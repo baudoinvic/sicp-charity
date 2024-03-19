@@ -8,43 +8,39 @@ import { FaStar } from "react-icons/fa6";
 const ProductsData = [
   {
     id: 1,
-    img: Img1,
-    title: "Women Ethnic",
+    img: "https://www.beautyflex.co.uk/cdn/shop/products/QEI_Active_Harmonie_reparateur.png?v=1610910556",
+    title: "QIE Paris lotion",
     rating: 5.0,
     color: "white",
+    price: "17$.11",
     aosDelay: "0",
   },
   {
     id: 2,
-    img: Img2,
-    title: "Women western",
+    img: "https://image.harrods.com/kilian-paris-good-girl-gone-bad-extreme-eau-de-parfum-50ml_15391581_27037165_2048.jpg",
+    title: "QIE Paris Parfum",
     rating: 4.5,
-    color: "Red",
+    color: "white",
+    price: "17$.11",
     aosDelay: "200",
   },
   {
     id: 3,
-    img: Img3,
-    title: "Goggles",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShGjGN3yd0QycPTsiiZ6Qxcn3I9utRKIBDAw&usqp=CAU",
+    title: "Pr francoise Bedon paris oil",
     rating: 4.7,
     color: "brown",
+    price: "17$.11",
     aosDelay: "400",
   },
   {
     id: 4,
-    img: Img4,
-    title: "Printed T-Shirt",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_6hCxUrS3TCsoy0Qcghkq415TPunGONC8PQ&usqp=CAU",
+    title: "Pr francoise Bedon paris parfum",
     rating: 4.4,
     color: "Yellow",
+    price: "17$.11",
     aosDelay: "600",
-  },
-  {
-    id: 5,
-    img: Img2,
-    title: "Fashin T-Shirt",
-    rating: 4.5,
-    color: "Pink",
-    aosDelay: "800",
   },
 ];
 
@@ -58,44 +54,72 @@ const Products = () => {
             Top Selling Products for you
           </p>
           <h1 data-aos="fade-up" className="text-3xl font-bold">
-            Products
+            Our Popular Products
           </h1>
-          <p data-aos="fade-up" className="text-xs text-gray-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-            asperiores modi Sit asperiores modi
+          <p data-aos="fade-up" className="text-lg text-gray-400">
+            we are here to help you with our Popular products don't miss it out
           </p>
         </div>
         {/* Body section */}
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-20 md:gap-5 place-items-center ">
             {/* card section */}
             {ProductsData.map((data) => (
               <div
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}
                 key={data.id}
-                className="space-y-3"
+                className="space-y-3 border border-solid rounded-md p-3"
               >
                 <img
                   src={data.img}
                   alt=""
-                  className="h-[220px] w-[150px] object-cover rounded-md"
+                  className="h-[220px] w-[250px] object-cover rounded-md"
                 />
+
                 <div>
                   <h3 className="font-semibold">{data.title}</h3>
                   <p className="text-sm text-gray-600">{data.color}</p>
-                  <div className="flex items-center gap-1">
-                    <FaStar className="text-yellow-400" />
-                    <span>{data.rating}</span>
-                  </div>
+                  <span className="text-xl text-black font-bold">
+                    {data.price}
+                  </span>
+                  <div className="flex items-center gap-1"></div>
                 </div>
               </div>
             ))}
           </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-20 md:gap-5 place-items-center mt-10">
+            {/* card section */}
+            {ProductsData.map((data) => (
+              <div
+                data-aos="fade-up"
+                data-aos-delay={data.aosDelay}
+                key={data.id}
+                className="space-y-3 border border-solid rounded-md p-3"
+              >
+                <img
+                  src={data.img}
+                  alt=""
+                  className="h-[220px] w-[250px] object-cover rounded-md"
+                />
+
+                <div>
+                  <h3 className="font-semibold">{data.title}</h3>
+                  <p className="text-sm text-gray-600">{data.color}</p>
+                  <span className="text-xl text-black font-bold">
+                    {data.price}
+                  </span>
+                  <div className="flex items-center gap-1"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+
           {/* view all button */}
           <div className="flex justify-center">
-            <button className="text-center mt-10 cursor-pointer bg-primary text-white py-1 px-5 rounded-md">
-              View All Button
+            <button className="text-center mt-10 cursor-pointer bg-primary text-white py-2 px-5 rounded-md">
+              View All Products
             </button>
           </div>
         </div>

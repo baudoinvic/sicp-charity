@@ -22,12 +22,20 @@ const Subscribe = () => {
           <h1 className="text-2xl !text-center sm:text-left sm:text-4xl font-semibold">
             Get Notified About New Products
           </h1>
-          <input
-            data-aos="fade-up"
-            type="text"
-            placeholder="Enter your email"
-            className="w-full p-3"
-          />
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+            <input
+              data-aos="fade-up"
+              type="text"
+              placeholder="Enter your email"
+              className="w-full p-3"
+            />
+            <button
+              className="bg-white text-black px-4 py-2 rounded-md"
+             
+            >
+              Submit
+            </button>
+          </div>
         </div>
       </div>
     </div>

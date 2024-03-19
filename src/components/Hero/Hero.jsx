@@ -7,21 +7,21 @@ import Slider from "react-slick";
 const ImageList = [
   {
     id: 1,
-    img: Image1,
-    title: "Upto 50% off on all Men's Wear",
+    img: "https://media.istockphoto.com/id/657258090/vector/cosmetic-vials-for-essential-serum.jpg?s=612x612&w=0&k=20&c=cFa-hw5ROWQ9ABtk_ki-dNyNYXfTRA-vu_cH8Na5rIM=",
+    title: "Upto 50% off on all Men's oil",
     description:
       "lorem His Life will forever be Changed dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 2,
-    img: Image2,
-    title: "30% off on all Women's Wear",
+    img: "https://itapelobeautystore.com/cdn/shop/products/20220414_141628.jpg?v=1649975103&width=1946",
+    title: "30% off on all of our lotion on sale",
     description:
       "Who's there lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 3,
-    img: Image3,
+    img: "https://www.destinodebelleza.es/assets/images/product_images/mon-paris-edp-1640343478.png",
     title: "70% off on all Products Sale",
     description:
       "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -93,7 +93,7 @@ const Hero = ({ handleOrderPopup }) => {
                     <img
                       src={data.img}
                       alt=""
-                      className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto"
+                      className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto rounded-xl !important "
                     />
                   </div>
                 </div>

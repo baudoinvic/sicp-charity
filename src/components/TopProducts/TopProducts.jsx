@@ -7,24 +7,24 @@ import { FaStar } from "react-icons/fa";
 const ProductsData = [
   {
     id: 1,
-    img: Img1,
-    title: "Casual Wear",
+    img: "https://image.harrods.com/kilian-paris-good-girl-gone-bad-extreme-eau-de-parfum-50ml_15391581_27037165_2048.jpg",
+    title: "QIE Paris Parfum",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "we also delivering QIE paris parfum for men's and also for women's .",
   },
   {
     id: 2,
-    img: Img2,
-    title: "Printed shirt",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_6hCxUrS3TCsoy0Qcghkq415TPunGONC8PQ&usqp=CAU",
+    title: "Pr francoise Bedon paris parfum",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "we also delivering QIE paris parfum for men's and also for women's .",
   },
   {
     id: 3,
-    img: Img3,
-    title: "Women shirt",
+    img: "https://www.beautyflex.co.uk/cdn/shop/products/QEI_Active_Harmonie_reparateur.png?v=1610910556",
+    title: "QIE Paris lotion",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "we also delivering QIE paris parfum for men's and also for women's .",
   },
 ];
 const TopProducts = ({ handleOrderPopup }) => {
