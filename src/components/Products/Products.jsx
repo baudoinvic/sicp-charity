@@ -69,7 +69,7 @@ const Products = () => {
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}
                 key={data.id}
-                className="space-y-3 border border-solid rounded-md p-3"
+                className="space-y-3 border border-solid rounded-md p-3 hover:shadow-lg transition duration-300 ease-in-out cursor-pointer"
               >
                 <img
                   src={data.img}
@@ -96,7 +96,7 @@ const Products = () => {
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}
                 key={data.id}
-                className="space-y-3 border border-solid rounded-md p-3"
+                className="space-y-3 border border-solid rounded-md p-3 hover:shadow-lg transition duration-300 ease-in-out cursor-pointer"
               >
                 <img
                   src={data.img}
