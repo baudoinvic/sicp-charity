@@ -4,26 +4,27 @@ import Slider from "react-slick";
 const TestimonialData = [
   {
     id: 1,
-    name: "Victor",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "ishimwe sandra",
+    text: " i'm so proude to work with beatha business i bought the products  many time and got the original one at my home ",
+
     img: "https://picsum.photos/101/101",
   },
   {
     id: 2,
-    name: "Satya Nadella",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Divine josh",
+    text: "i'm so proude to work with beatha business i bought the products  many time and got the original one at my home",
     img: "https://picsum.photos/102/102",
   },
   {
     id: 3,
-    name: "Virat Kohli",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Tousaint Francis",
+    text: "i'm so proude to work with beatha business i bought the products  many time and got the original one at my home",
     img: "https://picsum.photos/104/104",
   },
   {
     id: 5,
-    name: "Sachin Tendulkar",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Chris johnB",
+    text: "i'm so proude to work with beatha business i bought the products  many time and got the original one at my home",
     img: "https://picsum.photos/103/103",
   },
 ];
@@ -79,8 +80,9 @@ const Testimonials = () => {
             Testimonials
           </h1>
           <p data-aos="fade-up" className="text-xs text-gray-400">
-           i'm so proude to work with beatha business i bought the products many time and got the original one at my home
-           they are the best one to work with
+            i'm so proude to work with beatha business i bought the products
+            many time and got the original one at my home they are the best one
+            to work with
           </p>
         </div>
 
