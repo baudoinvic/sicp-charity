@@ -79,8 +79,8 @@ const Testimonials = () => {
             Testimonials
           </h1>
           <p data-aos="fade-up" className="text-xs text-gray-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-            asperiores modi Sit asperiores modi
+           i'm so proude to work with beatha business i bought the products many time and got the original one at my home
+           they are the best one to work with
           </p>
         </div>
 
