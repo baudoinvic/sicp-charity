@@ -1,11 +1,8 @@
 import React from 'react'
-import Navbar from '../Navbar/Navbar'
-import Footer from '../Footer/Footer';
 
-const Checkout = () => {
+const Login = () => {
   return (
-    <>
-      <Navbar />
+    <div>
       <div data-aos="zoom-in">
         <div className="checkout flex mt-10" style={{ marginLeft: "20rem" }}>
           <div className="left-side flex-none mr-4">
@@ -103,11 +100,8 @@ const Checkout = () => {
           </div>
         </div>
       </div>
-      <br />
-      <br />
-      <Footer />
-    </>
+    </div>
   );
 }
 
-export default Checkout
+export default Login
