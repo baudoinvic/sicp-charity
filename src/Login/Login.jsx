@@ -1,4 +1,6 @@
 import React from 'react'
+import { IoMdArrowBack } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
@@ -13,89 +15,54 @@ const Login = () => {
             />
           </div>
           <div className="right-side max-w-md mx-auto p-6 shadow-md w-96 ml-4">
-            <h1 className="text-2xl font-bold mb-4">BILLING ADDRESS</h1>
+            <Link to="/Home">
+              <div className="flex">
+                <IoMdArrowBack className="text-primary mt-1 mr-2" />
+                <span className="text-primary">Home</span>
+              </div>
+            </Link>
+
+            <h1 className="text-2xl font-bold mb-4">Sign in</h1>
             <form>
-              <div className="mb-4">
-                <label htmlFor="country" className="block font-medium mb-1">
-                  Country
-                </label>
-                <input
-                  type="text"
-                  id="country"
-                  name="country"
-                  required
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="town" className="block font-medium mb-1">
-                  Town
-                </label>
-                <input
-                  type="text"
-                  id="town"
-                  name="town"
-                  required
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="streetAddress"
-                  className="block font-medium mb-1"
-                >
-                  Street Address
-                </label>
-                <input
-                  type="text"
-                  id="streetAddress"
-                  name="streetAddress"
-                  required
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="state" className="block font-medium mb-1">
-                  State
-                </label>
-                <input
-                  type="text"
-                  id="state"
-                  name="state"
-                  required
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="postcode" className="block font-medium mb-1">
-                  Postcode
-                </label>
-                <input
-                  type="text"
-                  id="postcode"
-                  name="postcode"
-                  required
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                />
-              </div>
               <div className="mb-4">
                 <label htmlFor="email" className="block font-medium mb-1">
                   Email
                 </label>
                 <input
-                  type="email"
+                  type="text"
                   id="email"
                   name="email"
                   required
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                 />
               </div>
+              <div className="mb-4">
+                <label htmlFor="password" className="block font-medium mb-1">
+                  Password
+                </label>
+                <input
+                  type="text"
+                  id="password"
+                  name="password"
+                  required
+                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+                />
+              </div>
+
+              <div className="">
+                <span>Forgot password?</span>
+              </div>
+
               <button
                 type="submit"
-                className="bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600"
+                className="bg-primary text-white w-full py-2 rounded-md hover:bg-primary"
               >
-                Continue
+                Sign in
               </button>
+              <div className="">
+                <span>Don't you have an account?</span>
+                <span className="text-primary ml-4">Sign up here</span>
+              </div>
             </form>
           </div>
         </div>

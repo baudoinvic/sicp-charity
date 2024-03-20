@@ -68,10 +68,13 @@ const Navbar = ({ handleOrderPopup }) => {
               <IoMdSearch className="text-gray-500 group-hover:text-primary absolute top-1/2 -translate-y-1/2 right-3" />
             </div>
 
-            <div className="sign-in flex">
-              <FaRegUser className="mt-2" />
-              <span className="text-gray-900">Sign in</span>
-            </div>
+            <Link to="/Login">
+              <div className="sign-in flex">
+                <FaRegUser className="mt-2" />
+                <span className="text-gray-900">Sign in</span>
+              </div>
+            </Link>
+
             {/* order button */}
             <Link to="/Addcart">
               <button
