@@ -16,6 +16,7 @@ import Allproducts from "./components/Products/Allproducts";
 import Addcart from "./Addcart/Addcart";
 import Checkout from "./components/Checkout/Checkout";
 import Login from "./Login/Login";
+import Signup from "./Signup/Signup";
 
 
  const CommonLayout = ({ children }) => {
@@ -67,6 +68,7 @@ const App = () => {
           <Route path="/Addcart" element={<Addcart />} />
           <Route path="/Checkout" element={<Checkout />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
         </Routes>
       </BrowserRouter>
     </div>
