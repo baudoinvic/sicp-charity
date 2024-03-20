@@ -2,13 +2,14 @@ import React from 'react'
 import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar/Navbar';
 import Subscribe from '../components/Subscribe/Subscribe';
+import { Link } from 'react-router-dom';
 
 const Addcart = () => {
     
   return (
     <>
       <Navbar />
-      <div data-aos = "zoom-in">
+      <div data-aos="zoom-in">
         <div
           className="add-cart flex justify-between bg-white p-4 rounded-lg shadow-md ml-20 mr-20"
           style={{ marginTop: "5rem" }}
@@ -91,9 +92,11 @@ const Addcart = () => {
               <span className="font-semibold">Total Amount</span>
               <span className="font-semibold">$23.20</span>
             </div>
-            <button className="bg-gray-900 text-white px-4 py-2 rounded-md">
-              Proceed to Checkout
-            </button>
+            <Link to="/Checkout">
+              <button className="bg-gray-900 text-white px-4 py-2 rounded-md">
+                Proceed to Checkout
+              </button>
+            </Link>
           </div>
         </div>
       </div>
