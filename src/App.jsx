@@ -11,8 +11,20 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
 import Popup from "./components/Popup/Popup";
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Allproducts from "./components/Products/Allproducts";
+
+
+ const CommonLayout = ({ children }) => {
+   return (
+     <>
+       <Navbar />
+       <Outlet />
+       {children}
+       <Footer />
+     </>
+   );
+ };
 
 const App = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
@@ -20,6 +32,7 @@ const App = () => {
   const handleOrderPopup = () => {
     setOrderPopup(!orderPopup);
   };
+
   React.useEffect(() => {
     AOS.init({
       offset: 100,
@@ -32,25 +45,24 @@ const App = () => {
 
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
-      <Navbar handleOrderPopup={handleOrderPopup} />
-      <Hero handleOrderPopup={handleOrderPopup} />
-      <Products />
-      <TopProducts handleOrderPopup={handleOrderPopup} />
-      <Banner />
-      <Subscribe />
-      {/* <Products /> */}
-      <Testimonials />
-      <Footer />
-      <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
-
-      <Router>
-        <div>
-          <Route path="Allproducts" element={<Allproducts />} />
-
-          <Route path="career" element={<Career />} />
-          <Route path="ourservices" element={<Ourservices />} />
-        </div>
-      </Router>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <CommonLayout>
+                <Hero handleOrderPopup={handleOrderPopup} />
+                <Products />
+                <TopProducts handleOrderPopup={handleOrderPopup} />
+                <Banner />
+                <Subscribe />
+                <Testimonials />
+              </CommonLayout>
+            }
+          />
+          <Route path="/Allproducts" element={<Allproducts />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
