@@ -71,7 +71,7 @@ const Navbar = ({ handleOrderPopup }) => {
             <Link to="/Login">
               <div className="sign-in flex">
                 <FaRegUser className="mt-2" />
-                <span className="text-gray-900">Sign in</span>
+                <span className="text-gray-900 mt-1">Sign in</span>
               </div>
             </Link>
 
