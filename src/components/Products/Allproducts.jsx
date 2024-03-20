@@ -1,51 +1,44 @@
-import React from "react";
-import Img1 from "../../assets/women/women.png";
-import Img2 from "../../assets/women/women2.jpg";
-import Img3 from "../../assets/women/women3.jpg";
-import Img4 from "../../assets/women/women4.jpg";
-import { FaStar } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import React from 'react'
 
-const ProductsData = [
-  {
-    id: 1,
-    img: "https://www.beautyflex.co.uk/cdn/shop/products/QEI_Active_Harmonie_reparateur.png?v=1610910556",
-    title: "QIE Paris lotion",
-    rating: 5.0,
-    color: "white",
-    price: "17$.11",
-    aosDelay: "0",
-  },
-  {
-    id: 2,
-    img: "https://image.harrods.com/kilian-paris-good-girl-gone-bad-extreme-eau-de-parfum-50ml_15391581_27037165_2048.jpg",
-    title: "QIE Paris Parfum",
-    rating: 4.5,
-    color: "white",
-    price: "17$.11",
-    aosDelay: "200",
-  },
-  {
-    id: 3,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShGjGN3yd0QycPTsiiZ6Qxcn3I9utRKIBDAw&usqp=CAU",
-    title: "Pr francoise Bedon paris oil",
-    rating: 4.7,
-    color: "brown",
-    price: "17$.11",
-    aosDelay: "400",
-  },
-  {
-    id: 4,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_6hCxUrS3TCsoy0Qcghkq415TPunGONC8PQ&usqp=CAU",
-    title: "Pr francoise Bedon paris parfum",
-    rating: 4.4,
-    color: "Yellow",
-    price: "17$.11",
-    aosDelay: "600",
-  },
-];
-
-const Products = () => {
+export default function Allproducts() {
+    const ProductsData = [
+      {
+        id: 1,
+        img: "https://www.beautyflex.co.uk/cdn/shop/products/QEI_Active_Harmonie_reparateur.png?v=1610910556",
+        title: "QIE Paris lotion",
+        rating: 5.0,
+        color: "white",
+        price: "17$.11",
+        aosDelay: "0",
+      },
+      {
+        id: 2,
+        img: "https://image.harrods.com/kilian-paris-good-girl-gone-bad-extreme-eau-de-parfum-50ml_15391581_27037165_2048.jpg",
+        title: "QIE Paris Parfum",
+        rating: 4.5,
+        color: "white",
+        price: "17$.11",
+        aosDelay: "200",
+      },
+      {
+        id: 3,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShGjGN3yd0QycPTsiiZ6Qxcn3I9utRKIBDAw&usqp=CAU",
+        title: "Pr francoise Bedon paris oil",
+        rating: 4.7,
+        color: "brown",
+        price: "17$.11",
+        aosDelay: "400",
+      },
+      {
+        id: 4,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_6hCxUrS3TCsoy0Qcghkq415TPunGONC8PQ&usqp=CAU",
+        title: "Pr francoise Bedon paris parfum",
+        rating: 4.4,
+        color: "Yellow",
+        price: "17$.11",
+        aosDelay: "600",
+      },
+    ];
   return (
     <div className="mt-14 mb-12">
       <div className="container">
@@ -118,17 +111,9 @@ const Products = () => {
           </div>
 
           {/* view all button */}
-          <Link to="/Allproducts">
-            <div className="flex justify-center">
-              <button className="text-center mt-10 cursor-pointer bg-primary text-white py-2 px-5 rounded-md">
-                View All Products
-              </button>
-            </div>
-          </Link>
+         
         </div>
       </div>
     </div>
   );
-};
-
-export default Products;
+}

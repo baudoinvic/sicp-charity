@@ -11,6 +11,9 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
 import Popup from "./components/Popup/Popup";
 
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Allproducts from "./components/Products/Allproducts";
+
 const App = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
 
@@ -39,6 +42,15 @@ const App = () => {
       <Testimonials />
       <Footer />
       <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
+
+      <Router>
+        <div>
+          <Route path="Allproducts" element={<Allproducts />} />
+
+          <Route path="career" element={<Career />} />
+          <Route path="ourservices" element={<Ourservices />} />
+        </div>
+      </Router>
     </div>
   );
 };
