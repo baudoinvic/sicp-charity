@@ -13,6 +13,7 @@ import Popup from "./components/Popup/Popup";
 
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Allproducts from "./components/Products/Allproducts";
+import Addcart from "./Addcart/Addcart";
 
 
  const CommonLayout = ({ children }) => {
@@ -61,6 +62,7 @@ const App = () => {
             }
           />
           <Route path="/Allproducts" element={<Allproducts />} />
+          <Route path="/Addcart" element={<Addcart />} />
         </Routes>
       </BrowserRouter>
     </div>
