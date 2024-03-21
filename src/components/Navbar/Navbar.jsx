@@ -110,12 +110,12 @@ const Navbar = ({ handleOrderPopup }) => {
           ))}
           {/* Simple Dropdown and Links */}
           <li className="group relative cursor-pointer">
-            <a href="#" className="flex items-center gap-[2px] py-2">
+            {/* <a href="#" className="flex items-center gap-[2px] py-2">
               Brower Categories
               <span>
                 <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
               </span>
-            </a>
+            </a> */}
             <div className="absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white p-2 text-black shadow-md">
               <ul>
                 {DropdownLinks.map((data) => (
