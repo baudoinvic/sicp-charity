@@ -18,6 +18,7 @@ import Checkout from "./components/Checkout/Checkout";
 import Login from "./Login/Login";
 import Signup from "./Signup/Signup";
 import Contact from "./Contact/Contact";
+import About from "./About/About";
 
 
  const CommonLayout = ({ children }) => {
@@ -71,6 +72,7 @@ const App = () => {
           <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="/About" element={<About />} />
         </Routes>
       </BrowserRouter>
     </div>
