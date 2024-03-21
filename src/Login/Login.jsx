@@ -15,7 +15,7 @@ const Login = () => {
             />
           </div>
           <div className="right-side max-w-md mx-auto p-6 shadow-md w-96 ml-4">
-            <Link to="/Home">
+            <Link to="/#">
               <div className="flex">
                 <IoMdArrowBack className="text-primary mt-1 mr-2" />
                 <span className="text-primary">Home</span>
