@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer';
+import { Link } from 'react-router-dom';
 
 const Checkout = () => {
   return (
     <>
       <Navbar />
       <div data-aos="zoom-in">
-      
         <div className="checkout flex flex-col md:flex-row mt-10 md:mx-auto md:max-w-4xl">
           <div className="left-side flex-none md:w-1/2 mr-4 mb-4 md:mb-0">
             <img
@@ -94,12 +94,14 @@ const Checkout = () => {
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                 />
               </div>
-              <button
-                type="submit"
-                className="bg-primary text-white w-full py-2 rounded-md hover:bg-primary"
-              >
-               Place order
-              </button>
+              <Link to="/Payment">
+                <button
+                  type="submit"
+                  className="bg-primary text-white w-full py-2 rounded-md hover:bg-primary"
+                >
+                  Place order
+                </button>
+              </Link>
             </form>
           </div>
         </div>
