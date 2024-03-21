@@ -10,17 +10,14 @@ const Addcart = () => {
     <>
       <Navbar />
       <div data-aos="zoom-in">
-        <div
-          className="add-cart flex justify-between bg-white p-4 rounded-lg shadow-md ml-20 mr-20"
-          style={{ marginTop: "5rem" }}
-        >
+        <div className="add-cart flex flex-col md:flex-row justify-between bg-white p-4 rounded-lg shadow-md mx-4 md:mx-auto md:max-w-4xl mt-10">
           {/* Left Side */}
-          <div className="left-side flex flex-col " style={{ width: "700px" }}>
-            <div class="bg-primary text-white px-10 py-4 rounded-t-lg">
-              <span class="font-semibold mr-16">Product</span>
-              <span class="font-semibold mr-16">Price</span>
-              <span class="font-semibold mr-16">Quantity</span>
-              <span class="font-semibold mr-16">Subtotal</span>
+          <div className="left-side flex flex-col md:w-3/4 mr-4">
+            <div className="bg-primary text-white px-10 py-4 rounded-t-lg">
+              <span className="font-semibold mr-16">Product</span>
+              <span className="font-semibold mr-16">Price</span>
+              <span className="font-semibold mr-16">Quantity</span>
+              <span className="font-semibold mr-16">Subtotal</span>
             </div>
             <div className="flex items-center py-4 border-b border-gray-200">
               <div className="w-40 h-30 flex-shrink-0">
@@ -34,7 +31,6 @@ const Addcart = () => {
                 <span className="font-semibold">Product Name</span>
                 <span className="text-sm">Size: 50ml</span>
               </div>
-
               <div className="flex items-center ml-auto">
                 <button className="px-2 py-1 border rounded-md mr-2">-</button>
                 <span className="px-2">1</span>
@@ -54,7 +50,6 @@ const Addcart = () => {
                 <span className="font-semibold">Product Name</span>
                 <span className="text-sm">Size: 50ml</span>
               </div>
-
               <div className="flex items-center ml-auto">
                 <button className="px-2 py-1 border rounded-md mr-2">-</button>
                 <span className="px-2">1</span>
@@ -73,7 +68,7 @@ const Addcart = () => {
           </div>
 
           {/* Right Side */}
-          <div className="right-side w-72 flex flex-col justify-between ">
+          <div className="right-side w-full md:w-1/4 flex flex-col justify-between mt-4 md:mt-0">
             <div className="bg-primary text-white px-8 py-4 rounded-t-lg">
               <span className="font-semibold">Cart Total</span>
             </div>
