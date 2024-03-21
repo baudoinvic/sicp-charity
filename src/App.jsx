@@ -20,6 +20,8 @@ import Signup from "./Signup/Signup";
 import Contact from "./Contact/Contact";
 import About from "./About/About";
 import Payment from "./Payment/Payment";
+import Dashboard from "./Admindashboard/Dashboard";
+import Dash from "./Admindashboard/Dash";
 
 
  const CommonLayout = ({ children }) => {
@@ -75,6 +77,11 @@ const App = () => {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/About" element={<About />} />
           <Route path="/Payment" element={<Payment />} />
+
+          {/* Dashboard routes */}
+          <Route path="/Admindashboard/Dashboard" element={<Dashboard />}>
+            <Route path="" element={<Dash />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>
