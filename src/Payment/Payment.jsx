@@ -1,9 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import { IoMdArrowBack } from "react-icons/io";
 
 const Payment = () => {
   return (
-    <div>
+    <div data-aos="zoom-in">
       <div class="max-w-md mx-auto mt-8 p-6 bg-white shadow-md rounded-lg">
+        <Link to="/#">
+          <div className="flex">
+            <IoMdArrowBack className="text-primary mt-1 mr-2" />
+            <span className="text-primary">Home</span>
+          </div>
+        </Link>
         <h2 class="text-xl font-semibold mb-4">Payment Details</h2>
         <form>
           <div class="relative mb-4">
