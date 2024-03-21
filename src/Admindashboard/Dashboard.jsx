@@ -10,17 +10,12 @@ import { TbLogout } from "react-icons/tb";
 
 function Dashboard() {
   return (
-    <div>
+    <div data-aos="zoom-in">
       <div className="flex h-screen">
         {/* Sidebar */}
         <div className="bg-gray-900 text-white w-64 flex flex-col justify-between">
           <div className="p-4 flex items-center">
-            <img
-              className="w-12 h-12 rounded-full mr-2"
-              src="https://www.shutterstock.com/image-vector/user-icon-trendy-flat-style-600nw-418179856.jpg"
-              alt=""
-            />
-            <span className="text-xl font-semibold">Beatha</span>
+            <span className="text-xl font-bold">Beatha-Ecommerce</span>
           </div>
           <ul className="py-4">
             <li className="px-4 py-4 flex items-center font-bold">
