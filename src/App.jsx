@@ -22,6 +22,7 @@ import About from "./About/About";
 import Payment from "./Payment/Payment";
 import Dashboard from "./Admindashboard/Dashboard";
 import Dash from "./Admindashboard/Dash";
+import Chart from "./Admindashboard/Chart";
 
 
  const CommonLayout = ({ children }) => {
@@ -81,6 +82,7 @@ const App = () => {
           {/* Dashboard routes */}
           <Route path="/Admindashboard/Dashboard" element={<Dashboard />}>
             <Route path="" element={<Dash />} />
+            <Route path="/Admindashboard/Dashboard/Chart" component={Chart} />
           </Route>
         </Routes>
       </BrowserRouter>

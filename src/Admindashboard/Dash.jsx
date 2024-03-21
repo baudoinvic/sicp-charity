@@ -1,12 +1,15 @@
-import React from 'react'
+import { Bar } from "react-chartjs-2";
+import React from "react";
 import {
   HiUserGroup,
   HiUser,
   HiShoppingCart,
   HiCurrencyDollar,
 } from "react-icons/hi";
+import { Chart } from "chart.js";
 
 function Dash() {
+    
   return (
     <div data-aos="zoom-in">
       <div class="bg-gray-200 py-4">
@@ -59,9 +62,12 @@ function Dash() {
             <p className="text-black text-base">Total income</p>
           </div>
         </div>
+        <div className="chart">
+          
+        </div>
       </div>
     </div>
   );
 }
 
-export default Dash
+export default Dash;
