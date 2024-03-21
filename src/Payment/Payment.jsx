@@ -76,7 +76,7 @@ const Payment = () => {
               for="name"
               class="block text-gray-700 text-sm font-bold mb-2"
             >
-              Cardholder Name
+              Name on Card
             </label>
             <input
               type="text"
