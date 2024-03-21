@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
-import { BsTwitterX } from "react-icons/bs";
+import { FaLinkedin } from "react-icons/fa6";
 
 const Contact = () => {
   return (
@@ -73,7 +73,7 @@ const Contact = () => {
               <div className="social-media flex mt-10">
                 <FaFacebook className='mr-5 text-2xl' />
                 <FaInstagram className='mr-5 text-2xl' />
-                <BsTwitterX  className='text-2xl'/>
+                <FaLinkedin  className='text-2xl' /> 
               </div>
             </div>
           </div>
