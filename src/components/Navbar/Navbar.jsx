@@ -21,7 +21,7 @@ const Menu = [
   {
     id: 3,
     name: "Contact us",
-    link: "/#",
+    link: "/Contact",
   },
   
 ];

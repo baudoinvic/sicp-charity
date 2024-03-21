@@ -1,11 +1,14 @@
 import React from 'react'
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
+import { FaFacebook } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { BsTwitterX } from "react-icons/bs";
 
 const Contact = () => {
   return (
-    <div className='contact-us'>
-        <Navbar />
+    <div className="contact-us">
+      <Navbar />
       <div className="sign-up">
         <div data-aos="zoom-in">
           <div className="checkout flex flex-col md:flex-row mt-10 md:mx-auto md:max-w-4xl">
@@ -17,10 +20,12 @@ const Contact = () => {
               />
             </div>
             <div className="right-side w-full md:w-1/2 mx-auto p-6 shadow-md">
-             
               <h1 className="text-2xl font-bold mb-4">Let's get in touch</h1>
-               <span>Leave us a message if you have a question we are here to help you</span>
-              <form>
+              <span className='text-gray-500'>
+                Leave us a message if you have a question we are here to help
+                you
+              </span>
+              <form className='mt-5'>
                 <div className="mb-4">
                   <label htmlFor="firstname" className="block font-medium mb-1">
                     Firstname
@@ -62,9 +67,14 @@ const Contact = () => {
                   type="submit"
                   className="bg-primary text-white w-full py-2 rounded-md hover:bg-primary"
                 >
-                Send message
+                  Send message
                 </button>
               </form>
+              <div className="social-media flex mt-10">
+                <FaFacebook className='mr-5 text-2xl' />
+                <FaInstagram className='mr-5 text-2xl' />
+                <BsTwitterX  className='text-2xl'/>
+              </div>
             </div>
           </div>
         </div>
