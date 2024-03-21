@@ -6,15 +6,16 @@ const Login = () => {
   return (
     <div>
       <div data-aos="zoom-in">
-        <div className="checkout flex mt-10" style={{ marginLeft: "20rem" }}>
-          <div className="left-side flex-none mr-4">
+       
+        <div className="checkout flex flex-col md:flex-row mt-10 md:mx-auto md:max-w-4xl">
+          <div className="left-side flex-none md:w-1/2 mr-0 md:mr-4 mb-4 md:mb-0">
             <img
               src="https://media.istockphoto.com/id/1671142169/vector/web-phishing-illustration-on-mobile-concept.jpg?s=612x612&w=0&k=20&c=XDfAqPBBiHFZCbEqUZognNbY4XTD-XTpacgjmH-Q-sA="
               alt="Cyclist"
               className="h-full object-cover"
             />
           </div>
-          <div className="right-side max-w-md mx-auto p-6 shadow-md w-96 ml-4">
+          <div className="right-side w-full md:w-1/2 mx-auto p-6 shadow-md">
             <Link to="/#">
               <div className="flex">
                 <IoMdArrowBack className="text-primary mt-1 mr-2" />
@@ -49,8 +50,8 @@ const Login = () => {
                 />
               </div>
 
-              <div className="">
-                <span>Forgot password?</span>
+              <div className="mb-4">
+                <span className="text-blue-500">Forgot password?</span>
               </div>
 
               <button
@@ -59,10 +60,10 @@ const Login = () => {
               >
                 Sign in
               </button>
-              <div className="">
-                <span>Don't you have an account?</span>
+              <div className="mt-4">
+                <span>Don't have an account?</span>
                 <Link to="/Signup">
-                  <span className="text-primary ml-4">Sign up here</span>
+                  <span className="text-primary ml-2">Sign up here</span>
                 </Link>
               </div>
             </form>
