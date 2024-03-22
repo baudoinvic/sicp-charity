@@ -30,10 +30,13 @@ function Dashboard() {
               <FaUserGroup className="mr-4" />
               <span className="cursor-pointer">Customers</span>
             </li>
-            <li className="px-4 py-4 flex items-center font-bold">
-              <FaUserPlus className="mr-4" />
-              <span className="cursor-pointer">Users</span>
-            </li>
+            <Link to="/Admindashboard/Dashboard/Users">
+              <li className="px-4 py-4 flex items-center font-bold">
+                <FaUserPlus className="mr-4" />
+                <span className="cursor-pointer">Users</span>
+              </li>
+            </Link>
+
             <li className="px-4 py-4 flex items-center font-bold">
               <FaBorderStyle className="mr-4" />
               <span className="cursor-pointer">Orders</span>
