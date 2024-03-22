@@ -11,9 +11,9 @@ import { TbLogout } from "react-icons/tb";
 function Dashboard() {
   return (
     <div data-aos="zoom-in">
-      <div className="flex h-screen">
+      <div className="flex flex-col md:flex-row h-screen">
         {/* Sidebar */}
-        <div className="bg-gray-900 text-white w-64 flex flex-col justify-between">
+        <div className="bg-gray-900 text-white w-full md:w-64 flex flex-col justify-between">
           <div className="p-4 flex items-center">
             <span className="text-xl font-bold">Beatha-Ecommerce</span>
           </div>
@@ -32,21 +32,18 @@ function Dashboard() {
                 <span className="cursor-pointer">Customers</span>
               </li>
             </Link>
-
             <Link to="/Admindashboard/Dashboard/Users">
               <li className="px-4 py-4 flex items-center font-bold">
                 <FaUserPlus className="mr-4" />
                 <span className="cursor-pointer">Users</span>
               </li>
             </Link>
-
             <Link to="/Admindashboard/Dashboard/Order">
               <li className="px-4 py-4 flex items-center font-bold">
                 <FaBorderStyle className="mr-4" />
                 <span className="cursor-pointer">Orders</span>
               </li>
             </Link>
-
             <li className="px-4 py-4 flex items-center font-bold">
               <IoSettingsOutline className="mr-4" />
               <span className="cursor-pointer">Settings</span>
