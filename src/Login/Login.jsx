@@ -6,7 +6,6 @@ const Login = () => {
   return (
     <div>
       <div data-aos="zoom-in">
-       
         <div className="checkout flex flex-col md:flex-row mt-10 md:mx-auto md:max-w-4xl">
           <div className="left-side flex-none md:w-1/2 mr-0 md:mr-4 mb-4 md:mb-0">
             <img
@@ -54,12 +53,15 @@ const Login = () => {
                 <span className="text-blue-500">Forgot password?</span>
               </div>
 
-              <button
-                type="submit"
-                className="bg-primary text-white w-full py-2 rounded-md hover:bg-primary"
-              >
-                Sign in
-              </button>
+              <Link to="/Admindashboard/dashboard">
+                <button
+                  type="submit"
+                  className="bg-primary text-white w-full py-2 rounded-md hover:bg-primary"
+                >
+                  Sign in
+                </button>
+              </Link>
+
               <div className="mt-4">
                 <span>Don't have an account?</span>
                 <Link to="/Signup">
