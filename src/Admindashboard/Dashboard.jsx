@@ -18,10 +18,13 @@ function Dashboard() {
             <span className="text-xl font-bold">Beatha-Ecommerce</span>
           </div>
           <ul className="py-4">
-            <li className="px-4 py-4 flex items-center font-bold bg-primary rounded-lg">
-              <IoMdHome className="mr-4" />
-              <span className="cursor-pointer">Home</span>
-            </li>
+            <Link to="/Admindashboard/Dashboard">
+              <li className="px-4 py-4 flex items-center font-bold bg-primary rounded-lg">
+                <IoMdHome className="mr-4" />
+                <span className="cursor-pointer">Home</span>
+              </li>
+            </Link>
+
             <li className="px-4 py-4 flex items-center font-bold">
               <MdProductionQuantityLimits className="mr-4" />
               <span className="cursor-pointer">Products</span>

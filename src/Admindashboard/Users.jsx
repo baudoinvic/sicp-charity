@@ -4,7 +4,7 @@ import { MdDeleteOutline } from "react-icons/md";
 
 const Users = () => {
   return (
-    <div className="">
+    <div data-aos="zoom-in" className="">
         <span className='text-3xl font-bold'>Users</span>
       <div class="flex justify-between items-center bg-gray-100 p-4 rounded-lg shadow-md mt-20">
         <div class="flex">
@@ -12,7 +12,6 @@ const Users = () => {
           <span class="font-bold mr-64">Lastname</span>
           <span class="font-bold mr-64">Email</span>
           <span class="font-bold mr-64">Action</span>
-          <div class="flex items-center"></div>
         </div>
       </div>
       <div class="flex ml-5 mt-10">

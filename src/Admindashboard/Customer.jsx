@@ -4,7 +4,7 @@ import { MdDeleteOutline } from "react-icons/md";
 
 const Customer = () => {
   return (
-    <div className="">
+    <div data-aos="zoom-in" className="">
       <span className="text-3xl font-bold">Customers</span>
       <div class="flex justify-between items-center bg-gray-100 p-4 rounded-lg shadow-md mt-20">
         <div class="flex">
