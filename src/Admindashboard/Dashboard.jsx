@@ -18,7 +18,7 @@ function Dashboard() {
             <span className="text-xl font-bold">Beatha-Ecommerce</span>
           </div>
           <ul className="py-4">
-            <li className="px-4 py-4 flex items-center font-bold">
+            <li className="px-4 py-4 flex items-center font-bold bg-primary rounded-lg">
               <IoMdHome className="mr-4" />
               <span className="cursor-pointer">Home</span>
             </li>
