@@ -24,6 +24,7 @@ import Dashboard from "./Admindashboard/Dashboard";
 import Dash from "./Admindashboard/Dash";
 import Chart from "./Admindashboard/Chart";
 import Users from "./Admindashboard/Users";
+import Customer from "./Admindashboard/Customer";
 
 
  const CommonLayout = ({ children }) => {
@@ -85,6 +86,7 @@ const App = () => {
             <Route path="" element={<Dash />} />
             <Route path="Chart" element={<Chart />} />
             <Route path="Users" element={<Users />} />
+            <Route path="Customer" element={<Customer />} />
           </Route>
         </Routes>
       </BrowserRouter>
