@@ -40,10 +40,13 @@ function Dashboard() {
               </li>
             </Link>
 
-            <li className="px-4 py-4 flex items-center font-bold">
-              <FaBorderStyle className="mr-4" />
-              <span className="cursor-pointer">Orders</span>
-            </li>
+            <Link to="/Admindashboard/Dashboard/Order">
+              <li className="px-4 py-4 flex items-center font-bold">
+                <FaBorderStyle className="mr-4" />
+                <span className="cursor-pointer">Orders</span>
+              </li>
+            </Link>
+
             <li className="px-4 py-4 flex items-center font-bold">
               <IoSettingsOutline className="mr-4" />
               <span className="cursor-pointer">Settings</span>
