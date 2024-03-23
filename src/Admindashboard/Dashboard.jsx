@@ -25,10 +25,13 @@ function Dashboard() {
               </li>
             </Link>
 
-            <li className="px-4 py-4 flex items-center font-bold">
-              <MdProductionQuantityLimits className="mr-4" />
-              <span className="cursor-pointer">Products</span>
-            </li>
+            <Link to="/products">
+              <li className="px-4 py-4 flex items-center font-bold">
+                <MdProductionQuantityLimits className="mr-4" />
+                <span className="cursor-pointer">Products</span>
+              </li>
+            </Link>
+
             <Link to="/Admindashboard/Dashboard/Customer">
               <li className="px-4 py-4 flex items-center font-bold">
                 <FaUserGroup className="mr-4" />
