@@ -17,7 +17,7 @@ const Users = () => {
       <div class="flex ml-5 mt-10">
         <span class=" mr-64">johnsonema</span>
         <span class=" mr-64">ema</span>
-        <span class=" mr-64">ema@gmail.com</span>
+        <span class=" mr-64">emma@gmail.com</span>
         <div class="flex items-center">
           <FaEdit className='text-2xl text-gray-900' />
           <MdDeleteOutline className='ml-4 text-2xl text-red-500' />
