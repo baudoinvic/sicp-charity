@@ -50,10 +50,10 @@ function Dashboard() {
                 <span className="cursor-pointer">Orders</span>
               </li>
             </Link>
-            <li className="px-4 py-4 flex items-center font-bold">
+            {/* <li className="px-4 py-4 flex items-center font-bold">
               <IoSettingsOutline className="mr-4" />
               <span className="cursor-pointer">Settings</span>
-            </li>
+            </li> */}
           </ul>
           <div className="mt-auto px-4 py-2 flex font-bold">
             <span className="block cursor-pointer hover:text-gray-300 flex items-center">
