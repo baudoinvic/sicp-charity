@@ -25,7 +25,7 @@ function Dashboard() {
               </li>
             </Link>
 
-            <Link to="/products">
+            <Link to="Admindashboard/Dashboard/Product">
               <li className="px-4 py-4 flex items-center font-bold">
                 <MdProductionQuantityLimits className="mr-4" />
                 <span className="cursor-pointer">Products</span>
