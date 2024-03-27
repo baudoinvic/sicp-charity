@@ -15,7 +15,7 @@ function Dashboard() {
         {/* Sidebar */}
         <div className="bg-gray-900 text-white w-full md:w-64 flex flex-col justify-between">
           <div className="p-4 flex items-center">
-            <span className="text-xl font-bold">Beatha-Ecommerce</span>
+            <span className="text-xl font-bold">Beatha-BM</span>
           </div>
           <ul className="py-4">
             <Link to="/Admindashboard/Dashboard">
