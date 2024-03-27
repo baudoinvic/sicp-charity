@@ -1,4 +1,6 @@
 import React from 'react'
+import { MdDeleteOutline } from "react-icons/md";
+import { FaEdit } from "react-icons/fa";
 
 const Product = () => {
   return (
