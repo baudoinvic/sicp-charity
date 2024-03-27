@@ -6,7 +6,7 @@ const Product = () => {
   return (
     <div data-aos="zoom-in" className="">
       <span className="text-3xl font-bold">Products</span>
-      <div class="flex justify-between items-center bg-gray-100 p-4 rounded-lg shadow-md mt-20">
+      <div class="flex justify-between items-center bg-gray-100 p-4 rounded-lg shadow-md mt-10">
         <div class="flex">
           <span class="font-bold mr-64">Id</span>
           <span class="font-bold mr-64">Name</span>
