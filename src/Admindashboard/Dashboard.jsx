@@ -9,6 +9,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { TbLogout } from "react-icons/tb";
 
 function Dashboard() {
+  
   return (
     <div data-aos="zoom-in">
       <div className="flex flex-col md:flex-row h-screen">
@@ -50,10 +51,12 @@ function Dashboard() {
                 <span className="cursor-pointer">Orders</span>
               </li>
             </Link>
-            <li className="px-4 py-4 flex items-center font-bold">
-              <IoSettingsOutline className="mr-4" />
-              <span className="cursor-pointer">Settings</span>
-            </li>
+            <Link to="/AdminDashboard/Dashboard/Setting">
+              <li className="px-4 py-4 flex items-center font-bold">
+                <IoSettingsOutline className="mr-4" />
+                <span className="cursor-pointer">Settings</span>
+              </li>
+            </Link>
           </ul>
           <div className="mt-auto px-4 py-2 flex font-bold">
             <span className="block cursor-pointer hover:text-gray-300 flex items-center">
