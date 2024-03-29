@@ -2,8 +2,8 @@ import React from 'react'
 
 const Setting = () => {
   return (
-    <div className="flex justify-between">
-      <div className="w-1/2">
+    <div className="flex justify-between items-center">
+      <div className="w-1/2 mr-5">
         <h1 class="text-lg font-bold mb-4">Personal information</h1>
         <input
           type="text"
@@ -16,7 +16,7 @@ const Setting = () => {
           class="w-full bg-gray-100 border border-gray-300 rounded-md px-4 py-2 mb-2 focus:outline-none focus:border-blue-500"
           placeholder="Email"
         ></input>
-        <br></br>
+   
         <br />
         <input
           type="text"
