@@ -2,7 +2,7 @@ import React from 'react'
 
 const Setting = () => {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center mt-20">
       <div className="w-1/2 mr-5">
         <h1 class="text-lg font-bold mb-4">Personal information</h1>
         <input
