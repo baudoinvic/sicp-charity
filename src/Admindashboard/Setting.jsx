@@ -37,7 +37,7 @@ const Setting = () => {
           placeholder="Phone Number"
         ></input>
         <br />
-        <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        <button class="bg-primary text-white font-bold py-2 px-4 rounded ">
           Save Changes
         </button>
       </div>
