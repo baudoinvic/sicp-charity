@@ -51,13 +51,17 @@ const Chart = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div className="bg-white rounded-lg shadow-md p-6 h-[500px] w-full md:w-3/4 lg:w-2/3">
+      <div className="bg-white rounded-lg shadow-md p-6 w-full   h-[65vh]  ">
+        {" "}
+        {/* Add a fixed height for the chart container */}
         <h2 className="text-xl font-semibold mb-4">Revenue Chart</h2>
         <div className="flex justify-center h-full">
+          {" "}
+          {/* Use h-full to make the chart take up the remaining height */}
           <Bar options={options} data={data} />
         </div>
       </div>
-      <div className="bg-white rounded-lg shadow-md p-6 md:w-1/4 lg:w-1/3">
+      <div className="bg-white rounded-lg shadow-md p-6 w-full xl:w-4/12 px-4  h-[65vh]">
         <h2 className="text-xl font-semibold mb-4">Chat</h2>
         {/* Your chat component goes here */}
       </div>
