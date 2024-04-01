@@ -4,16 +4,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Setting = () => {
   return (
     <div className="setting-user">
-      <div className="information-part flex">
-        <div className="setting-right-side ml-16">
-          <h4 className="profile-setting-tile mt-16 ml-8">profile</h4>
-          <span className="setting-info-title ml-8 text-gray-700">
-            This information will be displayed publicly be careful what you
-            share
-          </span>
+      <div className="information-part flex flex-col md:flex-row">
+        <div className="setting-right-side md:w-2/3 md:ml-16">
+          <h4 className="profile-setting-tile mt-8 md:mt-16 ml-4 md:ml-8 text-lg md:text-xl lg:text-2xl">
+           Settings
+          </h4>
+          
+
           <form className="settings-tab-form ml-8 mt-16">
-            <div className="row flex gap-4">
-              <div className="col flex-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
                 <input
                   type="text"
                   id="name"
@@ -22,7 +22,7 @@ const Setting = () => {
                   className="w-full p-2 border border-gray-300 mb-4"
                 />
               </div>
-              <div className="col flex-1">
+              <div>
                 <input
                   type="email"
                   id="email"
@@ -33,8 +33,8 @@ const Setting = () => {
               </div>
             </div>
 
-            <div className="row flex gap-4">
-              <div className="col flex-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
                 <select
                   id="gender"
                   name="gender"
@@ -46,7 +46,7 @@ const Setting = () => {
                   <option value="other">Other</option>
                 </select>
               </div>
-              <div className="col flex-1">
+              <div>
                 <input
                   type="tel"
                   id="phone"
@@ -57,11 +57,10 @@ const Setting = () => {
               </div>
             </div>
 
-            <span className="personal-address mr-8 mt-10">personal address</span>
-   
+            <span className="personal-address mr-8 mt-4">personal address</span>
 
-            <div className="row flex gap-4">
-              <div className="col flex-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
                 <input
                   type="text"
                   id="country"
@@ -70,7 +69,7 @@ const Setting = () => {
                   className="w-full p-2 border border-gray-300 mb-4"
                 />
               </div>
-              <div className="col flex-1">
+              <div>
                 <input
                   type="text"
                   id="province"
@@ -81,8 +80,8 @@ const Setting = () => {
               </div>
             </div>
 
-            <div className="row flex gap-4">
-              <div className="col flex-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
                 <input
                   type="text"
                   id="district"
@@ -91,7 +90,7 @@ const Setting = () => {
                   className="w-full p-2 border border-gray-300 mb-4"
                 />
               </div>
-              <div className="col flex-1">
+              <div>
                 <input
                   type="tel"
                   id="phone"
