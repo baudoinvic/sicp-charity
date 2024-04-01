@@ -1,80 +1,71 @@
-import React from 'react'
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  ArcElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
-
+import React from "react";
 import { Bar } from "react-chartjs-2";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
-
 const Chart = () => {
-  
-    const options = {
-      responsive: true,
-      plugins: {
-        legend: {
-          position: "top",
-        },
-        title: {
-          display: true,
-          text: "Total revenue",
-        },
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top",
       },
-    };
-    const labels = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
+      title: {
+        display: true,
+        text: "Total revenue",
+      },
+    },
+  };
 
-    const data = {
-      labels,
-      datasets: [
-        {
-          label: "number of patient",
-          data: [20, 43, 10, 54, 8, 23, 40, 23, 56, 87, 44, 10],
-          backgroundColor: "#6A399E",
-        },
-        {
-          label: "number of patient",
-          data: [24, 26, 16, 10, 20, 40, 46, 49, 72, 34, 54, 60, 65, 70, 72],
-          backgroundColor: "skyblue",
-        },
-      ],
-    };
+  const labels = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
 
-    ChartJS.register(ArcElement, Tooltip, Legend);
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: "Number of Patients",
+        data: [20, 43, 10, 54, 8, 23, 40, 23, 56, 87, 44, 10],
+        backgroundColor: "#3B82F6",
+      },
+      {
+        label: "Number of Patients",
+        data: [24, 26, 16, 10, 20, 40, 46, 49, 72, 34, 54, 60, 65, 70, 72],
+        backgroundColor: "#111827",
+      },
+    ],
+  };
+
   return (
-    <div>
-      <div className="chart">
-        {/* <Bar  options={options} data={data} /> */}
-        <Bar className="option" options={options} data={data} />
+    <div className="grid grid-cols-2 gap-6">
+      <div
+        className="bg-white rounded-lg shadow-md p-6"
+        style={{ width: "75%" }}
+      >
+        <h2 className="text-xl font-semibold mb-4">Revenue Chart</h2>
+        <div className="flex justify-center">
+          <Bar options={options} data={data} />
+        </div>
+      </div>
+      <div
+        className="bg-white rounded-lg shadow-md p-6"
+        style={{ width: "25%" }}
+      >
+        <h2 className="text-xl font-semibold mb-4">Chat</h2>
+        {/* Your chat component goes here */}
       </div>
     </div>
   );
-}
+};
 
-export default Chart
+export default Chart;
