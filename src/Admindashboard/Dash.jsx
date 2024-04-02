@@ -17,6 +17,19 @@ const Dash = () => {
             <div className="px-10 py-4">
               <div className="flex items-center mb-4">
                 <HiUserGroup className="w-8 h-8 text-blue-500 mr-2" />
+                <div className="font-bold text-xl text-blue-500">Status</div>
+              </div>
+              <h2 className="text-3xl text-gray-800 font-semibold">34</h2>
+              <p className="text-gray-700 text-base">total status</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
+          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+            <div className="px-10 py-4">
+              <div className="flex items-center mb-4">
+                <HiUserGroup className="w-8 h-8 text-blue-500 mr-2" />
                 <div className="font-bold text-xl text-blue-500">Customers</div>
               </div>
               <h2 className="text-3xl text-gray-800 font-semibold">34,416</h2>
