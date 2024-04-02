@@ -52,7 +52,7 @@ const Chart = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
      
-        <div className="bg-white rounded-lg shadow-md p-6 w-[110vh]   h-[65vh]   ">
+        <div className="bg-white rounded-lg shadow-md p-6 w-[110vh]   h-[65vh] ml-10  ">
           <h2 className="text-xl font-semibold mb-4">Revenue Chart</h2>
           <div className="flex justify-center h-full">
             <Bar options={options} data={data} />
