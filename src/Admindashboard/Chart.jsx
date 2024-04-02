@@ -37,12 +37,12 @@ const Chart = () => {
     labels,
     datasets: [
       {
-        label: "Number of Patients",
+        label: "Number of customers",
         data: [20, 43, 10, 54, 8, 23, 40, 23, 56, 87, 44, 10],
         backgroundColor: "#3B82F6",
       },
       {
-        label: "Number of Patients",
+        label: "orders",
         data: [24, 26, 16, 10, 20, 40, 46, 49, 72, 34, 54, 60],
         backgroundColor: "#111827",
       },
@@ -59,9 +59,9 @@ const Chart = () => {
           </div>
         
       </div>
-      <div className="ml-20  bg-white rounded-lg shadow-md p-6 w-full xl:w-4/12 px-4  h-[65vh] " style={{marginLeft: '17rem'}}>
+      <div className="ml-20  bg-white rounded-lg shadow-lg p-6 w-full xl:w-4/12 px-4  h-[65vh] " style={{marginLeft: '17rem'}}>
         <h2 className="text-xl font-semibold mb-4">Chat</h2>
-        {/* Your chat component goes here */}
+         <p>hello how can i assist you </p>
       </div>
     </div>
   );

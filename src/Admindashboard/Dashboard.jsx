@@ -69,7 +69,7 @@ function Dashboard() {
         </div>
 
         {/* Content */}
-        <div className="flex-1 bg-gray-200 p-8">
+        <div className="flex-1 bg-white p-8">
           <div className="sidebar-right-side">
             <Outlet />
           </div>
