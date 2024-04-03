@@ -13,7 +13,7 @@ function Dashboard() {
   return (
     <div data-aos="zoom-in">
       <div className="flex flex-col md:flex-row h-screen">
-        {/* Sidebar */}
+      
         <div className="bg-gray-900 text-white w-full md:w-64 flex flex-col justify-between">
           <div className="p-4 flex items-center">
             <span className="text-xl font-bold">Beatha-BM</span>
