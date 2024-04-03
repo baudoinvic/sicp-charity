@@ -8,6 +8,8 @@ import {
 } from "react-icons/hi";
 import Chart from "./Chart";
 
+import { FaInstalod } from "react-icons/fa6";
+
 const Dash = () => {
   return (
     <div data-aos="zoom-in">
@@ -16,7 +18,7 @@ const Dash = () => {
           <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
             <div className="px-10 py-4">
               <div className="flex items-center mb-4">
-                <HiUserGroup className="w-8 h-8 text-blue-500 mr-2" />
+                <FaInstalod className="w-8 h-8 text-primary mr-2" />
                 <div className="font-bold text-xl text-blue-500">Status</div>
               </div>
               <h2 className="text-3xl text-gray-800 font-semibold">34</h2>
@@ -42,7 +44,7 @@ const Dash = () => {
           <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
             <div className="px-10 py-4">
               <div className="flex items-center mb-4">
-                <HiUser className="w-8 h-8 text-green-500 mr-2" />
+                <HiUser className="w-8 h-8 text-primary mr-2" />
                 <div className="font-bold text-xl text-green-500">Users</div>
               </div>
               <h2 className="text-3xl text-gray-800 font-semibold">100</h2>
@@ -55,7 +57,7 @@ const Dash = () => {
           <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
             <div className="px-10 py-4">
               <div className="flex items-center mb-4">
-                <HiShoppingCart className="w-8 h-8 text-blue-500 mr-2" />
+                <HiShoppingCart className="w-8 h-8 text-primary mr-2" />
                 <div className="font-bold text-xl text-blue-500">Orders</div>
               </div>
               <h2 className="text-3xl text-gray-800 font-semibold">20.4k</h2>
