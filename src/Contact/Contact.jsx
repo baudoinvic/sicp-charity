@@ -4,8 +4,53 @@ import Footer from '../components/Footer/Footer';
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
+import { ToastContainer,toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from 'axios';
+import { useState, useEffect } from "react";
+
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    
+  });
+
+  const handleChange = (e) => {
+    const fieldName = e.target.name;
+
+    setFormData({
+      ...formData,
+      [fieldName]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      let token = localStorage.getItem("token");
+      console.log("Request Data:", formData);
+
+      const response = await axios({
+        url: "https://beathaecommerceback-end.onrender.com/api/v1/contactus",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        data: JSON.stringify(formData),
+      });
+
+      console.log("Response Data:", response.data);
+      toast.success("Thank you for your feedback");
+    } catch (error) {
+      console.error("Error:", error.response ? error.response.data : error);
+      toast.error("Failed to send message. Please try again later.");
+    }
+  };
   return (
     <div className="contact-us">
       <Navbar />
@@ -25,7 +70,7 @@ const Contact = () => {
                 Leave us a message if you have a question we are here to help
                 you
               </span>
-              <form className='mt-5'>
+              <form onSubmit={handleSubmit} className='mt-5'>
                 <div className="mb-4">
                   <label htmlFor="firstname" className="block font-medium mb-1">
                     Firstname
@@ -34,6 +79,7 @@ const Contact = () => {
                     type="text"
                     id="firstname"
                     name="firstname"
+                    onChange={handleChange}
                     required
                     className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                   />
@@ -46,6 +92,7 @@ const Contact = () => {
                     type="text"
                     id="lastname"
                     name="lastname"
+                    onChange={handleChange}
                     required
                     className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                   />
@@ -58,6 +105,7 @@ const Contact = () => {
                     type="text"
                     id="email"
                     name="email"
+                    onChange={handleChange}
                     required
                     className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                   />
@@ -70,6 +118,7 @@ const Contact = () => {
                   Send message
                 </button>
               </form>
+              <ToastContainer />
               <div className="social-media flex mt-10">
                 <FaFacebook className='mr-5 text-2xl' />
                 <FaInstagram className='mr-5 text-2xl' />
