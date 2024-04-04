@@ -1,8 +1,53 @@
 import React from 'react'
 import { IoMdArrowBack } from "react-icons/io";
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { ToastContainer } from 'react-toastify';
+import { useState } from 'react';
 
 const Login = () => {
+ 
+   const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    const fieldName = e.target.name;
+
+    setFormData({
+      ...formData,
+      [fieldName]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      let token = localStorage.getItem("token");
+      console.log("Request Data:", formData);
+
+      const response = await axios({
+        url: "https://beathaecommerceback-end.onrender.com/api/v1/auth/login",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        data: JSON.stringify(formData),
+      });
+
+      console.log("Response Data:", response.data);
+      toast.success("login succssfully");
+    } catch (error) {
+      console.error("Error:", error.response ? error.response.data : error);
+      toast.error("Failed to log in. Please try again later.");
+    }
+  }
+
+
+
   return (
     <div>
       <div data-aos="zoom-in">
@@ -23,7 +68,7 @@ const Login = () => {
             </Link>
 
             <h1 className="text-2xl font-bold mb-4">Sign in</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label htmlFor="email" className="block font-medium mb-1">
                   Email
@@ -32,6 +77,7 @@ const Login = () => {
                   type="text"
                   id="email"
                   name="email"
+                   onChange={handleChange}
                   required
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                 />
@@ -41,9 +87,10 @@ const Login = () => {
                   Password
                 </label>
                 <input
-                  type="text"
+                  type="password"
                   id="password"
                   name="password"
+                  onChange={handleChange}
                   required
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                 />
@@ -69,6 +116,7 @@ const Login = () => {
                 </Link>
               </div>
             </form>
+            <ToastContainer />
           </div>
         </div>
       </div>
