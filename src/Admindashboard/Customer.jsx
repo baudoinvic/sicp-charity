@@ -32,6 +32,28 @@ useEffect(() => {
   fetchBillings();
 }, []);
 
+const handleDeleteBillings = async (id) => {
+  if (window.confirm("Are you sure you want to delete?")) {
+    let token = localStorage.getItem("token");
+    axios({
+      url: `https://beathaecommerceback-end.onrender.com/api/v1/billing/${id}`,
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((response) => {
+        toast.success("customer deleted successfully");
+        console.log(response, "Response");
+      })
+      .catch((error) => {
+        toast.error(error.response.data.message);
+        console.log(error, "Error");
+      });
+  }
+};
+
+
   
   return (
     
@@ -62,7 +84,7 @@ useEffect(() => {
                 className="text-2xl text-gray-900 mr-2"
                 style={{ cursor: "pointer" }}
               />
-              <MdDeleteOutline
+              <MdDeleteOutline onClick={() =>handleDeleteBillings(billings._id)}
                 className="text-2xl text-red-500"
                 style={{ cursor: "pointer" }}
               />
