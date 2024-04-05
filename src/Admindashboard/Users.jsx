@@ -52,7 +52,7 @@ const Users = () => {
             <span className="w-1/4">{user.email}</span>
             <span className="w-1/4">{user.location}</span>
             <div className="w-1/4 flex items-center">
-              <FaEdit className="text-2xl text-gray-900 mr-2" />
+              <FaEdit className="text-2xl text-gray-900 mr-2" style={{cursor: 'pointer'}} />
               <MdDeleteOutline
                 className="text-2xl text-red-500"
                 style={{ cursor: "pointer" }}
