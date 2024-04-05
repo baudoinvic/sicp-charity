@@ -1,27 +1,65 @@
 import React from 'react'
 import { MdDeleteOutline } from "react-icons/md";
-  import { FaEdit } from "react-icons/fa";
+import { FaEdit } from "react-icons/fa";
+import axios from "axios";
+import { useState,useEffect } from 'react';
+import { ToastContainer, toast } from "react-toastify";
 
 const Users = () => {
+
+  const[users, setUsers] = useState ([]);
+
+   const fetchUsers = () => {
+     let token = localStorage.getItem("token");
+     axios({
+       url: "https://beathaecommerceback-end.onrender.com/api/v1/users",
+       method: "GET",
+       headers: {
+         Authorization: `Bearer ${token}`,
+       },
+     })
+       .then((response) => {
+         const allUsers = response.data;
+         setUsers(allUsers);
+         toast.success(response.data.message);
+       })
+       .catch((error) => {
+         console.log(error);
+       });
+   };
+
+   useEffect(() => {
+     fetchUsers();
+   }, []);
+
+
+
+
   return (
+   
     <div data-aos="zoom-in" className="">
-        <span className='text-3xl font-bold'>Users</span>
-      <div class="flex justify-between items-center bg-gray-100 p-4 rounded-lg shadow-md mt-20">
-        <div class="flex">
-          <span class="font-bold mr-64">Firstname</span>
-          <span class="font-bold mr-64">Lastname</span>
-          <span class="font-bold mr-64">Email</span>
-          <span class="font-bold mr-64">Action</span>
+      <span className="text-3xl font-bold">Users</span>
+      <div class="bg-white p-4 rounded-lg  mt-10">
+        <div class="flex shadow-md mt-10">
+          <span class="font-bold w-1/4">Fullnames</span>
+          <span class="font-bold w-1/4">Email</span>
+          <span class="font-bold w-1/4">Location</span>
+          <span class="font-bold w-1/4">Action</span>
         </div>
-      </div>
-      <div class="flex ml-5 mt-10">
-        <span class=" mr-64">johnsonema</span>
-        <span class=" mr-64">ema</span>
-        <span class=" mr-64">emma@gmail.com</span>
-        <div class="flex items-center">
-          <FaEdit className='text-2xl text-gray-900' />
-          <MdDeleteOutline className='ml-4 text-2xl text-red-500' />
-        </div>
+        {users.map((user) => (
+          <div className="flex mt-10" key={user._id}>
+            <span className="w-1/4">{user.fullNames}</span>
+            <span className="w-1/4">{user.email}</span>
+            <span className="w-1/4">{user.location}</span>
+            <div className="w-1/4 flex items-center">
+              <FaEdit className="text-2xl text-gray-900 mr-2" />
+              <MdDeleteOutline
+                className="text-2xl text-red-500"
+                style={{ cursor: "pointer" }}
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
