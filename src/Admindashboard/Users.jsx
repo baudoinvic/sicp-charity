@@ -57,7 +57,6 @@ const Users = () => {
 
 
   return (
-   
     <div data-aos="zoom-in" className="">
       <span className="text-3xl font-bold">Users</span>
       <div class="bg-white p-4 rounded-lg  mt-10">
@@ -65,6 +64,7 @@ const Users = () => {
           <span class="font-bold w-1/4">Fullnames</span>
           <span class="font-bold w-1/4">Email</span>
           <span class="font-bold w-1/4">Location</span>
+          <span class="font-bold w-1/4">Phone</span>
           <span class="font-bold w-1/4">Action</span>
         </div>
         {users.map((user) => (
@@ -72,9 +72,14 @@ const Users = () => {
             <span className="w-1/4">{user.fullNames}</span>
             <span className="w-1/4">{user.email}</span>
             <span className="w-1/4">{user.location}</span>
+            <span className="w-1/4">{user.phoneNo}</span>
             <div className="w-1/4 flex items-center">
-              <FaEdit className="text-2xl text-gray-900 mr-2" style={{cursor: 'pointer'}} />
-              <MdDeleteOutline onClick={() => handleDeleteUser(user._id)}
+              <FaEdit
+                className="text-2xl text-gray-900 mr-2"
+                style={{ cursor: "pointer" }}
+              />
+              <MdDeleteOutline
+                onClick={() => handleDeleteUser(user._id)}
                 className="text-2xl text-red-500"
                 style={{ cursor: "pointer" }}
               />

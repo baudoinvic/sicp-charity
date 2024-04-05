@@ -34,8 +34,27 @@ const Product = () => {
     fetchProducts();
   }, []);
 
-  // Function to handle file input change
  
+  const handleDeleteProduct = async (id) => {
+    if (window.confirm("Are you sure you want to delete?")) {
+      let token = localStorage.getItem("token");
+      axios({
+        url: `https://beathaecommerceback-end.onrender.com/api/v1/product/deleteProduct/${id}`,
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+        .then((response) => {
+          toast.success("Product deleted successfully");
+          console.log(response, "Response");
+        })
+        .catch((error) => {
+          toast.error(error.response.data.message);
+          console.log(error, "Error");
+        });
+    }
+  };
 
   return (
     <div data-aos="zoom-in">
@@ -46,6 +65,7 @@ const Product = () => {
           <span className="font-bold w-1/4">Price</span>
           <span className="font-bold w-1/4">Stock quantity</span>
           <span className="font-bold w-1/4">Category</span>
+          <span className="font-bold w-1/4">Description</span>
           <span className="font-bold w-1/4">Product Image</span>{" "}
           {/* Added Product Image column */}
           <span className="font-bold w-1/4">Action</span>
@@ -56,6 +76,7 @@ const Product = () => {
             <span className="w-1/4">{product.price}</span>
             <span className="w-1/4">{product.stock_quantity}</span>
             <span className="w-1/4">{product.category}</span>
+            <span className="w-1/4">{product.description}</span>
             <span className="w-1/4">
               <img
                 src={product.productImage[0]}
@@ -69,15 +90,16 @@ const Product = () => {
                 style={{ cursor: "pointer" }}
               />
               <MdDeleteOutline
+                onClick={() => handleDeleteProduct(product._id)}
                 className="text-2xl text-red-500"
                 style={{ cursor: "pointer" }}
               />
-            
+              <ToastContainer />
             </div>
+          
           </div>
         ))}
       </div>
-      
     </div>
   );
 };
