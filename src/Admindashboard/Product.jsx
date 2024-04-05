@@ -57,9 +57,9 @@ const Product = () => {
   };
 
   return (
-    <div data-aos="zoom-in">
+    <div data-aos="zoom-in" className="mt-10">
       <span className="text-3xl font-bold">Products</span>
-      <div className="bg-white p-4 rounded-lg mt-10">
+      <div className="bg-white p-4 rounded-lg ">
         <div className="flex shadow-md mt-10">
           <span className="font-bold w-1/4">Productname</span>
           <span className="font-bold w-1/4">Price</span>

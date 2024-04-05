@@ -52,15 +52,11 @@ const handleDeleteBillings = async (id) => {
       });
   }
 };
-
-
   
   return (
-    
-
-    <div data-aos="zoom-in">
+    <div data-aos="zoom-in" className="mt-10">
       <span className="text-3xl font-bold">Customers</span>
-      <div className="bg-white p-4 rounded-lg mt-10">
+      <div className="bg-white p-4 rounded-lg ">
         <div className="flex shadow-md mt-10">
           <span className="font-bold w-1/4">Email</span>
           <span className="font-bold w-1/4">Country</span>
@@ -68,7 +64,6 @@ const handleDeleteBillings = async (id) => {
           <span className="font-bold w-1/4">Street</span>
           <span className="font-bold w-1/4">State</span>
           <span className="font-bold w-1/4">postcode</span>
-          {/* Added Product Image column */}
           <span className="font-bold w-1/4">Action</span>
         </div>
         {Billings.map((billings) => (
@@ -78,13 +73,14 @@ const handleDeleteBillings = async (id) => {
             <span className="w-1/4">{billings.street}</span>
             <span className="w-1/4">{billings.state}</span>
             <span className="w-1/4">{billings.postcode}</span>
-            
+
             <div className="w-1/4 flex items-center">
               <FaEdit
                 className="text-2xl text-gray-900 mr-2"
                 style={{ cursor: "pointer" }}
               />
-              <MdDeleteOutline onClick={() =>handleDeleteBillings(billings._id)}
+              <MdDeleteOutline
+                onClick={() => handleDeleteBillings(billings._id)}
                 className="text-2xl text-red-500"
                 style={{ cursor: "pointer" }}
               />

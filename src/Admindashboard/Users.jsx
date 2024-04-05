@@ -57,9 +57,9 @@ const Users = () => {
 
 
   return (
-    <div data-aos="zoom-in" className="">
+    <div data-aos="zoom-in" className="mt-10">
       <span className="text-3xl font-bold">Users</span>
-      <div class="bg-white p-4 rounded-lg  mt-10">
+      <div class="bg-white p-4 rounded-lg ">
         <div class="flex shadow-md mt-10">
           <span class="font-bold w-1/4">Fullnames</span>
           <span class="font-bold w-1/4">Email</span>
