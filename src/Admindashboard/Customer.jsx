@@ -1,28 +1,75 @@
 import React from 'react'
 import { MdDeleteOutline } from "react-icons/md";
   import { FaEdit } from "react-icons/fa";
+import axios from "axios";
+import { useEffect,useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 const Customer = () => {
+
+const [Billings, setBillings] = useState([]);
+
+const fetchBillings = () => {
+  let token = localStorage.getItem("token");
+  axios({
+    url: "https://beathaecommerceback-end.onrender.com/api/v1/billing",
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  })
+    .then((response) => {
+      const allBillings = response.data;
+      setBillings(allBillings);
+      toast.success(response.data.message);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+useEffect(() => {
+  fetchBillings();
+}, []);
+
+  
   return (
-    <div data-aos="zoom-in" className="">
+    
+
+    <div data-aos="zoom-in">
       <span className="text-3xl font-bold">Customers</span>
-      <div class="flex justify-between items-center bg-gray-100 p-4 rounded-lg shadow-md mt-20">
-        <div class="flex">
-          <span class="font-bold mr-32">Country</span>
-          <span class="font-bold mr-32">Town</span>
-          <span class="font-bold mr-32">Street Address</span>
-          <span class="font-bold mr-32">State</span>
-          <span class="font-bold mr-32">postcode</span>
-          <span class="font-bold mr-32">Email</span>
+      <div className="bg-white p-4 rounded-lg mt-10">
+        <div className="flex shadow-md mt-10">
+          <span className="font-bold w-1/4">Email</span>
+          <span className="font-bold w-1/4">Country</span>
+          <span className="font-bold w-1/4">Town</span>
+          <span className="font-bold w-1/4">Street</span>
+          <span className="font-bold w-1/4">State</span>
+          <span className="font-bold w-1/4">postcode</span>
+          {/* Added Product Image column */}
+          <span className="font-bold w-1/4">Action</span>
         </div>
-      </div>
-      <div class="flex ml-5 mt-10">
-        <span class="mr-32">Country</span>
-        <span class=" mr-32">Town</span>
-        <span class="mr-32">Street Address</span>
-        <span class=" mr-32">State</span>
-        <span class=" mr-32">postcode</span>
-        <span class=" mr-32">Email</span>
+        {Billings.map((billings) => (
+          <div className="flex mt-10" key={billings._id}>
+            <span className="w-1/4">{billings.email}</span>
+            <span className="w-1/4">{billings.country}</span>
+            <span className="w-1/4">{billings.street}</span>
+            <span className="w-1/4">{billings.state}</span>
+            <span className="w-1/4">{billings.postcode}</span>
+            
+            <div className="w-1/4 flex items-center">
+              <FaEdit
+                className="text-2xl text-gray-900 mr-2"
+                style={{ cursor: "pointer" }}
+              />
+              <MdDeleteOutline
+                className="text-2xl text-red-500"
+                style={{ cursor: "pointer" }}
+              />
+              <ToastContainer />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
