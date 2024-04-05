@@ -5,6 +5,7 @@ import axios from "axios";
 import { useState,useEffect } from 'react';
 import { ToastContainer, toast } from "react-toastify";
 
+
 const Users = () => {
 
   const[users, setUsers] = useState ([]);
@@ -32,6 +33,26 @@ const Users = () => {
      fetchUsers();
    }, []);
 
+      const handleDeleteUser = async (id) => {
+        if (window.confirm("Are you sure you want to delete?")) {
+          let token = localStorage.getItem("token");
+          axios({
+            url: `https://beathaecommerceback-end.onrender.com/api/v1/users/${id}`,
+            method: "DELETE",
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          })
+            .then((response) => {
+              toast.success("User deleted successfully");
+              console.log(response, "Response");
+            })
+            .catch((error) => {
+              toast.error(error.response.data.message);
+              console.log(error, "Error");
+            });
+        }
+      };
 
 
 
@@ -53,10 +74,11 @@ const Users = () => {
             <span className="w-1/4">{user.location}</span>
             <div className="w-1/4 flex items-center">
               <FaEdit className="text-2xl text-gray-900 mr-2" style={{cursor: 'pointer'}} />
-              <MdDeleteOutline
+              <MdDeleteOutline onClick={() => handleDeleteUser(user._id)}
                 className="text-2xl text-red-500"
                 style={{ cursor: "pointer" }}
               />
+              <ToastContainer />
             </div>
           </div>
         ))}
