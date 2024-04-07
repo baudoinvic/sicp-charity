@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
+import { Link } from 'react-router-dom';
 
 export default function Allproducts() {
     const ProductsData = [
@@ -12,6 +13,7 @@ export default function Allproducts() {
         color: "white",
         price: "17$.11",
         aosDelay: "0",
+        button: "Add to cart",
       },
       {
         id: 2,
@@ -21,6 +23,7 @@ export default function Allproducts() {
         color: "white",
         price: "17$.11",
         aosDelay: "200",
+        button: "Add to cart",
       },
       {
         id: 3,
@@ -30,6 +33,7 @@ export default function Allproducts() {
         color: "brown",
         price: "17$.11",
         aosDelay: "400",
+        button: "Add to cart",
       },
       {
         id: 4,
@@ -39,6 +43,7 @@ export default function Allproducts() {
         color: "Yellow",
         price: "17$.11",
         aosDelay: "600",
+        button: "Add to cart",
       },
     ];
   return (
@@ -82,8 +87,12 @@ export default function Allproducts() {
                     <span className="text-xl text-black font-bold">
                       {data.price}
                     </span>
-                    <div className="flex items-center gap-1"></div>
                   </div>
+                  <Link to="/Addcart">
+                    <button className="mt-4 bg-primary text-white py-2 px-4 rounded-md hover:bg-primary-dark transition duration-300 ease-in-out">
+                      {data.button}
+                    </button>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -111,6 +120,11 @@ export default function Allproducts() {
                     </span>
                     <div className="flex items-center gap-1"></div>
                   </div>
+                  <Link to="/Addcart">
+                    <button className="mt-4 bg-primary text-white py-2 px-4 rounded-md hover:bg-primary-dark transition duration-300 ease-in-out">
+                      {data.button}
+                    </button>
+                  </Link>
                 </div>
               ))}
             </div>
