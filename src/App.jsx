@@ -29,6 +29,7 @@ import Order from "./Admindashboard/Order";
 import Product from "./Admindashboard/Product";
 import Setting from "./Admindashboard/Setting";
 import Edituser from "./Admindashboard/Edituser";
+import Editproduct from "./Admindashboard/Editproduct";
 
 
  const CommonLayout = ({ children }) => {
@@ -94,12 +95,15 @@ const App = () => {
             <Route path="Order" element={<Order />} />
             <Route path="Product" element={<Product />} />
             <Route path="Setting" element={<Setting />} />
-            {/* <Route path="Edituser/id:" element={<Edituser />} /> */}
             <Route
               path="/Admindashboard/Dashboard/Edituser/:id"
               element={<Edituser />}
             />
           </Route>
+          <Route
+            path="/Admindashboard/Dashboard/Editproduct/:id"
+            element={<Editproduct />}
+          />
         </Routes>
       </BrowserRouter>
     </div>

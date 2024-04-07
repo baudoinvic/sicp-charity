@@ -5,6 +5,7 @@ import { FaEdit } from "react-icons/fa";
 import axios from "axios";
 import { useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 const Product = () => {
   const [Products, setProducts] = useState([]);
@@ -85,10 +86,12 @@ const Product = () => {
               />
             </span>
             <div className="w-1/4 flex items-center">
-              <FaEdit
-                className="text-2xl text-gray-900 mr-2"
-                style={{ cursor: "pointer" }}
-              />
+              <Link to="/Admindashboard/Dashboard/Editproduct/${product._id}">
+                <FaEdit
+                  className="text-2xl text-gray-900 mr-2"
+                  style={{ cursor: "pointer" }}
+                />
+              </Link>
               <MdDeleteOutline
                 onClick={() => handleDeleteProduct(product._id)}
                 className="text-2xl text-red-500"
@@ -96,7 +99,6 @@ const Product = () => {
               />
               <ToastContainer />
             </div>
-          
           </div>
         ))}
       </div>
