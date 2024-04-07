@@ -15,6 +15,7 @@ const ProductsData = [
     color: "white",
     price: "17$.11",
     aosDelay: "0",
+    button: "Add to cart",
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const ProductsData = [
     color: "white",
     price: "17$.11",
     aosDelay: "200",
+    button: "Add to cart",
   },
   {
     id: 3,
@@ -33,6 +35,7 @@ const ProductsData = [
     color: "brown",
     price: "17$.11",
     aosDelay: "400",
+    button: "Add to cart",
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ const ProductsData = [
     color: "Yellow",
     price: "17$.11",
     aosDelay: "600",
+    button: "Add to cart",
   },
 ];
 
@@ -84,8 +88,10 @@ const Products = () => {
                   <span className="text-xl text-black font-bold">
                     {data.price}
                   </span>
-                  <div className="flex items-center gap-1"></div>
                 </div>
+                <button className="mt-4 bg-primary text-white py-2 px-4 rounded-md hover:bg-primary-dark transition duration-300 ease-in-out">
+                  {data.button}
+                </button>
               </div>
             ))}
           </div>

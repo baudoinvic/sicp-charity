@@ -13,11 +13,74 @@ const Editproduct = () => {
   const [description, setDescription] = useState("");
   const [productimage, setProductImage] = useState("");
 
+
+const [Products, setProducts] = useState([]);
+
+const fetchProducts = () => {
+  let token = localStorage.getItem("token");
+  axios({
+    url: "https://beathaecommerceback-end.onrender.com/api/v1/product/viewAllProd",
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  })
+    .then((response) => {
+      const productsData = response.data.products;
+      setProducts(productsData);
+      toast.success(response.data.message);
+    })
+    .catch((error) => {
+      console.error("Error fetching products:", error);
+      toast.error("Error fetching products. Please try again later.");
+    });
+};
+
+useEffect(() => {
+  fetchProducts();
+}, []);
+
+
+
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here
-  };
+     const data = {
+       productName: productname,
+       price: price,
+       stockQuantity: stockquanty,
+       category: category,
+       description: description,
+       productImage: productimage,
+     };
+     axios({
+      method: "PUT",
+      url: `https://holiday-planner-4lnj.onrender.com/api/v1/auth/users/update/${userId}`,
+      data: data,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((response) => {
+        console.log(response);
+        toast.success("user is successfully edited");
+        setTimeout(() => {
+          navigate("/Admindashboard/Dashboard/Users");
+        }, 3000);
+      })
 
+      .catch((error) => {
+        console.log(error);
+        toast.error(error.message);
+      })
+
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
+ 
   return (
     <div>
       <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-md shadow-md">
