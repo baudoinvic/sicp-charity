@@ -4,6 +4,7 @@ import { FaEdit } from "react-icons/fa";
 import axios from "axios";
 import { useState,useEffect } from 'react';
 import { ToastContainer, toast } from "react-toastify";
+import { Link } from 'react-router-dom';
 
 
 const Users = () => {
@@ -74,10 +75,13 @@ const Users = () => {
             <span className="w-1/4">{user.location}</span>
             <span className="w-1/4">{user.phoneNo}</span>
             <div className="w-1/4 flex items-center">
-              <FaEdit
-                className="text-2xl text-gray-900 mr-2"
-                style={{ cursor: "pointer" }}
-              />
+              <Link>
+                <FaEdit
+                  className="text-2xl text-gray-900 mr-2"
+                  style={{ cursor: "pointer" }}
+                />
+              </Link>
+
               <MdDeleteOutline
                 onClick={() => handleDeleteUser(user._id)}
                 className="text-2xl text-red-500"
