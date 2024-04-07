@@ -97,7 +97,7 @@ const Product = () => {
                 className="text-2xl text-red-500"
                 style={{ cursor: "pointer" }}
               />
-              <ToastContainer />
+              {/* <ToastContainer /> */}
             </div>
           </div>
         ))}
