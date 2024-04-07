@@ -58,9 +58,12 @@ const Addcart = () => {
               <span className="font-semibold">$17.70</span>
             </div>
             <div className="flex justify-between pt-4">
-              <button className="bg-gray-900 text-white px-4 py-2 rounded-md">
-                Continue Shopping
-              </button>
+              <Link to="">
+                <button className="bg-gray-900 text-white px-4 py-2 rounded-md">
+                  Continue Shopping
+                </button>
+              </Link>
+
               <button className="bg-red-500 text-white px-4 py-2 rounded-md">
                 Clear Cart
               </button>

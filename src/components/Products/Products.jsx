@@ -89,9 +89,12 @@ const Products = () => {
                     {data.price}
                   </span>
                 </div>
-                <button className="mt-4 bg-primary text-white py-2 px-4 rounded-md hover:bg-primary-dark transition duration-300 ease-in-out">
-                  {data.button}
-                </button>
+
+                <Link to="/Addcart">
+                  <button className="mt-4 bg-primary text-white py-2 px-4 rounded-md hover:bg-primary-dark transition duration-300 ease-in-out">
+                    {data.button}
+                  </button>
+                </Link>
               </div>
             ))}
           </div>
