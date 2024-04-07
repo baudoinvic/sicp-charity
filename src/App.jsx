@@ -94,7 +94,11 @@ const App = () => {
             <Route path="Order" element={<Order />} />
             <Route path="Product" element={<Product />} />
             <Route path="Setting" element={<Setting />} />
-            <Route path="Edituser/:" element={<Edituser />} />
+            {/* <Route path="Edituser/id:" element={<Edituser />} /> */}
+            <Route
+              path="/Admindashboard/Dashboard/Edituser/:id"
+              element={<Edituser />}
+            />
           </Route>
         </Routes>
       </BrowserRouter>
