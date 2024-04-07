@@ -1,16 +1,82 @@
-import React, { useState } from "react";
+
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Edituser = () => {
-  
+ 
+  const navigate = useNavigate();
+
+  const [isLoading, setIsLoading] = useState(false);
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [location, setLocation] = useState("");
-  const [phone, setPhone] = useState("");
+  const [phoneNo, setPhoneNo] = useState("");
 
+    const [users, setUsers] = useState([]);
+
+    const fetchUsers = () => {
+      let token = localStorage.getItem("token");
+      axios({
+        url: "https://beathaecommerceback-end.onrender.com/api/v1/users",
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+        .then((response) => {
+          const allUsers = response.data;
+          setUsers(allUsers);
+          toast.success(response.data.message);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    };
+
+    useEffect(() => {
+      fetchUsers();
+    }, []);
+
+
+    
 
   const handleSubmit = (e) => {
     e.preventDefault();
-   
+
+    const data = {
+      fullName: fullName,
+      email: email,
+      location: location,
+      phoneNo: phoneNo,
+    };
+
+    axios({
+      method: "PUT",
+      url: `https://holiday-planner-4lnj.onrender.com/api/v1/auth/users/update/${userId}`,
+      data: data,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((response) => {
+        console.log(response);
+        toast.success("user is successfully edited");
+        setTimeout(() => {
+          navigate("/Admindashboard/Dashboard/Users");
+        }, 3000);
+      })
+
+      .catch((error) => {
+        console.log(error);
+        toast.error(error.message);
+      })
+
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -80,17 +146,19 @@ const Edituser = () => {
             id="phone"
             placeholder="Enter your phone number"
             className="w-full border border-gray rounded-md px-4 py-2 focus:outline-none focus:border-blue-500"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+            value={phoneNo}
+            onChange={(e) => setPhoneNo(e.target.value)}
           />
         </div>
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600 transition duration-300"
+          className="w-full bg-primary text-white rounded-md px-4 py-2 hover:bg-blue-600 transition duration-300"
         >
-          Save Changes
+          update user
+          {isLoading && <div className="loader-spinner">Loading...</div>}
         </button>
       </form>
+      <ToastContainer />
     </div>
   );
 };
