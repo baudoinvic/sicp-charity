@@ -97,6 +97,7 @@ const Edituser = () => {
             type="text"
             id="fullName"
             placeholder="Enter your full name"
+            required
             className="w-full border border-gray rounded-md px-4 py-2 focus:outline-none focus:border-blue-500"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
@@ -113,6 +114,7 @@ const Edituser = () => {
             type="email"
             id="email"
             placeholder="Enter your email"
+            required
             className="w-full border border-gray rounded-md px-4 py-2 focus:outline-none focus:border-blue-500"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -129,6 +131,7 @@ const Edituser = () => {
             type="text"
             id="location"
             placeholder="Enter your location"
+             required
             className="w-full border border-gray rounded-md px-4 py-2 focus:outline-none focus:border-blue-500"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
@@ -145,6 +148,7 @@ const Edituser = () => {
             type="tel"
             id="phone"
             placeholder="Enter your phone number"
+            required
             className="w-full border border-gray rounded-md px-4 py-2 focus:outline-none focus:border-blue-500"
             value={phoneNo}
             onChange={(e) => setPhoneNo(e.target.value)}
@@ -152,7 +156,7 @@ const Edituser = () => {
         </div>
         <button
           type="submit"
-          className="w-full bg-primary text-white rounded-md px-4 py-2 hover:bg-blue-600 transition duration-300"
+          className="w-full bg-primary text-white rounded-md px-4 py-2 hover:bg-gray-900 transition duration-300"
         >
           update user
           {isLoading && <div className="loader-spinner">Loading...</div>}
