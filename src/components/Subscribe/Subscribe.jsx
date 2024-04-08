@@ -31,11 +31,10 @@ const Subscribe = () => {
               placeholder="Enter your email"
               required
               className="w-full p-3"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+             
             />
             <button
-              onClick={handleSubmit}
+              
               className="bg-white text-black px-4 py-2 rounded-md"
             >
               Submit
