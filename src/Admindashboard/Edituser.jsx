@@ -2,11 +2,13 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Edituser = () => {
- 
+   
   const navigate = useNavigate();
+   const params = useParams();
+   let userId = params.id; 
 
   const [isLoading, setIsLoading] = useState(false);
   const [fullName, setFullName] = useState("");
@@ -15,6 +17,7 @@ const Edituser = () => {
   const [phoneNo, setPhoneNo] = useState("");
 
     const [users, setUsers] = useState([]);
+   
 
     const fetchUsers = () => {
       let token = localStorage.getItem("token");
@@ -45,6 +48,9 @@ const Edituser = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+      let token = localStorage.getItem("token");
+     
+
     const data = {
       fullName: fullName,
       email: email,
@@ -54,7 +60,7 @@ const Edituser = () => {
 
     axios({
       method: "PUT",
-      url: `https://holiday-planner-4lnj.onrender.com/api/v1/auth/users/update/${userId}`,
+      url: `'https://beathaecommerceback-end.onrender.com/api/v1/users/${userId}`,
       data: data,
       headers: {
         "Content-Type": "application/json",
