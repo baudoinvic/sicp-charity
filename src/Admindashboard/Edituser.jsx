@@ -7,8 +7,9 @@ import { useNavigate, useParams } from "react-router-dom";
 const Edituser = () => {
    
   const navigate = useNavigate();
-   const params = useParams();
-   let userId = params.id; 
+ const { id } = useParams();
+ const [userId, setUserId] = useState(id);
+
 
   const [isLoading, setIsLoading] = useState(false);
   const [fullName, setFullName] = useState("");
