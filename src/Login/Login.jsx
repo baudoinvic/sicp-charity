@@ -8,7 +8,7 @@ import { useState } from 'react';
 const Login = () => {
  
    const [formData, setFormData] = useState({
-    email: "",
+    username: "",
     password: "",
   });
 
@@ -70,13 +70,13 @@ const Login = () => {
             <h1 className="text-2xl font-bold mb-4">Sign in</h1>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
-                <label htmlFor="email" className="block font-medium mb-1">
-                  Email
+                <label htmlFor="username" className="block font-medium mb-1">
+                  username
                 </label>
                 <input
                   type="text"
-                  id="email"
-                  name="email"
+                  id="username"
+                  name="username"
                    onChange={handleChange}
                   required
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
