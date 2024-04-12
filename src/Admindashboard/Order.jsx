@@ -13,7 +13,7 @@ const Order = () => {
  const fetchOrders = () => {
    let token = localStorage.getItem("token");
    axios({
-     url: "https://beathaecommerceback-end.onrender.com/api/v1/users",
+     url: "https://beathaecommerceback-end.onrender.com/api/v1/orders",
      method: "GET",
      headers: {
        Authorization: `Bearer ${token}`,
