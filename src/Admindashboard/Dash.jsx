@@ -15,6 +15,9 @@ import { ToastContainer, toast } from "react-toastify";
 
 const Dash = () => {
 
+const [Products, setProducts] = useState([]);
+ 
+
 const [users, setUsers] = useState([]);
 
 const fetchUsers = () => {
@@ -66,6 +69,29 @@ useEffect(() => {
   fetchBillings();
 }, []);
 
+ const fetchProducts = () => {
+   let token = localStorage.getItem("token");
+   axios({
+     url: "https://beathaecommerceback-end.onrender.com/api/v1/product/viewAllProd",
+     method: "GET",
+     headers: {
+       Authorization: `Bearer ${token}`,
+     },
+   })
+     .then((response) => {
+       const productsData = response.data.products;
+       setProducts(productsData);
+       toast.success(response.data.message);
+     })
+     .catch((error) => {
+       console.error("Error fetching products:", error);
+       toast.error("Error fetching products. Please try again later.");
+     });
+ };
+
+ useEffect(() => {
+   fetchProducts();
+ }, []);
 
 
   return (
@@ -78,7 +104,7 @@ useEffect(() => {
                 <FaInstalod className="w-8 h-8 text-primary mr-2" />
                 <div className="font-bold text-xl text-blue-500">Products</div>
               </div>
-              <h2 className="text-3xl text-gray-800 font-semibold">34</h2>
+              <h2 className="text-3xl text-gray-800 font-semibold">{Products.length}</h2>
               <p className="text-gray-700 text-base">total products</p>
             </div>
           </div>
