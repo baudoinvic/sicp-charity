@@ -46,8 +46,6 @@ const Login = () => {
     }
   }
 
-
-
   return (
     <div>
       <div data-aos="zoom-in">
