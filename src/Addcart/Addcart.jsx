@@ -55,8 +55,14 @@ useEffect(() => {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-semibold">Product Name</span>
-                <span className="text-sm">Size: 50ml</span>
+                {/* <span className="font-semibold">{productName.length}</span>
+                <span className="text-sm">{Description.length}</span> */}
+                <span className="font-semibold">
+                  {productName && productName.length}
+                </span>
+                <span className="text-sm">
+                  {Description && Description.length}
+                </span>
               </div>
               <div className="flex items-center ml-auto">
                 <button className="px-2 py-1 border rounded-md mr-2">-</button>
