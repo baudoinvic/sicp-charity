@@ -5,10 +5,13 @@ import Subscribe from '../components/Subscribe/Subscribe';
 import { Link } from 'react-router-dom';
 import { useEffect,useState } from 'react';
 import axios from 'axios';
+import Product from '../Admindashboard/Product';
 
 const Addcart = () => {
-
+ const [Products, setProducts] = useState([]);
 const [cart, setCart] = useState([]);
+ 
+
 
 const fetchCart = () => {
   let token = localStorage.getItem("token");
@@ -54,15 +57,13 @@ useEffect(() => {
                   className="w-full h-full object-cover rounded-md mr-4"
                 />
               </div>
-              <div className="flex flex-col">
-                {/* <span className="font-semibold">{productName.length}</span>
-                <span className="text-sm">{Description.length}</span> */}
-                <span className="font-semibold">
-                  {productName && productName.length}
-                </span>
-                <span className="text-sm">
-                  {Description && Description.length}
-                </span>
+              <div className="flex flex-col" >
+                {Products.map((product, index) => (
+                  <div key={index}>
+                    <span className="font-semibold">{product.productName}</span>
+                    <span className="text-sm">{product.description}</span>
+                  </div>
+                ))}
               </div>
               <div className="flex items-center ml-auto">
                 <button className="px-2 py-1 border rounded-md mr-2">-</button>
