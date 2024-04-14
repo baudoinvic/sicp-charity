@@ -3,8 +3,35 @@ import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar/Navbar';
 import Subscribe from '../components/Subscribe/Subscribe';
 import { Link } from 'react-router-dom';
+import { useEffect,useState } from 'react';
+import axios from 'axios';
 
 const Addcart = () => {
+
+const [cart, setCart] = useState([]);
+
+const fetchCart = () => {
+  let token = localStorage.getItem("token");
+  axios({
+    url: "https://beathaecommerceback-end.onrender.com/api/v1/cart",
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  })
+    .then((response) => {
+      const allCart = response.data;
+      setCart(allCart);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+useEffect(() => {
+  fetchCart();
+}, []);
+
     
   return (
     <>
