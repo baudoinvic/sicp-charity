@@ -68,7 +68,7 @@ const Product = () => {
           <span className="font-bold w-1/4">Category</span>
           <span className="font-bold w-1/4">Description</span>
           <span className="font-bold w-1/4">Product Image</span>{" "}
-          {/* Added Product Image column */}
+         
           <span className="font-bold w-1/4">Action</span>
         </div>
         {Products.map((product) => (
@@ -97,7 +97,7 @@ const Product = () => {
                 className="text-2xl text-red-500"
                 style={{ cursor: "pointer" }}
               />
-              {/* <ToastContainer /> */}
+           
             </div>
           </div>
         ))}
