@@ -117,7 +117,7 @@ useEffect(() => {
               <span className="font-semibold">Select Country</span>
               <select className="block w-full border rounded-md py-1 px-2 mt-2">
                 <option>United States</option>
-                {/* Add more countries as needed */}
+              
               </select>
             </div>
             <div className="flex justify-between py-4">
