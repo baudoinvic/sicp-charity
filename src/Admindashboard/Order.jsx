@@ -54,12 +54,7 @@ const Order = () => {
             <span className="w-1/4">{order.amount}</span>
             <span className="w-1/4">{order.numberOfItems}</span>
             <span className="w-1/4">{order.paymentStatus}</span>
-            {/* <span
-              className="w-1/8 bg-green-500 py-1 px-2 rounded-lg text-white text-center"
-              style={{ cursor: "pointer" }}
-            >
-              View
-            </span> */}
+           
           </div>
         ))}
       </div>
