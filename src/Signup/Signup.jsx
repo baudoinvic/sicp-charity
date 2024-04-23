@@ -6,7 +6,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 
 function Signup() {
-  const navigate = useNavigate(); // Hook for programmatic navigation
+  const navigate = useNavigate(); 
 
   const [formData, setFormData] = useState({
     email: "",
@@ -38,10 +38,10 @@ function Signup() {
       console.log("Response Data:", response.data);
       toast.success("User registered successfully");
 
-      // Delay navigation after showing success message
+      
       setTimeout(() => {
         navigate("/login");
-      }, 2000); // Delay in milliseconds
+      }, 2000); 
     } catch (error) {
       console.error("Error:", error.response ? error.response.data : error);
       toast.error("Failed to register. Please try again later.");
