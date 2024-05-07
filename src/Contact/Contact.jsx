@@ -105,6 +105,7 @@ const Contact = () => {
                     type="text"
                     id="email"
                     name="email"
+                    onChange={handleChange}
                     value={formData.email}
                     required
                     className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
