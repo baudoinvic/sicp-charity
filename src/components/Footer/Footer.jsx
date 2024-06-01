@@ -28,13 +28,18 @@ const FooterLinks = [
     link: "/#about",
   },
   {
+    title: "What we do",
+    link: "",
+  },
+  {
+    title: "Donate",
+    link: "/#about",
+  },
+  {
     title: "Contact",
     link: "/#contact",
   },
-  {
-    title: "Blog",
-    link: "/#blog",
-  },
+ 
 ];
 
 const Footer = () => {
@@ -46,11 +51,9 @@ const Footer = () => {
           <div className="py-8 px-4">
             <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
               <img src={footerLogo} alt="" className="max-w-[50px]" />
-              Beatha
+              Auction App
             </h1>
-            <p>
-              we provide the goods products for our clients specially oil and parfum
-            </p>
+            <p>Build and sell & collect digital items</p>
           </div>
 
           {/* Footer Links */}
@@ -107,11 +110,11 @@ const Footer = () => {
               <div className="mt-6">
                 <div className="flex items-center gap-3">
                   <FaLocationArrow />
-                  <p>Kigali rwanda kg 540 street</p>
+                  <p>Kigali Rwanda kg 540 street</p>
                 </div>
                 <div className="flex items-center gap-3 mt-3">
                   <FaMobileAlt />
-                  <p>+61403748654</p>
+                  <p>+(250)725151768</p>
                 </div>
               </div>
             </div>

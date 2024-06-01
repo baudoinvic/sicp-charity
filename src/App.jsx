@@ -13,7 +13,6 @@ import Popup from "./components/Popup/Popup";
 
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Allproducts from "./components/Products/Allproducts";
-import Addcart from "./Addcart/Addcart";
 import Checkout from "./components/Checkout/Checkout";
 import Login from "./Login/Login";
 import Signup from "./Signup/Signup";
@@ -30,6 +29,7 @@ import Product from "./Admindashboard/Product";
 import Setting from "./Admindashboard/Setting";
 import Edituser from "./Admindashboard/Edituser";
 import Editproduct from "./Admindashboard/Editproduct";
+import Bidding from "./components/Bidding/Bidding";
 
 
  const CommonLayout = ({ children }) => {
@@ -78,11 +78,11 @@ const App = () => {
             }
           />
           <Route path="/Allproducts" element={<Allproducts />} />
-          <Route path="/Addcart" element={<Addcart />} />
           <Route path="/Checkout" element={<Checkout />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="/Bidding" element={<Bidding />} />
           <Route path="/About" element={<About />} />
           <Route path="/Payment" element={<Payment />} />
 

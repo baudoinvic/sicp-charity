@@ -80,9 +80,9 @@ const Testimonials = () => {
             Testimonials
           </h1>
           <p data-aos="fade-up" className="text-xs text-gray-400">
-            i'm so proude to work with beatha business i bought the products
-            many time and got the original one at my home they are the best one
-            to work with
+            Explore on the world's best & largest Bidding marketplace with our
+            beautiful Bidding products. We want to be a part of your smile,
+            success and future growth.
           </p>
         </div>
 
