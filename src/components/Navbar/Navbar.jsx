@@ -20,10 +20,19 @@ const Menu = [
   },
   {
     id: 3,
+    name: "What we do",
+    link: "",
+  },
+  {
+    id: 4,
+    name: "Donate",
+    link: "",
+  },
+  {
+    id: 5,
     name: "Contact us",
     link: "/Contact",
   },
-  
 ];
 
 const DropdownLinks = [
@@ -53,7 +62,7 @@ const Navbar = ({ handleOrderPopup }) => {
           <div>
             <a href="#" className="font-bold text-2xl sm:text-3xl flex gap-2">
               <img src={Logo} alt="Logo" className="w-10" />
-              Beatha
+             Auction App
             </a>
           </div>
 
@@ -76,17 +85,11 @@ const Navbar = ({ handleOrderPopup }) => {
             </Link>
 
             {/* order button */}
-            <Link to="/Addcart">
-              <button
-                onClick={() => handleOrderPopup()}
-                className="bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white  py-1 px-4 rounded-full flex items-center gap-3 group"
-              >
-                <span className="group-hover:block hidden transition-all duration-200">
-                  Cart
-                </span>
-                <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
+            {/* <Link to="">
+              <button>
+                Donate
               </button>
-            </Link>
+            </Link> */}
 
             {/* Darkmode Switch */}
             <div>

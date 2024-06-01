@@ -9,23 +9,23 @@ const ImageList = [
   {
     id: 1,
     img: "https://media.istockphoto.com/id/657258090/vector/cosmetic-vials-for-essential-serum.jpg?s=612x612&w=0&k=20&c=cFa-hw5ROWQ9ABtk_ki-dNyNYXfTRA-vu_cH8Na5rIM=",
-    title: "Upto 50% off on all Men's oil",
+    title: "Build, sell & collect digital items..",
     description:
-      "our Business is offering the new products of oil and parfum we sell online and we deliver as well to our clients.",
+      "Let's bid on the products together. We always assist our customers in placing bids, as a way to support charitable donations",
   },
   {
     id: 2,
     img: "https://itapelobeautystore.com/cdn/shop/products/20220414_141628.jpg?v=1649975103&width=1946",
-    title: "30% off on all of our lotion on sale",
+    title: "Enjoy 30% off on selected items up for auction",
     description:
-      "we always have the purcentages of our clients who bought our products per and now we are on 30% of lotion selling online ",
+      "We are excited to offer this special discount to our valued customers. Join us and place your bids now to take advantage of this limited-time offer and support our charitable initiatives! ",
   },
   {
     id: 3,
     img: "https://www.destinodebelleza.es/assets/images/product_images/mon-paris-edp-1640343478.png",
-    title: "70% off on all Products Sold",
+    title: "Enjoy 70% off on all products sold",
     description:
-      "above 60% our clients has already subscribe to our newsletter to get the new feature of our products .",
+      "Over 60% of our clients have already subscribed to our newsletter to stay updated on our latest product features and exclusive offers .",
   },
 ];
 
