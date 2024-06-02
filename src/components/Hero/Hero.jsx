@@ -8,21 +8,21 @@ import { Link } from "react-router-dom";
 const ImageList = [
   {
     id: 1,
-    img: "https://media.istockphoto.com/id/657258090/vector/cosmetic-vials-for-essential-serum.jpg?s=612x612&w=0&k=20&c=cFa-hw5ROWQ9ABtk_ki-dNyNYXfTRA-vu_cH8Na5rIM=",
+    img: "https://bidout-wp.b-cdn.net/wp-content/themes/bidout/includes/theme-options/images/others/breadcrumb.png",
     title: "Build, sell & collect digital items..",
     description:
       "Let's bid on the products together. We always assist our customers in placing bids, as a way to support charitable donations",
   },
   {
     id: 2,
-    img: "https://itapelobeautystore.com/cdn/shop/products/20220414_141628.jpg?v=1649975103&width=1946",
+    img: "https://media.istockphoto.com/id/1396980121/vector/real-estate-auctions-and-bidding-vector-concept.jpg?s=612x612&w=0&k=20&c=t7igFdum2uoBSbWYv6xjLYFL7IUWKKkgK4RJEzqf2-k=",
     title: "Enjoy 30% off on selected items up for auction",
     description:
       "We are excited to offer this special discount to our valued customers. Join us and place your bids now to take advantage of this limited-time offer and support our charitable initiatives! ",
   },
   {
     id: 3,
-    img: "https://www.destinodebelleza.es/assets/images/product_images/mon-paris-edp-1640343478.png",
+    img: "https://media.istockphoto.com/id/1389452340/vector/online-auction-concept-banner-male-auctioneer-sells-works-of-art-group-of-various-art-buyers.jpg?s=612x612&w=0&k=20&c=B4tPqG0cmjdDR8g5RUkkulLH1Pv9suOkC-BSG1fCWXs=",
     title: "Enjoy 70% off on all products sold",
     description:
       "Over 60% of our clients have already subscribed to our newsletter to stay updated on our latest product features and exclusive offers .",

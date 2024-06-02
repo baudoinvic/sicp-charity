@@ -11,34 +11,30 @@ const About = () => {
           {/* Left Side - Image */}
           <div className="w-full md:w-1/2 mb-4 md:mb-0">
             <img
-              src="https://t4.ftcdn.net/jpg/06/50/75/23/360_F_650752340_svHnkTNmdl7ISCeJMRrnyu9ZfDXLAkGT.webp"
+              src="https://media.istockphoto.com/id/1396980121/vector/real-estate-auctions-and-bidding-vector-concept.jpg?s=612x612&w=0&k=20&c=t7igFdum2uoBSbWYv6xjLYFL7IUWKKkgK4RJEzqf2-k="
               alt="Placeholder"
-              className="w-full h-auto rounded-lg shadow-md"
+              className=" h-auto rounded-lg shadow-md"
             />
           </div>
 
           {/* Right Side - Text */}
           <div className="w-full md:w-1/2 md:ml-8 mt-4 md:mt-0">
-            <h2 className="text-3xl font-bold mb-4">About beatha business</h2>
+            <h3>WHO WE ARE!</h3>
+            <h2 className="text-3xl font-bold mb-4">
+              We Work for Your Incredible Success
+            </h2>
             <p className="text-gray-700 leading-relaxed">
-              Welcome to Beatha Business where we provide quality products to
-              our customers. We offer a variety of products including oils and
-              perfumes. Our popular products include{" "}
-              <span className="text-primary">QIE Paris lotion</span>,{" "}
-              <span className="text-primary">QIE Paris perfume</span>,{" "}
-              <span className="text-primary">
-                PR Francoise Bredon Paris lotion
-              </span>
-              , and{" "}
-              <span className="text-primary">
-                PR Francoise Bredon Paris perfume
-              </span>
-              . This is our main product menu. We welcome you all to our
-              platform to enjoy our quality products. We offer oils for both men
-              and women.
+              Auction sites present consumers with a thrilling, competitive way
+              to buy the goods
+              <br /> and services they need most. But getting your own auction
+              site up and running has
+              <br /> always required learning complex coding languages, or
+              hiring an expensive design firm for thousands of dollars and
+              months of work.
             </p>
           </div>
         </div>
+       
       </div>
       <Footer />
     </div>

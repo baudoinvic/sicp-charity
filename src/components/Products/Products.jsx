@@ -9,45 +9,40 @@ import { Link } from "react-router-dom";
 const ProductsData = [
   {
     id: 1,
-    img: "https://www.beautyflex.co.uk/cdn/shop/products/QEI_Active_Harmonie_reparateur.png?v=1610910556",
-    title: "QIE Paris lotion",
+    img: "https://bidout-wp.b-cdn.net/wp-content/uploads/2022/11/markus-spiske-fpTVkXjxL_Y-unsplash-1.jpg",
+    title: "Macbook Pro 2024",
     rating: 5.0,
-    color: "white",
-    price: "17$.11",
+    price: "Current bid: 500$",
     aosDelay: "0",
-    button: "Add to cart",
+    button: "Place A Bid",
   },
   {
     id: 2,
-    img: "https://image.harrods.com/kilian-paris-good-girl-gone-bad-extreme-eau-de-parfum-50ml_15391581_27037165_2048.jpg",
-    title: "QIE Paris Parfum",
+    img: "https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-1.jpg",
+    title: "Black Analogue Watch",
     rating: 4.5,
-    color: "white",
-    price: "17$.11",
+    price: "Current bid: 100$",
     aosDelay: "200",
-    button: "Add to cart",
+    button: "Place A Bid",
   },
   {
     id: 3,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShGjGN3yd0QycPTsiiZ6Qxcn3I9utRKIBDAw&usqp=CAU",
-    title: "Pr francoise Bedon paris oil",
+    img: "https://media.istockphoto.com/id/610772852/photo/alarm-clock-blue-isolated-background.jpg?s=612x612&w=0&k=20&c=BCJiaRy9FsmcnOPmKRX4xH7fz7v3xPVX8OIFA4kWllg=",
+    title: "Alarm Clock ",
     rating: 4.7,
-    color: "brown",
-    price: "17$.11",
+    price: "Current bid: 70$",
     aosDelay: "400",
-    button: "Add to cart",
+    button: "place A Bid",
   },
   {
     id: 4,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_6hCxUrS3TCsoy0Qcghkq415TPunGONC8PQ&usqp=CAU",
-    title: "Pr francoise Bedon paris parfum",
+    img: "https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-14.jpg",
+    title: "Couple Wedding Ring",
     rating: 4.4,
-    color: "Yellow",
-    price: "17$.11",
+    price: "Current bid: 6,020.0$",
     aosDelay: "600",
-    button: "Add to cart",
+    button: "Place A Bid",
   },
-  
 ];
 
 const Products = () => {
@@ -59,11 +54,13 @@ const Products = () => {
           <p data-aos="fade-up" className="text-sm text-primary">
             Top Selling Products for you
           </p>
-          <h1 data-aos="fade-up" className="text-3xl font-bold">
-            Our Popular Products
+          <h1 data-aos="fade-up" className="text-5xl font-bold">
+            Live Auction
           </h1>
-          <p data-aos="fade-up" className="text-lg text-gray-400">
-            we are here to help you with our Popular products don't miss it out
+          <p data-aos="fade-up" className="text-lg text-gray-500 mt-5">
+            Explore on the world's best & largest Bidding marketplace with our
+            beautiful Bidding products. We want to be a part of your smile,
+            success and future growth.
           </p>
         </div>
         {/* Body section */}
@@ -135,8 +132,8 @@ const Products = () => {
           {/* view all button */}
           <Link to="/Allproducts">
             <div className="flex justify-center">
-              <button className="text-center mt-10 cursor-pointer bg-primary text-white py-2 px-5 rounded-md">
-                View All Products
+              <button className="text-center mt-10 cursor-pointer bg-primary text-white py-2 px-10 rounded-md">
+                View All 
               </button>
             </div>
           </Link>

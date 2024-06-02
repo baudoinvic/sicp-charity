@@ -57,11 +57,12 @@ export default function Allproducts() {
               Top Selling Products for you
             </p>
             <h1 data-aos="fade-up" className="text-3xl font-bold">
-              Our Popular Products
+              Live Auction
             </h1>
             <p data-aos="fade-up" className="text-lg text-gray-400">
-              we are here to help you with our Popular products don't miss it
-              out
+              Explore on the world's best & largest Bidding marketplace with our
+              beautiful Bidding products. We want to be a part of your smile,
+              success and future growth.
             </p>
           </div>
           {/* Body section */}

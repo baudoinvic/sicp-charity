@@ -21,12 +21,12 @@ const Menu = [
   {
     id: 3,
     name: "What we do",
-    link: "",
+    link: "/",
   },
   {
     id: 4,
     name: "Donate",
-    link: "",
+    link: "/",
   },
   {
     id: 5,
@@ -35,23 +35,7 @@ const Menu = [
   },
 ];
 
-const DropdownLinks = [
-  {
-    id: 1,
-    name: "QIE & Oil",
-    link: "/#",
-  },
-  {
-    id: 2,
-    name: "QIE & Parfum",
-    link: "/#",
-  },
-  {
-    id: 3,
-    name: "Pr Bridon Paris",
-    link: "/#",
-  },
-];
+
 
 const Navbar = ({ handleOrderPopup }) => {
   return (
@@ -84,14 +68,7 @@ const Navbar = ({ handleOrderPopup }) => {
               </div>
             </Link>
 
-            {/* order button */}
-            {/* <Link to="">
-              <button>
-                Donate
-              </button>
-            </Link> */}
-
-            {/* Darkmode Switch */}
+          
             <div>
               <DarkMode />
             </div>
@@ -111,29 +88,7 @@ const Navbar = ({ handleOrderPopup }) => {
               </a>
             </li>
           ))}
-          {/* Simple Dropdown and Links */}
-          <li className="group relative cursor-pointer">
-            {/* <a href="#" className="flex items-center gap-[2px] py-2">
-              Brower Categories
-              <span>
-                <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
-              </span>
-            </a> */}
-            <div className="absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white p-2 text-black shadow-md">
-              <ul>
-                {DropdownLinks.map((data) => (
-                  <li key={data.id}>
-                    <a
-                      href={data.link}
-                      className="inline-block w-full rounded-md p-2 hover:bg-primary/20 "
-                    >
-                      {data.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </li>
+         
         </ul>
       </div>
     </div>
