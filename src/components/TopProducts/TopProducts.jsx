@@ -8,24 +8,24 @@ import { Link } from "react-router-dom";
 const ProductsData = [
   {
     id: 1,
-    img: "https://image.harrods.com/kilian-paris-good-girl-gone-bad-extreme-eau-de-parfum-50ml_15391581_27037165_2048.jpg",
-    title: "QIE Paris Parfum",
+    img: "https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-1.jpg",
+    title: "Black Analogue Watch",
     description:
-      "we also delivering QIE paris parfum for men's and also for women's .",
+      "the one of the best watch for men's and women's as well",
   },
   {
     id: 2,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_6hCxUrS3TCsoy0Qcghkq415TPunGONC8PQ&usqp=CAU",
-    title: "Pr francoise Bedon paris parfum",
+    img: "https://media.istockphoto.com/id/610772852/photo/alarm-clock-blue-isolated-background.jpg?s=612x612&w=0&k=20&c=BCJiaRy9FsmcnOPmKRX4xH7fz7v3xPVX8OIFA4kWllg=",
+    title: "Alarm Clock",
     description:
-      "we also delivering QIE paris parfum for men's and also for women's .",
+      "this is upcoming auction for alarm clock stay update with us so that you can't miss it out",
   },
   {
     id: 3,
-    img: "https://www.beautyflex.co.uk/cdn/shop/products/QEI_Active_Harmonie_reparateur.png?v=1610910556",
-    title: "QIE Paris lotion",
+    img: "https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-14.jpg",
+    title: "Couple Wedding Ring",
     description:
-      "we also delivering QIE paris parfum for men's and also for women's .",
+      "this is upcoming auction for women's wedding ring.",
   },
 ];
 const TopProducts = ({ handleOrderPopup }) => {
@@ -76,14 +76,14 @@ const TopProducts = ({ handleOrderPopup }) => {
                 <p className="text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-2">
                   {data.description}
                 </p>
-                <Link to="/Addcart">
+               
                   <button
-                    className="bg-primary hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
+                    className="bg-primary hover:scale-105 duration-300 text-white py-2 px-5 mt-4 group-hover:bg-white group-hover:text-primary"
                     onClick={handleOrderPopup}
                   >
-                    Add to cart
+                   View details
                   </button>
-                </Link>
+                
               </div>
             </div>
           ))}
