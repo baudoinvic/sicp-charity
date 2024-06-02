@@ -12,7 +12,7 @@ const Banner = () => {
           {/* image section */}
           <div data-aos="zoom-in">
             <img
-              src="https://image.harrods.com/kilian-paris-good-girl-gone-bad-extreme-eau-de-parfum-50ml_15391581_27037165_2048.jpg"
+              src="https://media.istockphoto.com/id/610772852/photo/alarm-clock-blue-isolated-background.jpg?s=612x612&w=0&k=20&c=BCJiaRy9FsmcnOPmKRX4xH7fz7v3xPVX8OIFA4kWllg="
               alt=""
               className="max-w-[400px] h-[350px] w-full mx-auto drop-shadow-[-10px_10px_12px_rgba(0,0,0,1)] object-cover"
             />

@@ -5,26 +5,26 @@ const TestimonialData = [
   {
     id: 1,
     name: "ishimwe sandra",
-    text: " i'm so proude to work with beatha business i bought the products  many time and got the original one at my home ",
+    text: " I'm proud to participate in auctions Business. I've won several bids and received authentic items delivered right to my home ",
 
     img: "https://picsum.photos/101/101",
   },
   {
     id: 2,
     name: "Divine josh",
-    text: "i'm so proude to work with beatha business i bought the products  many time and got the original one at my home",
+    text: "I'm proud to participate in auctions Business. I've won several bids and received authentic items delivered right to my home",
     img: "https://picsum.photos/102/102",
   },
   {
     id: 3,
     name: "Tousaint Francis",
-    text: "i'm so proude to work with beatha business i bought the products  many time and got the original one at my home",
+    text: "I'm proud to participate in auctions Business. I've won several bids and received authentic items delivered right to my home",
     img: "https://picsum.photos/104/104",
   },
   {
     id: 5,
     name: "Chris johnB",
-    text: "i'm so proude to work with beatha business i bought the products  many time and got the original one at my home",
+    text: "I'm proud to participate in auctions Business. I've won several bids and received authentic items delivered right to my home",
     img: "https://picsum.photos/103/103",
   },
 ];

@@ -32,20 +32,24 @@ const TopProducts = ({ handleOrderPopup }) => {
   return (
     <div>
       <div className="container">
-        <div className="text-left mb-24">
+
+        <div className="text-center mb-10 max-w-[600px] mx-auto">
           <p data-aos="fade-up" className="text-sm text-primary">
             Exciting Auctions Await You
           </p>
           <h1 data-aos="fade-up" className="text-3xl font-bold">
-            Discover the Latest Auctions
+            Up Comming Auction
           </h1>
-          <p data-aos="fade-up" className="text-xs text-gray-400">
-            Discover unique items and exciting bidding experiences.<br /> Explore rare
-            treasures and enjoy the thrill of winning auctions.
-          </p>
+         
+            <p data-aos="fade-up" className="text-lg text-gray-400 mt-5">
+              Explore on the world's best & largest Bidding marketplace with our
+              beautiful Bidding products. We want to be a part of your smile,
+              success and future growth.
+            </p>
+          
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 place-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 place-items-center mt-40">
           {ProductsData.map((data) => (
             <div
               data-aos="zoom-in"
