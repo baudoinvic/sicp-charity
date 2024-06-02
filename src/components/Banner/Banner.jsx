@@ -21,13 +21,14 @@ const Banner = () => {
           {/* text details section */}
           <div className="flex flex-col justify-center gap-6 sm:pt-0">
             <h1 data-aos="fade-up" className="text-3xl sm:text-4xl font-bold">
-             We sell and we delivering
+              Bid on Unique Items
             </h1>
             <p
               data-aos="fade-up"
               className="text-sm text-gray-500 tracking-wide leading-5"
             >
-             we are here to help you to bring your products at your home just purchase yours
+              Experience the thrill of auctions from the comfort of your home.
+              Bid on unique items and win them at great prices
             </p>
             <div className="flex flex-col gap-4">
               <div data-aos="fade-up" className="flex items-center gap-4">
