@@ -21,7 +21,7 @@ const Menu = [
   {
     id: 3,
     name: "What we do",
-    link: "/",
+    link: "Service",
   },
   {
     id: 4,

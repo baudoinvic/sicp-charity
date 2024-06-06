@@ -31,6 +31,7 @@ import Edituser from "./Admindashboard/Edituser";
 import Editproduct from "./Admindashboard/Editproduct";
 import Bidding from "./components/Bidding/Bidding";
 import Donation from "./Donation/Donation";
+import Service from "./Service/Service";
 
 
  const CommonLayout = ({ children }) => {
@@ -86,6 +87,7 @@ const App = () => {
           <Route path="/Bidding" element={<Bidding />} />
           <Route path="/About" element={<About />} />
           <Route path="/Donation" element={<Donation />} />
+          <Route path="/Service" element={<Service />} />
           <Route path="/Payment" element={<Payment />} />
 
           {/* Dashboard routes */}
