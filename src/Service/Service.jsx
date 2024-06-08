@@ -1,80 +1,8 @@
-// import React from 'react'
-// import Navbar from '../components/Navbar/Navbar';
 
-// const Service = () => {
-//   return (
-//     <div className="what we do">
-//         <Navbar />
-//       <div className="bg-gray-100 py-16">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//           <div className="lg:text-center">
-//             <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
-//               What We Do
-//             </h2>
-//             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-//               Bringing Auctions to Your Fingertips
-//             </p>
-//             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-//               Our auction website offers a seamless and exciting platform for
-//               buyers and sellers to connect and participate in auctions from the
-//               comfort of their homes.
-//             </p>
-//           </div>
-
-//           <div className="mt-10">
-//             <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-//               <div className="flex">
-//                 <div className="flex-shrink-0">
-//                   <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-//                     {/* Add an icon or image here */}
-//                   </div>
-//                 </div>
-//                 <div className="ml-4">
-//                   <dt className="text-lg leading-6 font-medium text-gray-900">
-//                     For Buyers
-//                   </dt>
-//                   <dd className="mt-2 text-base text-gray-500">
-//                     Explore a wide range of unique and exciting items, bid on
-//                     your desired products, and secure great deals through our
-//                     user-friendly bidding system.
-//                   </dd>
-//                 </div>
-//               </div>
-
-//             <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
-//           <div className="bg-white shadow-md rounded-lg p-6">
-//             <h3 className="text-lg font-semibold text-gray-900">For Buyers</h3>
-//             <p className="mt-2 text-gray-600">
-//               Explore a wide range of unique and exciting items, bid on your desired products, and secure great deals through our user-friendly bidding system.
-//             </p>
-//           </div>
-//           <div className="bg-white shadow-md rounded-lg p-6">
-//             <h3 className="text-lg font-semibold text-gray-900">For Sellers</h3>
-//             <p className="mt-2 text-gray-600">
-//               List your items and reach a vast audience of potential buyers. Our platform provides a secure and efficient way to sell your products through auctions.
-//             </p>
-//           </div>
-//           <div className="bg-white shadow-md rounded-lg p-6">
-//             <h3 className="text-lg font-semibold text-gray-900">Auction Categories</h3>
-//             <p className="mt-2 text-gray-600">
-//               Discover a diverse range of auction categories, from electronics and collectibles to art and antiques, catering to every interest and taste.
-//             </p>
-//           </div>
-//           </div>
-
-//               {/* Add more sections for sellers, auction categories, etc. */}
-//             </dl>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default 
 
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 
 const Service = () => {
   return (
@@ -86,12 +14,12 @@ const Service = () => {
         className="relative bg-cover bg-center"
         style={{ backgroundImage: 'url("/path/to/hero-image.jpg")' }}
       >
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-primary "></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Bringing Auctions to Your Fingertips
           </h1>
-          <p className="mt-6 text-xl text-gray-300 max-w-3xl">
+          <p className="mt-6 text-xl text-white max-w-3xl">
             Our auction website offers a seamless and exciting platform for
             buyers and sellers to connect and participate in auctions from the
             comfort of their homes.
@@ -100,7 +28,7 @@ const Service = () => {
       </div>
 
       {/* Feature Cards */}
-      <div className="bg-gray-100 py-16">
+      <div className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
             <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
@@ -189,12 +117,12 @@ const Service = () => {
       
 
       {/* Call-to-Action */}
-      <div className="bg-indigo-600 py-16">
+      <div className="bg-primary py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-extrabold text-white mb-4">
             Start Bidding Today
           </h2>
-          <p className="text-gray-300 mb-8">
+          <p className="text-white mb-8">
             Join our exciting auction platform and discover a world of unique
             items and great deals.
           </p>
@@ -206,6 +134,7 @@ const Service = () => {
           </a>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

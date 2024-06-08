@@ -1,21 +1,21 @@
-import React from 'react'
-import Navbar from '../components/Navbar/Navbar';
-import Footer from '../components/Footer/Footer';
-import { FaFacebook } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa6";
-import { ToastContainer,toast } from "react-toastify";
+
+import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from 'axios';
-import { useState, useEffect } from "react";
+import axios from "axios";
+import { IoLocationOutline } from "react-icons/io5";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+import Footer from "../components/Footer/Footer";
+import Navbar from "../components/Navbar/Navbar";
 
-
-const Contact = () => {
+function Contact() {
   const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
+    Firstname: "",
+    Lastname: "",
     email: "",
-    
+    phoneNumber: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -35,7 +35,7 @@ const Contact = () => {
       console.log("Request Data:", formData);
 
       const response = await axios({
-        url: "https://beathaecommerceback-end.onrender.com/api/v1/contactus",
+        url: "https://fabtechhub.onrender.com/FabtechHub/contacts/makecontact",
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -51,89 +51,203 @@ const Contact = () => {
       toast.error("Failed to send message. Please try again later.");
     }
   };
+
   return (
-    <div className="contact-us">
+    <>
       <Navbar />
-      <div className="sign-up">
-        <div data-aos="zoom-in">
-          <div className="checkout flex flex-col md:flex-row mt-10 md:mx-auto md:max-w-4xl">
-            <div className="left-side flex-none md:w-1/2 mr-0 md:mr-4 mb-4 md:mb-0">
-              <img
-                src="https://media.istockphoto.com/id/1671142169/vector/web-phishing-illustration-on-mobile-concept.jpg?s=612x612&w=0&k=20&c=XDfAqPBBiHFZCbEqUZognNbY4XTD-XTpacgjmH-Q-sA="
-                alt="Cyclist"
-                className="h-full object-cover"
-              />
+
+      <div className="contact-page bg-gray-100 ">
+        <div
+          className="hero-section h-screen bg-cover bg-center flex flex-col justify-center items-center relative"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')",
+          }}
+        >
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white text-center relative z-10 mb-6 leading-tight">
+            Let's Get in Touch
+          </h1>
+          <p className="text-xl text-gray-200 text-center relative z-10 mb-12 max-w-3xl px-6">
+            Do you have a question or need some advice? We are here to help.
+            Fill out the form below and let's start a conversation that could
+            lead to culinary brilliance.
+          </p>
+        </div>
+
+        <div
+          id="contact-form"
+          className="container mx-auto px-4 py-20 -mt-48 relative z-20"
+        >
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+            <div className="lg:w-1/2 bg-primary text-white p-12">
+              <h2 className="text-4xl font-bold mb-6">
+                We'd Love to Hear from You
+              </h2>
+              <p className="text-lg mb-8">
+                Whether you are new to cooking or an experienced chef, your
+                journey with us begins here. Share your thoughts, and let's
+                create something extraordinary together.
+              </p>
+
+              <div className="space-y-8">
+                <div className="flex items-start space-x-4">
+                  <IoLocationOutline className="text-4xl text-white opacity-80" />
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Our Address</h3>
+                    <p className="text-sm leading-relaxed opacity-80">
+                      St Dominic Gatsata 30
+                      <br />
+                      Gatsata Road toward bujumbura
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <MdOutlineMailOutline className="text-4xl text-white opacity-80" />
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Write to Us</h3>
+                    <p className="text-sm opacity-80">
+                      winifredn@solinitiativecp.org
+                    </p>
+                    <a
+                      href="mailto:winifredn@solinitiativecp.org
+"
+                      className="text-sm font-medium underline hover:text-gray-200 transition-colors inline-block mt-2"
+                    >
+                      Send an Email
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <FaPhoneAlt className="text-3xl text-white opacity-80" />
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Call Us</h3>
+                    <p className="text-sm opacity-80">+250 793 017 617</p>
+                    <a
+                      href="tel:+32498778291"
+                      className="text-sm font-medium underline hover:text-gray-200 transition-colors inline-block mt-2"
+                    >
+                      Call Now
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="right-side w-full md:w-1/2 mx-auto p-6 shadow-md">
-              <h1 className="text-2xl font-bold mb-4">Let's get in touch</h1>
-              <span className='text-gray-500'>
-                Leave us a message if you have a question we are here to help
-                you
-              </span>
-              <form onSubmit={handleSubmit} className='mt-5'>
-                <div className="mb-4">
-                  <label htmlFor="firstname" className="block font-medium mb-1">
-                    Firstname
-                  </label>
-                  <input
-                    type="text"
-                    id="firstname"
-                    name="firstname"
-                    onChange={handleChange}
-                    required
-                    className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                  />
+
+            <div className="lg:w-1/2 p-12">
+              <h2 className="text-3xl font-bold mb-6 text-gray-800">
+                Send Us a Message
+              </h2>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      htmlFor="Firstname"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      id="Firstname"
+                      name="Firstname"
+                      className="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-brightColor focus:bg-white focus:ring-0"
+                      placeholder="e.g., Marie"
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="Lastname"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
+                      Last Name
+                    </label>
+                    <input
+                      type="text"
+                      id="Lastname"
+                      name="Lastname"
+                      className="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-brightColor focus:bg-white focus:ring-0"
+                      placeholder="e.g., Dupont"
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
                 </div>
-                <div className="mb-4">
-                  <label htmlFor="lastname" className="block font-medium mb-1">
-                    Lastname
+
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Email Address
                   </label>
                   <input
-                    type="text"
-                    id="lastname"
-                    name="lastname"
-                    onChange={handleChange}
-                    required
-                    className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="email" className="block font-medium mb-1">
-                    Email
-                  </label>
-                  <input
-                    type="text"
+                    type="email"
                     id="email"
                     name="email"
+                    className="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-brightColor focus:bg-white focus:ring-0"
+                    placeholder="you@example.com"
                     onChange={handleChange}
-                    value={formData.email}
                     required
-                    className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                   />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="phoneNumber"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    className="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-brightColor focus:bg-white focus:ring-0"
+                    placeholder="e.g., +32 598 80 83 21"
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Your Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    className="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-brightColor focus:bg-white focus:ring-0"
+                    placeholder="Tell us about your culinary dreams..."
+                    onChange={handleChange}
+                    required
+                  ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="bg-primary text-white w-full py-2 rounded-md hover:bg-primary"
+                  className="w-full bg-primary text-white px-6 py-3 rounded-full font-semibold text-lg hover:bg-brightColor-dark transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brightColor focus:ring-offset-2"
                 >
-                  Send message
+                  Send Message
                 </button>
               </form>
               <ToastContainer />
-              <div className="social-media flex mt-10">
-                <FaFacebook className='mr-5 text-2xl' />
-                <FaInstagram className='mr-5 text-2xl' />
-                <FaLinkedin  className='text-2xl' /> 
-              </div>
             </div>
           </div>
         </div>
+        <Footer />
       </div>
-      <br />
-      <br />
-      <Footer />
-    </div>
+    </>
   );
 }
 
-export default Contact
+export default Contact;
+
