@@ -96,114 +96,116 @@ useEffect(() => {
 
 
   return (
-    <div data-aos="zoom-in ">
-      <div className="flex items-center justify-between mb-8">
-        <div className="flex items-center">
-          <div className="relative mr-4">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="py-2 px-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-            <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-              <FaSearch className="text-gray-500" />
-            </div>
-          </div>
-        </div>
-        <div className="flex items-center">
+    <div className="">
+      <div data-aos="zoom-in  ">
+        <div className="flex items-center justify-between mb-8">
           <div className="flex items-center">
-            <button className="p-2 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-              <FaBell className="text-gray-500" />
-            </button>
-            <button className="p-2 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-              <FaEnvelope className="text-gray-500" />
-            </button>
-            <button className="p-2 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-              <FaGlobe className="text-gray-500" />
-            </button>
-          </div>
-          <div className="relative">
-            <div className="w-10 h-10 rounded-full overflow-hidden">
-              <img
-                src="https://via.placeholder.com/40"
-                alt="Profile"
-                className="w-full h-full object-cover"
+            <div className="relative mr-4">
+              <input
+                type="text"
+                placeholder="Search..."
+                className="py-2 px-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
-            </div>
-            <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-wrap justify-center mt-8">
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
-          <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
-            <div className="px-6 py-4">
-              <div className="flex items-center mb-2">
-                <FaInstalod className="w-6 h-6 text-teal-500 mr-2" />
-                <div className="font-semibold text-lg text-teal-500">
-                  Auction Items
-                </div>
+              <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                <FaSearch className="text-gray-500" />
               </div>
-              <h2 className="text-2xl text-gray-800 font-bold mb-1">
-                {Products.length}
-              </h2>
-              <p className="text-gray-600">Items up for Auction</p>
             </div>
           </div>
-        </div>
-
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
-          <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
-            <div className="px-6 py-4">
-              <div className="flex items-center mb-2">
-                <HiUserGroup className="w-6 h-6 text-indigo-500 mr-2" />
-                <div className="font-semibold text-lg text-indigo-500">
-                  Bidders
-                </div>
+          <div className="flex items-center">
+            <div className="flex items-center">
+              <button className="p-2 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <FaBell className="text-gray-500" />
+              </button>
+              <button className="p-2 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <FaEnvelope className="text-gray-500" />
+              </button>
+              <button className="p-2 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <FaGlobe className="text-gray-500" />
+              </button>
+            </div>
+            <div className="relative">
+              <div className="w-10 h-10 rounded-full overflow-hidden">
+                <img
+                  src="https://via.placeholder.com/40"
+                  alt="Profile"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h2 className="text-2xl text-gray-800 font-bold mb-1">
-                {Billings.length}
-              </h2>
-              <p className="text-gray-600">Total Bidders</p>
+              <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
             </div>
           </div>
         </div>
 
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
-          <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
-            <div className="px-6 py-4">
-              <div className="flex items-center mb-2">
-                <HiUser className="w-6 h-6 text-green-500 mr-2" />
-                <div className="font-semibold text-lg text-green-500">
-                  Sellers
+        <div className="flex flex-wrap justify-center mt-8 space-x-10">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
+            <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+              <div className="px-6 py-4">
+                <div className="flex items-center mb-2">
+                  <FaInstalod className="w-6 h-6 text-teal-500 mr-2" />
+                  <div className="font-semibold text-lg text-teal-500">
+                    Auction Items
+                  </div>
                 </div>
+                <h2 className="text-2xl text-gray-800 font-bold mb-1">
+                  {Products.length}
+                </h2>
+                <p className="text-gray-600">Items up for Auction</p>
               </div>
-              <h2 className="text-2xl text-gray-800 font-bold mb-1">
-                {users.length}
-              </h2>
-              <p className="text-gray-600">Total Sellers</p>
             </div>
           </div>
-        </div>
 
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
-          <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
-            <div className="px-6 py-4">
-              <div className="flex items-center mb-2">
-                <HiShoppingCart className="w-6 h-6 text-orange-500 mr-2" />
-                <div className="font-semibold text-lg text-orange-500">
-                  Bids
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
+            <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+              <div className="px-6 py-4">
+                <div className="flex items-center mb-2">
+                  <HiUserGroup className="w-6 h-6 text-indigo-500 mr-2" />
+                  <div className="font-semibold text-lg text-indigo-500">
+                    Bidders
+                  </div>
                 </div>
+                <h2 className="text-2xl text-gray-800 font-bold mb-1">
+                  {Billings.length}
+                </h2>
+                <p className="text-gray-600">Total Bidders</p>
               </div>
-              <h2 className="text-2xl text-gray-800 font-bold mb-1">20.4k</h2>
-              <p className="text-gray-600">Total Bids Placed</p>
             </div>
           </div>
-        </div>
 
-        <div className="w-full sm:w-full md:w-full lg:w-full xl:w-full px-4 mb-8">
-          <Chart />
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
+            <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+              <div className="px-6 py-4">
+                <div className="flex items-center mb-2">
+                  <HiUser className="w-6 h-6 text-green-500 mr-2" />
+                  <div className="font-semibold text-lg text-green-500">
+                    Sellers
+                  </div>
+                </div>
+                <h2 className="text-2xl text-gray-800 font-bold mb-1">
+                  {users.length}
+                </h2>
+                <p className="text-gray-600">Total Sellers</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
+            <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+              <div className="px-6 py-4">
+                <div className="flex items-center mb-2">
+                  <HiShoppingCart className="w-6 h-6 text-orange-500 mr-2" />
+                  <div className="font-semibold text-lg text-orange-500">
+                    Bids
+                  </div>
+                </div>
+                <h2 className="text-2xl text-gray-800 font-bold mb-1">20.4k</h2>
+                <p className="text-gray-600">Total Bids Placed</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full  sm:w-full md:w-full lg:w-full xl:w-full px-4 mb-8">
+            <Chart />
+          </div>
         </div>
       </div>
     </div>

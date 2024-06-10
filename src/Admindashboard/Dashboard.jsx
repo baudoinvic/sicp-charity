@@ -11,62 +11,61 @@ import { TbLogout } from "react-icons/tb";
 function Dashboard() {
   
   return (
-   
     <div data-aos="zoom-in ">
       <div className="flex flex-col md:flex-row h-screen ">
-        <div className="bg-primary text-white w-full md:w-64 flex flex-col justify-between">
+        <div className="bg-white text-white w-full md:w-64 flex flex-col justify-between shadow-md">
           <div className="p-4 flex items-center">
-            <span className="text-2xl font-bold tracking-wide">
+            <span className="text-2xl font-bold tracking-wide text-black">
               Admin
             </span>
           </div>
           <ul className="py-4 space-y-2">
             <Link to="/Admindashboard/Dashboard">
-              <li className="px-6 py-3 flex items-center rounded-lg bg-orange-700 hover:bg-orange-800 transition-colors duration-300">
-                <IoMdHome className="mr-4 text-xl" />
-                <span className="cursor-pointer text-lg font-semibold">
+              <li className="px-6 py-3 flex items-center rounded-lg bg-primary transition-colors duration-300 ml-3 mr-3">
+                <IoMdHome className="mr-4  text-xl" />
+                <span className="cursor-pointer text-lg font-semibold ">
                   Dashboard
                 </span>
               </li>
             </Link>
 
             <Link to="/Admindashboard/Dashboard/Product">
-              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-orange-600 transition-colors duration-300">
-                <MdProductionQuantityLimits className="mr-4 text-xl" />
-                <span className="cursor-pointer text-lg font-semibold">
+              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-primary transition-colors duration-300">
+                <MdProductionQuantityLimits className="mr-4 text-xl text-black" />
+                <span className="cursor-pointer text-lg font-semibold text-black">
                   Auction Items
                 </span>
               </li>
             </Link>
 
             <Link to="/Admindashboard/Dashboard/Customer">
-              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-orange-600 transition-colors duration-300">
-                <FaUserGroup className="mr-4 text-xl" />
-                <span className="cursor-pointer text-lg font-semibold">
+              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-primary transition-colors duration-300">
+                <FaUserGroup className="mr-4 text-xl text-black" />
+                <span className="cursor-pointer text-lg font-semibold text-black">
                   Bidders
                 </span>
               </li>
             </Link>
             <Link to="/Admindashboard/Dashboard/Users">
-              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-orange-600 transition-colors duration-300">
-                <FaUserPlus className="mr-4 text-xl" />
-                <span className="cursor-pointer text-lg font-semibold">
+              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-primary transition-colors duration-300">
+                <FaUserPlus className="mr-4 text-xl text-black" />
+                <span className="cursor-pointer text-lg font-semibold text-black">
                   Sellers
                 </span>
               </li>
             </Link>
             <Link to="/Admindashboard/Dashboard/Order">
-              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-orange-600 transition-colors duration-300">
-                <FaBorderStyle className="mr-4 text-xl" />
-                <span className="cursor-pointer text-lg font-semibold">
+              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-primary transition-colors duration-300">
+                <FaBorderStyle className="mr-4 text-xl text-black" />
+                <span className="cursor-pointer text-lg font-semibold text-black">
                   Bids
                 </span>
               </li>
             </Link>
             <Link to="/AdminDashboard/Dashboard/Setting">
-              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-orange-600 transition-colors duration-300">
-                <IoSettingsOutline className="mr-4 text-xl" />
-                <span className="cursor-pointer text-lg font-semibold">
+              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-primary transition-colors duration-300">
+                <IoSettingsOutline className="mr-4 text-xl text-black" />
+                <span className="cursor-pointer text-lg font-semibold text-black">
                   Settings
                 </span>
               </li>
@@ -74,9 +73,9 @@ function Dashboard() {
           </ul>
           <div className="mt-auto px-4 py-2 flex font-bold">
             <span className="block cursor-pointer hover:text-amber-300 flex items-center">
-              <TbLogout className="mr-4 font-bold text-xl" />
+              <TbLogout className="mr-4 font-bold text-xl text-black" />
               <Link to="/Login">
-                <span className="cursor-pointer text-lg font-semibold">
+                <span className="cursor-pointer text-lg font-semibold text-black">
                   Logout
                 </span>
               </Link>
@@ -85,7 +84,7 @@ function Dashboard() {
         </div>
 
         {/* Content */}
-        <div className="flex-1 bg-white p-8">
+        <div className="flex-1 bg-gray-200 p-8">
           <div className="sidebar-right-side">
             <Outlet />
           </div>
