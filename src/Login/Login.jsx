@@ -2,7 +2,7 @@ import React from 'react'
 import { IoMdArrowBack } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer,toast } from 'react-toastify';
 import { useState } from 'react';
 
 const Login = () => {
@@ -47,7 +47,6 @@ const Login = () => {
   }
 
   return (
-   
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div data-aos="zoom-in" className="w-full md:w-4/5 lg:w-3/5 xl:w-1/2">
         <div className="checkout flex flex-col md:flex-row rounded-lg shadow-lg overflow-hidden">
@@ -105,12 +104,14 @@ const Login = () => {
                 </span>
               </div>
 
-              <button
-                type="submit"
-                className="bg-primary text-white w-full py-3 rounded-md hover:bg-primary-dark transition duration-300"
-              >
-                Sign in
-              </button>
+              <Link to="/Admindashboard/Dashboard">
+                <button
+                  type="submit"
+                  className="bg-primary text-white w-full py-3 rounded-md hover:bg-primary-dark transition duration-300"
+                >
+                  Sign in
+                </button>
+              </Link>
 
               <div className="mt-6 text-center">
                 <span>Don't have an account?</span>

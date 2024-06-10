@@ -98,72 +98,67 @@ useEffect(() => {
     <div data-aos="zoom-in">
       <div className="flex flex-wrap justify-center mt-8">
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
-          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-            <div className="px-10 py-4">
-              <div className="flex items-center mb-4">
-                <FaInstalod className="w-8 h-8 text-primary mr-2" />
-                <div className="font-bold text-xl text-blue-500">Products</div>
-              </div>
-              <h2 className="text-3xl text-gray-800 font-semibold">{Products.length}</h2>
-              <p className="text-gray-700 text-base">total products</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
-          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-            <div className="px-10 py-4">
-              <div className="flex items-center mb-4">
-                <HiUserGroup className="w-8 h-8 text-blue-500 mr-2" />
-                <div className="font-bold text-xl text-blue-500">Customers</div>
-              </div>
-              <h2 className="text-3xl text-gray-800 font-semibold">{Billings.length}</h2>
-              <p className="text-gray-700 text-base">Total of cumstomers</p>
-            </div>
-          </div>
-        </div>
-
-      
-
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
-          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-            <div className="px-10 py-4">
-              <div className="flex items-center mb-4">
-                <HiUser className="w-8 h-8 text-primary mr-2" />
-                <div className="font-bold text-xl text-green-500">
-                  users
+          <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+            <div className="px-6 py-4">
+              <div className="flex items-center mb-2">
+                <FaInstalod className="w-6 h-6 text-teal-500 mr-2" />
+                <div className="font-semibold text-lg text-teal-500">
+                  Auction Items
                 </div>
               </div>
-              <h2 className="text-3xl text-gray-800 font-semibold">
+              <h2 className="text-2xl text-gray-800 font-bold mb-1">
+                {Products.length}
+              </h2>
+              <p className="text-gray-600">Items up for Auction</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
+          <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+            <div className="px-6 py-4">
+              <div className="flex items-center mb-2">
+                <HiUserGroup className="w-6 h-6 text-indigo-500 mr-2" />
+                <div className="font-semibold text-lg text-indigo-500">
+                  Bidders
+                </div>
+              </div>
+              <h2 className="text-2xl text-gray-800 font-bold mb-1">
+                {Billings.length}
+              </h2>
+              <p className="text-gray-600">Total Bidders</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
+          <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+            <div className="px-6 py-4">
+              <div className="flex items-center mb-2">
+                <HiUser className="w-6 h-6 text-green-500 mr-2" />
+                <div className="font-semibold text-lg text-green-500">
+                  Sellers
+                </div>
+              </div>
+              <h2 className="text-2xl text-gray-800 font-bold mb-1">
                 {users.length}
               </h2>
-              <p className="text-gray-700 text-base">Total of users</p>
+              <p className="text-gray-600">Total Sellers</p>
             </div>
           </div>
         </div>
 
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
-          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-            <div className="px-10 py-4">
-              <div className="flex items-center mb-4">
-                <HiShoppingCart className="w-8 h-8 text-primary mr-2" />
-                <div className="font-bold text-xl text-blue-500">Orders</div>
+          <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+            <div className="px-6 py-4">
+              <div className="flex items-center mb-2">
+                <HiShoppingCart className="w-6 h-6 text-orange-500 mr-2" />
+                <div className="font-semibold text-lg text-orange-500">
+                  Bids
+                </div>
               </div>
-              <h2 className="text-3xl text-gray-800 font-semibold">20.4k</h2>
-              <p className="text-gray-700 text-base">Number of orders</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
-          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-            <div className="px-10 py-4">
-              <div className="flex items-center mb-4">
-                <HiCurrencyDollar className="w-8 h-8 text-blue-500 mr-2" />
-                <div className="font-bold text-xl text-blue-500">Income</div>
-              </div>
-              <h2 className="text-3xl text-black font-semibold">$20.4k</h2>
-              <p className="text-black text-base">Total income</p>
+              <h2 className="text-2xl text-gray-800 font-bold mb-1">20.4k</h2>
+              <p className="text-gray-600">Total Bids Placed</p>
             </div>
           </div>
         </div>
