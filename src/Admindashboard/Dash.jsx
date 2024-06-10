@@ -96,7 +96,7 @@ useEffect(() => {
 
 
   return (
-    <div data-aos="zoom-in">
+    <div data-aos="zoom-in ">
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center">
           <div className="relative mr-4">

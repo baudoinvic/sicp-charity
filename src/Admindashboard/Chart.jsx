@@ -39,7 +39,7 @@ const Chart = () => {
       {
         label: "Number of customers",
         data: [20, 43, 10, 54, 8, 23, 40, 23, 56, 87, 44, 10],
-        backgroundColor: "#3B82F6",
+        backgroundColor: "#FFBF00",
       },
       {
         label: "orders",
@@ -64,7 +64,7 @@ const Chart = () => {
             </select>
           </div>
         </div>
-        <div className="relative h-[500px]">
+        <div className="relative h-[400px]">
           <Bar options={options} data={data} />
           <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
            
