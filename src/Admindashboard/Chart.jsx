@@ -50,18 +50,55 @@ const Chart = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
-     
-        <div className="bg-white rounded-lg shadow-md p-6 w-[110vh]   h-[65vh] ml-10  ">
-          <h2 className="text-xl font-semibold mb-4">Revenue Chart</h2>
-          <div className="flex justify-center h-full">
-            <Bar options={options} data={data} />
+  
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="bg-white rounded-xl shadow-lg p-6 overflow-hidden">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold text-gray-800">Revenue Chart</h2>
+          <div className="flex items-center">
+            <span className="mr-2 text-gray-600">Filter:</span>
+            <select className="bg-gray-200 text-gray-800 rounded-md py-1 px-2 focus:outline-none focus:ring-2 focus:ring-orange-500">
+              <option value="monthly">Monthly</option>
+              <option value="quarterly">Quarterly</option>
+              <option value="yearly">Yearly</option>
+            </select>
           </div>
-        
+        </div>
+        <div className="relative h-[500px]">
+          <Bar options={options} data={data} />
+          <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+           
+          </div>
+        </div>
       </div>
-      <div className="ml-20  bg-white rounded-lg shadow-lg p-6 w-full xl:w-4/12 px-4  h-[65vh] " style={{marginLeft: '17rem'}}>
-        <h2 className="text-xl font-semibold mb-4">Chat</h2>
-         <p>hello how can i assist you </p>
+      <div className="bg-white rounded-xl shadow-lg p-6 overflow-hidden">
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Key Metrics</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="bg-gray-100 rounded-lg p-4">
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              Highest Bid
+            </h3>
+            <p className="text-2xl font-bold text-orange-500">$5,000</p>
+          </div>
+          <div className="bg-gray-100 rounded-lg p-4">
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              New Bidders
+            </h3>
+            <p className="text-2xl font-bold text-orange-500">125</p>
+          </div>
+          <div className="bg-gray-100 rounded-lg p-4">
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              Upcoming Auctions
+            </h3>
+            <p className="text-2xl font-bold text-orange-500">8</p>
+          </div>
+          <div className="bg-gray-100 rounded-lg p-4">
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              Hot Items
+            </h3>
+            <p className="text-2xl font-bold text-orange-500">12</p>
+          </div>
+        </div>
       </div>
     </div>
   );
