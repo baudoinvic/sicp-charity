@@ -46,7 +46,7 @@ const Navbar = ({ handleOrderPopup }) => {
           <div>
             <a href="#" className="font-bold text-2xl sm:text-3xl flex gap-2">
               <img src={Logo} alt="Logo" className="w-10" />
-             Auction App
+              SICP
             </a>
           </div>
 
@@ -68,7 +68,6 @@ const Navbar = ({ handleOrderPopup }) => {
               </div>
             </Link>
 
-          
             <div>
               <DarkMode />
             </div>
@@ -88,7 +87,6 @@ const Navbar = ({ handleOrderPopup }) => {
               </a>
             </li>
           ))}
-         
         </ul>
       </div>
     </div>

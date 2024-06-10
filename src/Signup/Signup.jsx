@@ -52,12 +52,17 @@ function Signup() {
     <div className="sign-up">
       <div data-aos="zoom-in">
         <div className="checkout flex flex-col md:flex-row mt-10 md:mx-auto md:max-w-4xl">
-          <div className="left-side flex-none md:w-1/2 mr-0 md:mr-4 mb-4 md:mb-0">
+       
+          <div className="left-side flex-none md:w-1/2 relative">
             <img
               src="https://media.istockphoto.com/id/1671142169/vector/web-phishing-illustration-on-mobile-concept.jpg?s=612x612&w=0&k=20&c=XDfAqPBBiHFZCbEqUZognNbY4XTD-XTpacgjmH-Q-sA="
               alt="Cyclist"
-              className="h-full object-cover"
+              className="h-full  object-cover"
             />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
+            <div className="absolute inset-0 flex items-center justify-center text-white">
+              <h2 className="text-4xl font-bold">Join Us Today</h2>
+            </div>
           </div>
           <div className="right-side w-full md:w-1/2 mx-auto p-6 shadow-md">
             <Link to="/#">
