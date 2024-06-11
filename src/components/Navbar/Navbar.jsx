@@ -23,11 +23,7 @@ const Menu = [
     name: "What we do",
     link: "Service",
   },
-  {
-    id: 4,
-    name: "Donate",
-    link: "/Donation",
-  },
+ 
   {
     id: 5,
     name: "Contact us",
@@ -41,7 +37,7 @@ const Navbar = ({ handleOrderPopup }) => {
   return (
     <div className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40">
       {/* upper Navbar */}
-      <div className="bg-white py-2">
+      <div className="bg-white py-4">
         <div className="container flex justify-between items-center">
           <div>
             <a href="#" className="font-bold text-2xl sm:text-3xl flex gap-2">
@@ -76,7 +72,7 @@ const Navbar = ({ handleOrderPopup }) => {
       </div>
       {/* lower Navbar */}
       <div data-aos="zoom-in" className="flex justify-center">
-        <ul className="sm:flex hidden items-center gap-4">
+        <ul className="sm:flex hidden items-center mb-5">
           {Menu.map((data) => (
             <li key={data.id}>
               <a
