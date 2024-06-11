@@ -1,92 +1,67 @@
 import React from "react";
-import Img1 from "../../assets/shirt/shirt.png";
-import Img2 from "../../assets/shirt/shirt2.png";
-import Img3 from "../../assets/shirt/shirt3.png";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const ProductsData = [
-  {
-    id: 1,
-    img: "https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-1.jpg",
-    title: "Black Analogue Watch",
-    description:
-      "the one of the best watch for men's and women's as well",
-  },
-  {
-    id: 2,
-    img: "https://media.istockphoto.com/id/610772852/photo/alarm-clock-blue-isolated-background.jpg?s=612x612&w=0&k=20&c=BCJiaRy9FsmcnOPmKRX4xH7fz7v3xPVX8OIFA4kWllg=",
-    title: "Alarm Clock",
-    description:
-      "this is upcoming auction for alarm clock stay update with us so that you can't miss it out",
-  },
-  {
-    id: 3,
-    img: "https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-14.jpg",
-    title: "Couple Wedding Ring",
-    description:
-      "this is upcoming auction for women's wedding ring.",
-  },
-];
+
 const TopProducts = ({ handleOrderPopup }) => {
   return (
-    <div>
-      <div className="container">
+    <div data-aos="zoom-in">
+      <div className="bg-gray-100 py-12">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-center">
+          {/* Left Side - Image */}
+          <div className="w-full md:w-1/2 mb-8 md:mb-0">
+            <img
+              src="https://media.istockphoto.com/id/490592864/photo/african-boy-in-need-for-clean-water.jpg?s=612x612&w=0&k=20&c=yFCXj_EkP2X_EH_7aNhxVFtQlt5OedQxYqxcKDy2uuc="
+              alt="African Boy"
+              className="rounded-lg shadow-md"
+            />
+          </div>
 
-        <div className="text-center mb-10 max-w-[600px] mx-auto">
-          <p data-aos="fade-up" className="text-sm text-primary">
-            Exciting Auctions Await You
-          </p>
-          <h1 data-aos="fade-up" className="text-3xl font-bold">
-            Up Comming Auction
-          </h1>
-         
-            <p data-aos="fade-up" className="text-lg text-gray-400 mt-5">
-              Explore on the world's best & largest Bidding marketplace with our
-              beautiful Bidding products. We want to be a part of your smile,
-              success and future growth.
-            </p>
-          
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 place-items-center mt-40">
-          {ProductsData.map((data) => (
-            <div
-              data-aos="zoom-in"
-              className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-primary hover:text-white relative shadow-xl duration-300 group max-w-[300px]"
-            >
-              {/* image section */}
-              <div className="h-[100px]">
-                <img
-                  src={data.img}
-                  alt=""
-                  className="max-w-[140px] block mx-auto transform -translate-y-20 group-hover:scale-105 duration-300 drop-shadow-md"
-                />
-              </div>
-              {/* details section */}
-              <div className="p-4 text-center">
-                {/* star rating */}
-                <div className="w-full flex items-center justify-center gap-1">
-                  <FaStar className="text-yellow-500" />
-                  <FaStar className="text-yellow-500" />
-                  <FaStar className="text-yellow-500" />
-                  <FaStar className="text-yellow-500" />
+          {/* Right Side - Form */}
+          <div className="w-full md:w-1/2 md:ml-8">
+            <h2 className="text-2xl font-bold mb-4">Give your hand</h2>
+            <h3 className="text-xl font-bold mb-6">BECOME A VOLUNTEER</h3>
+            <form className="bg-gray-100 ">
+              <div className="flex flex-col md:flex-row mb-4">
+                <div className="w-full md:w-1/2 mr-0 md:mr-4 mb-4 md:mb-0">
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
                 </div>
-                <h1 className="text-xl font-bold">{data.title}</h1>
-                <p className="text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-2">
-                  {data.description}
-                </p>
-               
-                  <button
-                    className="bg-primary hover:scale-105 duration-300 text-white py-2 px-5 mt-4 group-hover:bg-white group-hover:text-primary"
-                    onClick={handleOrderPopup}
-                  >
-                   View details
-                  </button>
-                
+                <div className="w-full md:w-1/2">
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+              <div className="flex flex-col md:flex-row mb-4">
+                <div className="w-full md:w-1/2 mr-0 md:mr-4 mb-4 md:mb-0">
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+                <div className="w-full md:w-1/2">
+                  <input
+                    type="text"
+                    placeholder="City"
+                    className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+              </div>
+              <button
+                type="submit"
+                className="bg-primary text-white py-2 px-4 rounded-md"
+              >
+                Submit Now
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

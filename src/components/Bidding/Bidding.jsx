@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import { ProductsData } from "../Products/Products";
+// import { ProductsData } from "../Products/Products";
 
 const Modal = ({ show, onClose }) => {
   if (!show) return null;
