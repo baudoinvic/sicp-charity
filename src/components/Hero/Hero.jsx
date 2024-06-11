@@ -51,7 +51,7 @@ const Hero = ({ handleOrderPopup }) => {
       <div className="w-full">
         <Slider {...settings}>
           {ImageList.map((data) => (
-            <div key={data.id} className="relative bg-black ">
+            <div key={data.id} className="r ">
               <div
                 className="h-[500px] sm:h-[550px] bg-cover bg-center"
                 style={{ backgroundImage: `url(${data.img})` }}
