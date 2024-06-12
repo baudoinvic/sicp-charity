@@ -74,15 +74,17 @@ const Testimonials = () => {
         {/* header section */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
           <p data-aos="fade-up" className="text-sm text-primary">
-            What our customers are saying
+            Making a Difference Together
           </p>
           <h1 data-aos="fade-up" className="text-3xl font-bold">
-            Testimonials
+            What Our Donors Say
           </h1>
-          <p data-aos="fade-up" className="text-xs text-gray-400">
-            Explore on the world's best & largest Bidding marketplace with our
-            beautiful Bidding products. We want to be a part of your smile,
-            success and future growth.
+          <p data-aos="fade-up" className="text-lg text-gray-400">
+            Welcome to our community of kindness and compassion. 
+            we believe in the power of collective action to
+            change lives. Each donation, big or small, is a beacon of hope for
+            those in need. Join us as we strive to make the world a better
+            place, one act of generosity at a time.
           </p>
         </div>
 
@@ -93,7 +95,7 @@ const Testimonials = () => {
               <div className="my-6">
                 <div
                   key={data.id}
-                  className="flex flex-col gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl dark:bg-gray-800 bg-primary/10 relative"
+                  className="flex flex-col gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl bg-primary relative"
                 >
                   <div className="mb-4">
                     <img
@@ -104,13 +106,13 @@ const Testimonials = () => {
                   </div>
                   <div className="flex flex-col items-center gap-4">
                     <div className="space-y-3">
-                      <p className="text-xs text-gray-500">{data.text}</p>
-                      <h1 className="text-xl font-bold text-black/80 dark:text-light">
+                      <p className="text-xs text-white text-gray-500">{data.text}</p>
+                      <h1 className="text-xl font-bold text-white">
                         {data.name}
                       </h1>
                     </div>
                   </div>
-                  <p className="text-black/20 text-9xl font-serif absolute top-0 right-0">
+                  <p className="text-white text-9xl font-serif absolute top-0 right-0">
                     ,,
                   </p>
                 </div>
