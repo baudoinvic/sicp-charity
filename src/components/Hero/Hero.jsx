@@ -67,7 +67,7 @@ const Hero = ({ handleOrderPopup }) => {
           </h1>
           <p className="text-xl w-2/4 ">{ImageList[0].description}</p>
           <div className="pt-10">
-            <Link to="/donate">
+            <Link to="/donation">
               <button
                 onClick={handleOrderPopup}
                 className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-4 px-10 "
