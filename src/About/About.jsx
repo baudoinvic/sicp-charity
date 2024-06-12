@@ -103,9 +103,12 @@ const About = () => {
                 OUR MISSION
               </h3>
               <p className="mt-2 text-gray-600 text-center">
-                Our mission is to uplift marginalized individuals through
-                charity, education, and economic empowerment, fostering equality
-                and development.
+                Solidarity Initiative for Children and People (SICP) is aims to
+                get poor people and marginalized people out from poverty with
+                charity works, lead them to meaningful woks which get incomes,
+                in order to reload their belief in their lives, with goal to
+                step them to the level of others like: job, welfare, education,
+                economic and development
               </p>
             </div>
 
@@ -130,9 +133,10 @@ const About = () => {
                 OUR VISION
               </h3>
               <p className="mt-2 text-gray-600 text-center">
-                We envision a world where education and economic opportunities
-                empower every individual, promoting social justice and
-                reconciliation.
+                Education, economies and development will be a great tools of
+                social empowerment, liberty and justice and reconciliation. We
+                believe every human being should have opportunity to success in
+                life.
               </p>
             </div>
 
@@ -157,8 +161,8 @@ const About = () => {
                 OUR VALUES
               </h3>
               <p className="mt-2 text-gray-600 text-center">
-                Collaboration, compassion, equality, and faith guide our efforts
-                to assist those in need, regardless of race or background.
+                Working together Helping suffering people No discrimination
+                (races) Belief  Truth Faith in God
               </p>
             </div>
           </div>
