@@ -18,7 +18,6 @@ import Login from "./Login/Login";
 import Signup from "./Signup/Signup";
 import Contact from "./Contact/Contact";
 import About from "./About/About";
-import Payment from "./Payment/Payment";
 import Dashboard from "./Admindashboard/Dashboard";
 import Dash from "./Admindashboard/Dash";
 import Chart from "./Admindashboard/Chart";
@@ -89,7 +88,6 @@ const App = () => {
           <Route path="/About" element={<About />} />
           <Route path="/Donation" element={<Donation />} />
           <Route path="/Service" element={<Service />} />
-          <Route path="/Payment" element={<Payment />} />
 
           {/* Dashboard routes */}
           <Route path="/Admindashboard/Dashboard" element={<Dashboard />}>

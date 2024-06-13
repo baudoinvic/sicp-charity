@@ -9,7 +9,7 @@ const ImageList = [
   {
     id: 1,
     img: "https://media.istockphoto.com/id/618053488/photo/little-african-boy-drinking-healthy-clean-water-from-tap.jpg?s=612x612&w=0&k=20&c=Kg4ju6Ae0Emb_E2PzqM02SgDY3Xa6c2ExUWLNmXvtMA=",
-    title: "Support Our Cause and Make a Difference",
+    title: "Solidarity Initiative for Children and People(SICP)",
     description:
       "join us in our mission to support those in need. Your donations and bids help us provide essential resources and services to communities around the world.",
   },

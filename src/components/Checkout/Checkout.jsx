@@ -1,169 +1,141 @@
-import React from 'react'
-import Navbar from '../Navbar/Navbar'
-import Footer from '../Footer/Footer';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import { useState } from 'react';
-import { ToastContainer,toast } from 'react-toastify';
+
+
+import React, { useState } from "react";
+import { IoMdArrowBack } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
+  const [cardNumber, setCardNumber] = useState("");
+  const [expiryDate, setExpiryDate] = useState("");
+  const [cvc, setCvc] = useState("");
+  const [nameOnCard, setNameOnCard] = useState("");
 
- const [formData, setFormData] = useState({
-   country: "",
-   town: "",
-   email: "",
-   street: "",
-   state: "",
-   postcode: "",
- });
-
- const handleChange = (e) => {
-   const fieldName = e.target.name;
-
-   setFormData({
-     ...formData,
-     [fieldName]: e.target.value,
-   });
- };
-
- const handleSubmit = async (e) => {
-   e.preventDefault();
-
-   try {
-     let token = localStorage.getItem("token");
-     console.log("Request Data:", formData);
-
-     const response = await axios({
-       url: "https://beathaecommerceback-end.onrender.com/api/v1/billing",
-       method: "POST",
-       headers: {
-         "Content-Type": "application/json",
-         Authorization: `Bearer ${token}`,
-       },
-       data: JSON.stringify(formData),
-     });
-
-     console.log("Response Data:", response.data);
-     toast.success("place order succssfully");
-   } catch (error) {
-     console.error("Error:", error.response ? error.response.data : error);
-     toast.error("Failed to place order. Please try again later.");
-   }
- };
-
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle the payment processing logic here
+    console.log({
+      cardNumber,
+      expiryDate,
+      cvc,
+      nameOnCard,
+    });
+  };
 
   return (
-    <>
-      <Navbar />
-      <div data-aos="zoom-in">
-        <div className="checkout flex flex-col md:flex-row mt-10 md:mx-auto md:max-w-4xl">
-          <div className="left-side flex-none md:w-1/2 mr-4 mb-4 md:mb-0">
-            <img
-              src="https://media.istockphoto.com/id/1671142169/vector/web-phishing-illustration-on-mobile-concept.jpg?s=612x612&w=0&k=20&c=XDfAqPBBiHFZCbEqUZognNbY4XTD-XTpacgjmH-Q-sA="
-              alt="Cyclist"
-              className="h-full object-cover"
-            />
+    <div className="Checkout min-h-screen bg-gray-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-2xl w-full space-y-8">
+        <Link to="/Donation">
+          <div className="flex">
+            <IoMdArrowBack className="text-primary mt-1 mr-2" />
+            <span className="text-primary">Donation</span>
           </div>
-          <div className="right-side w-full md:w-1/2 mx-auto p-6 shadow-md">
-            <h1 className="text-2xl font-bold mb-4">BILLING ADDRESS</h1>
-            <form onSubmit={handleSubmit}> 
-              <div className="mb-4">
-                <label htmlFor="country" className="block font-medium mb-1">
-                  Country
+        </Link>
+
+        <div>
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+            Payment Details
+          </h2>
+        </div>
+        <form
+          className="mt-8 space-y-6 bg-white p-10 shadow-lg rounded-lg"
+          onSubmit={handleSubmit}
+        >
+          <div className="rounded-md shadow-sm">
+            <div>
+              <label htmlFor="card-number" className="sr-only">
+                Card Number
+              </label>
+              <input
+                id="card-number"
+                name="cardNumber"
+                type="text"
+                autoComplete="cc-number"
+                required
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                placeholder="Card Number"
+                value={cardNumber}
+                onChange={(e) => setCardNumber(e.target.value)}
+              />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+              <div>
+                <label htmlFor="expiry-date" className="sr-only">
+                  Expiry Date
                 </label>
                 <input
-                  type="country"
-                  id="country"
-                  name="country"
-                  onChange={handleChange}
+                  id="expiry-date"
+                  name="expiryDate"
+                  type="text"
+                  autoComplete="cc-exp"
                   required
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                  placeholder="Expiry Date (MM/YY)"
+                  value={expiryDate}
+                  onChange={(e) => setExpiryDate(e.target.value)}
                 />
               </div>
-              <div className="mb-4">
-                <label htmlFor="email" className="block font-medium mb-1">
-                  Town
+              <div>
+                <label htmlFor="cvc" className="sr-only">
+                  CVC
                 </label>
                 <input
-                  type="town"
-                  id="town"
-                  name="town"
-                  onChange={handleChange}
+                  id="cvc"
+                  name="cvc"
+                  type="text"
+                  autoComplete="cc-csc"
                   required
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                  placeholder="CVC"
+                  value={cvc}
+                  onChange={(e) => setCvc(e.target.value)}
                 />
               </div>
-              <div className="mb-4">
-                <label htmlFor="street" className="block font-medium mb-1">
-                  Street
-                </label>
-                <input
-                  type="street"
-                  id="street"
-                  name="street"
-                  onChange={handleChange}
-                  required
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="state" className="block font-medium mb-1">
-                  State
-                </label>
-                <input
-                  type="state"
-                  id="state"
-                  name="state"
-                  onChange={handleChange}
-                  required
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="postcode" className="block font-medium mb-1">
-                  Postcode
-                </label>
-                <input
-                  type="postcode"
-                  id="postcode"
-                  name="postcode"
-                  onChange={handleChange}
-                  required
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="email" className="block font-medium mb-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  onChange={handleChange}
-                  required
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                />
-              </div>
-              {/* <Link to="/Payment"> */}
-              <button
-                type="submit"
-                className="bg-primary text-white w-full py-2 rounded-md hover:bg-primary"
-              >
-                Place order
-              </button>
-              {/* </Link> */}
-            </form>
-            <ToastContainer />
+            </div>
+            <div className="mt-4">
+              <label htmlFor="name-on-card" className="sr-only">
+                Name on Card
+              </label>
+              <input
+                id="name-on-card"
+                name="nameOnCard"
+                type="text"
+                autoComplete="cc-name"
+                required
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                placeholder="Name on Card"
+                value={nameOnCard}
+                onChange={(e) => setNameOnCard(e.target.value)}
+              />
+            </div>
           </div>
+
+          <div>
+            <button
+              type="submit"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-transform transform hover:scale-105"
+            >
+              Complete Payment
+            </button>
+          </div>
+        </form>
+        <div className="mt-6 text-center">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg"
+            alt="Visa"
+            className="h-8 inline-block mx-2"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
+            alt="MasterCard"
+            className="h-8 inline-block mx-2"
+          />
+          <p className="text-center text-sm text-gray-600 mt-2">
+            Your payment information is secure and encrypted.
+          </p>
         </div>
       </div>
-      <br />
-      <br />
-      <Footer />
-    </>
+    </div>
   );
-}
+};
 
-export default Checkout
+export default Checkout;

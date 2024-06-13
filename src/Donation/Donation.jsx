@@ -3,12 +3,17 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 const Donation = () => {
   const [amount, setAmount] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [newsletter, setNewsletter] = useState(false);
+  
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,6 +24,9 @@ const Donation = () => {
       email,
       newsletter,
     });
+
+    // Navigate to the checkout page
+    navigate("/checkout");
   };
 
   return (
