@@ -32,6 +32,7 @@ import Bidding from "./components/Bidding/Bidding";
 import Donation from "./Donation/Donation";
 import Service from "./Service/Service";
 import Compaign from "./Compaign/Compaign";
+import Funraise from "./Funraise/Funraise";
 
 
  const CommonLayout = ({ children }) => {
@@ -85,6 +86,7 @@ const App = () => {
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/bidding/:id" element={<Bidding />} />
+          <Route path="/Funraise" element={<Funraise />} />
 
           <Route path="/Compaign" element={<Compaign />} />
           <Route path="/About" element={<About />} />

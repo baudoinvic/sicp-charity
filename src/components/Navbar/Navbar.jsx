@@ -31,7 +31,13 @@ const Menu = [
   },
 
   {
-    id: 4,
+    id: 5,
+    name: "Funraising",
+    link: "/Funraise",
+  },
+
+  {
+    id: 6,
     name: "Contact us",
     link: "/Contact",
   },
