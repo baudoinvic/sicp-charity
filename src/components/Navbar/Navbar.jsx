@@ -21,11 +21,17 @@ const Menu = [
   {
     id: 3,
     name: "What we do",
-    link: "Service",
+    link: "/Service",
   },
- 
+
   {
-    id: 5,
+    id: 4,
+    name: "Compaign",
+    link: "/Compaign",
+  },
+
+  {
+    id: 4,
     name: "Contact us",
     link: "/Contact",
   },

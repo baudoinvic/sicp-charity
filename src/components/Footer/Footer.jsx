@@ -17,11 +17,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
-              {/* <img
-                src={traite}
-                alt="Logo Traiteur Joy"
-                className="w-16 h-auto rounded-full shadow-lg"
-              /> */}
+            
               <h1 className="font-bold text-2xl text-primary">
                 Solidarity Initiative
                 <br />
@@ -35,7 +31,7 @@ const Footer = () => {
             </p>
             <div>
               <p className="text-lg font-semibold mb-3">
-                subscribe to our Newa letter
+                subscribe to our News letter
               </p>
               <form
                 action="/abonnement"
@@ -45,7 +41,7 @@ const Footer = () => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="Entrez votre email"
+                  placeholder="Enter your email"
                   required
                   className="px-4 py-3 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-brightColor"
                 />
