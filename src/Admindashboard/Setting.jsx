@@ -107,7 +107,7 @@ const Setting = () => {
               Cancel
             </button>
             <div className="save">
-              <button className="saving py-4 px-10 bg-purple-700 text-white border border-white">
+              <button className="saving py-4 px-10 bg-primary text-white border border-white">
                 Save
               </button>
             </div>
