@@ -1,226 +1,223 @@
-
 import React, { useState } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 
-const App = () => {
-  const [donors, setDonors] = useState([
-    { id: 1, name: "John Doe" },
-    { id: 2, name: "Jane Smith" },
-  ]);
+const Compaign = () => {
+  const [modal, setModal] = useState(null);
 
-  const [campaigns, setCampaigns] = useState([
-    { id: 1, name: "Education Campaign", total: 5000 },
-    { id: 2, name: "Healthcare Campaign", total: 3000 },
-  ]);
-
-  const [fundraisers, setFundraisers] = useState([
-    { id: 1, name: "Charity Gala", total: 10000 },
-    { id: 2, name: "Walkathon", total: 8000 },
-  ]);
-
-  const beneficiaryGroups = [
-    "Children and Students",
-    "Youth",
-    "Women",
-    "Patients",
-  ];
-
-  const handleDonation = (
-    amount,
-    campaignId,
-    fundraiserId,
-    beneficiaryGroup
-  ) => {
-    // Update campaign total
-    const updatedCampaigns = campaigns.map((campaign) =>
-      campaign.id === campaignId
-        ? { ...campaign, total: campaign.total + amount }
-        : campaign
-    );
-    setCampaigns(updatedCampaigns);
-
-    // Update fundraiser total
-    const updatedFundraisers = fundraisers.map((fundraiser) =>
-      fundraiser.id === fundraiserId
-        ? { ...fundraiser, total: fundraiser.total + amount }
-        : fundraiser
-    );
-    setFundraisers(updatedFundraisers);
-
-    // Add new donor
-    const newDonor = {
-      id: donors.length + 1,
-      name: `Donor ${donors.length + 1}`,
-    };
-    setDonors([...donors, newDonor]);
-
-    console.log(`Donated $${amount} to ${beneficiaryGroup} group.`);
-  };
+  const showModal = (campaign) => setModal(campaign);
+  const hideModal = () => setModal(null);
 
   return (
     <>
      <Navbar />
-      <div className="container mx-auto py-8 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">Donors</h2>
-            <ul className="space-y-2">
-              {donors.map((donor) => (
-                <li key={donor.id} className="text-gray-700">
-                  {donor.name}
-                </li>
-              ))}
-            </ul>
+      <div className="min-h-screen bg-gray-100">
+        <header
+          className="bg-blue-600 text-white py-32"
+          style={{
+            backgroundImage:
+              "url('https://static.wixstatic.com/media/cecc1b_4e0f99a994834b81bc3e86f11a515b4f~mv2.jpg/v1/fill/w_1583,h_453,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/cecc1b_4e0f99a994834b81bc3e86f11a515b4f~mv2.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="container mx-auto bg-opacity-75 bg-primary py-4 rounded-lg">
+            <h1 className="text-3xl font-bold">Support Our Causes</h1>
+            <p className="mt-2">
+              Help us make a difference by donating to specific campaigns or
+              through our general fundraising efforts.
+            </p>
           </div>
+        </header>
 
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">Campaigns</h2>
-            <ul className="space-y-2">
-              {campaigns.map((campaign) => (
-                <li key={campaign.id} className="text-gray-700">
-                  {campaign.name} (Total: ${campaign.total})
-                </li>
-              ))}
-            </ul>
-          </div>
+        <main className="container mx-auto py-8">
+          <section className="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 className="text-2xl font-semibold mb-4">Campaign Overview</h2>
+            <p className="mb-4">
+              Our organization runs several campaigns aimed at helping different
+              groups in need. Below you can find information about each campaign
+              and how to contribute.
+            </p>
+          </section>
 
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">Fundraisers</h2>
-            <ul className="space-y-2">
-              {fundraisers.map((fundraiser) => (
-                <li key={fundraiser.id} className="text-gray-700">
-                  {fundraiser.name} (Total: ${fundraiser.total})
-                </li>
-              ))}
-            </ul>
-          </div>
+          <section className="mt-8">
+            <h2 className="text-2xl font-semibold mb-4">Fundraising Goals</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-gray-200 p-4 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold">Total Goal</h3>
+                <p className="mt-2">$50,000</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold">Raised So Far</h3>
+                <p className="mt-2">$20,000</p>
+              </div>
+            </div>
+          </section>
 
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">Beneficiary Groups</h2>
-            <ul className="space-y-2">
-              {beneficiaryGroups.map((group, index) => (
-                <li key={index} className="text-gray-700">
-                  {group}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+          <section className="mt-8">
+            <h2 className="text-2xl font-semibold mb-4">How to Donate</h2>
+            <div className="bg-white p-6 rounded-lg shadow-md mb-8">
+              <p>
+                You can choose to donate to a specific campaign or contribute to
+                our general fundraising efforts. Select a category below to
+                learn more and donate.
+              </p>
+            </div>
+          </section>
 
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h2 className="text-3xl font-bold text-primary mb-6 text-center">
-            Make a Donation
-          </h2>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              const amount = parseInt(e.target.elements.amount.value);
-              const campaignId = parseInt(e.target.elements.campaignId.value);
-              const fundraiserId = parseInt(
-                e.target.elements.fundraiserId.value
-              );
-              const beneficiaryGroup = e.target.elements.beneficiaryGroup.value;
-              handleDonation(
-                amount,
-                campaignId,
-                fundraiserId,
-                beneficiaryGroup
-              );
-              e.target.reset();
-            }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6"
-          >
-            <div>
-              <label
-                htmlFor="amount"
-                className="block font-bold text-gray-700 mb-2"
-              >
-                Amount:
-              </label>
-              <input
-                type="number"
-                id="amount"
-                name="amount"
-                className="border-2 border-blue-600 px-3 py-2 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-600"
-                required
-              />
+          <section className="mt-8">
+            <h2 className="text-2xl font-semibold mb-4">
+              Fundraising Campaigns
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-2">
+                  Children and Students
+                </h3>
+                <p className="mb-4">
+                  Our Children and Students campaign focuses on providing
+                  educational resources, school supplies, and scholarships to
+                  underprivileged children. By donating, you help these children
+                  get the education they deserve, opening doors to a brighter
+                  future.
+                </p>
+                <button
+                  onClick={() => showModal("children-students")}
+                  className="bg-blue-600 text-white py-2 px-4 rounded-lg"
+                >
+                  Learn More
+                </button>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-2">Youth</h3>
+                <p className="mb-4">
+                  The Youth campaign is dedicated to supporting young people
+                  through mentorship programs, career training, and recreational
+                  activities. Your donations help empower youth, fostering their
+                  development and ensuring they have the skills and
+                  opportunities to succeed.
+                </p>
+                <button
+                  onClick={() => showModal("youth")}
+                  className="bg-blue-600 text-white py-2 px-4 rounded-lg"
+                >
+                  Learn More
+                </button>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-2">Women</h3>
+                <p className="mb-4">
+                  Our Women’s campaign focuses on empowering women through
+                  education, job training, and support services. Donations to
+                  this campaign help women achieve financial independence, gain
+                  confidence, and build a better future for themselves and their
+                  families.
+                </p>
+                <button
+                  onClick={() => showModal("women")}
+                  className="bg-blue-600 text-white py-2 px-4 rounded-lg"
+                >
+                  Learn More
+                </button>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-2">Patients</h3>
+                <p className="mb-4">
+                  The Patients campaign aims to provide medical assistance,
+                  medications, and support for individuals who cannot afford
+                  healthcare. Your contributions help improve the quality of
+                  life for patients by ensuring they receive the necessary
+                  medical care and support.
+                </p>
+                <button
+                  onClick={() => showModal("patients")}
+                  className="bg-blue-600 text-white py-2 px-4 rounded-lg"
+                >
+                  Learn More
+                </button>
+              </div>
             </div>
-            <div>
-              <label
-                htmlFor="campaignId"
-                className="block font-bold text-gray-700 mb-2"
-              >
-                Campaign:
-              </label>
-              <select
-                id="campaignId"
-                name="campaignId"
-                className="border-2 border-blue-600 px-3 py-2 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-600"
-                required
-              >
-                <option value="">Select a campaign</option>
-                {campaigns.map((campaign) => (
-                  <option key={campaign.id} value={campaign.id}>
-                    {campaign.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label
-                htmlFor="fundraiserId"
-                className="block font-bold text-gray-700 mb-2"
-              >
-                Fundraiser:
-              </label>
-              <select
-                id="fundraiserId"
-                name="fundraiserId"
-                className="border-2 border-blue-600 px-3 py-2 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-600"
-                required
-              >
-                <option value="">Select a fundraiser</option>
-                {fundraisers.map((fundraiser) => (
-                  <option key={fundraiser.id} value={fundraiser.id}>
-                    {fundraiser.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label
-                htmlFor="beneficiaryGroup"
-                className="block font-bold text-gray-700 mb-2"
-              >
-                Beneficiary Group:
-              </label>
-              <select
-                id="beneficiaryGroup"
-                name="beneficiaryGroup"
-                className="border-2 border-blue-600 px-3 py-2 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-600"
-                required
-              >
-                <option value="">Select a beneficiary group</option>
-                {beneficiaryGroups.map((group, index) => (
-                  <option key={index} value={group}>
-                    {group}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <button
-              type="submit"
-              className="bg-primary text-white font-bold py-3 rounded-md hover:bg-blue-700 mt-4 w-96"
-            >
-              Donate
-            </button>
-          </form>
-        </div>
-        <Footer />
+          </section>
+        </main>
       </div>
+
+      {modal === "children-students" && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-2">
+              Children and Students
+            </h3>
+            <p className="mb-4">
+              Detailed information about the Children and Students campaign.
+              This campaign focuses on providing educational resources, school
+              supplies, and scholarships to underprivileged children.
+            </p>
+            <button
+              onClick={hideModal}
+              className="bg-red-600 text-white py-2 px-4 rounded-lg"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+      {modal === "youth" && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-2">Youth</h3>
+            <p className="mb-4">
+              Detailed information about the Youth campaign. This campaign
+              supports young people through mentorship programs, career
+              training, and recreational activities.
+            </p>
+            <button
+              onClick={hideModal}
+              className="bg-red-600 text-white py-2 px-4 rounded-lg"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+      {modal === "women" && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-2">Women</h3>
+            <p className="mb-4">
+              Detailed information about the Women’s campaign. This campaign
+              focuses on empowering women through education, job training, and
+              support services.
+            </p>
+            <button
+              onClick={hideModal}
+              className="bg-red-600 text-white py-2 px-4 rounded-lg"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+      {modal === "patients" && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-2">Patients</h3>
+            <p className="mb-4">
+              Detailed information about the Patients campaign. This campaign
+              aims to provide medical assistance, medications, and support for
+              individuals who cannot afford healthcare.
+            </p>
+            <button
+              onClick={hideModal}
+              className="bg-red-600 text-white py-2 px-4 rounded-lg"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+      <Footer />
     </>
   );
 };
 
-export default App;
+export default Compaign;

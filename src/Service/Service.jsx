@@ -12,10 +12,10 @@ const Service = () => {
 
       {/* Hero Section */}
       <header
-        className="hero bg-cover bg-center brightness-50 h-96 flex items-center justify-center text-center "
+        className="hero bg-cover bg-center  h-96 flex items-center justify-center text-center "
         style={{
           backgroundImage:
-            "url('https://media.istockphoto.com/id/474234518/photo/clean-fresh-water-scarcity-symbol-black-girl-drinking-from-tap.jpg?s=612x612&w=0&k=20&c=_pjxYm6dsAFMPIfn1dXux0km0bESkvKgUflxf9So3ak=')",
+            "url('https://static.wixstatic.com/media/cecc1b_4e0f99a994834b81bc3e86f11a515b4f~mv2.jpg/v1/fill/w_1583,h_453,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/cecc1b_4e0f99a994834b81bc3e86f11a515b4f~mv2.jpg')",
         }}
       >
         <h1 className="text-5xl font-bold text-white">What We Do</h1>
