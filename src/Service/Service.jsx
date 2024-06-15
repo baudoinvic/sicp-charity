@@ -32,7 +32,10 @@ const Service = () => {
       </span>
 
       {/* Main Content */}
-      <main className="container mx-auto py-16 px-4 flex  items-center space-x-10">
+      <main
+        data-aos="zoom-in"
+        className="container mx-auto py-16 px-4 flex  items-center space-x-10"
+      >
         {/* Section: Overview */}
         <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold text-center  mb-6">Our Mission</h2>

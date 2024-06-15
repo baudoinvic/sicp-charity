@@ -10,7 +10,7 @@ const Compaign = () => {
 
   return (
     <>
-     <Navbar />
+      <Navbar />
       <div className="min-h-screen ">
         <header
           className="bg-blue-600 text-white py-32"
@@ -65,7 +65,7 @@ const Compaign = () => {
             </div>
           </section>
 
-          <section className="mt-8">
+          <section data-aos="zoom-in" className="mt-8">
             <h2 className="text-2xl font-semibold mb-4">
               Fundraising Campaigns
             </h2>

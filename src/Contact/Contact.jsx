@@ -76,6 +76,7 @@ function Contact() {
         </div>
 
         <div
+          data-aos="zoom-in"
           id="contact-form"
           className="container mx-auto px-4 py-20 -mt-48 relative z-20"
         >

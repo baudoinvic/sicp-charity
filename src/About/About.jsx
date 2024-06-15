@@ -11,7 +11,10 @@ const About = () => {
 
       {/* Hero Section */}
       <section className="relative">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-center py-8 mt-10">
+        <div
+          data-aos="zoom-in"
+          className="container mx-auto flex flex-col md:flex-row items-center justify-center py-8 mt-10"
+        >
           {/* Left Side - Image */}
           <div className="w-full md:w-1/2 mb-4 md:mb-0">
             <img
@@ -36,7 +39,10 @@ const About = () => {
           </div>
         </div>
 
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-16 mt-10">
+        <div
+          data-aos="zoom-in"
+          className="container mx-auto flex flex-col md:flex-row items-center justify-between py-16 mt-10"
+        >
           <div className="md:w-1/2 mb-8 md:mb-0">
             <div className="mb-10">
               <h2 className="text-4xl font-bold mb-4 text-primary">
@@ -162,7 +168,7 @@ const About = () => {
               </h3>
               <p className="mt-2 text-gray-600 text-center">
                 Working together Helping suffering people No discrimination
-                (races) Belief  Truth Faith in God
+                (races) Belief Truth Faith in God
               </p>
             </div>
           </div>

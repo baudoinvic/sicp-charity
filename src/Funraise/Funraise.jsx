@@ -88,8 +88,11 @@ const Funraise= () => {
 
   return (
     <>
-    <Navbar />
-      <div className="min-h-screen  flex flex-col items-center justify-center">
+      <Navbar />
+      <div
+        data-aos="zoom-in"
+        className="min-h-screen  flex flex-col items-center justify-center"
+      >
         <div className="max-w-3xl w-full mx-auto">
           <h1 className="text-4xl font-bold text-center text-blue-600 mb-12">
             Fundraising Calendar
