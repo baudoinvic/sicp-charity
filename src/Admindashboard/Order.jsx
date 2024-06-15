@@ -40,13 +40,13 @@ const Order = () => {
     
 
     <div data-aos="zoom-in" className="mt-10">
-      <span className="text-3xl font-bold">Orders</span>
+      <span className="text-3xl font-bold">Volunteers</span>
       <div class="bg-white p-4 rounded-lg ">
         <div class="flex shadow-md mt-10">
-          <span class="font-bold w-1/4">customerName</span>
-          <span class="font-bold w-1/4">Amount</span>
-          <span class="font-bold w-1/4">number of items</span>
-          <span class="font-bold w-1/4">Payment status</span>
+          <span class="font-bold w-1/4">Name</span>
+          <span class="font-bold w-1/4">Email</span>
+          <span class="font-bold w-1/4">Country</span>
+          <span class="font-bold w-1/4">Phone number</span>
         </div>
         {orders.map((order) => (
           <div className="flex mt-10" key={order._id}>

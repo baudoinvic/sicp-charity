@@ -1,12 +1,11 @@
 import React from 'react'
  import { Link, NavLink, Outlet } from "react-router-dom";
  import { IoMdHome } from "react-icons/io";
- import { MdProductionQuantityLimits } from "react-icons/md";
  import { FaUserGroup } from "react-icons/fa6";
 import { FaUserPlus } from "react-icons/fa6";
-import { FaBorderStyle } from "react-icons/fa";
 import { IoSettingsOutline } from "react-icons/io5";
 import { TbLogout } from "react-icons/tb";
+import { FaDonate } from "react-icons/fa";
 
 function Dashboard() {
   
@@ -31,9 +30,9 @@ function Dashboard() {
 
             <Link to="/Admindashboard/Dashboard/Product">
               <li className="px-6 py-3 flex items-center rounded-lg hover:bg-primary transition-colors duration-300">
-                <MdProductionQuantityLimits className="mr-4 text-xl text-black" />
+                <FaDonate className="mr-4 text-xl text-black" />
                 <span className="cursor-pointer text-lg font-semibold text-black">
-                  Auction Items
+                  Donations
                 </span>
               </li>
             </Link>
@@ -42,7 +41,7 @@ function Dashboard() {
               <li className="px-6 py-3 flex items-center rounded-lg hover:bg-primary transition-colors duration-300">
                 <FaUserGroup className="mr-4 text-xl text-black" />
                 <span className="cursor-pointer text-lg font-semibold text-black">
-                  Bidders
+                  Donors
                 </span>
               </li>
             </Link>
@@ -50,15 +49,15 @@ function Dashboard() {
               <li className="px-6 py-3 flex items-center rounded-lg hover:bg-primary transition-colors duration-300">
                 <FaUserPlus className="mr-4 text-xl text-black" />
                 <span className="cursor-pointer text-lg font-semibold text-black">
-                  Sellers
+                  Users
                 </span>
               </li>
             </Link>
             <Link to="/Admindashboard/Dashboard/Order">
               <li className="px-6 py-3 flex items-center rounded-lg hover:bg-primary transition-colors duration-300">
-                <FaBorderStyle className="mr-4 text-xl text-black" />
+                <FaUserPlus className="mr-4 text-xl text-black" />
                 <span className="cursor-pointer text-lg font-semibold text-black">
-                  Bids
+                  Volunteers
                 </span>
               </li>
             </Link>
@@ -84,7 +83,7 @@ function Dashboard() {
         </div>
 
         {/* Content */}
-        <div className="flex-1 bg-gray-200 p-8">
+        <div className="flex-1 p-8">
           <div className="sidebar-right-side">
             <Outlet />
           </div>

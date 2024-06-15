@@ -55,15 +55,14 @@ const handleDeleteBillings = async (id) => {
   
   return (
     <div data-aos="zoom-in" className="mt-10">
-      <span className="text-3xl font-bold">Customers</span>
+      <span className="text-3xl font-bold">Donors</span>
       <div className="bg-white p-4 rounded-lg ">
         <div className="flex shadow-md mt-10">
+          <span className="font-bold w-1/4">Firstname</span>
+          <span className="font-bold w-1/4">Lastnae</span>
           <span className="font-bold w-1/4">Email</span>
-          <span className="font-bold w-1/4">Country</span>
-          <span className="font-bold w-1/4">Town</span>
-          <span className="font-bold w-1/4">Street</span>
-          <span className="font-bold w-1/4">State</span>
-          <span className="font-bold w-1/4">postcode</span>
+          <span className="font-bold w-1/4">Postal code</span>
+          <span className="font-bold w-1/4">City</span>
           <span className="font-bold w-1/4">Action</span>
         </div>
         {Billings.map((billings) => (

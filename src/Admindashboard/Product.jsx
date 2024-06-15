@@ -59,16 +59,14 @@ const Product = () => {
 
   return (
     <div data-aos="zoom-in" className="mt-10">
-      <span className="text-3xl font-bold">Products</span>
+      <span className="text-3xl font-bold">Donations</span>
       <div className="bg-white p-4 rounded-lg ">
         <div className="flex shadow-md mt-10">
-          <span className="font-bold w-1/4">Productname</span>
-          <span className="font-bold w-1/4">Price</span>
-          <span className="font-bold w-1/4">Stock quantity</span>
-          <span className="font-bold w-1/4">Category</span>
-          <span className="font-bold w-1/4">Description</span>
-          <span className="font-bold w-1/4">Product Image</span>{" "}
-         
+          <span className="font-bold w-1/4">Donor name</span>
+          <span className="font-bold w-1/4">Donation amount</span>
+          <span className="font-bold w-1/4">Email</span>
+          <span className="font-bold w-1/4">phone number</span>
+          <span className="font-bold w-1/4">City</span>
           <span className="font-bold w-1/4">Action</span>
         </div>
         {Products.map((product) => (
