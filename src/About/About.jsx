@@ -41,7 +41,7 @@ const About = () => {
 
         <div
           data-aos="zoom-in"
-          className="container mx-auto flex flex-col md:flex-row items-center justify-between py-16 mt-10"
+          className="container mx-auto flex flex-col md:flex-row items-center justify-between py-16 "
         >
           <div className="md:w-1/2 mb-8 md:mb-0">
             <div className="mb-10">
@@ -174,11 +174,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* Our Story Section */}
-
-      {/* Who Can Donate Section */}
-
       <Footer />
     </div>
   );

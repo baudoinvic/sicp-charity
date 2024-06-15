@@ -44,33 +44,32 @@ const Hero = ({ handleOrderPopup }) => {
   };
 
   return (
-    <div className="relative overflow-hidden bg-gray-100 flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 ">
-      {/* background pattern */}
-      <div className="h-[700px] w-[900px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
-      {/* hero section */}
-      <div className="w-full">
+  
+    <div className="relative overflow-hidden bg-gray-100 flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200">
+      <div className="h-[700px] w-[900px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z-8"></div>
+      <div className="w-full relative">
         <Slider {...settings}>
           {ImageList.map((data) => (
-            <div key={data.id} className="relative ">
+            <div key={data.id} className="relative">
               <div
                 className="h-[500px] sm:h-[550px] bg-cover bg-center brightness-60"
                 style={{ backgroundImage: `url(${data.img})` }}
-              >
-                {/* Only the background image changes */}
-              </div>
+              ></div>
             </div>
           ))}
         </Slider>
-        <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-start text-left bg-black bg-opacity-50 text-white p-10">
-          <h1 className="text-5xl sm:text-4xl lg:text-7xl font-bold w-2/4">
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center sm:items-start text-center sm:text-left bg-black bg-opacity-50 text-white p-10">
+          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold w-full sm:w-2/4 mb-4 sm:mb-8">
             {ImageList[0].title}
           </h1>
-          <p className="text-xl w-2/4 ">{ImageList[0].description}</p>
-          <div className="pt-10">
+          <p className="text-lg sm:text-xl w-full sm:w-2/4 mb-6">
+            {ImageList[0].description}
+          </p>
+          <div className="flex flex-wrap justify-center sm:justify-start space-x-4">
             <Link to="/donation">
               <button
                 onClick={handleOrderPopup}
-                className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-4 px-10 "
+                className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-3 px-8 sm:py-4 sm:px-10 mb-4 sm:mb-0 mr-0 sm:mr-4"
               >
                 Donate
               </button>
@@ -78,7 +77,7 @@ const Hero = ({ handleOrderPopup }) => {
             <Link to="/contact">
               <button
                 onClick={handleOrderPopup}
-                className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-4 px-10  ml-4"
+                className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-3 px-8 sm:py-4 sm:px-10"
               >
                 Contact Us
               </button>

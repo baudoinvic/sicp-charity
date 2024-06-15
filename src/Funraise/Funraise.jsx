@@ -4,7 +4,7 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 
-const Funraise= () => {
+const Funraise = () => {
   const months = [
     {
       name: "June 2024",
@@ -24,6 +24,8 @@ const Funraise= () => {
         "National Handshake Day · June 27",
         "Pride Day · June 28",
       ],
+      image:
+        "https://media.istockphoto.com/id/1486305888/photo/world-environment-day-2023-3d-concept.jpg?s=612x612&w=0&k=20&c=NX7LEjr6s4ficuxHWAob87bilc_nx4qJaH6YRHtsEo4=",
     },
     {
       name: "July 2024",
@@ -41,6 +43,8 @@ const Funraise= () => {
         "Disability Independence Day · July 26",
         "International Friendship Day · July 30",
       ],
+      image:
+        "https://media.istockphoto.com/id/1360731988/vector/national-strawberry-ice-cream-day-january-15-holiday-concept-template-for-background-banner.jpg?s=612x612&w=0&k=20&c=L6N4M4ICwbzo8dOusNbwvyvk61fvsB3SxIBguxKbhzQ=",
     },
     {
       name: "August 2024",
@@ -62,6 +66,8 @@ const Funraise= () => {
         "Women's Equality Day · August 26",
         "International Overdose Awareness Day · August 31",
       ],
+      image:
+        "https://media.istockphoto.com/id/1409566238/vector/national-dog-day-august-26-holiday-concept-template-for-background-banner-card-poster-with.jpg?s=612x612&w=0&k=20&c=SBwLbMF3FXEerSPkHROdVF3HOjeNqa4SV2JJA1Cwvn8=",
     },
     {
       name: "September 2024",
@@ -83,38 +89,44 @@ const Funraise= () => {
         "Oktoberfest · September 21 - October 6",
         "Chuseok (Harvest Moon Festival) · September 16-18",
       ],
+      image:
+        "https://media.istockphoto.com/id/1680606749/vector/hispanic-heritage-month-vector-web-banner-poster-card-for-social-media-networks-greeting.jpg?s=612x612&w=0&k=20&c=7svjtEmib9WG6Rrcm5Kzqycec6V_QeA-P4w_uXqMKkE=",
     },
   ];
 
   return (
-    <>
+  
+    <div className="min-h-screen ">
       <Navbar />
-      <div
-        data-aos="zoom-in"
-        className="min-h-screen  flex flex-col items-center justify-center"
-      >
-        <div className="max-w-3xl w-full mx-auto">
-          <h1 className="text-4xl font-bold text-center text-blue-600 mb-12">
-            Fundraising Calendar
-          </h1>
-          {months.map((month, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md p-6 mb-8">
-              <h2 className="text-2xl font-bold text-blue-600 mb-4">
-                {month.name}
-              </h2>
-              <ul className="list-disc pl-6 space-y-2">
-                {month.events.map((event, eventIndex) => (
-                  <li key={eventIndex} className="text-gray-700">
-                    {event}
-                  </li>
-                ))}
-              </ul>
+      <div className="py-12 px-4 md:px-0 max-w-7xl mx-auto">
+        <h1 className="text-4xl font-bold text-center text-blue-600 mb-8">
+          Fundraising Calendar
+        </h1>
+        {months.map((month, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-lg shadow-md mb-8 overflow-hidden"
+          >
+            <div className="flex items-center justify-between p-6">
+              <h2 className="text-2xl font-bold text-blue-600 ">{month.name}</h2>
+              <img
+                src={month.image}
+                alt={`${month.name} image`}
+                className="w-1/3 md:w-1/2 h-64 rounded-lg object-cover"
+              />
             </div>
-          ))}
-        </div>
+            <ul className="pl-8 pb-6 " style={{marginTop: "-6rem"}}>
+              {month.events.map((event, eventIndex) => (
+                <li key={eventIndex} className="text-gray-700 mb-2">
+                  {event}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -1,11 +1,11 @@
-import React from "react";
+
+
+import React, { useState } from "react";
 import Logo from "../../assets/logo.png";
 import { IoMdSearch } from "react-icons/io";
-import { FaCartShopping } from "react-icons/fa6";
-import { FaCaretDown } from "react-icons/fa";
 import DarkMode from "./DarkMode";
 import { Link } from "react-router-dom";
-import { FaRegUser } from "react-icons/fa6";
+import { FaRegUser } from "react-icons/fa";
 
 const Menu = [
   {
@@ -23,19 +23,16 @@ const Menu = [
     name: "What we do",
     link: "/Service",
   },
-
   {
     id: 4,
     name: "Compaign",
     link: "/Compaign",
   },
-
   {
     id: 5,
-    name: "Funraising",
+    name: "Fundraising",
     link: "/Funraise",
   },
-
   {
     id: 6,
     name: "Contact us",
@@ -43,9 +40,13 @@ const Menu = [
   },
 ];
 
-
-
 const Navbar = ({ handleOrderPopup }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40">
       {/* upper Navbar */}
@@ -60,15 +61,17 @@ const Navbar = ({ handleOrderPopup }) => {
 
           {/* search bar */}
           <div className="flex justify-between items-center gap-4">
+            {/* Search input */}
             <div className="relative group hidden sm:block">
               <input
                 type="text"
-                placeholder="search"
-                className="w-[200px] sm:w-[200px] group-hover:w-[300px] transition-all duration-300 rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary dark:border-gray-500 dark:bg-gray-800  "
+                placeholder="Search"
+                className="w-[200px] sm:w-[200px] group-hover:w-[300px] transition-all duration-300 rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary dark:border-gray-500 dark:bg-gray-800"
               />
               <IoMdSearch className="text-gray-500 group-hover:text-primary absolute top-1/2 -translate-y-1/2 right-3" />
             </div>
 
+            {/* Sign in button */}
             <Link to="/Login">
               <div className="sign-in flex">
                 <FaRegUser className="mt-2" />
@@ -76,12 +79,63 @@ const Navbar = ({ handleOrderPopup }) => {
               </div>
             </Link>
 
+            {/* Dark mode toggle */}
             <div>
               <DarkMode />
             </div>
+
+            {/* Mobile menu toggle button */}
+            <button
+              className="sm:hidden block text-gray-600 dark:text-gray-300 focus:outline-none"
+              onClick={toggleMenu}
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {isMenuOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
+                )}
+              </svg>
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile menu */}
+      <div
+        className={`${
+          isMenuOpen ? "block" : "hidden"
+        } sm:hidden bg-white dark:bg-gray-900 py-2`}
+      >
+        <ul className="flex flex-col items-center">
+          {Menu.map((data) => (
+            <li key={data.id} className="my-2">
+              <a
+                href={data.link}
+                className="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary duration-200"
+              >
+                {data.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
       {/* lower Navbar */}
       <div data-aos="zoom-in" className="flex justify-center">
         <ul className="sm:flex hidden items-center mb-5">
