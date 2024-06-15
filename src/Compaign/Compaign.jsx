@@ -11,7 +11,7 @@ const Compaign = () => {
   return (
     <>
      <Navbar />
-      <div className="min-h-screen bg-gray-100">
+      <div className="min-h-screen ">
         <header
           className="bg-blue-600 text-white py-32"
           style={{
