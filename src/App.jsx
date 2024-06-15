@@ -6,9 +6,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import TopProducts from "./components/TopProducts/TopProducts";
 import Banner from "./components/Banner/Banner";
+import Video from "./components/Video/Video";
 import Subscribe from "./components/Subscribe/Subscribe";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
+
 import Popup from "./components/Popup/Popup";
 
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
@@ -75,6 +77,7 @@ const App = () => {
                 <Products />
                 <TopProducts handleOrderPopup={handleOrderPopup} />
                 <Banner />
+                <Video />
                 <Subscribe />
                 <Testimonials />
               </CommonLayout>

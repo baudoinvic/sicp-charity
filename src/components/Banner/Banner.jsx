@@ -3,7 +3,7 @@ import BannerImg from "../../assets/women/women2.jpg";
 import { GrSecure } from "react-icons/gr";
 import { IoFastFood } from "react-icons/io5";
 import { GiFoodTruck } from "react-icons/gi";
-import Video from "../Video/Video";
+// import Video from "../Video/Video";
 
 const Banner = () => {
   return (
@@ -84,7 +84,7 @@ const Banner = () => {
           </div>
         </div>
 
-        <Video />
+        {/* <Video /> */}
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import React from 'react'
 const Video = () => {
   return (
     <div>
-      <div className="relative mt-20">
+      <div className="relative mt-10">
         <div className="w-full h-screen overflow-hidden">
           <video
             autoPlay
@@ -22,15 +22,13 @@ const Video = () => {
             <h1 className="text-4xl font-bold mb-20">
               We Have Organized More Than 50 Events Every Year
             </h1>
-            <button
-             
-              className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-4 px-10  "
-            >
-              Read More 
+            <button className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-4 px-10  ">
+              Read More
             </button>
           </div>
         </div>
       </div>
+   
     </div>
   );
 }
