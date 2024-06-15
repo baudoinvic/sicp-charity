@@ -143,13 +143,13 @@ useEffect(() => {
                 <div className="flex items-center mb-2">
                   <FaInstalod className="w-6 h-6 text-teal-500 mr-2" />
                   <div className="font-semibold text-lg text-teal-500">
-                    Auction Items
+                    Donations
                   </div>
                 </div>
                 <h2 className="text-2xl text-gray-800 font-bold mb-1">
                   {Products.length}
                 </h2>
-                <p className="text-gray-600">Items up for Auction</p>
+                <p className="text-gray-600">Items up for Donations</p>
               </div>
             </div>
           </div>
@@ -160,13 +160,13 @@ useEffect(() => {
                 <div className="flex items-center mb-2">
                   <HiUserGroup className="w-6 h-6 text-indigo-500 mr-2" />
                   <div className="font-semibold text-lg text-indigo-500">
-                    Bidders
+                    Donners
                   </div>
                 </div>
                 <h2 className="text-2xl text-gray-800 font-bold mb-1">
                   {Billings.length}
                 </h2>
-                <p className="text-gray-600">Total Bidders</p>
+                <p className="text-gray-600">Total Donors</p>
               </div>
             </div>
           </div>
@@ -177,13 +177,13 @@ useEffect(() => {
                 <div className="flex items-center mb-2">
                   <HiUser className="w-6 h-6 text-green-500 mr-2" />
                   <div className="font-semibold text-lg text-green-500">
-                    Sellers
+                     Users
                   </div>
                 </div>
                 <h2 className="text-2xl text-gray-800 font-bold mb-1">
                   {users.length}
                 </h2>
-                <p className="text-gray-600">Total Sellers</p>
+                <p className="text-gray-600">Total Users</p>
               </div>
             </div>
           </div>
@@ -194,11 +194,11 @@ useEffect(() => {
                 <div className="flex items-center mb-2">
                   <HiShoppingCart className="w-6 h-6 text-orange-500 mr-2" />
                   <div className="font-semibold text-lg text-orange-500">
-                    Bids
+                    Volunteers
                   </div>
                 </div>
                 <h2 className="text-2xl text-gray-800 font-bold mb-1">20.4k</h2>
-                <p className="text-gray-600">Total Bids Placed</p>
+                <p className="text-gray-600">Total Volunteers</p>
               </div>
             </div>
           </div>
