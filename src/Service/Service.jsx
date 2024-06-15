@@ -21,7 +21,7 @@ const Service = () => {
         <h1 className="text-5xl font-bold text-white">What We Do</h1>
       </header>
 
-      <span className="block w-2/3 mx-auto text-center text-gray-700 leading-relaxed p-4 pt-20 ">
+      <span className="block w-11/12 sm:w-2/3 mx-auto text-center text-gray-700 leading-relaxed p-4 sm:pt-20 text-sm sm:text-base md:text-lg">
         We train vulnerables in different knowledge within meaningful works that
         give incomes. We teach them social study and social environment in order
         to build peace, unity, and development, and teach these poor families
@@ -31,21 +31,19 @@ const Service = () => {
         do fundraise money to support them.
       </span>
 
-      {/* Main Content */}
       <main
         data-aos="zoom-in"
-        className="container mx-auto py-16 px-4 flex  items-center space-x-10"
+        className="container mx-auto py-16 px-4 flex flex-col lg:flex-row items-center space-y-10 lg:space-y-0 lg:space-x-10"
       >
-        {/* Section: Overview */}
         <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold text-center  mb-6">Our Mission</h2>
+          <h2 className="text-2xl font-bold text-center mb-6">Our Mission</h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-            Solidarity Initiative for Children and People (SICP) is aims to get
+            Solidarity Initiative for Children and People (SICP) aims to get
             poor people and marginalized people out from poverty with charity
-            works, lead them to meaningful woks which get incomes, in order to
+            works, lead them to meaningful works which get incomes, in order to
             reload their belief in their lives, with goal to step them to the
             level of others like: job, welfare, education, economic and
-            development
+            development.
           </p>
         </section>
 
