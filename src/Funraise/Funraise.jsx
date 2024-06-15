@@ -95,29 +95,30 @@ const Funraise = () => {
   ];
 
   return (
-  
-    <div className="min-h-screen ">
+    <div className="min-h-screen">
       <Navbar />
-      <div className="py-12 px-4 md:px-0 max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-blue-600 mb-8">
-          Fundraising Calendar
+      <div className="py-12 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center text-blue-600 mb-8">
+          Fundraising Events
         </h1>
         {months.map((month, index) => (
           <div
             key={index}
             className="bg-white rounded-lg shadow-md mb-8 overflow-hidden"
           >
-            <div className="flex items-center justify-between p-6">
-              <h2 className="text-2xl font-bold text-blue-600 ">{month.name}</h2>
+            <div className="flex flex-col md:flex-row items-center md:justify-between p-6 space-y-4 md:space-y-0 md:space-x-4">
+              <h2 className="text-xl sm:text-2xl font-bold text-blue-600">
+                {month.name}
+              </h2>
               <img
                 src={month.image}
                 alt={`${month.name} image`}
-                className="w-1/3 md:w-1/2 h-64 rounded-lg object-cover"
+                className="w-full md:w-1/2 h-64 rounded-lg object-cover"
               />
             </div>
-            <ul className="pl-8 pb-6 " style={{marginTop: "-6rem"}}>
+            <ul className="pl-6 pr-6 pb-6 space-y-2">
               {month.events.map((event, eventIndex) => (
-                <li key={eventIndex} className="text-gray-700 mb-2">
+                <li key={eventIndex} className="text-gray-700">
                   {event}
                 </li>
               ))}
@@ -131,3 +132,4 @@ const Funraise = () => {
 };
 
 export default Funraise;
+

@@ -17,14 +17,14 @@ const Video = () => {
             />
           </video>
         </div>
-        <div className="absolute inset-0 flex items-center justify-center text-white">
+        <div className="absolute inset-0 flex items-center justify-center text-white mb-20">
           <div className="text-center">
             <h1 className="text-4xl font-bold mb-20">
-              We Have Organized More Than 200 Events Every Year
+              We Have Organized More Than 50 Events Every Year
             </h1>
             <button
              
-              className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-4 px-10 "
+              className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-4 px-10  "
             >
               Read More 
             </button>
