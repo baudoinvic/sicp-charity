@@ -12,8 +12,10 @@ const Compaign = () => {
     <>
       <Navbar />
       <div className="min-h-screen ">
-        <header
-          className="bg-blue-600 text-white py-32"
+      
+
+       <header
+          className="bg-blue-600 text-white py-16 md:py-32"
           style={{
             backgroundImage:
               "url('https://static.wixstatic.com/media/cecc1b_4e0f99a994834b81bc3e86f11a515b4f~mv2.jpg/v1/fill/w_1583,h_453,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/cecc1b_4e0f99a994834b81bc3e86f11a515b4f~mv2.jpg')",
@@ -21,9 +23,11 @@ const Compaign = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="container mx-auto bg-opacity-75 bg-primary py-4 rounded-lg">
-            <h1 className="text-3xl font-bold">Support Our Causes</h1>
-            <p className="mt-2">
+          <div className="container mx-auto bg-opacity-75 bg-primary py-8 md:py-12 rounded-lg text-center">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+              Support Our Causes
+            </h1>
+            <p className="mt-2 text-sm md:text-base lg:text-lg">
               Help us make a difference by donating to specific campaigns or
               through our general fundraising efforts.
             </p>

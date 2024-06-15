@@ -17,7 +17,6 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
-            
               <h1 className="font-bold text-2xl text-primary">
                 Solidarity Initiative
                 <br />
@@ -25,9 +24,9 @@ const Footer = () => {
               </h1>
             </div>
             <p className="text-gray-300">
-              Together, we can make a lasting<br /> impact and create a brighter
-              future<br /> for children and people in need.
-             
+              Together, we can make a lasting
+              <br /> impact and create a brighter future
+              <br /> for children and people in need.
             </p>
             <div>
               <p className="text-lg font-semibold mb-3">
@@ -96,6 +95,18 @@ const Footer = () => {
           <div>
             <h2 className="text-2xl font-bold text-primary mb-6">Links</h2>
             <nav className="space-y-3">
+              <Link
+                to="/funraise"
+                className="block text-gray-300 hover:text-primary transition duration-300"
+              >
+                Fundraising
+              </Link>
+              <Link
+                to="/compaign"
+                className="block text-gray-300 hover:text-primary transition duration-300"
+              >
+               Campaign
+              </Link>
               <Link
                 to="/service"
                 className="block text-gray-300 hover:text-primary transition duration-300"
