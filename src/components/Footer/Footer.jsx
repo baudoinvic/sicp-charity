@@ -1,16 +1,46 @@
 
 
 import React from "react";
-import { BsFacebook } from "react-icons/bs";
-import { RiTwitterXFill } from "react-icons/ri";
-import { BsInstagram } from "react-icons/bs";
-// import traite from "../assets/img/traite.png";
 import { Link } from "react-router-dom";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
+import axios from "axios";
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      let token = localStorage.getItem("token");
+      console.log("Newsletter Subscription Email:", email);
+
+      const response = await axios({
+        url: "https://auction-website-auji.onrender.com/api/v1/subscriptions",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        data: JSON.stringify({ email }),
+      });
+
+      console.log("Subscription Response Data:", response.data);
+      toast.success("Thank you for subscribing to our News letter");
+    } catch (error) {
+      console.error("Error:", error.response ? error.response.data : error);
+      toast.error("Failed to subscribe. Please try again later.");
+    }
+  };
   return (
     <div className="bg-gray-900 text-white rounded-t-3xl mt-8 md:mt-0 shadow-2xl">
       <div className="container mx-auto p-8 md:p-16">
@@ -32,15 +62,13 @@ const Footer = () => {
               <p className="text-lg font-semibold mb-3">
                 subscribe to our News letter
               </p>
-              <form
-                action="/abonnement"
-                method="post"
-                className="flex flex-col space-y-3"
-              >
+              <form onSubmit={handleSubmit} className="flex flex-col space-y-3">
                 <input
-                  type="email"
+                  type="text"
                   name="email"
-                  placeholder="Enter your email"
+                  value={email}
+                  onChange={handleChange}
+                  placeholder="enter your email"
                   required
                   className="px-4 py-3 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-brightColor"
                 />
@@ -51,6 +79,7 @@ const Footer = () => {
                   Subscribe
                 </button>
               </form>
+              <ToastContainer />
             </div>
           </div>
 
@@ -105,7 +134,7 @@ const Footer = () => {
                 to="/compaign"
                 className="block text-gray-300 hover:text-primary transition duration-300"
               >
-               Campaign
+                Campaign
               </Link>
               <Link
                 to="/service"

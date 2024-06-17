@@ -11,11 +11,11 @@ import Navbar from "../components/Navbar/Navbar";
 
 function Contact() {
   const [formData, setFormData] = useState({
-    Firstname: "",
-    Lastname: "",
+    firstname: "",
+    lastname: "",
     email: "",
-    phoneNumber: "",
-    message: "",
+    address: "",
+    // message: "",
   });
 
   const handleChange = (e) => {
@@ -35,7 +35,7 @@ function Contact() {
       console.log("Request Data:", formData);
 
       const response = await axios({
-        url: "https://fabtechhub.onrender.com/FabtechHub/contacts/makecontact",
+        url: "https://auction-website-auji.onrender.com/api/v1/contacts",
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -145,15 +145,15 @@ function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label
-                      htmlFor="Firstname"
+                      htmlFor="firstname"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
                       First Name
                     </label>
                     <input
                       type="text"
-                      id="Firstname"
-                      name="Firstname"
+                      id="firstname"
+                      name="firstname"
                       className="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-brightColor focus:bg-white focus:ring-0"
                       placeholder="e.g., Marie"
                       onChange={handleChange}
@@ -162,15 +162,15 @@ function Contact() {
                   </div>
                   <div>
                     <label
-                      htmlFor="Lastname"
+                      htmlFor="lastname"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
                       Last Name
                     </label>
                     <input
                       type="text"
-                      id="Lastname"
-                      name="Lastname"
+                      id="lastname"
+                      name="lastname"
                       className="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-brightColor focus:bg-white focus:ring-0"
                       placeholder="e.g., Dupont"
                       onChange={handleChange}
@@ -199,23 +199,23 @@ function Contact() {
 
                 <div>
                   <label
-                    htmlFor="phoneNumber"
+                    htmlFor="address"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Phone Number
+                    address
                   </label>
                   <input
                     type="tel"
-                    id="phoneNumber"
-                    name="phoneNumber"
+                    id="address"
+                    name="address"
                     className="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-brightColor focus:bg-white focus:ring-0"
-                    placeholder="e.g., +32 598 80 83 21"
+                    placeholder="address"
                     onChange={handleChange}
                     required
                   />
                 </div>
 
-                <div>
+                {/* <div>
                   <label
                     htmlFor="message"
                     className="block text-sm font-medium text-gray-700 mb-2"
@@ -231,7 +231,7 @@ function Contact() {
                     onChange={handleChange}
                     required
                   ></textarea>
-                </div>
+                </div> */}
 
                 <button
                   type="submit"
