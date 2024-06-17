@@ -1,65 +1,48 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { IoMdArrowBack } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
-import { useState } from "react";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
-  });
-
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    const fieldName = e.target.name;
-
-    setFormData({
-      ...formData,
-      [fieldName]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    const adminCredentials = {
-      username: "Winfred",
-      password: "123456",
-    };
-
     try {
-      let token = localStorage.getItem("token");
-      console.log("Request Data:", formData);
-
       const response = await axios({
-        url: "https://auction-website-auji.onrender.com/api/v1/auth",
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
+        url: "https://auction-website-auji.onrender.com/api/v1/auth",
+        data: {
+          username: username,
+          password: password,
         },
-        data: JSON.stringify(formData),
       });
 
-      console.log("Response Data:", response.data);
+      // Handle login success
+      localStorage.setItem("user", JSON.stringify(response.data.user));
+      const user = JSON.parse(localStorage.getItem("user"));
+      localStorage.setItem("token", response.data.access_token);
+      toast.success("Login successful");
 
-      if (
-        formData.username === adminCredentials.username &&
-        formData.password === adminCredentials.password
-      ) {
-        toast.success("Admin login successful");
-        navigate("/Admindashboard/Dashboard");
-      } else {
-        toast.success("Login successful");
-        navigate("/"); 
-      }
+      setTimeout(() => {
+        if (user.role === "admin") {
+          navigate("/Admindashboard/Dashboard");
+        } else {
+          navigate("/");
+        }
+      }, 2000); // Adjust the delay as needed
     } catch (error) {
-      console.error("Error:", error.response ? error.response.data : error);
-      toast.error("Failed to log in. Please try again later.");
+      console.log(error);
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setUsername("");
+      setPassword("");
     }
   };
 
@@ -85,7 +68,7 @@ const Login = () => {
             </Link>
 
             <h1 className="text-3xl font-bold mb-6">Sign in</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleLogin}>
               <div className="mb-4">
                 <label htmlFor="username" className="block font-medium mb-1">
                   Username
@@ -94,8 +77,8 @@ const Login = () => {
                   type="text"
                   id="username"
                   name="username"
-                  value={formData.username}
-                  onChange={handleChange}
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
                   required
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                 />
@@ -108,8 +91,8 @@ const Login = () => {
                   type="password"
                   id="password"
                   name="password"
-                  value={formData.password}
-                  onChange={handleChange}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   required
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                 />
@@ -147,4 +130,3 @@ const Login = () => {
 };
 
 export default Login;
-

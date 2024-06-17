@@ -15,6 +15,7 @@ function Contact() {
     lastname: "",
     email: "",
     address: "",
+    message: "",
     // message: "",
   });
 
@@ -215,7 +216,7 @@ function Contact() {
                   />
                 </div>
 
-                {/* <div>
+                <div>
                   <label
                     htmlFor="message"
                     className="block text-sm font-medium text-gray-700 mb-2"
@@ -231,7 +232,7 @@ function Contact() {
                     onChange={handleChange}
                     required
                   ></textarea>
-                </div> */}
+                </div>
 
                 <button
                   type="submit"

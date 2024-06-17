@@ -14,7 +14,7 @@ const Users = () => {
    const fetchUsers = () => {
      let token = localStorage.getItem("token");
      axios({
-       url: "https://beathaecommerceback-end.onrender.com/api/v1/users",
+       url: "https://auction-website-auji.onrender.com/api/v1/users",
        method: "GET",
        headers: {
          Authorization: `Bearer ${token}`,
@@ -38,7 +38,7 @@ const Users = () => {
         if (window.confirm("Are you sure you want to delete?")) {
           let token = localStorage.getItem("token");
           axios({
-            url: `https://beathaecommerceback-end.onrender.com/api/v1/users/${id}`,
+            url: `https://auction-website-auji.onrender.com/api/v1/users/${id}`,
             method: "DELETE",
             headers: {
               Authorization: `Bearer ${token}`,
@@ -62,21 +62,21 @@ const Users = () => {
       <span className="text-3xl font-bold">Users</span>
       <div class="bg-white p-4 rounded-lg ">
         <div class="flex shadow-md mt-10">
-          <span class="font-bold w-1/4">Fullnames</span>
-          <span class="font-bold w-1/4">Email</span>
-          <span class="font-bold w-1/4">Location</span>
-          <span class="font-bold w-1/4">Phone</span>
+          <span class="font-bold w-1/4">firstname</span>
+          <span class="font-bold w-1/4">lastName</span>
+          <span class="font-bold w-1/4">usermame</span>
+          <span class="font-bold w-1/4">email</span>
+          <span class="font-bold w-1/4">location</span>
           <span class="font-bold w-1/4">Action</span>
         </div>
         {users.map((user) => (
           <div className="flex mt-10" key={user._id}>
-            <span className="w-1/4">{user.fullNames}</span>
+            <span className="w-1/4">{user.firstname}</span>
+            <span className="w-1/4">{user.lastname}</span>
+            <span className="w-1/4">{user.usermame}</span>
             <span className="w-1/4">{user.email}</span>
             <span className="w-1/4">{user.location}</span>
-            <span className="w-1/4">{user.phoneNo}</span>
             <div className="w-1/4 flex items-center">
-            
-
               <Link to="/Admindashboard/Dashboard/Edituser/${user._id}">
                 <FaEdit
                   className="text-2xl text-gray-900 mr-2"
