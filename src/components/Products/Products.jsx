@@ -10,7 +10,6 @@ import { BsSendCheck } from "react-icons/bs";
 
 const Products = () => {
   return (
-   
     <div className="py-12 mt-10">
       <div data-aos="zoom-in">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-center">
@@ -25,9 +24,11 @@ const Products = () => {
               <h2 className="text-xl sm:text-2xl font-bold text-center md:text-left">
                 HELP FOR HOMELESS CHILD
               </h2>
-              <button className="bg-primary text-white py-2 px-4 rounded-md">
-                DONATE NOW
-              </button>
+              <Link to="/Donation">
+                <button className="bg-primary text-white py-2 px-4 rounded-md">
+                  DONATE NOW
+                </button>
+              </Link>
             </div>
           </div>
 

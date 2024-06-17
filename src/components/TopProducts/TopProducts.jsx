@@ -1,6 +1,5 @@
 import React from "react";
-import { FaStar } from "react-icons/fa";
-import { Link } from "react-router-dom";
+
 
 
 const TopProducts = ({ handleOrderPopup }) => {
@@ -26,14 +25,16 @@ const TopProducts = ({ handleOrderPopup }) => {
                 <div className="w-full md:w-1/2 mr-0 md:mr-4 mb-4 md:mb-0">
                   <input
                     type="text"
-                    placeholder="First Name"
+                    placeholder="firstname"
+                    required
                     className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
                 <div className="w-full md:w-1/2">
                   <input
                     type="text"
-                    placeholder="Last Name"
+                    placeholder="lastname"
+                    required
                     className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
@@ -42,14 +43,16 @@ const TopProducts = ({ handleOrderPopup }) => {
                 <div className="w-full md:w-1/2 mr-0 md:mr-4 mb-4 md:mb-0">
                   <input
                     type="email"
-                    placeholder="Email"
+                    placeholder="your email"
+                    required
                     className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
                 <div className="w-full md:w-1/2">
                   <input
                     type="text"
-                    placeholder="City"
+                    placeholder="address"
+                    required
                     className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
