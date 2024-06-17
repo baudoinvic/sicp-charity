@@ -120,7 +120,7 @@ const Navbar = ({ handleOrderPopup }) => {
       <div
         className={`${
           isMenuOpen ? "block" : "hidden"
-        } sm:hidden bg-white dark:bg-gray-900 py-2`}
+        } sm:hidden bg-white dark:bg-gray-900 py-2 `}
       >
         <ul className="flex flex-col items-center">
           {Menu.map((data) => (
@@ -156,3 +156,4 @@ const Navbar = ({ handleOrderPopup }) => {
 };
 
 export default Navbar;
+

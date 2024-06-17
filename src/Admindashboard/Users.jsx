@@ -57,7 +57,6 @@ const Users = () => {
       };
 
 
-
   return (
     <div data-aos="zoom-in" className="mt-10">
       <span className="text-3xl font-bold">Users</span>
