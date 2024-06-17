@@ -55,7 +55,7 @@ const Login = () => {
         navigate("/Admindashboard/Dashboard");
       } else {
         toast.success("Login successful");
-        navigate("/Home"); // Adjust this path to where regular users should be redirected
+        navigate("/"); 
       }
     } catch (error) {
       console.error("Error:", error.response ? error.response.data : error);
