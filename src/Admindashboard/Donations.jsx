@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { Link } from "react-router-dom";
 
-const Product = () => {
+const Donations = () => {
   const [Products, setProducts] = useState([]);
  
 
@@ -104,5 +104,5 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default Donations;
 

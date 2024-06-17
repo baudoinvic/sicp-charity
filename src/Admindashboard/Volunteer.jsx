@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { useState } from 'react';
 import { ToastContainer, toast } from "react-toastify";
 
-const Order = () => {
+const Volunteer = () => {
  const [orders, setOrders] = useState([]);
 
  const fetchOrders = () => {
@@ -62,4 +62,4 @@ const Order = () => {
   );
 }
 
-export default Order
+export default Volunteer

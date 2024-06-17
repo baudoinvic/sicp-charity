@@ -5,7 +5,7 @@ import axios from "axios";
 import { useEffect,useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
-const Customer = () => {
+const Donors = () => {
 
 const [Billings, setBillings] = useState([]);
 
@@ -92,4 +92,4 @@ const handleDeleteBillings = async (id) => {
   );
 }
 
-export default Customer
+export default Donors

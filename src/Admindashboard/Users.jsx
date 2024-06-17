@@ -13,6 +13,7 @@ const Users = () => {
 
    const fetchUsers = () => {
      let token = localStorage.getItem("token");
+     console.log("token")
      axios({
        url: "https://auction-website-auji.onrender.com/api/v1/users",
        method: "GET",
@@ -99,3 +100,5 @@ const Users = () => {
 }
 
 export default Users
+
+
