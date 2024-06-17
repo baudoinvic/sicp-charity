@@ -47,7 +47,7 @@ const TopProducts = ({ handleOrderPopup }) => {
 
   return (
     <div data-aos="zoom-in">
-      <div className="bg-gray-100 py-12">
+      <div className="py-12 bg-white shadow-lg">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-center">
           {/* Left Side - Image */}
           <div className="w-full md:w-1/2 mb-8 md:mb-0">
@@ -62,7 +62,7 @@ const TopProducts = ({ handleOrderPopup }) => {
           <div className="w-full md:w-1/2 md:ml-8">
             <h2 className="text-2xl font-bold mb-4">Give your hand</h2>
             <h3 className="text-xl font-bold mb-6">BECOME A VOLUNTEER</h3>
-            <form onSubmit={handleSubmit} className="bg-gray-100">
+            <form onSubmit={handleSubmit} className="bg-white">
               <div className="flex flex-col md:flex-row mb-4">
                 <div className="w-full md:w-1/2 mr-0 md:mr-4 mb-4 md:mb-0">
                   <input
