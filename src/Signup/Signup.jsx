@@ -4,17 +4,18 @@ import { Link, useNavigate } from "react-router-dom";
 import { IoMdArrowBack } from "react-icons/io";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Signup() {
   const navigate = useNavigate(); 
 
   const [formData, setFormData] = useState({
-    email: "",
-    fullNames: "",
-    location: "",
-    phoneNo: "",
-    password: "",
+    firstname: "",
+    lastname: "",
     username: "",
+    email: "",
+    location: "",
+    password: "",
   });
 
   const handleChange = (e) => {
@@ -31,7 +32,7 @@ function Signup() {
 
     try {
       const response = await axios.post(
-        "https://beathaecommerceback-end.onrender.com/api/v1/users",
+        "https://auction-website-auji.onrender.com/api/v1/users",
         formData
       );
 
@@ -52,7 +53,6 @@ function Signup() {
     <div className="sign-up">
       <div data-aos="zoom-in">
         <div className="checkout flex flex-col md:flex-row mt-10 md:mx-auto md:max-w-4xl">
-       
           <div className="left-side flex-none md:w-1/2 relative">
             <img
               src="https://media.istockphoto.com/id/1671142169/vector/web-phishing-illustration-on-mobile-concept.jpg?s=612x612&w=0&k=20&c=XDfAqPBBiHFZCbEqUZognNbY4XTD-XTpacgjmH-Q-sA="
@@ -65,7 +65,7 @@ function Signup() {
             </div>
           </div>
           <div className="right-side w-full md:w-1/2 mx-auto p-6 shadow-md">
-            <Link to="/#">
+            <Link to="/Home">
               <div className="flex">
                 <IoMdArrowBack className="text-primary mt-1 mr-2" />
                 <span className="text-primary">Home</span>
@@ -74,52 +74,40 @@ function Signup() {
             <h1 className="text-2xl font-bold mb-4">Create a new account</h1>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
+                <label htmlFor="firstname" className="block font-medium mb-1">
+                  Firstname
+                </label>
+                <input
+                  type="fristname"
+                  id="firstname"
+                  name="firstname"
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="lastname" className="block font-medium mb-1">
+                  Lastname
+                </label>
+                <input
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+                />
+              </div>
+
+              <div className="mb-4">
                 <label htmlFor="email" className="block font-medium mb-1">
                   Email
                 </label>
                 <input
-                  type="email"
+                  type="text"
                   id="email"
                   name="email"
-                  onChange={handleChange}
-                  required
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="fullNames" className="block font-medium mb-1">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="fullNames"
-                  name="fullNames"
-                  onChange={handleChange}
-                  required
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="location" className="block font-medium mb-1">
-                  Location
-                </label>
-                <input
-                  type="text"
-                  id="location"
-                  name="location"
-                  onChange={handleChange}
-                  required
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="phoneNo" className="block font-medium mb-1">
-                  Phone
-                </label>
-                <input
-                  type="text"
-                  id="phoneNo"
-                  name="phoneNo"
                   onChange={handleChange}
                   required
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
@@ -138,6 +126,21 @@ function Signup() {
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                 />
               </div>
+
+              <div className="mb-4">
+                <label htmlFor="location" className="block font-medium mb-1">
+                  Location
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+                />
+              </div>
+
               <div className="mb-4">
                 <label htmlFor="password" className="block font-medium mb-1">
                   Password

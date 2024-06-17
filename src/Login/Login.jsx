@@ -1,16 +1,18 @@
-import React from 'react'
+
+import React from "react";
 import { IoMdArrowBack } from "react-icons/io";
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import { ToastContainer,toast } from 'react-toastify';
-import { useState } from 'react';
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import { useState } from "react";
 
 const Login = () => {
- 
-   const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     username: "",
     password: "",
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const fieldName = e.target.name;
@@ -24,12 +26,17 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const adminCredentials = {
+      username: "Winfred",
+      password: "123456",
+    };
+
     try {
       let token = localStorage.getItem("token");
       console.log("Request Data:", formData);
 
       const response = await axios({
-        url: "https://beathaecommerceback-end.onrender.com/api/v1/auth/login",
+        url: "https://auction-website-auji.onrender.com/api/v1/auth",
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -39,12 +46,22 @@ const Login = () => {
       });
 
       console.log("Response Data:", response.data);
-      toast.success("login succssfully");
+
+      if (
+        formData.username === adminCredentials.username &&
+        formData.password === adminCredentials.password
+      ) {
+        toast.success("Admin login successful");
+        navigate("/Admindashboard/Dashboard");
+      } else {
+        toast.success("Login successful");
+        navigate("/Home"); // Adjust this path to where regular users should be redirected
+      }
     } catch (error) {
       console.error("Error:", error.response ? error.response.data : error);
       toast.error("Failed to log in. Please try again later.");
     }
-  }
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -104,14 +121,12 @@ const Login = () => {
                 </span>
               </div>
 
-              <Link to="/Admindashboard/Dashboard">
-                <button
-                  type="submit"
-                  className="bg-primary text-white w-full py-3 rounded-md hover:bg-primary-dark transition duration-300"
-                >
-                  Sign in
-                </button>
-              </Link>
+              <button
+                type="submit"
+                className="bg-primary text-white w-full py-3 rounded-md hover:bg-primary-dark transition duration-300"
+              >
+                Sign in
+              </button>
 
               <div className="mt-6 text-center">
                 <span>Don't have an account?</span>
@@ -129,6 +144,7 @@ const Login = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Login
+export default Login;
+

@@ -76,19 +76,19 @@ const Chart = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="bg-gray-100 rounded-lg p-4">
             <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              Highest Bid
+              Highest donation
             </h3>
-            <p className="text-2xl font-bold text-orange-500">$5,000</p>
+            <p className="text-2xl font-bold text-orange-500">$500</p>
           </div>
           <div className="bg-gray-100 rounded-lg p-4">
             <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              New Bidders
+              New donners
             </h3>
             <p className="text-2xl font-bold text-orange-500">125</p>
           </div>
           <div className="bg-gray-100 rounded-lg p-4">
             <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              Upcoming Auctions
+              Upcoming events
             </h3>
             <p className="text-2xl font-bold text-orange-500">8</p>
           </div>
