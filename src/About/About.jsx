@@ -167,8 +167,8 @@ const About = () => {
                 OUR VALUES
               </h3>
               <p className="mt-2 text-gray-600 text-center">
-                Working together Helping suffering people No discrimination
-                (races) Belief Truth Faith in God
+                Working together, Helping suffering people, No discrimination
+                races, Belief, Truth, Faith in God
               </p>
             </div>
           </div>

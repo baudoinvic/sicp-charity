@@ -1,7 +1,8 @@
 
 
 import React, { useState } from "react";
-import Logo from "../../assets/logo.png";
+// import Logo from "../../assets/logo.png";
+import pic1 from "../../assets/pic1.jpg";
 import { IoMdSearch } from "react-icons/io";
 import DarkMode from "./DarkMode";
 import { Link } from "react-router-dom";
@@ -54,7 +55,7 @@ const Navbar = ({ handleOrderPopup }) => {
         <div className="container flex justify-between items-center">
           <div>
             <a href="#" className="font-bold text-2xl sm:text-3xl flex gap-2">
-              <img src={Logo} alt="Logo" className="w-10" />
+              <img src={pic1} alt="Logo" className="w-10" />
               SICP
             </a>
           </div>
