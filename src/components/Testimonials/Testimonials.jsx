@@ -4,28 +4,27 @@ import Slider from "react-slick";
 const TestimonialData = [
   {
     id: 1,
-    name: "ishimwe sandra",
-    text: " I'm proud to participate in auctions Business. I've won several bids and received authentic items delivered right to my home ",
-
-    img: "https://picsum.photos/101/101",
+    name: "Ishimwe Sandra",
+    text: "Being part of SICP's initiatives has been incredibly rewarding. I've seen firsthand how our efforts transform lives, providing much-needed support to children and senior citizens.",
+    img: "https://media.istockphoto.com/id/1725885533/photo/runner-man-winner-and-medal-in-portrait-for-marathon-competition-or-race-with-smile-in-cape.jpg?s=612x612&w=0&k=20&c=sfoAG44fHbgksz98so14-5lfBN0KBmWGVIZDD44jnVk=",
   },
   {
     id: 2,
-    name: "Divine josh",
-    text: "I'm proud to participate in auctions Business. I've won several bids and received authentic items delivered right to my home",
-    img: "https://picsum.photos/102/102",
+    name: "Divine Josh",
+    text: "Volunteering with SICP has been a life-changing experience. The impact we make in Kigali and beyond, especially in providing clean water and education, is truly inspiring.",
+    img: "https://media.istockphoto.com/id/696643544/photo/artist-paints-a-picture-of-the-street-stone-town.jpg?s=612x612&w=0&k=20&c=8uqfJ0FTOYfoPdM1QFL453k9ygnVcBEMOeeNgsmFL8A=",
   },
   {
     id: 3,
     name: "Tousaint Francis",
-    text: "I'm proud to participate in auctions Business. I've won several bids and received authentic items delivered right to my home",
-    img: "https://picsum.photos/104/104",
+    text: "I've witnessed SICP's dedication to helping our community. Their commitment to senior citizens' welfare and children's education is commendable and deeply impactful.",
+    img: "https://pngimg.com/uploads/student/student_PNG62539.png",
   },
   {
-    id: 5,
-    name: "Chris johnB",
-    text: "I'm proud to participate in auctions Business. I've won several bids and received authentic items delivered right to my home",
-    img: "https://picsum.photos/103/103",
+    id: 4,
+    name: "josephine ishimwe",
+    text: "Participating in SICP's programs has been a privilege. The organization's work in supporting vulnerable groups in Kigali is essential and makes a real difference.",
+    img: "https://tse1.mm.bing.net/th?id=OIP.CTsmIkEVMgmpguoOa7iR2gHaKq&pid=Api&P=0&h=180",
   },
 ];
 
