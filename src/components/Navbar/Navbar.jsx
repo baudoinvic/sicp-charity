@@ -25,6 +25,11 @@ const Menu = [
     link: "/Service",
   },
   {
+    id: 3,
+    name: "Our Gallery",
+    link: "/Gallery",
+  },
+  {
     id: 4,
     name: "Campaign",
     link: "/Compaign",

@@ -35,6 +35,7 @@ import Donation from "./Donation/Donation";
 import Service from "./Service/Service";
 import Compaign from "./Compaign/Compaign";
 import Funraise from "./Funraise/Funraise";
+import Gallery from "./Gallery/Gallery";
 
 
  const CommonLayout = ({ children }) => {
@@ -88,11 +89,11 @@ const App = () => {
           <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/bidding/:id" element={<Bidding />} />
           <Route path="/Funraise" element={<Funraise />} />
 
           <Route path="/Compaign" element={<Compaign />} />
           <Route path="/About" element={<About />} />
+          <Route path="/Gallery" element={<Gallery />} />
           <Route path="/Donation" element={<Donation />} />
           <Route path="/Service" element={<Service />} />
 
