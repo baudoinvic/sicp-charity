@@ -12,12 +12,15 @@ const Banner = () => {
         <div className="container mx-auto">
           <div className="text-center mb-10">
             <h1 className="text-3xl font-bold mb-4">RECENT CAUSES</h1>
-            <p className="text-gray-600 ">
-              Lorem ipsum dolor sit amet, vitae mattis vehicula scelerisque
-              suscipit donec, tortor duis phasellus vivamus wisi placerat
+            <p className="text-gray-600">
+              Discover the latest initiatives we are passionately working on to
+              make a positive impact in our communities.
+              <br /> From providing essential resources to those in need to
+              supporting educational programs and health services
+              <br /> your contributions help us drive change and uplift lives.
               <br />
-              pellentesque augue leo. Orci nullam, nonummy nam sed, sapien
-              temporibus ac ac, velit ante volutpat enim
+              Join us in our mission to create a brighter future for everyone.
+              Every effort counts, and together, we can make a difference.
             </p>
           </div>
 
@@ -29,14 +32,16 @@ const Banner = () => {
                   alt="Cause"
                   className="w-full h-96 object-cover"
                 />
+
                 <div className="p-6">
                   <h2 className="text-xl font-bold mb-2">
-                    CLEAN WATER FOR CHILD
+                    CLEAN WATER FOR CHILDREN
                   </h2>
                   <p className="text-gray-600">
-                    Lorem ipsum dolor sit amet, vitae mattis vehicula
-                    scelerisque suscipit donec, tortor duis phasellus vivamus
-                    wisi
+                    Access to clean water is a fundamental human right, yet many
+                    children around the world still suffer from water scarcity.
+                    Our mission is to provide safe and clean drinking water to
+                    children in underserved communities.
                   </p>
                 </div>
               </div>
@@ -51,12 +56,13 @@ const Banner = () => {
                 />
                 <div className="p-6">
                   <h2 className="text-xl font-bold mb-2">
-                    EDUCATION FOR CHILD
+                    EDUCATION FOR CHILDREN
                   </h2>
                   <p className="text-gray-600">
-                    Lorem ipsum dolor sit amet, vitae mattis vehicula
-                    scelerisque suscipit donec, tortor duis phasellus vivamus
-                    wisi
+                    Education is the key to breaking the cycle of poverty and
+                    unlocking a brighter future. We are dedicated to providing
+                    quality education to children in need, giving them the tools
+                    and opportunities to succeed.
                   </p>
                 </div>
               </div>
@@ -74,9 +80,11 @@ const Banner = () => {
                     HELP SENIOR CITIZENS
                   </h2>
                   <p className="text-gray-600">
-                    Lorem ipsum dolor sit amet, vitae mattis vehicula
-                    scelerisque suscipit donec, tortor duis phasellus vivamus
-                    wisi
+                    Our senior citizens deserve care, respect, and support in
+                    their golden years. We are committed to enhancing the
+                    quality of life for the elderly by providing essential
+                    services and resources.
+                  
                   </p>
                 </div>
               </div>
