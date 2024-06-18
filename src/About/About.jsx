@@ -66,6 +66,26 @@ const About = () => {
                 services. Your support helps transform lives and build brighter
                 futures.
               </p>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                The donate of SICP is everyone who has understood the goal of
+                and the value of the organization, and support the charity
+                action. The donate can supports can support financially or with
+                tools or products from his heart. We have many children today
+                who have not anything, and want support from you, remember that
+                before being powerful person, it comes from to a child, and
+                those different kind of people need help from you. You can
+                choose kinds that your heart is with and give today from your
+                possibility. If you give to a child only $50 every month, he
+                (she) shall eat, cloths and study well. For a child of primary
+                school give only $100 every trimester or $300 for three
+                trimesters, he (she) shall study, eat and cloths. And those who
+                study at high school give only $160 every trimester or $480 for
+                three trimesters, he (she) shall study and cloths. And $250 can
+                help a young girl, or a woman or a young boy from marginalized
+                families, these money could be their capitals to start a small
+                business that can give one of them incomes without being beggars
+                in the streets.
+              </p>
               <Link to="/donation">
                 <button className="bg-primary text-white font-bold py-3 px-6   transition duration-300">
                   Donate Now
