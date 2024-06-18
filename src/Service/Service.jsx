@@ -4,7 +4,9 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { Link } from "react-router-dom";
-
+import pic7 from "../assets/women/pic7.jpg";
+import pic3 from "../assets/women/pic3.jpg";
+import pic4 from "../assets/women/pic4.jpg";
 const Service = () => {
   return (
     <div className="what-we-do">
@@ -36,34 +38,49 @@ const Service = () => {
         className="container mx-auto py-16 px-4 flex flex-col lg:flex-row items-center space-y-10 lg:space-y-0 lg:space-x-10"
       >
         <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold text-center mb-6">Our Mission</h2>
+          <img
+            className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+            src={pic7}
+            alt="Picture 7"
+          />
+          <h2 className="text-2xl font-bold text-center mb-6">
+            We train youth
+          </h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-            Solidarity Initiative for Children and People (SICP) aims to get
-            poor people and marginalized people out from poverty with charity
-            works, lead them to meaningful works which get incomes, in order to
-            reload their belief in their lives, with goal to step them to the
-            level of others like: job, welfare, education, economic and
-            development.
+            we train youth and women in different meaningful works which get
+            incomes also as well, We train them in social study and sosial
+            environment in order to get peace and unity
           </p>
         </section>
 
         {/* Section: Our Impact */}
         <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold text-center mb-6">Our Impact</h2>
+          <img
+            className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+            src={pic3}
+            alt="Picture 3"
+          />
+          <h2 className="text-2xl font-bold text-center mb-6">Fundraising</h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-            Through our dedicated efforts, we have made a significant impact on
-            the lives of many individuals and communities. Here are some of the
-            key statistics and stories of how our work is making a difference.
+            we fundraise money in order to help those in their needs Teaching We
+            teach familes how to care their children from their enfancy to adult
+            and them to obey God Assistance We assist patients, widows, refugees
+            and others vulnerable for having good health and stand well
           </p>
         </section>
 
-        {/* Section: Call to Action */}
-        <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg text-center">
-          <h2 className="text-2xl font-bold mb-6">Get Involved</h2>
-          <p className="text-gray-700 leading-relaxed max-w-xl mx-auto mb-8">
-            You can make a difference by supporting our programs and
-            initiatives. Whether through donations, volunteering, or spreading
-            the word, your involvement is crucial to our success.
+        <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
+          <img
+            className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+            src={pic4}
+            alt="Picture 4"
+          />
+          <h2 className="text-2xl font-bold text-center mb-6">Promoting</h2>
+          <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
+            We promote peace, liberty, justice and reconciliation. Study for
+            children and youth .We help children and youth in their study Water
+            cleaning .We publish to all to clean water in order that everyone
+            have good health especially to care our children
           </p>
           <Link to="/contact">
             <button className="bg-primary text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
@@ -71,6 +88,7 @@ const Service = () => {
             </button>
           </Link>
         </section>
+
       </main>
 
       <Footer />
