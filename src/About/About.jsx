@@ -29,7 +29,7 @@ const About = () => {
             <h2 className="text-3xl font-bold mb-4 text-primary">ABOUT US</h2>
             <p className="text-gray-700 leading-relaxed">
               The Solidarity Initiative for Children and People (SICP) is a
-              charity non-profit organization founded by Winifred
+              charity non-profit organization nongovernmental founded by Winifred
               Nyirahabarugira in 2023 in Rwanda. Our mission is to help
               marginalized individuals and families, especially children, youth,
               and women, to alleviate poverty and achieve equality in society.
