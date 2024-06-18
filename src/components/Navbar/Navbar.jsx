@@ -116,18 +116,17 @@ const Navbar = ({ handleOrderPopup }) => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <div
         className={`${
-          isMenuOpen ? "block" : "hidden"
-        } sm:hidden bg-white dark:bg-gray-900 py-2 `}
+          isMenuOpen ? "translate-x-0" : "-translate-x-full"
+        } md:hidden bg-white dark:bg-gray-900 py-2 z-50 fixed inset-0 mt-16 transition-transform duration-300 ease-in-out`}
       >
-        <ul className="flex flex-col items-center">
+        <ul className="flex flex-col items-center space-y-4  pt-16">
           {Menu.map((data) => (
-            <li key={data.id} className="my-2">
+            <li key={data.id} className="w-full text-center">
               <a
                 href={data.link}
-                className="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary duration-200"
+                className="block w-full px-4 py-3 text-lg text-gray-600 dark:text-gray-300 hover:text-primary duration-200"
               >
                 {data.name}
               </a>
