@@ -185,7 +185,7 @@ const Footer = () => {
                 <span>
                   St Dominic Gatsata 30 Road
                   <br /> Gatsata Road
-                  <br /> toward bujumbura
+                  <br /> toward Byumba
                 </span>
               </a>
             </nav>

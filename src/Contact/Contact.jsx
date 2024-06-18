@@ -100,7 +100,7 @@ function Contact() {
                     <p className="text-sm leading-relaxed opacity-80">
                       St Dominic Gatsata 30
                       <br />
-                      Gatsata Road toward bujumbura
+                      Gatsata Road toward Byumba,
                     </p>
                   </div>
                 </div>
