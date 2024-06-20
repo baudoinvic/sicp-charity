@@ -3,6 +3,8 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { Link } from "react-router-dom";
+import pic17 from "../assets/women/pic17.jpg";
+import pic18 from "../assets/women/pic18.jpg";
 
 const About = () => {
   return (
@@ -18,7 +20,7 @@ const About = () => {
           {/* Left Side - Image */}
           <div className="w-full md:w-1/2 mb-4 md:mb-0">
             <img
-              src="https://assets-global.website-files.com/5fff1b1358bb914db4cb82f3/6053b1a7b7a1931385a35d84_charity%20water%202.png"
+              src={pic17}
               alt="About Us Image"
               className="h-auto rounded-lg shadow-md"
             />
@@ -103,7 +105,7 @@ const About = () => {
 
           <div className="md:w-2/5">
             <img
-              src="https://media.istockphoto.com/id/1499735039/photo/group-of-happy-african-children-orphanage-in-nairobi-kenya-east-africa.jpg?s=612x612&w=0&k=20&c=glXFgr6ata07ZSb9fc2djm0YBw89WFanvG8iJ8ajAQQ="
+              src={pic18}
               alt="About Us Image"
               className="w-full h-auto rounded-lg shadow-lg"
             />

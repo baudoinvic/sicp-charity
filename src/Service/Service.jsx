@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import pic14 from "../assets/women/pic14.jpg";
 import pic15 from "../assets/women/pic15.jpg";
 import pic16 from "../assets/women/pic16.jpg";
+
 const Service = () => {
   return (
     <div className="what-we-do">
