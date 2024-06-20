@@ -4,9 +4,9 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { Link } from "react-router-dom";
-import pic7 from "../assets/women/pic7.jpg";
-import pic3 from "../assets/women/pic3.jpg";
-import pic4 from "../assets/women/pic4.jpg";
+import pic14 from "../assets/women/pic14.jpg";
+import pic15 from "../assets/women/pic15.jpg";
+import pic16 from "../assets/women/pic16.jpg";
 const Service = () => {
   return (
     <div className="what-we-do">
@@ -40,7 +40,7 @@ const Service = () => {
         <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
           <img
             className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
-            src={pic7}
+            src={pic14}
             alt="Picture 7"
           />
           <h2 className="text-2xl font-bold text-center mb-6">
@@ -57,8 +57,8 @@ const Service = () => {
         <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
           <img
             className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
-            src={pic3}
-            alt="Picture 3"
+            src={pic15}
+            alt="Picture 15"
           />
           <h2 className="text-2xl font-bold text-center mb-6">Fundraising</h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
@@ -72,8 +72,8 @@ const Service = () => {
         <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
           <img
             className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
-            src={pic4}
-            alt="Picture 4"
+            src={pic16}
+            alt="Picture 16"
           />
           <h2 className="text-2xl font-bold text-center mb-6">Promoting</h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
@@ -88,8 +88,19 @@ const Service = () => {
             </button>
           </Link>
         </section>
-
       </main>
+
+      <section className="w-2/6 max-w-4xl p-8 bg-white rounded-lg shadow-lg ml-10 mb-5">
+        <h2 className="text-2xl font-bold text-center mb-6">Our impact</h2>
+        <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
+          Impact positive in our Organization since our beginning, many people
+          have changed their mind after following our teaching of social study
+          and social environment.And also the training for jobs which get
+          incomes. Many of them understood interested to make in applicance and
+          become reconciliated, because being lonely and fear other has gone,
+          because they feel working together in peace and unity.
+        </p>
+      </section>
 
       <Footer />
     </div>

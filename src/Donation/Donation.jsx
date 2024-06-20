@@ -70,7 +70,7 @@ const Donation = () => {
 
           <div className="flex flex-col items-center mb-6">
             <div className="flex justify-center mb-4">
-              {[25, 30, 50, 75].map((amt) => (
+              {[30, 50, 75, 100].map((amt) => (
                 <button
                   key={amt}
                   className={`px-4 py-2 rounded ${
@@ -83,7 +83,7 @@ const Donation = () => {
               ))}
             </div>
             <div className="flex justify-center">
-              {[100, 200, 570, 1000].map((amt) => (
+              {[250, 500, 750, 1000].map((amt) => (
                 <button
                   key={amt}
                   className={`px-4 py-2 rounded ${
@@ -120,7 +120,11 @@ const Donation = () => {
                 onChange={(e) => setPaymentMethod(e.target.value)}
               >
                 <option value="monthly">Monthly</option>
-                <option value="quarterly">Quarterly</option>
+
+                <option value="monthly">Monthly</option>
+                <option value="onetime">One Time</option>
+                <option value="quarterly"> Quarterly</option>
+                <option value="trimester">Trimester</option>
                 <option value="annually">Annually</option>
               </select>
             </div>

@@ -98,9 +98,9 @@ function Contact() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Our Address</h3>
                     <p className="text-sm leading-relaxed opacity-80">
-                      St Dominic Gatsata 30
+                      Paroisse St Famille Central St Dominic 32
                       <br />
-                      Gatsata Road toward Byumba,
+                      FW+4JH Gatsata Road, vers Byumba, Kigali
                     </p>
                   </div>
                 </div>
@@ -110,10 +110,11 @@ function Contact() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Write to Us</h3>
                     <p className="text-sm opacity-80">
-                      winifredn@solinitiativecp.org
+                      winifredn@solinitiativecp.org.
                     </p>
                     <a
-                      href="mailto:winifredn@solinitiativecp.org
+                      href="mailto:winifredn@solinitiativecp.org.
+
 "
                       className="text-sm font-medium underline hover:text-gray-200 transition-colors inline-block mt-2"
                     >
@@ -126,7 +127,7 @@ function Contact() {
                   <FaPhoneAlt className="text-3xl text-white opacity-80" />
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Call Us</h3>
-                    <p className="text-sm opacity-80">+250 793 017 617</p>
+                    <p className="text-sm opacity-80"> +250 785007514 </p>
                     <a
                       href="tel:+32498778291"
                       className="text-sm font-medium underline hover:text-gray-200 transition-colors inline-block mt-2"
@@ -221,7 +222,7 @@ function Contact() {
                     htmlFor="message"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Your Message
+                    Subject
                   </label>
                   <textarea
                     id="message"

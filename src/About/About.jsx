@@ -59,6 +59,7 @@ const About = () => {
                 individuals and families worldwide. Founded as a
                 non-governmental organization, we strive to bring hope and
                 support to those in need.
+                Chez madame Betty
               </p>
             </div>
 

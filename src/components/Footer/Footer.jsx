@@ -9,6 +9,10 @@ import axios from "axios";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { CiFacebook } from "react-icons/ci";
+import { FaYoutube } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
+import pic1 from "../../assets/pic1.jpg";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -47,6 +51,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
+              <img src={pic1} alt="Logo" className="w-10 rounded-full" />
               <h1 className="font-bold text-2xl text-primary">
                 Solidarity Initiative
                 <br />
@@ -80,6 +85,12 @@ const Footer = () => {
                 </button>
               </form>
               <ToastContainer />
+            </div>
+            <h1 className="ext-2xl font-bold mb-4">Follow us on</h1>
+            <div className="flex space-x-4">
+              <CiFacebook className="text-blue-600 hover:text-blue-800 cursor-pointer text-3xl" />
+              <FaYoutube className="text-red-600 hover:text-red-800 cursor-pointer text-3xl" />
+              <FaTiktok className="text-pink-600 hover:text-pink-800 cursor-pointer text-3xl" />
             </div>
           </div>
 
@@ -173,7 +184,7 @@ const Footer = () => {
                 className="block text-gray-300 hover:text-primary transition duration-300 flex items-center"
               >
                 <FaPhoneAlt className="text-xl mr-3" />
-                +250 793 017 617
+                 +250 785007514
               </a>
               <a
                 href="https://goo.gl/maps/yourAddress"
@@ -183,9 +194,10 @@ const Footer = () => {
               >
                 <IoLocationOutline className="text-2xl mr-3 mt-1" />
                 <span>
-                  St Dominic Gatsata 30 Road
-                  <br /> Gatsata Road
-                  <br /> toward Byumba
+                  Paroisse St Famille Central
+                  <br /> St Dominic 32
+                  <br /> FW+4JH Gatsata Road
+                  <br /> vers Byumba, Kigali
                 </span>
               </a>
             </nav>
