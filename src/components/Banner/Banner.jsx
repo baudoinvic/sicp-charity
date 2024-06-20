@@ -72,7 +72,7 @@ const Banner = () => {
             <div className="w-full md:w-1/3 px-4 mb-8">
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img
-                  src="https://charity-hand.netlify.app/img/causes/p4.jpg"
+                  src="https://charity-hand.netlify.app/img/gallery/g-4-2.jpg"
                   alt="Cause"
                   className="w-full h-96 object-cover"
                 />
@@ -85,15 +85,12 @@ const Banner = () => {
                     their golden years. We are committed to enhancing the
                     quality of life for the elderly by providing essential
                     services and resources.
-                  
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        
       </div>
     </div>
   );

@@ -40,22 +40,10 @@ const Compaign = () => {
             <p className="mb-4">
               Our organization runs several campaigns aimed at helping different
               groups in need. Below you can find information about each campaign
-              and how to contribute.
+              and how to contribute.<p>
+                we do fundraising every month which means each month we do our best to funraise communities
+              </p>
             </p>
-          </section>
-
-          <section className="mt-8">
-            <h2 className="text-2xl font-semibold mb-4">Fundraising Goals</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gray-200 p-4 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold">Total Goal</h3>
-                <p className="mt-2">$50,000</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold">Raised So Far</h3>
-                <p className="mt-2">$20,000</p>
-              </div>
-            </div>
           </section>
 
           <section className="mt-8">
