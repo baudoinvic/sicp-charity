@@ -5,6 +5,7 @@ import { IoFastFood } from "react-icons/io5";
 import { GiFoodTruck } from "react-icons/gi";
 
 
+
 const Banner = () => {
   return (
     <div data-aos="zoom-in">

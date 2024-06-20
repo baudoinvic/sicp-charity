@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { useNavigate, useLocation } from "react-router-dom";
+import pic19 from "../assets/women/pic19.jpg";
 
 const Donation = () => {
   const [amount, setAmount] = useState("");
@@ -218,6 +219,7 @@ const Donation = () => {
               you for your generosity and support.
             </p>
           </div>
+        
         </div>
       </main>
 
