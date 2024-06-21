@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import pic14 from "../assets/women/pic14.jpg";
 import pic15 from "../assets/women/pic15.jpg";
 import pic16 from "../assets/women/pic16.jpg";
+import pic20 from "../assets/women/pic20.jpg";
 
 const Service = () => {
   return (
@@ -92,6 +93,11 @@ const Service = () => {
       </main>
 
       <section className="w-2/6 max-w-4xl p-8 bg-white rounded-lg shadow-lg ml-10 mb-5">
+        <img
+          className="h-96 w-full object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+          src={pic20}
+          alt="Picture 20"
+        />
         <h2 className="text-2xl font-bold text-center mb-6">Our impact</h2>
         <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
           Impact positive in our Organization since our beginning, many people

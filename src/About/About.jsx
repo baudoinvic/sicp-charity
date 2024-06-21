@@ -5,6 +5,7 @@ import Footer from "../components/Footer/Footer";
 import { Link } from "react-router-dom";
 import pic17 from "../assets/women/pic17.jpg";
 import pic18 from "../assets/women/pic18.jpg";
+import pic21 from "../assets/women/pic21.jpg";
 
 const About = () => {
   return (
@@ -26,7 +27,6 @@ const About = () => {
             />
           </div>
 
-          {/* Right Side - Text */}
           <div className="w-full md:w-1/2 md:ml-8 mt-4 md:mt-0">
             <h2 className="text-3xl font-bold mb-4 text-primary">ABOUT US</h2>
             <p className="text-gray-700 leading-relaxed">
@@ -52,7 +52,7 @@ const About = () => {
           className="container mx-auto flex flex-col md:flex-row items-center justify-between py-16 "
         >
           <div className="md:w-1/2 mb-8 md:mb-0">
-            <div className="mb-10">
+            {/* <div className="mb-10">
               <h2 className="text-4xl font-bold mb-4 text-primary">
                 OUR STORY
               </h2>
@@ -63,7 +63,7 @@ const About = () => {
                 support to those in need.
                 Chez madame Betty
               </p>
-            </div>
+            </div> */}
 
             <div>
               <h2 className="text-4xl font-bold mb-4 text-primary">
@@ -112,6 +112,30 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <div
+        data-aos="zoom-in"
+        className="container mx-auto flex flex-col md:flex-row items-center justify-center py-8 mt-10"
+      >
+        {/* Left Side - Image */}
+        <div className="w-full md:w-1/2 mb-4 md:mb-0 flex justify-center">
+          <img
+            src={pic21}
+            alt="About Us Image"
+            className="w-full h-96 md:h-96 rounded-lg shadow-md object-cover"
+          />
+        </div>
+
+        <div className="w-full md:w-1/2 md:ml-8 mt-4 md:mt-0">
+          <h2 className="text-3xl font-bold mb-4 text-primary">Our Story</h2>
+          <p className="text-gray-700 leading-relaxed">
+            Poverty, disease, homelessness, and other challenges impact many
+            individuals and families worldwide. Founded as a non-governmental
+            organization, we strive to bring hope and support to those in need.
+            Chez madame Betty
+          </p>
+        </div>
+      </div>
 
       {/* Mission, Vision, Values Section */}
       <section className=" py-16">
