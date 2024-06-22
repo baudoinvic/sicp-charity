@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import pic17 from "../assets/women/pic17.jpg";
 import pic18 from "../assets/women/pic18.jpg";
 import pic21 from "../assets/women/pic21.jpg";
+import pic25 from "../assets/women/pic25.jpg"
 
 const About = () => {
   return (
@@ -21,7 +22,7 @@ const About = () => {
           {/* Left Side - Image */}
           <div className="w-full md:w-1/2 mb-4 md:mb-0">
             <img
-              src={pic17}
+              src={pic25}
               alt="About Us Image"
               className="h-auto rounded-lg shadow-md"
             />
@@ -52,18 +53,7 @@ const About = () => {
           className="container mx-auto flex flex-col md:flex-row items-center justify-between py-16 "
         >
           <div className="md:w-1/2 mb-8 md:mb-0">
-            {/* <div className="mb-10">
-              <h2 className="text-4xl font-bold mb-4 text-primary">
-                OUR STORY
-              </h2>
-              <p className="text-gray-700 leading-relaxed">
-                Poverty, disease, homelessness, and other challenges impact many
-                individuals and families worldwide. Founded as a
-                non-governmental organization, we strive to bring hope and
-                support to those in need.
-                Chez madame Betty
-              </p>
-            </div> */}
+          
 
             <div>
               <h2 className="text-4xl font-bold mb-4 text-primary">
@@ -120,7 +110,7 @@ const About = () => {
         {/* Left Side - Image */}
         <div className="w-full md:w-1/2 mb-4 md:mb-0 flex justify-center">
           <img
-            src={pic21}
+            src={pic17}
             alt="About Us Image"
             className="w-full h-96 md:h-96 rounded-lg shadow-md object-cover"
           />
@@ -129,7 +119,7 @@ const About = () => {
         <div className="w-full md:w-1/2 md:ml-8 mt-4 md:mt-0">
           <h2 className="text-3xl font-bold mb-4 text-primary">Our Story</h2>
           <p className="text-gray-700 leading-relaxed">
-            Poverty, disease, homelessness, and other challenges impact many
+            Poverty, disease, homelessness, hunger,disasters, asylam refugee, and other challenges impact many
             individuals and families worldwide. Founded as a non-governmental
             organization, we strive to bring hope and support to those in need.
             Chez madame Betty

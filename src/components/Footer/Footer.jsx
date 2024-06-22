@@ -53,11 +53,11 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
               <img src={pic24} alt="Logo" className="w-10 rounded-full" />
-              <h1 className="font-bold text-2xl text-primary">
-                Solidarity Initiative
+              <h3 className="font-bold text-lg  ">
+                Winifred Nyirahabarugira
                 <br />
-                for Children and People.SICP
-              </h1>
+                Founder of SICP
+              </h3>
             </div>
             <p className="text-gray-300">
               Together, we can make a lasting
@@ -171,6 +171,9 @@ const Footer = () => {
 
           <div>
             <h2 className="text-2xl font-bold text-primary mb-6">Contact</h2>
+            <p className="mb-4 text-gray-300  hover:text-primary transition duration-300 flex items-center mr-10">
+              Chief Executive Officer
+            </p>
             <nav className="space-y-4">
               <a
                 href="mailto: winifredn@solinitiativecp.org
@@ -181,11 +184,11 @@ const Footer = () => {
                 winifredn@solinitiativecp.org
               </a>
               <a
-                href="tel:+32493039440"
+                href="tel: +250793017617"
                 className="block text-gray-300 hover:text-primary transition duration-300 flex items-center"
               >
                 <FaPhoneAlt className="text-xl mr-3" />
-                 +250 785007514
+                 +250793017617
               </a>
               <a
                 href="https://goo.gl/maps/yourAddress"

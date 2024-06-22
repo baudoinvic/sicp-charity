@@ -84,7 +84,7 @@ const Banner = () => {
                   </h2>
                   <p className="text-gray-600">
                    our youth at high school need support throught their lives and study focusing on providing education resource,
-                   school fess, school supplies, healthcare and other needs, by donating your help these youth pupils to get 
+                   school fees, school supplies, healthcare and other needs, by donating your help these youth pupils to get 
                    their education, they deserve for opening doors to their bright future.
                   </p>
                 </div>

@@ -64,9 +64,9 @@ const Service = () => {
           />
           <h2 className="text-2xl font-bold text-center mb-6">Fundraising</h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-            we fundraise money in order to help those in their needs Teaching We
+            we fundraise money in order to help those in their needs. We
             teach familes how to care their children from their enfancy to adult
-            and them to obey God Assistance We assist patients, widows, refugees
+            and them to obey God. We assist patients, widows, refugees
             and others vulnerable for having good health and stand well
           </p>
         </section>
