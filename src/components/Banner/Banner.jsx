@@ -83,10 +83,9 @@ const Banner = () => {
                     EDUCATION FOR STUDENTS
                   </h2>
                   <p className="text-gray-600">
-                    Our senior citizens deserve care, respect, and support in
-                    their golden years. We are committed to enhancing the
-                    quality of life for the elderly by providing essential
-                    services and resources.
+                   our youth at high school need support throught their lives and study focusing on providing education resource,
+                   school fess, school supplies, healthcare and other needs, by donating your help these youth pupils to get 
+                   their education, they deserve for opening doors to their bright future.
                   </p>
                 </div>
               </div>

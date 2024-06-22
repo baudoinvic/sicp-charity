@@ -13,6 +13,7 @@ import { CiFacebook } from "react-icons/ci";
 import { FaYoutube } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import pic1 from "../../assets/pic1.jpg";
+import pic24 from "../../assets/pic24.jpg"
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -51,7 +52,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
-              <img src={pic1} alt="Logo" className="w-10 rounded-full" />
+              <img src={pic24} alt="Logo" className="w-10 rounded-full" />
               <h1 className="font-bold text-2xl text-primary">
                 Solidarity Initiative
                 <br />
