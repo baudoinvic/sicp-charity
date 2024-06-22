@@ -1,10 +1,12 @@
+
+
 import React from "react";
 import BannerImg from "../../assets/women/women2.jpg";
 import { GrSecure } from "react-icons/gr";
 import { IoFastFood } from "react-icons/io5";
 import { GiFoodTruck } from "react-icons/gi";
-
-
+import pic22 from "../../assets/women/pic22.jpg"; 
+import pic23 from "../../assets/women/pic23.jpg"
 
 const Banner = () => {
   return (
@@ -29,7 +31,7 @@ const Banner = () => {
             <div className="w-full md:w-1/3 px-4 mb-8">
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img
-                  src="https://charity-hand.netlify.app/img/causes/p4.jpg"
+                  src="https://charity-hand.netlify.app/img/causes/p5.jpg"
                   alt="Cause"
                   className="w-full h-96 object-cover"
                 />
@@ -51,7 +53,7 @@ const Banner = () => {
             <div className="w-full md:w-1/3 px-4 mb-8">
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img
-                  src="https://charity-hand.netlify.app/img/causes/p5.jpg"
+                  src={pic22}
                   alt="Cause"
                   className="w-full h-96 object-cover"
                 />
@@ -72,13 +74,13 @@ const Banner = () => {
             <div className="w-full md:w-1/3 px-4 mb-8">
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img
-                  src="https://charity-hand.netlify.app/img/gallery/g-4-2.jpg"
+                  src={pic23}
                   alt="Cause"
                   className="w-full h-96 object-cover"
                 />
                 <div className="p-6">
                   <h2 className="text-xl font-bold mb-2">
-                    HELP SENIOR CITIZENS
+                    EDUCATION FOR STUDENTS
                   </h2>
                   <p className="text-gray-600">
                     Our senior citizens deserve care, respect, and support in
@@ -97,3 +99,4 @@ const Banner = () => {
 };
 
 export default Banner;
+
