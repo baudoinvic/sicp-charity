@@ -8,6 +8,7 @@ import pic14 from "../assets/women/pic14.jpg";
 import pic15 from "../assets/women/pic15.jpg";
 import pic16 from "../assets/women/pic16.jpg";
 import pic20 from "../assets/women/pic20.jpg";
+import pic26 from "../assets/women/pic26.jpg"
 
 const Service = () => {
   return (
@@ -42,8 +43,8 @@ const Service = () => {
         <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
           <img
             className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
-            src={pic14}
-            alt="Picture 7"
+            src={pic15}
+            alt="Picture 15"
           />
           <h2 className="text-2xl font-bold text-center mb-6">
             We train youth
@@ -59,8 +60,8 @@ const Service = () => {
         <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
           <img
             className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
-            src={pic15}
-            alt="Picture 15"
+            src={pic26}
+            alt="Picture 26"
           />
           <h2 className="text-2xl font-bold text-center mb-6">Fundraising</h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
