@@ -31,12 +31,12 @@ const Menu = [
   },
   {
     id: 4,
-    name: "Campaign",
+    name: "Mission",
     link: "/Compaign",
   },
   {
     id: 5,
-    name: "Fundraising",
+    name: "Impact",
     link: "/Funraise",
   },
   {

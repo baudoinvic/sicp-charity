@@ -65,25 +65,26 @@ const Service = () => {
           />
           <h2 className="text-2xl font-bold text-center mb-6">Fundraising</h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-            we fundraise money in order to help those in their needs. We
-            teach familes how to care their children from their enfancy to adult
-            and them to obey God. We assist patients, widows, refugees
-            and others vulnerable for having good health and stand well
+            we fundraise money in order to help those in their needs. We teach
+            familes how to care their children from their enfancy to adult and
+            them to obey God. We assist patients, widows, refugees and others
+            vulnerable for having good health and stand well
           </p>
         </section>
 
         <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
           <img
-            className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
-            src={pic16}
-            alt="Picture 16"
+            className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+            src={pic20}
+            alt="Picture 20"
           />
           <h2 className="text-2xl font-bold text-center mb-6">Promoting</h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-            We promote peace, liberty, justice and reconciliation. Study for
-            children and youth .We help children and youth in their study Water
-            cleaning .We publish to all to clean water in order that everyone
-            have good health especially to care our children
+            We promote peace, liberty, justice and reconciliation for women, 
+            in differents jobs they do which give them strength in their lives, 
+           
+            
+        
           </p>
           <Link to="/contact">
             <button className="bg-primary text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
@@ -92,24 +93,6 @@ const Service = () => {
           </Link>
         </section>
       </main>
-
-      <section className="w-2/6 max-w-4xl p-8 bg-white rounded-lg shadow-lg ml-10 mb-5">
-        <img
-          className="h-96 w-full object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
-          src={pic20}
-          alt="Picture 20"
-        />
-        <h2 className="text-2xl font-bold text-center mb-6">Our impact</h2>
-        <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-          Impact positive in our Organization since our beginning, many people
-          have changed their mind after following our teaching of social study
-          and social environment.And also the training for jobs which get
-          incomes. Many of them understood interested to make in applicance and
-          become reconciliated, because being lonely and fear other has gone,
-          because they feel working together in peace and unity.
-        </p>
-      </section>
-
       <Footer />
     </div>
   );
