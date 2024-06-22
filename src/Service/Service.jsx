@@ -4,11 +4,13 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { Link } from "react-router-dom";
-import pic14 from "../assets/women/pic14.jpg";
 import pic15 from "../assets/women/pic15.jpg";
-import pic16 from "../assets/women/pic16.jpg";
 import pic20 from "../assets/women/pic20.jpg";
 import pic26 from "../assets/women/pic26.jpg"
+
+import pic31 from "../assets/women/pic31.jpg";
+import pic32 from "../assets/women/pic32.jpg";
+import pic33 from "../assets/women/pic33.jpg";
 
 const Service = () => {
   return (
@@ -80,11 +82,8 @@ const Service = () => {
           />
           <h2 className="text-2xl font-bold text-center mb-6">Promoting</h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-            We promote peace, liberty, justice and reconciliation for women, 
-            in differents jobs they do which give them strength in their lives, 
-           
-            
-        
+            We promote peace, liberty, justice and reconciliation for women, in
+            differents jobs they do which give them strength in their lives,
           </p>
           <Link to="/contact">
             <button className="bg-primary text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
@@ -93,6 +92,38 @@ const Service = () => {
           </Link>
         </section>
       </main>
+
+
+      <section className="mb-10">
+        <div className="container mx-auto px-4">
+     
+          <p className="text-center max-w-3xl mx-auto text-lg  text-gray-700 leading-relaxed mb-12 animate-fade-in-up">
+            We empower women from marginalized and underprivileged backgrounds,
+            equipping them with essential skills to nurture their children from
+            infancy through adulthood.
+          </p>
+          <div className="flex flex-col md:flex-row justify-center items-center md:space-x-8 space-y-8 md:space-y-0">
+            {[pic32, pic31, pic33].map((pic, index) => (
+              <div
+                key={index}
+                className="relative group overflow-hidden rounded-xl shadow-xl"
+              >
+                <img
+                  src={pic}
+                  className="w-full md:w-80 h-80 object-cover transition-transform duration-300 group-hover:scale-110"
+                  alt={`Empowering families ${index + 1}`}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
+                  <span className="text-white text-lg font-semibold">
+                    Transforming Lives
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

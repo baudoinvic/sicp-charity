@@ -43,13 +43,12 @@ const Funraise = () => {
             src={pic14}
             alt="Picture 14"
           />
-          <h2 className="text-2xl font-bold text-center mb-6">
-            Helping Windows
-          </h2>
+          <h2 className="text-2xl font-bold text-center mb-6">Sports</h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-            Action of charity for widows bring hope , peace and
-            strength in their lives
-          </p>
+            The sports and other training of our children, maked them to leave
+            their lonely and today some of them become champion in our
+            community.
+            </p>
         </section>
 
         {/* Section: Our Impact */}
