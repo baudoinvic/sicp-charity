@@ -103,7 +103,7 @@ const Service = () => {
             infancy through adulthood.
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center md:space-x-8 space-y-8 md:space-y-0">
-            {[pic32, pic31, pic33].map((pic, index) => (
+            {[pic32, pic33, pic31,].map((pic, index) => (
               <div
                 key={index}
                 className="relative group overflow-hidden rounded-xl shadow-xl"
