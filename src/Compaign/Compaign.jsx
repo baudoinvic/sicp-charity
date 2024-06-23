@@ -33,8 +33,10 @@ const Compaign = () => {
           </div>
         </header>
 
-        <div className="flex justify-center items-center mt-20">
-          <div className="w-2/4 bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+    
+
+        <div className="flex justify-center items-center mt-20 px-4">
+          <div className="w-full max-w-md bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
             <div className="w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
               <svg
                 className="w-8 h-8 text-indigo-600"
@@ -51,23 +53,25 @@ const Compaign = () => {
                 ></path>
               </svg>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-2 text-center">
               OUR MISSION
             </h3>
             <p className="mt-2 text-gray-600 text-center">
-              Solidarity Initiative for Children and People (SICP) is aims to
-              get poor people and marginalized people out from poverty with
-              charity works, lead them to meaningful woks which get incomes, in
-              order to reload their belief in their lives, with goal to step
-              them to the level of others like: job, welfare, education,
-              economic and development
+              Solidarity Initiative for Children and People (SICP) aims to get
+              poor and marginalized people out of poverty through charity work,
+              leading them to meaningful jobs that provide income. Our goal is
+              to help them regain belief in their lives and achieve parity with
+              others in terms of job opportunities, welfare, education, economic
+              stability, and development.
             </p>
           </div>
         </div>
 
         <main className="container mx-auto py-8">
           <section data-aos="zoom-in" className="mt-8">
-            <h2 className="text-2xl font-semibold mb-4 text-primary">Fundraising</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-primary">
+              Fundraising
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold mb-2">
