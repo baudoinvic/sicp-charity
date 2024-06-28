@@ -182,7 +182,6 @@ const Donation = () => {
               >
                 <option value="">Payment Method</option>
                 <option value="creditCard">Credit Card</option>
-                <option value="paypal">PayPal</option>
               </select>
               <div className="flex items-center">
                 <input
