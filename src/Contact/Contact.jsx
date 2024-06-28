@@ -16,7 +16,6 @@ function Contact() {
     email: "",
     address: "",
     message: "",
-    // message: "",
   });
 
   const handleChange = (e) => {
@@ -127,7 +126,7 @@ function Contact() {
                   <FaPhoneAlt className="text-3xl text-white opacity-80" />
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Call Us</h3>
-                    <p className="text-sm opacity-80"> +250 785007514 </p>
+                    <p className="text-sm opacity-80"> +250793017617 </p>
                     <a
                       href="tel:+32498778291"
                       className="text-sm font-medium underline hover:text-gray-200 transition-colors inline-block mt-2"
