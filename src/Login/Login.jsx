@@ -34,7 +34,7 @@ const Login = () => {
         if (user.role === "admin") {
           navigate("/Admindashboard/Dashboard");
         } else {
-          navigate("/");
+          navigate("/donation");
         }
       }, 2000); // Adjust the delay as needed
     } catch (error) {

@@ -65,7 +65,7 @@ function Signup() {
             </div>
           </div>
           <div className="right-side w-full md:w-1/2 mx-auto p-6 shadow-md">
-            <Link to="/Home">
+            <Link to="">
               <div className="flex">
                 <IoMdArrowBack className="text-primary mt-1 mr-2" />
                 <span className="text-primary">Home</span>
