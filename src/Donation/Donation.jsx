@@ -4,7 +4,9 @@
 // import Navbar from "../components/Navbar/Navbar";
 // import Footer from "../components/Footer/Footer";
 // import { useNavigate, useLocation } from "react-router-dom";
-// import pic19 from "../assets/women/pic19.jpg";
+// import axios from "axios";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 
 // const Donation = () => {
 //   const [amount, setAmount] = useState("");
@@ -14,6 +16,7 @@
 //   const [paymentMethod, setPaymentMethod] = useState("");
 //   const [newsletter, setNewsletter] = useState(false);
 //   const [showModal, setShowModal] = useState(false);
+//   const [isLoggedIn, setIsLoggedIn] = useState(false); // Track user login state
 
 //   const navigate = useNavigate();
 //   const location = useLocation();
@@ -26,19 +29,38 @@
 //     toggleModal();
 //   };
 
-//   const handleSignup = () => {
+//   const handleCheckout = () => {
 //     toggleModal();
-//     navigate("/signup");
+//     navigate("/checkout");
 //   };
 
-//   const handleSubmit = (e) => {
+//   const handleSubmit = async (e) => {
 //     e.preventDefault();
-//     const isLoggedIn = false; 
 
 //     if (!isLoggedIn) {
 //       toggleModal();
 //     } else {
-//       navigate("/checkout", { state: { from: location } });
+//       try {
+//         // Simulating donation process with axios POST request
+//         const response = await axios.post(
+//           "https://auction-website-auji.onrender.com/api/v1/donations",
+//           {
+//             firstname,
+//             lastname,
+//             email,
+//             amount,
+//             paymentMethod,
+//             newsletter,
+//           }
+//         );
+
+//         // Assuming successful donation handling
+//         toast.success("Donation successful!");
+//         navigate("/checkout", { state: { from: location } });
+//       } catch (error) {
+//         console.error("Error making donation:", error);
+//         toast.error("Failed to process donation. Please try again later.");
+//       }
 //     }
 //   };
 
@@ -119,10 +141,8 @@
 //                 onChange={(e) => setPaymentMethod(e.target.value)}
 //               >
 //                 <option value="monthly">Monthly</option>
-
-//                 <option value="monthly">Monthly</option>
 //                 <option value="onetime">One Time</option>
-//                 <option value="quarterly"> Quarterly</option>
+//                 <option value="quarterly">Quarterly</option>
 //                 <option value="trimester">Trimester</option>
 //                 <option value="annually">Annually</option>
 //               </select>
@@ -133,15 +153,15 @@
 //               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 //                 <input
 //                   type="text"
-//                   placeholder="firstname"
+//                   placeholder="First Name"
 //                   value={firstname}
 //                   required
-//                   onChange={(e) => setName(e.target.value)}
+//                   onChange={(e) => setFirstname(e.target.value)}
 //                   className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
 //                 />
 //                 <input
 //                   type="text"
-//                   placeholder="lastname"
+//                   placeholder="Last Name"
 //                   value={lastname}
 //                   onChange={(e) => setLastName(e.target.value)}
 //                   required
@@ -150,23 +170,21 @@
 //               </div>
 //               <input
 //                 type="email"
-//                 placeholder="email"
+//                 placeholder="Email"
 //                 value={email}
 //                 onChange={(e) => setEmail(e.target.value)}
 //                 required
 //                 className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
 //               />
-//               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-//                 <input
-//                   type="text"
-//                   placeholder="Amount"
-//                   value={amount}
-//                   onChange={(e) => setAmount(e.target.value)}
-//                   required
-//                   className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-//                 />
-            
-//               </div>
+
+//               <input
+//                 type="amount"
+//                 placeholder="amount"
+//                 value={amount}
+//                 onChange={(e) => setAmount(e.target.value)}
+//                 required
+//                 className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+//               />
 //               <select
 //                 className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
 //                 onChange={(e) => setPaymentMethod(e.target.value)}
@@ -192,6 +210,7 @@
 //                 Proceed to Checkout
 //               </button>
 //             </form>
+//             <ToastContainer />
 //           </div>
 
 //           <div className="w-full md:w-1/2">
@@ -209,7 +228,6 @@
 //               you for your generosity and support.
 //             </p>
 //           </div>
-        
 //         </div>
 //       </main>
 
@@ -218,22 +236,24 @@
 //         <div className="fixed inset-0 flex items-center justify-center">
 //           <div className="fixed inset-0 bg-black opacity-50"></div>
 //           <div className="bg-white rounded-lg p-6 shadow-lg z-10">
-//             <h2 className="text-xl font-semibold mb-4">Please Sign Up</h2>
+//             <h2 className="text-xl font-semibold mb-4">
+//               Would you like to Proceed with checkout
+//             </h2>
 //             <p className="mb-6">
-//               To proceed with the donation, you need to create an account first.
+//               Now you are To proceed with the donation, and make your payment
 //             </p>
 //             <div className="flex justify-end space-x-4">
 //               <button
-//                 className="px-4 py-2 rounded bg-gray-200 hover:bg-gray-300 transition-colors"
+//                 className="px-4 py-2 rounded text-white bg-red-500 hover:bg-red-500 transition-colors"
 //                 onClick={handleCancel}
 //               >
 //                 Cancel
 //               </button>
 //               <button
 //                 className="px-4 py-2 rounded bg-primary text-white hover:bg-blue-600 transition-colors"
-//                 onClick={handleSignup}
+//                 onClick={handleCheckout}
 //               >
-//                 Sign Up
+//                Proceed to Checkout
 //               </button>
 //             </div>
 //           </div>
@@ -276,9 +296,9 @@ const Donation = () => {
     toggleModal();
   };
 
-  const handleSignup = () => {
+  const handleCheckout = () => {
     toggleModal();
-    navigate("/signup");
+    navigate("/checkout");
   };
 
   const handleSubmit = async (e) => {
@@ -289,18 +309,25 @@ const Donation = () => {
     } else {
       try {
         // Simulating donation process with axios POST request
-        const response = await axios.post("https://your-donation-api-url", {
-          firstname,
-          lastname,
-          email,
-          amount,
-          paymentMethod,
-          newsletter,
-        });
+        const response = await axios.post(
+          "https://auction-website-auji.onrender.com/api/v1/donations",
+          {
+            firstname,
+            lastname,
+            email,
+            amount,
+            paymentMethod,
+            newsletter,
+          }
+        );
 
         // Assuming successful donation handling
         toast.success("Donation successful!");
-        navigate("/checkout", { state: { from: location } });
+
+        // After a short delay, navigate to donation page
+        setTimeout(() => {
+          navigate("/donate");
+        }, 2000); // 2000 milliseconds (2 seconds) delay before navigation
       } catch (error) {
         console.error("Error making donation:", error);
         toast.error("Failed to process donation. Please try again later.");
@@ -420,6 +447,15 @@ const Donation = () => {
                 required
                 className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
+
+              <input
+                type="amount"
+                placeholder="amount"
+                value={amount}
+                onChange={(e) => setAmount(e.target.value)}
+                required
+                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
               <select
                 className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                 onChange={(e) => setPaymentMethod(e.target.value)}
@@ -471,22 +507,24 @@ const Donation = () => {
         <div className="fixed inset-0 flex items-center justify-center">
           <div className="fixed inset-0 bg-black opacity-50"></div>
           <div className="bg-white rounded-lg p-6 shadow-lg z-10">
-            <h2 className="text-xl font-semibold mb-4">Would you like to Proceed with checkout</h2>
+            <h2 className="text-xl font-semibold mb-4">
+              Would you like to Proceed with checkout
+            </h2>
             <p className="mb-6">
-             Now you are  To proceed with the donation, and make your payment
+              Now you are To proceed with the donation, and make your payment
             </p>
             <div className="flex justify-end space-x-4">
               <button
-                className="px-4 py-2 rounded bg-gray-200 hover:bg-gray-300 transition-colors"
+                className="px-4 py-2 rounded text-white bg-red-500 hover:bg-red-500 transition-colors"
                 onClick={handleCancel}
               >
                 Cancel
               </button>
               <button
                 className="px-4 py-2 rounded bg-primary text-white hover:bg-blue-600 transition-colors"
-                onClick={handleSignup}
+                onClick={handleCheckout}
               >
-                Sign Up
+                Proceed to Checkout
               </button>
             </div>
           </div>
@@ -499,4 +537,9 @@ const Donation = () => {
 };
 
 export default Donation;
+
+
+
+
+
 
