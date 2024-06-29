@@ -12,7 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { CiFacebook } from "react-icons/ci";
 import { FaYoutube } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
-import pic1 from "../../assets/pic1.jpg";
+import ceo from "../../assets/ceo.jpg";
 import pic24 from "../../assets/pic24.jpg"
 
 const Footer = () => {
@@ -57,6 +57,15 @@ const Footer = () => {
                 Winifred Nyirahabarugira
                 <br />
                 Founder of SICP
+              </h3>
+            </div>
+           
+            <div className="flex items-center space-x-4">
+              <img src={ceo} alt="ceo" className="w-10 rounded-full" />
+              <h3 className="font-bold text-lg  ">
+                Christophe Bisangwa
+                <br />
+                Chief Executive Officer of SICP
               </h3>
             </div>
             <p className="text-gray-300">
