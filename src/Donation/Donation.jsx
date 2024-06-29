@@ -1,72 +1,64 @@
-
-
 import React, { useState } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Donation = () => {
-  const [amount, setAmount] = useState("");
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [paymentMethod, setPaymentMethod] = useState("");
-  const [newsletter, setNewsletter] = useState(false);
-  const [showModal, setShowModal] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Track user login state
-
   const navigate = useNavigate();
-  const location = useLocation();
+  
+ const [formData, setFormData] = useState({
+   firstname: "",
+   lastname: "",
+   email: "",
+   amount: "",
+ });
 
-  const toggleModal = () => {
-    setShowModal(!showModal);
-  };
+ const handleChange = (e) => {
+   const fieldName = e.target.name;
+   setFormData({
+     ...formData,
+     [fieldName]: e.target.value,
+   });
+ };
 
-  const handleCancel = () => {
-    toggleModal();
-  };
+ const handleAmountClick = (amt) => {
+   setFormData({ ...formData, amount: amt.toString() });
+ };
 
-  const handleCheckout = () => {
-    toggleModal();
-    navigate("/checkout");
-  };
+ const handleAmountChange = (e) => {
+   setFormData({ ...formData, amount: e.target.value });
+ };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+   e.preventDefault();
 
-    if (!isLoggedIn) {
-      toggleModal();
-    } else {
-      try {
-        // Simulating donation process with axios POST request
-        const response = await axios.post(
-          "https://auction-website-auji.onrender.com/api/v1/donations",
-          {
-            firstname,
-            lastname,
-            email,
-            amount,
-            paymentMethod,
-            newsletter,
-          }
-        );
+   try {
+     console.log("Request Data:", formData);
 
-        // Assuming successful donation handling
-        toast.success("Donation successful!");
+     const response = await axios.post(
+       "https://auction-website-auji.onrender.com/api/v1/donations",
+       formData,
+       {
+         headers: {
+           "Content-Type": "application/json",
+         },
+       }
+     );
 
-        // After a short delay, navigate to donation page
-        setTimeout(() => {
-          navigate("/donate");
-        }, 2000); // 2000 milliseconds (2 seconds) delay before navigation
-      } catch (error) {
-        console.error("Error making donation:", error);
-        toast.error("Failed to process donation. Please try again later.");
-      }
-    }
-  };
+     console.log("Response Data:", response.data);
+     toast.success("Donation created successfully");
+
+     setTimeout(() => {
+       navigate("/checkout");
+     }, 2000);
+   } catch (error) {
+     console.error("Error:", error.response ? error.response.data : error);
+     toast.error("Failed to donate. Please try again later.");
+   }
+ };
 
   return (
     <div className="Donation">
@@ -99,9 +91,11 @@ const Donation = () => {
                 <button
                   key={amt}
                   className={`px-4 py-2 rounded ${
-                    amount === amt.toString() ? "bg-blue-600" : "bg-primary"
+                    formData.amount === amt.toString()
+                      ? "bg-blue-600"
+                      : "bg-primary"
                   } text-white transition-colors mx-1`}
-                  onClick={() => setAmount(amt.toString())}
+                  onClick={() => handleAmountClick(amt)}
                 >
                   ${amt}
                 </button>
@@ -112,9 +106,11 @@ const Donation = () => {
                 <button
                   key={amt}
                   className={`px-4 py-2 rounded ${
-                    amount === amt.toString() ? "bg-blue-600" : "bg-primary"
+                    formData.amount === amt.toString()
+                      ? "bg-blue-600"
+                      : "bg-primary"
                   } text-white transition-colors mx-1`}
-                  onClick={() => setAmount(amt.toString())}
+                  onClick={() => handleAmountClick(amt)}
                 >
                   ${amt}
                 </button>
@@ -124,8 +120,8 @@ const Donation = () => {
           <input
             type="number"
             placeholder="Other amount"
-            value={amount}
-            onChange={(e) => setAmount(e.target.value)}
+            value={formData.amount}
+            onChange={handleAmountChange}
             className="block mx-auto px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </section>
@@ -135,9 +131,7 @@ const Donation = () => {
             <h2 className="text-2xl font-semibold mb-4">
               Would You Like To Make a Regular Donation?
             </h2>
-            <p className="mb-4">
-             Before you proceed with donation you need to create an account before.
-            </p>
+        
             <p className="mb-4">
               Your regular contributions help us sustain our mission and reach
               more people in need.
@@ -156,45 +150,48 @@ const Donation = () => {
             </div>
 
             <h2 className="text-xl font-semibold mb-4">Donation Details</h2>
-            <form className="space-y-4" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
                   type="text"
+                  name="firstname"
                   placeholder="First Name"
-                  value={firstname}
+                  value={formData.firstname}
                   required
-                  onChange={(e) => setFirstname(e.target.value)}
+                  onChange={handleChange}
                   className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <input
                   type="text"
+                  name="lastname"
                   placeholder="Last Name"
-                  value={lastname}
-                  onChange={(e) => setLastName(e.target.value)}
+                  value={formData.lastname}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <input
                 type="email"
+                name="email"
                 placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={formData.email}
+                onChange={handleChange}
                 required
                 className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
 
               <input
-                type="amount"
-                placeholder="amount"
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
+                type="number"
+                name="amount"
+                placeholder="Amount"
+                value={formData.amount}
+                onChange={handleAmountChange}
                 required
                 className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <select
                 className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                onChange={(e) => setPaymentMethod(e.target.value)}
               >
                 <option value="">Payment Method</option>
                 <option value="creditCard">Credit Card</option>
@@ -202,8 +199,6 @@ const Donation = () => {
               <div className="flex items-center">
                 <input
                   type="checkbox"
-                  checked={newsletter}
-                  onChange={(e) => setNewsletter(e.target.checked)}
                   className="mr-2"
                 />
                 <label htmlFor="newsletter" className="text-sm">
@@ -238,44 +233,9 @@ const Donation = () => {
         </div>
       </main>
 
-      {/* Modal */}
-      {showModal && (
-        <div className="fixed inset-0 flex items-center justify-center">
-          <div className="fixed inset-0 bg-black opacity-50"></div>
-          <div className="bg-white rounded-lg p-6 shadow-lg z-10">
-            <h2 className="text-xl font-semibold mb-4">
-              Would you like to Proceed with checkout
-            </h2>
-            <p className="mb-6">
-              Now you are To proceed with the donation, and make your payment
-            </p>
-            <div className="flex justify-end space-x-4">
-              <button
-                className="px-4 py-2 rounded text-white bg-red-500 hover:bg-red-500 transition-colors"
-                onClick={handleCancel}
-              >
-                Cancel
-              </button>
-              <button
-                className="px-4 py-2 rounded bg-primary text-white hover:bg-blue-600 transition-colors"
-                onClick={handleCheckout}
-              >
-                Proceed to Checkout
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
       <Footer />
     </div>
   );
 };
 
 export default Donation;
-
-
-
-
-
-

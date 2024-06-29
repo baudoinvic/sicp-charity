@@ -1,8 +1,11 @@
 
 
+
 import React, { useState } from "react";
 import { IoMdArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Checkout = () => {
   const [cardNumber, setCardNumber] = useState("");
@@ -10,19 +13,46 @@ const Checkout = () => {
   const [cvc, setCvc] = useState("");
   const [nameOnCard, setNameOnCard] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle the payment processing logic here
-    console.log({
+
+    const paymentData = {
       cardNumber,
       expiryDate,
       cvc,
       nameOnCard,
-    });
+    };
+
+    try {
+      const response = await fetch(
+        "https://auction-website-auji.onrender.com/api/v1/payments/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(paymentData),
+        }
+      );
+
+      if (response.ok) {
+        // Payment was processed successfully
+        toast.success("Payment processed successfully!");
+        // Optionally, redirect or show a success message
+      } else {
+        // Handle errors if payment processing fails
+        toast.error("Payment processing failed.");
+      }
+    } catch (error) {
+      console.error("Error processing payment:", error);
+      toast.error("Error processing payment. Please try again later.");
+    }
   };
 
   return (
     <div className="Checkout min-h-screen bg-gray-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <ToastContainer />
+
       <div className="max-w-2xl w-full space-y-8">
         <Link to="/Donation">
           <div className="flex">
