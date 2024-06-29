@@ -149,7 +149,7 @@ const Footer = () => {
                 to="/compaign"
                 className="block text-gray-300 hover:text-primary transition duration-300"
               >
-                Campaign
+                Our impact
               </Link>
               <Link
                 to="/service"
