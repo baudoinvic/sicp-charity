@@ -68,7 +68,7 @@ const About = () => {
               <p className="text-gray-700 leading-relaxed mb-6">
                 The donate of SICP is everyone who has understood the goal of
                 and the value of the organization, and support the charity
-                action. The donate can supports can support financially or with
+                action. The donate can support financially or with
                 tools or products from his heart. We have many children today
                 who have not anything, and want support from you, remember that
                 before being powerful person, it comes from to a child, and
