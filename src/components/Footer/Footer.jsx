@@ -96,12 +96,6 @@ const Footer = () => {
               </form>
               <ToastContainer />
             </div>
-            {/* <h1 className="ext-2xl font-bold mb-4">Follow us on</h1>
-            <div className="flex space-x-4">
-              <CiFacebook className="text-blue-600 hover:text-blue-800 cursor-pointer text-3xl" />
-              <FaYoutube className="text-red-600 hover:text-red-800 cursor-pointer text-3xl" />
-              <FaTiktok className="text-pink-600 hover:text-pink-800 cursor-pointer text-3xl" />
-            </div> */}
           </div>
 
           <div>
