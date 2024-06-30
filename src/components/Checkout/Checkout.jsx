@@ -36,11 +36,8 @@ const Checkout = () => {
       );
 
       if (response.ok) {
-        // Payment was processed successfully
         toast.success("Payment processed successfully!");
-        // Optionally, redirect or show a success message
       } else {
-        // Handle errors if payment processing fails
         toast.error("Payment processing failed.");
       }
     } catch (error) {
@@ -48,6 +45,8 @@ const Checkout = () => {
       toast.error("Error processing payment. Please try again later.");
     }
   };
+
+
 
   return (
     <div className="Checkout min-h-screen bg-gray-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -169,3 +168,4 @@ const Checkout = () => {
 };
 
 export default Checkout;
+
