@@ -1,5 +1,6 @@
 {
   "name": "charity-sicp",
+  "homepage": "https://sicpcharity.org/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
