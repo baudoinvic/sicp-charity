@@ -54,7 +54,7 @@ const Chart = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div className="bg-white rounded-xl shadow-lg p-6 overflow-hidden">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-gray-800">Revenue Chart</h2>
+          <h2 className="text-1xl font-bold text-gray-800">Revenue Chart</h2>
           <div className="flex items-center">
             <span className="mr-2 text-gray-600">Filter:</span>
             <select className="bg-gray-200 text-gray-800 rounded-md py-1 px-2 focus:outline-none focus:ring-2 focus:ring-orange-500">
@@ -72,31 +72,31 @@ const Chart = () => {
         </div>
       </div>
       <div className="bg-white rounded-xl shadow-lg p-6 overflow-hidden">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">Key Metrics</h2>
+        <h2 className="text-1xl font-bold text-gray-800 mb-4">Key Metrics</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="bg-gray-100 rounded-lg p-4">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+            <h3 className="text-xl-1 font-semibold text-gray-800 mb-2">
               Highest donation
             </h3>
-            <p className="text-2xl font-bold text-orange-500">$500</p>
+            <p className="text-1xl font-bold text-orange-500">$500</p>
           </div>
           <div className="bg-gray-100 rounded-lg p-4">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+            <h3 className="text-xl-1 font-semibold text-gray-800 mb-2">
               New donners
             </h3>
-            <p className="text-2xl font-bold text-orange-500">125</p>
+            <p className="text-xl-1 font-bold text-orange-500">125</p>
           </div>
           <div className="bg-gray-100 rounded-lg p-4">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+            <h3 className="text-xl-1 font-semibold text-gray-800 mb-2">
               Upcoming events
             </h3>
-            <p className="text-2xl font-bold text-orange-500">8</p>
+            <p className="text-xl-1 font-bold text-orange-500">8</p>
           </div>
           <div className="bg-gray-100 rounded-lg p-4">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+            <h3 className="text-xl-1 font-semibold text-gray-800 mb-2">
               Hot Items
             </h3>
-            <p className="text-2xl font-bold text-orange-500">12</p>
+            <p className="text-xl-1 font-bold text-orange-500">12</p>
           </div>
         </div>
       </div>

@@ -142,14 +142,16 @@ useEffect(() => {
               <div className="px-6 py-4">
                 <div className="flex items-center mb-2">
                   <FaInstalod className="w-6 h-6 text-teal-500 mr-2" />
-                  <div className="font-semibold text-lg text-teal-500">
+                  <div className="font-semibold text-xl-1 text-teal-500">
                     Donations
                   </div>
                 </div>
-                <h2 className="text-2xl text-gray-800 font-bold mb-1">
+                <h2 className="text-1xl text-gray-800 font-bold mb-1">
                   {Products.length}
                 </h2>
-                <p className="text-gray-600">Items up for Donations</p>
+                <p className="text-gray-600 text-xl-1">
+                  Items up for Donations
+                </p>
               </div>
             </div>
           </div>
@@ -159,11 +161,11 @@ useEffect(() => {
               <div className="px-6 py-4">
                 <div className="flex items-center mb-2">
                   <HiUserGroup className="w-6 h-6 text-indigo-500 mr-2" />
-                  <div className="font-semibold text-lg text-indigo-500">
+                  <div className="font-semibold text-xl-1 text-indigo-500">
                     Donners
                   </div>
                 </div>
-                <h2 className="text-2xl text-gray-800 font-bold mb-1">
+                <h2 className="text-1xl text-gray-800 font-bold mb-1">
                   {Billings.length}
                 </h2>
                 <p className="text-gray-600">Total Donors</p>
@@ -176,11 +178,11 @@ useEffect(() => {
               <div className="px-6 py-4">
                 <div className="flex items-center mb-2">
                   <HiUser className="w-6 h-6 text-green-500 mr-2" />
-                  <div className="font-semibold text-lg text-green-500">
-                     Users
+                  <div className="font-semibold text-xl-1 text-green-500">
+                    Users
                   </div>
                 </div>
-                <h2 className="text-2xl text-gray-800 font-bold mb-1">
+                <h2 className="text-1xl text-gray-800 font-bold mb-1">
                   {users.length}
                 </h2>
                 <p className="text-gray-600">Total Users</p>
@@ -193,12 +195,12 @@ useEffect(() => {
               <div className="px-6 py-4">
                 <div className="flex items-center mb-2">
                   <HiShoppingCart className="w-6 h-6 text-orange-500 mr-2" />
-                  <div className="font-semibold text-lg text-orange-500">
+                  <div className="font-semibold text-xl-1 text-orange-500">
                     Volunteers
                   </div>
                 </div>
-                <h2 className="text-2xl text-gray-800 font-bold mb-1">20.4k</h2>
-                <p className="text-gray-600">Total Volunteers</p>
+                <h2 className="text-1xl text-gray-800 font-bold mb-1">20</h2>
+                <p className="text-gray-600 text-xl-1">Total Volunteers</p>
               </div>
             </div>
           </div>
