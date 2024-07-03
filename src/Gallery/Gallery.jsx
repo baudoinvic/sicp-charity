@@ -31,42 +31,42 @@ const Gallery = () => {
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10"
       >
         <img
-          className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+          className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
           src={pic2}
           alt="Picture 2"
         />
         <img
-          className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+          className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
           src={pic3}
           alt="Picture 3"
         />
         <img
-          className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+          className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
           src={pic4}
           alt="Picture 4"
         />
         <img
-          className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+          className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
           src={pic5}
           alt="Picture 5"
         />
         <img
-          className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+          className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
           src={pic6}
           alt="Picture 6"
         />
         <img
-          className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+          className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
           src={pic7}
           alt="Picture 7"
         />
         <img
-          className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+          className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
           src={pic8}
           alt="Picture 8"
         />
         <img
-          className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+          className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
           src={pic9}
           alt="Picture 9"
         />
