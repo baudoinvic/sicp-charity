@@ -12,6 +12,7 @@ import pic10 from "../assets/women/pic10.jpg";
 import pic11 from "../assets/women/pic11.jpg";
 import pic12 from "../assets/women/pic12.jpg";
 import pic13 from "../assets/women/pic13.jpg";
+import pic28 from "../assets/women/pic28.jpg";
 import Footer from '../components/Footer/Footer';
 
 const Gallery = () => {
@@ -70,22 +71,22 @@ const Gallery = () => {
           alt="Picture 9"
         />
         <img
-          className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+          className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
           src={pic10}
           alt="Picture 10"
         />
+        {/* <img
+          className="w-full h-100 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+          src={pic28}
+          alt="Picture 28"
+        /> */}
         <img
-          className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
-          src={pic11}
-          alt="Picture 11"
-        />
-        <img
-          className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+          className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
           src={pic12}
           alt="Picture 12"
         />
         <img
-          className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+          className="w-full h-full object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
           src={pic13}
           alt="Picture 13"
         />
