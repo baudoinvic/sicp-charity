@@ -69,7 +69,10 @@ function Contact() {
             Let's Get in Touch
           </h1>
           <p className="text-xl text-gray-200 text-center relative z-10 mb-12 max-w-3xl px-6">
-           let's get in touch in case if you have question or you need  just help don't hesitate to reach out to us by filling out this form below 
+            Do you have a question or need some more information about our
+            organization? We are here to help. Fill out the form below and let's
+            start a conversation that could lead to great impact in our
+            community and make this world a better place.
           </p>
         </div>
 
@@ -81,11 +84,15 @@ function Contact() {
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
             <div className="lg:w-1/2 bg-primary text-white p-12">
               <h2 className="text-4xl font-bold mb-6">
-                We'd Appreciate to Hear from You
+                We'd Love to Hear from You
               </h2>
               <p className="text-lg mb-8">
-                please fill out this form if you would like to get in thouch with us we could appreciate 
-                to hear from you
+                Whether you are a beginner to working with a charity
+                organization like ours or an experienced kind hearted donor,
+                your journey with us begins here. Share your thoughts, advices
+                and let's create something extraordinary together, something
+                that will always be hold tenderly in the hearts of our
+                community.
               </p>
 
               <div className="space-y-8">
@@ -225,7 +232,7 @@ function Contact() {
                     name="message"
                     rows="4"
                     className="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-brightColor focus:bg-white focus:ring-0"
-                    placeholder="send us message"
+                    placeholder="Please share with us your thoughts"
                     onChange={handleChange}
                     required
                   ></textarea>
