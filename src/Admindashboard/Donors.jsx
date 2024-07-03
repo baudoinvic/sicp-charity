@@ -54,17 +54,16 @@ const handleDeleteBillings = async (id) => {
 };
   
   return (
-  
     <div data-aos="zoom-in" className="mt-10">
-      <span className="text-3xl font-bold">Donors</span>
+      <span className="text-1xl font-bold">Donors</span>
       <div className="bg-white p-4 rounded-lg">
         <div className="hidden md:flex shadow-md mt-10">
-          <span className="font-bold w-1/4">Firstname</span>
-          <span className="font-bold w-1/4">Lastnae</span>
-          <span className="font-bold w-1/4">Email</span>
-          <span className="font-bold w-1/4">Postal code</span>
-          <span className="font-bold w-1/4">City</span>
-          <span className="font-bold w-1/4">Action</span>
+          <span className="font-bold w-1/4 text-sm">Firstname</span>
+          <span className="font-bold w-1/4 text-sm">Lastnae</span>
+          <span className="font-bold w-1/4 text-sm">Email</span>
+          <span className="font-bold w-1/4 text-sm">Postal code</span>
+          <span className="font-bold w-1/4 text-sm">City</span>
+          <span className="font-bold w-1/4 text-sm">Action</span>
         </div>
         <div className="md:hidden flex flex-col">
           {Billings.map((billings) => (
@@ -73,23 +72,23 @@ const handleDeleteBillings = async (id) => {
               key={billings._id}
             >
               <div className="flex justify-between mb-2">
-                <span className="font-bold">Email:</span>
+                <span className="font-bold text-sm">Email:</span>
                 <span>{billings.email}</span>
               </div>
               <div className="flex justify-between mb-2">
-                <span className="font-bold">Country:</span>
+                <span className="font-bold text-sm">Country:</span>
                 <span>{billings.country}</span>
               </div>
               <div className="flex justify-between mb-2">
-                <span className="font-bold">Street:</span>
+                <span className="font-bold text-sm">Street:</span>
                 <span>{billings.street}</span>
               </div>
               <div className="flex justify-between mb-2">
-                <span className="font-bold">State:</span>
+                <span className="font-bold text-sm">State:</span>
                 <span>{billings.state}</span>
               </div>
               <div className="flex justify-between mb-2">
-                <span className="font-bold">Postcode:</span>
+                <span className="font-bold text-sm">Postcode:</span>
                 <span>{billings.postcode}</span>
               </div>
               <div className="flex justify-end">
@@ -110,11 +109,11 @@ const handleDeleteBillings = async (id) => {
         <div className="hidden md:flex flex-col">
           {Billings.map((billings) => (
             <div className="flex mt-10" key={billings._id}>
-              <span className="w-1/4">{billings.email}</span>
-              <span className="w-1/4">{billings.country}</span>
-              <span className="w-1/4">{billings.street}</span>
-              <span className="w-1/4">{billings.state}</span>
-              <span className="w-1/4">{billings.postcode}</span>
+              <span className="w-1/4 text-sm">{billings.email}</span>
+              <span className="w-1/4 text-sm">{billings.country}</span>
+              <span className="w-1/4 text-sm">{billings.street}</span>
+              <span className="w-1/4 text-sm">{billings.state}</span>
+              <span className="w-1/4 text-sm">{billings.postcode}</span>
 
               <div className="w-1/4 flex items-center">
                 <FaEdit

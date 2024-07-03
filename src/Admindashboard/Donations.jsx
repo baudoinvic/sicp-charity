@@ -59,24 +59,24 @@ const Donations = () => {
 
   return (
     <div data-aos="zoom-in" className="mt-10">
-      <span className="text-3xl font-bold">Donations</span>
+      <span className="text-1xl font-bold">Donations</span>
       <div className="bg-white p-4 rounded-lg ">
         <div className="flex shadow-md mt-10">
-          <span className="font-bold w-1/4">Donor name</span>
-          <span className="font-bold w-1/4">Donation amount</span>
-          <span className="font-bold w-1/4">Email</span>
-          <span className="font-bold w-1/4">phone number</span>
-          <span className="font-bold w-1/4">City</span>
-          <span className="font-bold w-1/4">Action</span>
+          <span className="font-bold w-1/4 text-sm">Donor name</span>
+          <span className="font-bold w-1/4 text-sm">Donation amount</span>
+          <span className="font-bold w-1/4 text-sm">Email</span>
+          <span className="font-bold w-1/4 text-sm">phone number</span>
+          <span className="font-bold w-1/4 text-sm">City</span>
+          <span className="font-bold w-1/4 text-sm">Action</span>
         </div>
         {Products.map((product) => (
           <div className="flex mt-10" key={product._id}>
-            <span className="w-1/4">{product.productName}</span>
-            <span className="w-1/4">{product.price}</span>
-            <span className="w-1/4">{product.stock_quantity}</span>
-            <span className="w-1/4">{product.category}</span>
-            <span className="w-1/4">{product.description}</span>
-            <span className="w-1/4">
+            <span className="w-1/4 text-sm">{product.productName}</span>
+            <span className="w-1/4 text-sm">{product.price}</span>
+            <span className="w-1/4 text-sm">{product.stock_quantity}</span>
+            <span className="w-1/4 text-sm">{product.category}</span>
+            <span className="w-1/4 text-sm">{product.description}</span>
+            <span className="w-1/4 ">
               <img
                 src={product.productImage[0]}
                 alt="Product"
@@ -95,7 +95,6 @@ const Donations = () => {
                 className="text-2xl text-red-500"
                 style={{ cursor: "pointer" }}
               />
-           
             </div>
           </div>
         ))}

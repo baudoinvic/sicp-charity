@@ -59,23 +59,23 @@ const Users = () => {
 
   return (
     <div data-aos="zoom-in" className="mt-10">
-      <span className="text-3xl font-bold">Users</span>
+      <span className="text-1xl font-bold">Users</span>
       <div class="bg-white p-4 rounded-lg ">
         <div class="flex shadow-md mt-10">
-          <span class="font-bold w-1/4">firstname</span>
-          <span class="font-bold w-1/4">lastName</span>
-          <span class="font-bold w-1/4">usermame</span>
-          <span class="font-bold w-1/4">email</span>
-          <span class="font-bold w-1/4">location</span>
-          <span class="font-bold w-1/4">Action</span>
+          <span class="font-bold w-1/4 text-sm">firstname</span>
+          <span class="font-bold w-1/4 text-sm">lastName</span>
+          <span class="font-bold w-1/4 text-sm">usermame</span>
+          <span class="font-bold w-1/4 text-sm">email</span>
+          <span class="font-bold w-1/4 text-sm">location</span>
+          <span class="font-bold w-1/4 text-sm">Action</span>
         </div>
         {users.map((user) => (
           <div className="flex mt-10" key={user._id}>
-            <span className="w-1/4">{user.firstname}</span>
-            <span className="w-1/4">{user.lastname}</span>
-            <span className="w-1/4">{user.usermame}</span>
-            <span className="w-1/4">{user.email}</span>
-            <span className="w-1/4">{user.location}</span>
+            <span className="w-1/4 text-sm">{user.firstname}</span>
+            <span className="w-1/4 text-sm">{user.lastname}</span>
+            <span className="w-1/4 text-sm">{user.usermame}</span>
+            <span className="w-1/4 text-sm">{user.email}</span>
+            <span className="w-1/4 text-sm">{user.location}</span>
             <div className="w-1/4 flex items-center">
               <Link to="/Admindashboard/Dashboard/Edituser/${user._id}">
                 <FaEdit
