@@ -32,18 +32,22 @@ const About = () => {
             <h2 className="text-3xl font-bold mb-4 text-primary">ABOUT US</h2>
             <p className="text-gray-700 leading-relaxed">
               The Solidarity Initiative for Children and People (SICP) is a
-              Charity nonprofit organization nongovernmental, founded by
-              Winifred Nyirahabarugira in year 2023 in Rwanda with aim to help
-              poor people and marginalized people who are suffering in their
-              need benefits with charity works and prayers. Those are children,
-              youth, women, families, widows, patients, refugees, but
-              especially, children, youth, and women (Girls, single moms, women
-              and widows) in country and abroad from marginalized families and
-              poor people in order to get them out from poverty and to step them
-              to the level of others. The organization started his works in
-              Rwanda and Uganda, and will continue to extend them in the foreign
-              countries. We have many children, youth and women who need support
-              from you and us
+              Charity Non-profit and Non-governmental organization bourgeoned in
+              Rwanda in 2023 with the main aim of helping a diverse community of
+              poor and marginalized people who suffer from the various life
+              imposed uncertainties. We offer our encouragement and support
+              through charity activities, empowerment and spiritual guidance to
+              the abovementioned categories of people in need, mainly focusing
+              on children but also the left behind societies such as women,
+              widows, unaccompanied hospital patients and refugees within the
+              East-African region. The root of our organization is Rwanda but
+              our reach is far beyond one country’s borders as we continue to
+              expand. We have many children and left behind women and other
+              peoples who need our support. Together from the little or more we
+              have, we can make unforgettable and huge positive impact in the
+              lives of these less fortunate but not damned people. We can
+              eradicate poverty and end global suffering in the blink of an eye
+              if we join hands, Please work with us.
             </p>
           </div>
         </div>
@@ -53,8 +57,6 @@ const About = () => {
           className="container mx-auto flex flex-col md:flex-row items-center justify-between py-16 "
         >
           <div className="md:w-1/2 mb-8 md:mb-0">
-          
-
             <div>
               <h2 className="text-4xl font-bold mb-4 text-primary">
                 Who Can Donate?
@@ -62,28 +64,33 @@ const About = () => {
               <p className="text-gray-700 leading-relaxed mb-6">
                 Anyone who believes in our mission and values can contribute to
                 our cause, whether through financial donations, goods, or
-                services. Your support helps transform lives and build brighter
-                futures.
+                services. Your support helps to transform lives and build
+                brighter futures.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
-                The donate of SICP is everyone who has understood the goal of
-                and the value of the organization, and support the charity
-                action. The donate can support financially or with
-                tools or products from his heart. We have many children today
-                who have not anything, and want support from you, remember that
-                before being powerful person, it comes from to a child, and
-                those different kind of people need help from you. You can
-                choose kinds that your heart is with and give today from your
-                possibility. If you give to a child only $50 every month, he
-                (she) shall eat, cloths and study well. For a child of primary
-                school give only $100 every trimester or $300 for three
-                trimesters, he (she) shall study, eat and cloths. And those who
-                study at high school give only $160 every trimester or $480 for
-                three trimesters, he (she) shall study and cloths. And $250 can
-                help a young girl, or a woman or a young boy from marginalized
-                families, these money could be their capitals to start a small
-                business that can give one of them incomes without being beggars
-                in the streets.
+                A donator of SICP is everyone who has understood the goal and
+                value of our organization and decides to support our agenda and
+                charity activities. A donator from his/her kind heart and
+                capacity can either support our community financially or through
+                essentials kits provision. We have many children today who lack
+                many basic needs either in their homes and school life, and want
+                support from you. Children are angels and leaders of tomorrow,
+                as we take into account this statement, let’s nourish our minds
+                that the best leaders of tomorrow are cultivated from the early
+                cared childhoods with good education and healthy life, therefore
+                this is where your role comes into play by helping to strengthen
+                the cared childhood stage. With your kind heart, you can choose
+                to donate today from your capacity. If for example you donate
+                only $50 every month to a kindergarten child, he/she will be
+                able to eat, cloth and study well. If it is for a primary school
+                child, only a $100 every trimester or $300 for three trimesters
+                will help him/her to study, eat and cloth well. In addition for
+                a high school child, only $160 every trimester or $480 for three
+                trimesters, can help him/her study, eat and cloth. Moreover a
+                $250 might help to change a young girl or boy and a left behind
+                woman life from marginalized families; as such amount could act
+                as a capital to start a small business that can generate income
+                to them saving them from being beggars in the streets.
               </p>
               <Link to="/donation">
                 <button className="bg-primary text-white font-bold py-3 px-6   transition duration-300">
@@ -119,10 +126,10 @@ const About = () => {
         <div className="w-full md:w-1/2 md:ml-8 mt-4 md:mt-0">
           <h2 className="text-3xl font-bold mb-4 text-primary">Our Story</h2>
           <p className="text-gray-700 leading-relaxed">
-            Poverty, disease, homelessness, hunger,disasters, asylam refugee, and other challenges impact many
-            individuals and families worldwide. Founded as a non-governmental
-            organization, we strive to bring hope and support to those in need.
-            Chez madame Betty
+            Poverty, disease, homelessness, hunger,disasters, asylam refugee,
+            and other challenges impact many individuals and families worldwide.
+            Founded as a non-governmental organization, we strive to bring hope
+            and support to those in need. Chez madame Betty
           </p>
         </div>
       </div>

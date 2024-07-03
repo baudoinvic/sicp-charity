@@ -83,9 +83,13 @@ const Banner = () => {
                     EDUCATION FOR STUDENTS
                   </h2>
                   <p className="text-gray-600">
-                   our youth at high school need support throught their lives and study focusing on providing education resource,
-                   school fees, school supplies, healthcare and other needs, by donating your help these youth pupils to get 
-                   their education, they deserve for opening doors to their bright future.
+                    The young generations in high school are in need of support
+                    throughout their academic lives so that they can concentrate
+                    on their studies very well. They need school fees, school
+                    materials, healthcare and other basic needs. By donating,
+                    you are helping these young students to learn well and get
+                    good education in a safe environment. Moreover you are
+                    opening doors to their bright future.
                   </p>
                 </div>
               </div>
