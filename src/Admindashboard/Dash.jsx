@@ -13,6 +13,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { FaSearch, FaBell, FaEnvelope, FaGlobe } from "react-icons/fa";
+import pic24 from "../assets/pic24.jpg";
 
 const Dash = () => {
 
@@ -96,7 +97,6 @@ useEffect(() => {
 
 
   return (
-   
     <div className="container mx-auto px-4">
       <div data-aos="zoom-in">
         <div className="flex flex-col md:flex-row items-center justify-between mb-8">
@@ -127,9 +127,9 @@ useEffect(() => {
             <div className="relative ml-4">
               <div className="w-10 h-10 rounded-full overflow-hidden">
                 <img
-                  src="https://via.placeholder.com/40"
-                  alt="Profile"
-                  className="w-full h-full object-cover"
+                  src={pic24}
+                  alt="profile"
+                  className="w-10 rounded-full object-coover cursor-pointer"
                 />
               </div>
               <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
@@ -144,21 +144,21 @@ useEffect(() => {
               title: "Donations",
               count: Products.length,
               subtitle: "Items up for Donations",
-              color: "teal",
+              color: "orange",
             },
             {
               icon: HiUserGroup,
               title: "Donners",
               count: Billings.length,
               subtitle: "Total Donors",
-              color: "indigo",
+              color: "orange",
             },
             {
               icon: HiUser,
               title: "Users",
               count: users.length,
               subtitle: "Total Users",
-              color: "green",
+              color: "orange",
             },
             {
               icon: HiShoppingCart,
