@@ -159,12 +159,17 @@ const About = () => {
                 OUR MISSION
               </h3>
               <p className="mt-2 text-gray-600 text-center">
-                Solidarity Initiative for Children and People (SICP) is aims to
-                get poor people and marginalized people out from poverty with
-                charity works, lead them to meaningful woks which get incomes,
-                in order to reload their belief in their lives, with goal to
-                step them to the level of others like: job, welfare, education,
-                economic and development
+                Solidarity Initiative for Children and People (SICP) is
+                primarily aiming at getting poor and marginalized peoples out
+                from poverty through charity activities by helping and saving
+                vulnerable lives especially children and women. Our second
+                mission is to help vulnerable peoples to embark on idea of
+                having a comprehensive self-created jobs with reliable incomes
+                as a path to raise their confidence and overcome the past life
+                failure and grievance with an aim of supporting them to catch up
+                with other standardized people pace in the society in terms of
+                job, welfare, education, sustainable economic growth and
+                livelihood development.
               </p>
             </div>
 
@@ -189,10 +194,13 @@ const About = () => {
                 OUR VISION
               </h3>
               <p className="mt-2 text-gray-600 text-center">
-                Education, economies and development will be a great tools of
-                social empowerment, liberty and justice and reconciliation. We
-                believe every human being should have opportunity to success in
-                life.
+                Education, social welfare and economic growth development will
+                be great tools of social transformation towards a society that
+                is in possession of empowerment, autonomy, liberty, justice and
+                reconciliation which are the definition of successful life in
+                our perspective. We believe every human being should have
+                opportunity to success in life and we intend to give our hand in
+                that matter.
               </p>
             </div>
 
@@ -217,8 +225,9 @@ const About = () => {
                 OUR VALUES
               </h3>
               <p className="mt-2 text-gray-600 text-center">
-                Working together, Helping suffering people, No discrimination
-                races, Belief, Truth, Faith in God
+                Working together; Helping the suffering ones; Non-discriminatory
+                behaviors Non-racism behaviors; and Fostering our belief in
+                Truth and Faith in Almighty
               </p>
             </div>
           </div>

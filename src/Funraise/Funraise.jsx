@@ -22,13 +22,18 @@ const Funraise = () => {
 
         <div className="max-w-2xl mx-auto p-4">
           <span className="text-lg text-gray-700">
-            Impact positive in our organizations since our beginning, many
-            people have changed their minds after following our teachings of
-            social study and social environment, and also the training for jobs
-            which get incomes. Many of them became interested in making
-            appliances and became reconciled because being lonely and fearing
-            others has gone. They feel they are working together in peace and
-            unity through charity work.
+            Our organizations had emitted positive effect to our community, as
+            many people have enriched their critical thinking after following
+            our teachings of social and environment studies, and many of our
+            community are now self-employed. Depression and loneliness is a tale
+            in the lives of many of our community todays and self-confidence is
+            prevalent. In the similar vein Reconciliation is a living testimony
+            as our people are working together in peace and unity through
+            charity and other activities of our organization. Moreover a
+            reasonable number of children are being cared for in the proper way
+            and their future is rest assured. Lastly but not the rest our
+            organization impact outreached to at least 500 lives so far to
+            better their living standards.
           </span>
         </div>
       </div>
@@ -45,10 +50,11 @@ const Funraise = () => {
           />
           <h2 className="text-2xl font-bold text-center mb-6">Sports</h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-            The sports and other training of our children, maked them to leave
-            their lonely and today some of them become champion in our
-            community.
-            </p>
+            The sports and other trainings activities designated to our children
+            had made them leave their depressing inner world and loneliness to
+            embark in the world full of inner peace, laughter, genuine smile and
+            hope of life in our community.
+          </p>
         </section>
 
         {/* Section: Our Impact */}
@@ -62,8 +68,8 @@ const Funraise = () => {
             Teaching and Training
           </h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-            Trough charity works, teaching and different training had brougth
-            reconciliation in them
+            Through charity activities, teaching and different trainings, the
+            spirit of reconciliation had taken off amongst our community
           </p>
         </section>
 
@@ -75,9 +81,9 @@ const Funraise = () => {
           />
           <h2 className="text-2xl font-bold text-center mb-6">Social</h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-            Trough training and social study and evironment , our youth today
-            help elderly and some institution to protect environment
-            and other works.
+            Through trainings, social and environmental studies, our youth today
+            help elderly and some institution to protect environment and
+            contribute in other various social works.
           </p>
         </section>
       </main>

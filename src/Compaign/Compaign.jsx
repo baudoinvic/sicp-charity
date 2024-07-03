@@ -33,8 +33,6 @@ const Compaign = () => {
           </div>
         </header>
 
-    
-
         <div className="flex justify-center items-center mt-20 px-4">
           <div className="w-full max-w-md bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
             <div className="w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
@@ -59,10 +57,10 @@ const Compaign = () => {
             <p className="mt-2 text-gray-600 text-center">
               Solidarity Initiative for Children and People (SICP) aims to get
               poor and marginalized people out of poverty through charity work,
-              leading them to meaningful jobs that provide income. Our goal is
-              to help them regain belief in their lives and achieve parity with
-              others in terms of job opportunities, welfare, education, economic
-              stability, and development.
+              leading them to meaningful jobs that provide decent income. Our
+              goal is to help them regain belief in their lives and achieve
+              parity with others in terms of job opportunities, welfare,
+              education, economic stability, and development.
             </p>
           </div>
         </div>
@@ -96,8 +94,8 @@ const Compaign = () => {
                 <p className="mb-4">
                   The Youth campaign is dedicated to supporting young people
                   through mentorship programs, career training, and recreational
-                  activities. Your donations help empower youth, fostering their
-                  development and ensuring they have the skills and
+                  activities. Your donations help to empower youth, fostering
+                  their development and ensuring that they have the skills and
                   opportunities to succeed.
                 </p>
                 <button
@@ -112,9 +110,9 @@ const Compaign = () => {
                 <p className="mb-4">
                   Our Women’s campaign focuses on empowering women through
                   education, job training, and support services. Donations to
-                  this campaign help women achieve financial independence, gain
+                  this campaign help women to achieve financial autonomy, gain
                   confidence, and build a better future for themselves and their
-                  families.
+                  families
                 </p>
                 <button
                   onClick={() => showModal("women")}
@@ -129,7 +127,7 @@ const Compaign = () => {
                   The Patients campaign aims to provide medical assistance,
                   medications, and support for individuals who cannot afford
                   healthcare. Your contributions help improve the quality of
-                  life for patients by ensuring they receive the necessary
+                  life for patients by ensuring that they receive the necessary
                   medical care and support.
                 </p>
                 <button

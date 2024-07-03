@@ -29,13 +29,17 @@ const Service = () => {
       </header>
 
       <span className="block w-11/12 sm:w-2/3 mx-auto text-center text-gray-700 leading-relaxed p-4 sm:pt-20 text-sm sm:text-base md:text-lg">
-        We train vulnerables in different knowledge within meaningful works that
-        give incomes. We teach them social study and social environment in order
-        to build peace, unity, and development, and teach these poor families
-        how to care for their children from their infancy and to prepare their
-        future. We teach them also to know God and to obey Him, in order that
-        their children grow with love for God and love for their neighbors. We
-        do fundraise money to support them.
+        We train vulnerable peoples from various backgrounds on how to embark on
+        decent works that generate reliable incomes. We educated on social and
+        environmental studies in order to foster peace, unity and sustainable
+        development amongst our community. We further educate poor families
+        through guidance provision on how to better care for their children from
+        their infancy stage to their adulthood for their bright future. We also
+        provide spiritual guidance to our community in terms of giving essence
+        to the universe and its creator, in this regard we cultivate peace and
+        love and obedience that give a life a true meaning and purpose amongst
+        our community as well as the youngsters. Lastly we do the fundraising of
+        money to support the abovementioned community.
       </span>
 
       <main
@@ -52,9 +56,15 @@ const Service = () => {
             We train youth
           </h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-            we train youth and women in different meaningful works which get
-            incomes also as well, We train them in social study and sosial
-            environment in order to get peace and unity
+            We train youth and women in different aspect of life on how get
+            decent self-created jobs that generate dependable income. We
+            psychological train them how to become self-confident and help them
+            toward the revelation of their self-awareness in whatever they do in
+            society. Moreover we use social and environmental studies to teach
+            them how they can be full prepared to harmonize with ecosystem in
+            better way, and how to grow their interpersonal excellence, social
+            development skills and prosper peace and unity interaction among
+            them.
           </p>
         </section>
 
@@ -67,10 +77,11 @@ const Service = () => {
           />
           <h2 className="text-2xl font-bold text-center mb-6">Fundraising</h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-            we fundraise money in order to help those in their needs. We teach
-            familes how to care their children from their enfancy to adult and
-            them to obey God. We assist patients, widows, refugees and others
-            vulnerable for having good health and stand well
+            We do fundraising of money in order to help those ones who are in
+            needs of support. We educate families through guidance provision on
+            how to better care for their children from their infancy stage to
+            their adulthood. We assist patients, widows, refugees and others
+            vulnerable by helping them to stand ten feet tall again.
           </p>
         </section>
 
@@ -80,10 +91,14 @@ const Service = () => {
             src={pic20}
             alt="Picture 20"
           />
-          <h2 className="text-2xl font-bold text-center mb-6">Promoting</h2>
+          <h2 className="text-2xl font-bold text-center mb-6">
+            Empowerment and Promotion
+          </h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-            We promote peace, liberty, justice and reconciliation for women, in
-            differents jobs they do which give them strength in their lives,
+            We ceaselessly promote peace, reconciliation, autonomy, liberty,
+            justice, and equity and gender equality for women in their
+            respective social gatherings and lives as a pathway to foster a
+            community with strong and empowered women.
           </p>
           <Link to="/contact">
             <button className="bg-primary text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
@@ -93,17 +108,15 @@ const Service = () => {
         </section>
       </main>
 
-
       <section className="mb-10">
         <div className="container mx-auto px-4">
-     
           <p className="text-center max-w-3xl mx-auto text-lg  text-gray-700 leading-relaxed mb-12 animate-fade-in-up">
             We empower women from marginalized and underprivileged backgrounds,
             equipping them with essential skills to nurture their children from
             infancy through adulthood.
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center md:space-x-8 space-y-8 md:space-y-0">
-            {[pic32, pic33, pic31,].map((pic, index) => (
+            {[pic32, pic33, pic31].map((pic, index) => (
               <div
                 key={index}
                 className="relative group overflow-hidden rounded-xl shadow-xl"
