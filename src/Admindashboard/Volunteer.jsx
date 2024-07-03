@@ -39,21 +39,38 @@ const Volunteer = () => {
   return (
     <div data-aos="zoom-in" className="mt-10">
       <span className="text-1xl font-bold">Volunteers</span>
-      <div class="bg-white p-4 rounded-lg ">
-        <div class="flex shadow-md mt-10">
-          <span class="font-bold w-1/4 text-sm">Name</span>
-          <span class="font-bold w-1/4 text-sm">Email</span>
-          <span class="font-bold w-1/4 text-sm">Country</span>
-          <span class="font-bold w-1/4 text-sm">Phone number</span>
-        </div>
-        {orders.map((order) => (
-          <div className="flex mt-10" key={order._id}>
-            <span className="w-1/4 text-sm">{order.customerName}</span>
-            <span className="w-1/4 text-sm">{order.amount}</span>
-            <span className="w-1/4 text-sm">{order.numberOfItems}</span>
-            <span className="w-1/4 text-sm">{order.paymentStatus}</span>
+      <div className="bg-white p-4 rounded-lg overflow-x-auto">
+        <div className="min-w-full">
+          <div className="flex flex-col sm:flex-row shadow-md mt-10">
+            <span className="font-bold w-full sm:w-1/4 text-sm p-2">Name</span>
+            <span className="font-bold w-full sm:w-1/4 text-sm p-2">Email</span>
+            <span className="font-bold w-full sm:w-1/4 text-sm p-2">
+              Country
+            </span>
+            <span className="font-bold w-full sm:w-1/4 text-sm p-2">
+              Phone number
+            </span>
           </div>
-        ))}
+          {orders.map((order) => (
+            <div
+              className="flex flex-col sm:flex-row mt-4 border-b"
+              key={order._id}
+            >
+              <span className="w-full sm:w-1/4 text-sm p-2">
+                {order.customerName}
+              </span>
+              <span className="w-full sm:w-1/4 text-sm p-2">
+                {order.amount}
+              </span>
+              <span className="w-full sm:w-1/4 text-sm p-2">
+                {order.numberOfItems}
+              </span>
+              <span className="w-full sm:w-1/4 text-sm p-2">
+                {order.paymentStatus}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -60,39 +60,63 @@ const Users = () => {
   return (
     <div data-aos="zoom-in" className="mt-10">
       <span className="text-1xl font-bold">Users</span>
-      <div class="bg-white p-4 rounded-lg ">
-        <div class="flex shadow-md mt-10">
-          <span class="font-bold w-1/4 text-sm">firstname</span>
-          <span class="font-bold w-1/4 text-sm">lastName</span>
-          <span class="font-bold w-1/4 text-sm">usermame</span>
-          <span class="font-bold w-1/4 text-sm">email</span>
-          <span class="font-bold w-1/4 text-sm">location</span>
-          <span class="font-bold w-1/4 text-sm">Action</span>
-        </div>
-        {users.map((user) => (
-          <div className="flex mt-10" key={user._id}>
-            <span className="w-1/4 text-sm">{user.firstname}</span>
-            <span className="w-1/4 text-sm">{user.lastname}</span>
-            <span className="w-1/4 text-sm">{user.usermame}</span>
-            <span className="w-1/4 text-sm">{user.email}</span>
-            <span className="w-1/4 text-sm">{user.location}</span>
-            <div className="w-1/4 flex items-center">
-              <Link to="/Admindashboard/Dashboard/Edituser/${user._id}">
-                <FaEdit
-                  className="text-2xl text-gray-900 mr-2"
+
+
+      <div className="bg-white p-4 rounded-lg overflow-x-auto">
+        <div className="min-w-full">
+          <div className="flex flex-col md:flex-row shadow-md mt-10">
+            <span className="font-bold w-full md:w-1/6 text-sm p-2">
+              Firstname
+            </span>
+            <span className="font-bold w-full md:w-1/6 text-sm p-2">
+              Lastname
+            </span>
+            <span className="font-bold w-full md:w-1/6 text-sm p-2">
+              Username
+            </span>
+            <span className="font-bold w-full md:w-1/6 text-sm p-2">Email</span>
+            <span className="font-bold w-full md:w-1/6 text-sm p-2">
+              Location
+            </span>
+            <span className="font-bold w-full md:w-1/6 text-sm p-2">
+              Action
+            </span>
+          </div>
+          {users.map((user) => (
+            <div
+              className="flex flex-col md:flex-row mt-4 border-b"
+              key={user._id}
+            >
+              <span className="w-full md:w-1/6 text-sm p-2">
+                {user.firstname}
+              </span>
+              <span className="w-full md:w-1/6 text-sm p-2">
+                {user.lastname}
+              </span>
+              <span className="w-full md:w-1/6 text-sm p-2">
+                {user.usermame}
+              </span>
+              <span className="w-full md:w-1/6 text-sm p-2">{user.email}</span>
+              <span className="w-full md:w-1/6 text-sm p-2">
+                {user.location}
+              </span>
+              <div className="w-full md:w-1/6 flex items-center p-2">
+                <Link to={`/Admindashboard/Dashboard/Edituser/${user._id}`}>
+                  <FaEdit
+                    className="text-2xl text-gray-900 mr-2"
+                    style={{ cursor: "pointer" }}
+                  />
+                </Link>
+                <MdDeleteOutline
+                  onClick={() => handleDeleteUser(user._id)}
+                  className="text-2xl text-red-500"
                   style={{ cursor: "pointer" }}
                 />
-              </Link>
-
-              <MdDeleteOutline
-                onClick={() => handleDeleteUser(user._id)}
-                className="text-2xl text-red-500"
-                style={{ cursor: "pointer" }}
-              />
-              <ToastContainer />
+                <ToastContainer />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

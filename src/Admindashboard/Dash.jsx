@@ -96,15 +96,16 @@ useEffect(() => {
 
 
   return (
-    <div className="">
-      <div data-aos="zoom-in  ">
-        <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center">
-            <div className="relative mr-4">
+   
+    <div className="container mx-auto px-4">
+      <div data-aos="zoom-in">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-8">
+          <div className="w-full md:w-auto mb-4 md:mb-0">
+            <div className="relative">
               <input
                 type="text"
                 placeholder="Search..."
-                className="py-2 px-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full py-2 px-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
               <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                 <FaSearch className="text-gray-500" />
@@ -112,7 +113,7 @@ useEffect(() => {
             </div>
           </div>
           <div className="flex items-center">
-            <div className="flex items-center">
+            <div className="flex items-center space-x-2">
               <button className="p-2 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                 <FaBell className="text-gray-500" />
               </button>
@@ -123,7 +124,7 @@ useEffect(() => {
                 <FaGlobe className="text-gray-500" />
               </button>
             </div>
-            <div className="relative">
+            <div className="relative ml-4">
               <div className="w-10 h-10 rounded-full overflow-hidden">
                 <img
                   src="https://via.placeholder.com/40"
@@ -136,78 +137,59 @@ useEffect(() => {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center mt-8 space-x-10">
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
-            <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+          {[
+            {
+              icon: FaInstalod,
+              title: "Donations",
+              count: Products.length,
+              subtitle: "Items up for Donations",
+              color: "teal",
+            },
+            {
+              icon: HiUserGroup,
+              title: "Donners",
+              count: Billings.length,
+              subtitle: "Total Donors",
+              color: "indigo",
+            },
+            {
+              icon: HiUser,
+              title: "Users",
+              count: users.length,
+              subtitle: "Total Users",
+              color: "green",
+            },
+            {
+              icon: HiShoppingCart,
+              title: "Volunteers",
+              count: 20,
+              subtitle: "Total Volunteers",
+              color: "orange",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg overflow-hidden shadow-lg"
+            >
               <div className="px-6 py-4">
-                <div className="flex items-center mb-2">
-                  <FaInstalod className="w-6 h-6 text-teal-500 mr-2" />
-                  <div className="font-semibold text-xl-1 text-teal-500">
-                    Donations
-                  </div>
+                <div
+                  className={`flex items-center mb-2 text-${item.color}-500`}
+                >
+                  <item.icon className="w-6 h-6 mr-2" />
+                  <div className="font-semibold text-lg">{item.title}</div>
                 </div>
-                <h2 className="text-1xl text-gray-800 font-bold mb-1">
-                  {Products.length}
+                <h2 className="text-2xl text-gray-800 font-bold mb-1">
+                  {item.count}
                 </h2>
-                <p className="text-gray-600 text-xl-1">
-                  Items up for Donations
-                </p>
+                <p className="text-gray-600 text-sm">{item.subtitle}</p>
               </div>
             </div>
-          </div>
+          ))}
+        </div>
 
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
-            <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
-              <div className="px-6 py-4">
-                <div className="flex items-center mb-2">
-                  <HiUserGroup className="w-6 h-6 text-indigo-500 mr-2" />
-                  <div className="font-semibold text-xl-1 text-indigo-500">
-                    Donners
-                  </div>
-                </div>
-                <h2 className="text-1xl text-gray-800 font-bold mb-1">
-                  {Billings.length}
-                </h2>
-                <p className="text-gray-600">Total Donors</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
-            <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
-              <div className="px-6 py-4">
-                <div className="flex items-center mb-2">
-                  <HiUser className="w-6 h-6 text-green-500 mr-2" />
-                  <div className="font-semibold text-xl-1 text-green-500">
-                    Users
-                  </div>
-                </div>
-                <h2 className="text-1xl text-gray-800 font-bold mb-1">
-                  {users.length}
-                </h2>
-                <p className="text-gray-600">Total Users</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-4 mb-8">
-            <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
-              <div className="px-6 py-4">
-                <div className="flex items-center mb-2">
-                  <HiShoppingCart className="w-6 h-6 text-orange-500 mr-2" />
-                  <div className="font-semibold text-xl-1 text-orange-500">
-                    Volunteers
-                  </div>
-                </div>
-                <h2 className="text-1xl text-gray-800 font-bold mb-1">20</h2>
-                <p className="text-gray-600 text-xl-1">Total Volunteers</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full  sm:w-full md:w-full lg:w-full xl:w-full px-4 mb-8">
-            <Chart />
-          </div>
+        <div className="mt-8">
+          <Chart />
         </div>
       </div>
     </div>

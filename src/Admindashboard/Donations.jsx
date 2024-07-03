@@ -60,44 +60,69 @@ const Donations = () => {
   return (
     <div data-aos="zoom-in" className="mt-10">
       <span className="text-1xl font-bold">Donations</span>
-      <div className="bg-white p-4 rounded-lg ">
-        <div className="flex shadow-md mt-10">
-          <span className="font-bold w-1/4 text-sm">Donor name</span>
-          <span className="font-bold w-1/4 text-sm">Donation amount</span>
-          <span className="font-bold w-1/4 text-sm">Email</span>
-          <span className="font-bold w-1/4 text-sm">phone number</span>
-          <span className="font-bold w-1/4 text-sm">City</span>
-          <span className="font-bold w-1/4 text-sm">Action</span>
-        </div>
-        {Products.map((product) => (
-          <div className="flex mt-10" key={product._id}>
-            <span className="w-1/4 text-sm">{product.productName}</span>
-            <span className="w-1/4 text-sm">{product.price}</span>
-            <span className="w-1/4 text-sm">{product.stock_quantity}</span>
-            <span className="w-1/4 text-sm">{product.category}</span>
-            <span className="w-1/4 text-sm">{product.description}</span>
-            <span className="w-1/4 ">
-              <img
-                src={product.productImage[0]}
-                alt="Product"
-                style={{ maxWidth: "100px" }}
-              />
+      <div className="bg-white p-4 rounded-lg overflow-x-auto">
+        <div className="min-w-full">
+          <div className="flex flex-col md:flex-row shadow-md mt-10">
+            <span className="font-bold w-full md:w-1/6 text-sm p-2">
+              Donor name
             </span>
-            <div className="w-1/4 flex items-center">
-              <Link to="/Admindashboard/Dashboard/Editproduct/${product._id}">
-                <FaEdit
-                  className="text-2xl text-gray-900 mr-2"
-                  style={{ cursor: "pointer" }}
-                />
-              </Link>
-              <MdDeleteOutline
-                onClick={() => handleDeleteProduct(product._id)}
-                className="text-2xl text-red-500"
-                style={{ cursor: "pointer" }}
-              />
-            </div>
+            <span className="font-bold w-full md:w-1/6 text-sm p-2">
+              Donation amount
+            </span>
+            <span className="font-bold w-full md:w-1/6 text-sm p-2">Email</span>
+            <span className="font-bold w-full md:w-1/6 text-sm p-2">
+              Phone number
+            </span>
+            <span className="font-bold w-full md:w-1/6 text-sm p-2">City</span>
+            <span className="font-bold w-full md:w-1/6 text-sm p-2">
+              Action
+            </span>
           </div>
-        ))}
+          {Products.map((product) => (
+            <div
+              className="flex flex-col md:flex-row mt-4 border-b"
+              key={product._id}
+            >
+              <span className="w-full md:w-1/6 text-sm p-2">
+                {product.productName}
+              </span>
+              <span className="w-full md:w-1/6 text-sm p-2">
+                {product.price}
+              </span>
+              <span className="w-full md:w-1/6 text-sm p-2">
+                {product.stock_quantity}
+              </span>
+              <span className="w-full md:w-1/6 text-sm p-2">
+                {product.category}
+              </span>
+              <span className="w-full md:w-1/6 text-sm p-2">
+                {product.description}
+              </span>
+              <div className="w-full md:w-1/6 flex flex-col md:flex-row items-center p-2">
+                <img
+                  src={product.productImage[0]}
+                  alt="Product"
+                  className="max-w-[100px] mb-2 md:mb-0 md:mr-2"
+                />
+                <div className="flex items-center">
+                  <Link
+                    to={`/Admindashboard/Dashboard/Editproduct/${product._id}`}
+                  >
+                    <FaEdit
+                      className="text-2xl text-gray-900 mr-2"
+                      style={{ cursor: "pointer" }}
+                    />
+                  </Link>
+                  <MdDeleteOutline
+                    onClick={() => handleDeleteProduct(product._id)}
+                    className="text-2xl text-red-500"
+                    style={{ cursor: "pointer" }}
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
