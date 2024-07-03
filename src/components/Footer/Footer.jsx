@@ -11,7 +11,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { CiFacebook } from "react-icons/ci";
 import { FaYoutube } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import ceo from "../../assets/ceo.jpg";
 import pic24 from "../../assets/pic24.jpg"
 
@@ -56,7 +57,7 @@ const Footer = () => {
               <h3 className="font-bold text-lg  ">
                 Winifred Nyirahabarugira
                 <br />
-               Ceo and Founder of SICP
+                Ceo and Founder of SICP
               </h3>
             </div>
 
@@ -87,6 +88,40 @@ const Footer = () => {
                 </button>
               </form>
               <ToastContainer />
+            </div>
+            <div className="">
+              <h3>Follow us</h3>
+              <div className="flex space-x-4 mt-4">
+                <a
+                  href="https://www.facebook.com/sicpcharity?mibextid=ZbWKwL"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <CiFacebook className="cursor-pointer text-3xl hover:bg-primary" />
+                </a>
+                <a
+                  href="https://youtube.com/@sicpcharity?si=Pmw5ZNp2pR7CWm5V"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaYoutube className="cursor-pointer text-3xl hover:bg-primary" />
+                </a>
+                <a
+                  href="https://www.instagram.com/sicpcharity?igsh=MXZiY2g5MzJkeW84cg=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram className="cursor-pointer text-3xl hover:bg-primary " />
+                </a>
+
+                <a
+                  href="https://x.com/chrisbi33?s=09"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaXTwitter className="cursor-pointer text-3xl hover:bg-primary" />
+                </a>
+              </div>
             </div>
           </div>
 
