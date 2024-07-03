@@ -75,11 +75,6 @@ const Gallery = () => {
           src={pic10}
           alt="Picture 10"
         />
-        {/* <img
-          className="w-full h-100 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
-          src={pic28}
-          alt="Picture 28"
-        /> */}
         <img
           className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
           src={pic12}
