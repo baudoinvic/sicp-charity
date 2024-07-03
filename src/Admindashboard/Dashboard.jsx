@@ -45,7 +45,7 @@ function Dashboard() {
         >
           <ul className="py-4 space-y-2">
             <Link to="/Admindashboard/Dashboard">
-              <li className="px-6 py-3 flex items-center rounded-lg bg-primary transition-colors duration-300 ml-3 mr-3">
+              <li className="px-6 py-3 flex items-center rounded-lg bg-primary hover:bg-gray-100 transition-colors duration-300 ml-3 mr-3">
                 <IoMdHome className="mr-4 text-xl-1" />
                 <span className="cursor-pointer text-lg font-semibold ">
                   Dashboard
@@ -54,7 +54,7 @@ function Dashboard() {
             </Link>
 
             <Link to="/Admindashboard/Dashboard/Product">
-              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-primary transition-colors duration-300">
+              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-gray-100 transition-colors duration-300">
                 <FaDonate className="mr-4 text-xl-1 text-black" />
                 <span className="cursor-pointer text-xl-1 font-semibold text-black">
                   Donations
@@ -63,7 +63,7 @@ function Dashboard() {
             </Link>
 
             <Link to="/Admindashboard/Dashboard/Customer">
-              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-primary transition-colors duration-300">
+              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-gray-100 transition-colors duration-300">
                 <FaUserGroup className="mr-4 text-xl-1 text-black" />
                 <span className="cursor-pointer text-xl-1 font-semibold text-black">
                   Donors
@@ -71,7 +71,7 @@ function Dashboard() {
               </li>
             </Link>
             <Link to="/Admindashboard/Dashboard/Users">
-              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-primary transition-colors duration-300">
+              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-gray-100 transition-colors duration-300">
                 <FaUserPlus className="mr-4 text-xl-1 text-black" />
                 <span className="cursor-pointer text-xl-1 font-semibold text-black">
                   Users
@@ -79,7 +79,7 @@ function Dashboard() {
               </li>
             </Link>
             <Link to="/Admindashboard/Dashboard/Order">
-              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-primary transition-colors duration-300">
+              <li className="px-6 py-3 flex items-center rounded-lg  hover:bg-gray-100 transition-colors duration-300">
                 <FaUserPlus className="mr-4 text-xl-1 text-black" />
                 <span className="cursor-pointer text-xl-1 font-semibold text-black">
                   Volunteers
@@ -87,7 +87,7 @@ function Dashboard() {
               </li>
             </Link>
             <Link to="/AdminDashboard/Dashboard/Setting">
-              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-primary transition-colors duration-300">
+              <li className="px-6 py-3 flex items-center rounded-lg hover:bg-gray-100 transition-colors duration-300">
                 <IoSettingsOutline className="mr-4 text-xl-1 text-black" />
                 <span className="cursor-pointer text-xl-1 font-semibold text-black">
                   Settings
