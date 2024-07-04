@@ -52,15 +52,17 @@ const Footer = () => {
       <div className="container mx-auto p-8 md:p-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-6">
-            <div className="flex items-center space-x-4">
+            {/* <div className="flex items-center space-x-4">
               <img src={pic24} alt="Logo" className="w-10 rounded-full" />
               <h3 className="font-bold text-lg  ">
                 Winifred Nyirahabarugira
                 <br />
                 Ceo and Founder of SICP
               </h3>
-            </div>
-
+            </div> */}
+            <h3 className="font-bold text-lg text-primary">
+              Solidarity Initiative for Children and People(SICP)
+            </h3>
             <p className="text-gray-300">
               Together, we can make a lasting
               <br /> impact and create a brighter future
