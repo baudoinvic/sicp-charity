@@ -21,7 +21,7 @@ const Funraise = () => {
         </h1>
 
         <div className="max-w-2xl mx-auto p-4">
-          <span className="text-lg text-gray-700">
+          <span className="text-sm text-gray-700">
             Our organizations had emitted positive effect to our community, as
             many people have enriched their critical thinking after following
             our teachings of social and environment studies, and many of our

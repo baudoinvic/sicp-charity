@@ -28,7 +28,7 @@ const Service = () => {
         <h1 className="text-5xl font-bold text-white">What We Do</h1>
       </header>
 
-      <span className="block w-11/12 sm:w-2/3 mx-auto text-center text-gray-700 leading-relaxed p-4 sm:pt-20 text-sm sm:text-base md:text-lg">
+      <span className="block w-11/12 sm:w-2/3 mx-auto text-center text-gray-700 leading-relaxed p-4 sm:pt-20 text-sm ">
         We train vulnerable peoples from various backgrounds on how to embark on
         decent works that generate reliable incomes. We educated on social and
         environmental studies in order to foster peace, unity and sustainable
@@ -52,10 +52,10 @@ const Service = () => {
             src={pic15}
             alt="Picture 15"
           />
-          <h2 className="text-2xl font-bold text-center mb-6">
+          <h2 className="text-2xl font-bold text-center mb-6 mt-5">
             We train youth
           </h2>
-          <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
+          <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto text-sm">
             We train youth and women in different aspect of life on how get
             decent self-created jobs that generate dependable income. We
             psychological train them how to become self-confident and help them
@@ -75,8 +75,8 @@ const Service = () => {
             src={pic26}
             alt="Picture 26"
           />
-          <h2 className="text-2xl font-bold text-center mb-6">Fundraising</h2>
-          <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-6 mt-5">Fundraising</h2>
+          <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto text-sm">
             We do fundraising of money in order to help those ones who are in
             needs of support. We educate families through guidance provision on
             how to better care for their children from their infancy stage to
@@ -91,20 +91,20 @@ const Service = () => {
             src={pic20}
             alt="Picture 20"
           />
-          <h2 className="text-2xl font-bold text-center mb-6">
+          <h2 className="text-2xl font-bold text-center mb-6 mt-5">
             Empowerment and Promotion
           </h2>
-          <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
+          <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto text-sm">
             We ceaselessly promote peace, reconciliation, autonomy, liberty,
             justice, and equity and gender equality for women in their
             respective social gatherings and lives as a pathway to foster a
             community with strong and empowered women.
           </p>
-          <Link to="/contact">
+          {/* <Link to="/contact">
             <button className="bg-primary text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
               Support Us
             </button>
-          </Link>
+          </Link> */}
         </section>
       </main>
 

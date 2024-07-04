@@ -278,7 +278,7 @@ const About = () => {
               key={index}
               className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
             >
-              <div className="h-64 overflow-hidden">
+              <div className="h-96 overflow-hidden">
                 <img
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                   src={member.image}

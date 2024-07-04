@@ -54,7 +54,7 @@ const Compaign = () => {
             <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-2 text-center">
               OUR MISSION
             </h3>
-            <p className="mt-2 text-gray-600 text-center">
+            <p className="mt-2 text-gray-600 text-center text-sm">
               Solidarity Initiative for Children and People (SICP) aims to get
               poor and marginalized people out of poverty through charity work,
               leading them to meaningful jobs that provide decent income. Our
@@ -75,156 +75,69 @@ const Compaign = () => {
                 <h3 className="text-xl font-semibold mb-2">
                   Children and Youth pupils
                 </h3>
-                <p className="mb-4">
+                <p className="mb-4 text-sm">
                   Our Children at primary school and youth at high school
                   campaign focuses on providing educational resources, school
                   supplies, school fees and scholarships to underprivileged
                   children. By donating, you help these children get the
                   education they deserve, opening doors to a brighter future.
                 </p>
-                <button
-                  onClick={() => showModal("children-students")}
-                  className="bg-primary text-white py-2 px-4 rounded-lg"
-                >
-                  Learn More
-                </button>
+                <Link to="/Donation">
+                  <button className="bg-primary text-white py-2 px-4 rounded-lg">
+                    Donate Now
+                  </button>
+                </Link>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold mb-2">Youth</h3>
-                <p className="mb-4">
+                <p className="mb-4 text-sm">
                   The Youth campaign is dedicated to supporting young people
                   through mentorship programs, career training, and recreational
                   activities. Your donations help to empower youth, fostering
                   their development and ensuring that they have the skills and
                   opportunities to succeed.
                 </p>
-                <button
-                  onClick={() => showModal("youth")}
-                  className="bg-primary text-white py-2 px-4 rounded-lg"
-                >
-                  Learn More
-                </button>
+                <Link to="/Donation">
+                  <button className="bg-primary text-white py-2 px-4 rounded-lg">
+                    Donate Now
+                  </button>
+                </Link>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold mb-2">Women</h3>
-                <p className="mb-4">
+                <p className="mb-4 text-sm">
                   Our Women’s campaign focuses on empowering women through
                   education, job training, and support services. Donations to
                   this campaign help women to achieve financial autonomy, gain
                   confidence, and build a better future for themselves and their
                   families
                 </p>
-                <button
-                  onClick={() => showModal("women")}
-                  className="bg-primary text-white py-2 px-4 rounded-lg"
-                >
-                  Learn More
-                </button>
+                <Link to="/Donation">
+                  <button className="bg-primary text-white py-2 px-4 rounded-lg">
+                    Donate Now
+                  </button>
+                </Link>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold mb-2">Patients</h3>
-                <p className="mb-4">
+                <p className="mb-4 text-sm">
                   The Patients campaign aims to provide medical assistance,
                   medications, and support for individuals who cannot afford
                   healthcare. Your contributions help improve the quality of
                   life for patients by ensuring that they receive the necessary
                   medical care and support.
                 </p>
-                <button
-                  onClick={() => showModal("patients")}
-                  className="bg-primary text-white py-2 px-4 rounded-lg"
-                >
-                  Learn More
-                </button>
+                <Link to="/Donation">
+                  <button className="bg-primary text-white py-2 px-4 rounded-lg">
+                    Donate Now
+                  </button>
+                </Link>
               </div>
             </div>
           </section>
         </main>
       </div>
 
-      {modal === "children-students" && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-2">
-              Children and Youth pupils
-            </h3>
-            <p className="w-2/3 mb-4 w-96">
-              Detailed information about the Children and Youth pupils. This
-              focuses on providing educational resources, school fees, supplies,
-              and scholarships to underprivileged children. by supporting with
-              this amount. 500.000 USD
-            </p>
-            <Link to="/donation">
-              <button
-                onClick={hideModal}
-                className="bg-primary text-white py-2 px-4 rounded-lg"
-              >
-                Donate
-              </button>
-            </Link>
-          </div>
-        </div>
-      )}
-      {modal === "youth" && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-2">Youth</h3>
-            <p className="mb-4">
-              Detailed information about the Youth campaign. This campaign
-              supports young people through mentorship programs, career
-              training, and recreational activities. 300.000 USD
-            </p>
-            <Link to="/donation">
-              <button
-                onClick={hideModal}
-                className="bg-primary text-white py-2 px-4 rounded-lg"
-              >
-                Donate
-              </button>
-            </Link>
-          </div>
-        </div>
-      )}
-      {modal === "women" && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-2">Women</h3>
-            <p className="mb-4">
-              Detailed information about the Women’s . this focuses on
-              empowering women through education, job training, and healthcare
-              by supporting with 350.000 USD
-            </p>
-            <Link to="/donation">
-              <button
-                onClick={hideModal}
-                className="bg-primary text-white py-2 px-4 rounded-lg"
-              >
-                Donate
-              </button>
-            </Link>
-          </div>
-        </div>
-      )}
-      {modal === "patients" && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-2">Patients</h3>
-            <p className="mb-4">
-              Detailed information about the Patients. This aims to provide
-              medical assistance, medications, and support for individuals who
-              cannot afford healthcare. by supporting 200.000 USD
-            </p>
-            <Link to="/Donation">
-              <button
-                onClick={hideModal}
-                className="bg-primary text-white py-2 px-4 rounded-lg"
-              >
-                Donate
-              </button>
-            </Link>
-          </div>
-        </div>
-      )}
       <Footer />
     </>
   );
