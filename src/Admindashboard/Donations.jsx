@@ -8,39 +8,37 @@ import { ToastContainer, toast } from "react-toastify";
 import { Link } from "react-router-dom";
 
 const Donations = () => {
-  const [Products, setProducts] = useState([]);
- 
-
-  const fetchProducts = () => {
+  const [donations, setDonations] = useState([]);
+  const fetchDonations = () => {
     let token = localStorage.getItem("token");
     axios({
-      url: "https://beathaecommerceback-end.onrender.com/api/v1/product/viewAllProd",
+      url: "https://auction-website-auji.onrender.com/api/v1/donations",
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
       },
     })
       .then((response) => {
-        const productsData = response.data.products;
-        setProducts(productsData);
+        const donationsData = response.data.products;
+        setDonations(donationsData);
         toast.success(response.data.message);
       })
       .catch((error) => {
-        console.error("Error fetching products:", error);
-        toast.error("Error fetching products. Please try again later.");
+        console.error("Error fetching donations:", error);
+        toast.error("Error fetching donations. Please try again later.");
       });
   };
 
   useEffect(() => {
-    fetchProducts();
+    fetchDonations();
   }, []);
 
  
-  const handleDeleteProduct = async (id) => {
+  const handleDonations = async (id) => {
     if (window.confirm("Are you sure you want to delete?")) {
       let token = localStorage.getItem("token");
       axios({
-        url: `https://beathaecommerceback-end.onrender.com/api/v1/product/deleteProduct/${id}`,
+        url: `https://auction-website-auji.onrender.com/api/v1/donations/${id}`,
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -69,44 +67,42 @@ const Donations = () => {
             <span className="font-bold w-full md:w-1/6 text-sm p-2">
               Donation amount
             </span>
-            <span className="font-bold w-full md:w-1/6 text-sm p-2">Email</span>
             <span className="font-bold w-full md:w-1/6 text-sm p-2">
-              Phone number
+            
+             Email
+            
+            </span>
+            <span className="font-bold w-full md:w-1/6 text-sm p-2">
+             location
             </span>
             <span className="font-bold w-full md:w-1/6 text-sm p-2">City</span>
             <span className="font-bold w-full md:w-1/6 text-sm p-2">
               Action
             </span>
           </div>
-          {Products.map((product) => (
+          {donations.map((donations) => (
             <div
               className="flex flex-col md:flex-row mt-4 border-b"
-              key={product._id}
+              key={donations._id}
             >
               <span className="w-full md:w-1/6 text-sm p-2">
-                {product.productName}
+                {donations.firstname}
               </span>
               <span className="w-full md:w-1/6 text-sm p-2">
-                {product.price}
+                {donations.lastname}
               </span>
               <span className="w-full md:w-1/6 text-sm p-2">
-                {product.stock_quantity}
+                {donations.amount}
               </span>
               <span className="w-full md:w-1/6 text-sm p-2">
-                {product.category}
+                {donations.amount}
               </span>
-              <span className="w-full md:w-1/6 text-sm p-2">
-                {product.description}
-              </span>
+             
               <div className="w-full md:w-1/6 flex flex-col md:flex-row items-center p-2">
-                <img
-                  src={product.productImage[0]}
-                  alt="Product"
-                  className="max-w-[100px] mb-2 md:mb-0 md:mr-2"
-                />
+               
                 <div className="flex items-center">
                   <Link
-                    to={`/Admindashboard/Dashboard/Editproduct/${product._id}`}
+                    to={`/Admindashboard/Dashboard/Editproduct/${donations._id}`}
                   >
                     <FaEdit
                       className="text-2xl text-gray-900 mr-2"
@@ -114,7 +110,7 @@ const Donations = () => {
                     />
                   </Link>
                   <MdDeleteOutline
-                    onClick={() => handleDeleteProduct(product._id)}
+                    onClick={() => handleDonations(donations._id)}
                     className="text-2xl text-red-500"
                     style={{ cursor: "pointer" }}
                   />
