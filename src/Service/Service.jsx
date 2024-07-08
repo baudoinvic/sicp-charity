@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 import pic15 from "../assets/women/pic15.jpg";
 import pic20 from "../assets/women/pic20.jpg";
 import pic26 from "../assets/women/pic26.jpg"
-
 import pic31 from "../assets/women/pic31.jpg";
 import pic32 from "../assets/women/pic32.jpg";
 import pic33 from "../assets/women/pic33.jpg";
+import copy from "../assets/women/copy.jpg";
 
 const Service = () => {
   return (
@@ -71,8 +71,8 @@ const Service = () => {
         {/* Section: Our Impact */}
         <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
           <img
-            className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
-            src={pic26}
+            className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+            src={copy}
             alt="Picture 26"
           />
           <h2 className="text-2xl font-bold text-center mb-6 mt-5">Fundraising</h2>

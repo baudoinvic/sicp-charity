@@ -11,6 +11,7 @@ import michel from "../assets/women/michel.jpg";
 import CEO from "../assets/women/CEO.jpg";
 import mag from "../assets/women/mag.jpg";
 import pic24 from "../assets/pic24.jpg";
+import change from "../assets/women/change.jpg";
 
 const About = () => {
   return (
@@ -117,7 +118,7 @@ const About = () => {
       >
         <div className="w-full md:w-2/5 mb-4 md:mb-0 flex justify-center">
           <img
-            src={pic17}
+            src={change}
             alt="Our Story"
             className="w-full h-auto max-h-85 rounded-lg shadow-md object-cover"
           />
