@@ -78,7 +78,7 @@ const Footer = () => {
                   name="email"
                   value={email}
                   onChange={handleChange}
-                  placeholder="enter your email"
+                  placeholder="Enter your email"
                   required
                   className="px-4 py-3 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-brightColor"
                 />
