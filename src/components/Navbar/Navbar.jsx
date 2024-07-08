@@ -86,9 +86,9 @@ const Navbar = ({ handleOrderPopup }) => {
             </Link>
 
             {/* Dark mode toggle */}
-            <div>
+            {/* <div>
               <DarkMode />
-            </div>
+            </div> */}
 
             {/* Mobile menu toggle button */}
             <button

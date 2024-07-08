@@ -15,6 +15,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import ceo from "../../assets/ceo.jpg";
 import pic1 from "../../assets/pic1.jpg";
+import code from "../../assets/women/code.jpg";
 import pic24 from "../../assets/pic24.jpg"
 
 const Footer = () => {
@@ -61,7 +62,7 @@ const Footer = () => {
                 for Children and People(SICP)
               </h3>
             </div>
-          
+
             <p className="text-gray-300">
               Together, we can make a lasting
               <br /> impact and create a brighter future
@@ -236,6 +237,13 @@ const Footer = () => {
                 </span>
               </a>
             </nav>
+            <div className="pt-10">
+              <img
+                src={code}
+                className="w-32 h-32 rounded-lg ml-10 p"
+                alt="Description"
+              />
+            </div>
           </div>
         </div>
 
