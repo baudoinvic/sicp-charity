@@ -34,7 +34,7 @@ const About = () => {
 
           {/* Right Side - Text */}
           <div className="w-full md:w-2/4 md:ml-8 mt-4 md:mt-0">
-            <h2 className="text-2xl font-bold mb-3 text-primary">ABOUT US</h2>
+            <h2 className="text-2xl font-bold mb-3 text-primary">WHO WE ARE</h2>
             <p className="text-gray-700 text-sm leading-relaxed">
               The Solidarity Initiative for Children and People (SICP) is a
               Charity Non-profit and Non-governmental organization established
@@ -287,7 +287,7 @@ const About = () => {
               </div>
               <div className="p-4 flex-grow flex flex-col">
                 <h2 className="text-xl font-bold text-center">{member.name}</h2>
-                <p className="text-sm text-gray-600 text-center mt-1 mb-2">
+                <p className="text-sm text-gray-600 text-center mt-1 mb-2 font-bold">
                   {member.title}
                 </p>
                 <p className="text-gray-700 text-sm leading-relaxed text-center">

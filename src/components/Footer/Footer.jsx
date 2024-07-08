@@ -14,6 +14,7 @@ import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import ceo from "../../assets/ceo.jpg";
+import pic1 from "../../assets/pic1.jpg";
 import pic24 from "../../assets/pic24.jpg"
 
 const Footer = () => {
@@ -52,17 +53,15 @@ const Footer = () => {
       <div className="container mx-auto p-8 md:p-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-6">
-            {/* <div className="flex items-center space-x-4">
-              <img src={pic24} alt="Logo" className="w-10 rounded-full" />
-              <h3 className="font-bold text-lg  ">
-                Winifred Nyirahabarugira
+            <div className="flex items-center space-x-4">
+              <img src={pic1} alt="Logo" className="w-10 rounded-full" />
+              <h3 className="font-bold text-lg text-primary ">
+                Solidarity Initiative
                 <br />
-                Ceo and Founder of SICP
+                for Children and People(SICP)
               </h3>
-            </div> */}
-            <h3 className="font-bold text-lg text-primary">
-              Solidarity Initiative for Children and People(SICP)
-            </h3>
+            </div>
+          
             <p className="text-gray-300">
               Together, we can make a lasting
               <br /> impact and create a brighter future
@@ -70,7 +69,7 @@ const Footer = () => {
             </p>
             <div>
               <p className="text-lg font-semibold mb-3">
-                subscribe to our News letter
+                Subscribe to our News letter
               </p>
               <form onSubmit={handleSubmit} className="flex flex-col space-y-3">
                 <input

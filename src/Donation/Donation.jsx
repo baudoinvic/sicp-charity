@@ -37,7 +37,7 @@ const Donation = () => {
 
    try {
      console.log("Request Data:", formData);
-
+     
      const response = await axios.post(
        "https://auction-website-auji.onrender.com/api/v1/donations",
        formData,
@@ -47,7 +47,6 @@ const Donation = () => {
          },
        }
      );
-
      console.log("Response Data:", response.data);
      toast.success("Donation created successfully");
 
