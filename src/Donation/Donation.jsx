@@ -130,7 +130,7 @@ const Donation = () => {
             <h2 className="text-2xl font-semibold mb-4">
               Would You Like To Make a Regular Donation?
             </h2>
-        
+
             <p className="mb-4">
               Your regular contributions help us sustain our mission and reach
               more people in need.
@@ -189,17 +189,13 @@ const Donation = () => {
                 required
                 className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <select
-                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
+              <select className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <option value="">Payment Method</option>
                 <option value="creditCard">Credit Card</option>
+                <option value="paypal">Paypal</option>
               </select>
               <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  className="mr-2"
-                />
+                <input type="checkbox" className="mr-2" />
                 <label htmlFor="newsletter" className="text-sm">
                   Subscribe to our newsletter
                 </label>
