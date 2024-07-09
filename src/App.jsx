@@ -92,8 +92,8 @@ const App = () => {
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Funraise" element={<Funraise />} />
-
-          <Route path="/Compaign" element={<Compaign />} />
+          <Route path="/Popup" element={<Funraise />} />
+          <Route path="/Compaign" element={<Popup />} />
           <Route path="/About" element={<About />} />
           <Route path="/Gallery" element={<Gallery />} />
           <Route path="/Donation" element={<Donation />} />
