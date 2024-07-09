@@ -11,8 +11,10 @@ import Subscribe from "./components/Subscribe/Subscribe";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
 
+import Popup from "./components/Popup/Popup";
+
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
-import Allproducts from "./components/Products/Allproducts";
+// import Allproducts from "./components/Products/Allproducts";
 import Checkout from "./components/Checkout/Checkout";
 import Login from "./Login/Login";
 import Signup from "./Signup/Signup";
@@ -28,6 +30,7 @@ import Product from "./Admindashboard/Donations";
 import Setting from "./Admindashboard/Setting";
 import Edituser from "./Admindashboard/Edituser";
 import Editproduct from "./Admindashboard/Editproduct";
+import Bidding from "./components/Bidding/Bidding";
 import Donation from "./Donation/Donation";
 import Service from "./Service/Service";
 import Compaign from "./Compaign/Compaign";
@@ -83,7 +86,7 @@ const App = () => {
               </CommonLayout>
             }
           />
-          <Route path="/Allproducts" element={<Allproducts />} />
+          {/* <Route path="/Allproducts" element={<Allproducts />} /> */}
           <Route path="/Checkout" element={<Checkout />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />
