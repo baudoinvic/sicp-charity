@@ -71,7 +71,7 @@ const Testimonials = () => {
     <div className="py-10 mb-10">
       <div className="container">
         {/* header section */}
-        <div className="text-center mb-10 max-w-[600px] mx-auto">
+        <div className="text-center mb-10 max-w-[600px] mx-auto -mt-8">
           <p data-aos="fade-up" className="text-sm text-primary">
             Making a Difference Together
           </p>
@@ -79,11 +79,11 @@ const Testimonials = () => {
             What Our Donors Say
           </h1>
           <p data-aos="fade-up" className="text-lg text-gray-400">
-            Welcome to our community of kindness and compassion. 
-            we believe in the power of collective action to
-            change lives. Each donation, big or small, is a beacon of hope for
-            those in need. Join us as we strive to make the world a better
-            place, one act of generosity at a time.
+            Welcome to our community of kindness and compassion. we believe in
+            the power of collective action to change lives. Each donation, big
+            or small, is a beacon of hope for those in need. Join us as we
+            strive to make the world a better place, one act of generosity at a
+            time.
           </p>
         </div>
 
@@ -105,7 +105,9 @@ const Testimonials = () => {
                   </div>
                   <div className="flex flex-col items-center gap-4">
                     <div className="space-y-3">
-                      <p className="text-xs text-white text-gray-500">{data.text}</p>
+                      <p className="text-xs text-white text-gray-500">
+                        {data.text}
+                      </p>
                       <h1 className="text-xl font-bold text-white">
                         {data.name}
                       </h1>
