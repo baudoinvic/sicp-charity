@@ -7,6 +7,7 @@ import pic28 from "../assets/women/pic28.jpg";
 import pic29 from "../assets/women/pic29.jpg";
 import pic30 from "../assets/women/pic30.jpg";
 import pic14 from "../assets/women/pic14.jpg";
+import impact from "../assets/women/impact.png";
 
 const Funraise = () => {
  
@@ -14,7 +15,6 @@ const Funraise = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-
       <div className="flex flex-col items-center text-center">
         <h1 className="pt-20 mb-10 text-2xl font-bold text-gray-800">
           OUR IMPACT
@@ -38,17 +38,38 @@ const Funraise = () => {
         </div>
       </div>
 
+      <div className="impact flex justify-center my-4">
+        <img
+          src={impact}
+          className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl h-auto"
+          alt="Impact Image"
+        />
+      </div>
+
+      <div className="text flex flex-col items-center text-center my-4 space-y-2 px-4 sm:px-8">
+        <span className="font-bold text-lg sm:text-xl">
+          Children Education Supported: 260
+        </span>
+        <p className="font-medium text-base sm:text-lg">Empowered Women: 130</p>
+        <p className="font-medium text-base sm:text-lg">
+          Others supported (patients, refugees, elders etc.): 92
+        </p>
+        <p className="font-medium text-base sm:text-lg">
+          Approached Associations: 18
+        </p>
+      </div>
+
       <main
         data-aos="zoom-in"
         className="container mx-auto py-16 px-4 flex flex-col lg:flex-row items-center space-y-10 lg:space-y-0 lg:space-x-10"
       >
         <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
           <img
-            className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+            className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
             src={pic14}
             alt="Picture 14"
           />
-          <h2 className="text-2xl font-bold text-center mb-6">Sports</h2>
+          <h2 className="text-2xl font-bold text-center mb-4 pt-5 ">Sports</h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
             The sports and other trainings activities designated to our children
             had made them leave their depressing inner world and loneliness to
@@ -60,11 +81,11 @@ const Funraise = () => {
         {/* Section: Our Impact */}
         <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
           <img
-            className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+            className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
             src={pic29}
             alt="Picture 29"
           />
-          <h2 className="text-2xl font-bold text-center mb-6">
+          <h2 className="text-2xl font-bold text-center mb-6 pt-5">
             Teaching and Training
           </h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
@@ -79,7 +100,7 @@ const Funraise = () => {
             src={pic30}
             alt="Picture 30"
           />
-          <h2 className="text-2xl font-bold text-center mb-6">Social</h2>
+          <h2 className="text-2xl font-bold text-center mb-6 pt-5">Social</h2>
           <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
             Through trainings, social and environmental studies, our youth today
             help elderly and some institution to protect environment and
@@ -87,7 +108,6 @@ const Funraise = () => {
           </p>
         </section>
       </main>
-
       <Footer />
     </div>
   );
