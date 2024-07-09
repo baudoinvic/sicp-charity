@@ -7,10 +7,6 @@ import pic17 from "../assets/women/pic17.jpg";
 import pic18 from "../assets/women/pic18.jpg";
 import pic21 from "../assets/women/pic21.jpg";
 import pic25 from "../assets/women/pic25.jpg";
-import michel from "../assets/women/michel.jpg";
-import CEO from "../assets/women/CEO.jpg";
-import mag from "../assets/women/mag.jpg";
-import pic24 from "../assets/pic24.jpg";
 import change from "../assets/women/change.jpg";
 
 const About = () => {
@@ -56,93 +52,10 @@ const About = () => {
           </div>
         </div>
 
-        <div
-          data-aos="zoom-in"
-          className="container mx-auto flex flex-col md:flex-row items-center justify-between py-8"
-        >
-          <div className="md:w-2/4 mb-6 md:mb-0 md:pr-8">
-            <h2 className="text-3xl font-bold mb-3 text-primary">
-              Who Can Donate?
-            </h2>
-            <p className="text-gray-700 text-sm leading-relaxed mb-4">
-              Anyone who believes in our mission and values can contribute to
-              our cause, whether through financial donations, goods, or
-              services. Your support helps to transform lives and build brighter
-              futures.
-            </p>
-            <p className="text-gray-700 text-sm leading-relaxed mb-4">
-              A donator of SICP is everyone who has understood the goal and
-              value of our organization and decides to support our agenda and
-              charity activities. A donator from his/her kind heart and capacity
-              can either support our community financially or through essentials
-              kits provision. We have many children today who lack many basic
-              needs either in their homes and school life, and want support from
-              you. Children are angels and leaders of tomorrow, as we take into
-              account this statement, let’s nourish our minds that the best
-              leaders of tomorrow are cultivated from the early cared childhoods
-              with good education and healthy life, therefore this is where your
-              role comes into play by helping to strengthen the cared childhood
-              stage. With your kind heart, you can choose to donate today from
-              your capacity. If for example you donate only $50 every month to a
-              kindergarten child, he/she will be able to eat, cloth and study
-              well. If it is for a primary school child, only a $100 every
-              trimester or $300 for three trimesters will help him/her to study,
-              eat and cloth well. In addition for a high school child, only $160
-              every trimester or $480 for three trimesters, can help him/her
-              study, eat and cloth. Moreover a $250 might help to change a young
-              girl or boy and a left behind woman life from marginalized
-              families; as such amount could act as a capital to start a small
-              business that can generate income to them saving them from being
-              beggars in the streets.
-            </p>
-            <Link to="/donation">
-              <button className="bg-primary text-white font-bold py-2 px-4 rounded transition duration-300">
-                Donate Now
-              </button>
-            </Link>
-          </div>
-
-          <div className="md:w-2/5">
-            <img
-              src={pic18}
-              alt="Donation Impact"
-              className="w-full h-auto max-h-full object-cover rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
+        
       </section>
 
-      <div
-        data-aos="zoom-in"
-        className="container mx-auto flex flex-col md:flex-row items-center justify-center py-6 mt-8"
-      >
-        <div className="w-full md:w-2/5 mb-4 md:mb-0 flex justify-center">
-          <img
-            src={change}
-            alt="Our Story"
-            className="w-full h-auto max-h-85 rounded-lg shadow-md object-cover"
-          />
-        </div>
-
-        <div className="w-full md:w-2/4 md:ml-6 mt-4 md:mt-0">
-          <h2 className="text-2xl font-bold mb-3 text-primary">Our Story</h2>
-          <p className="text-gray-700 text-sm leading-relaxed">
-            Poverty, disease, homelessness, hunger, disasters, and refugee
-            crises negatively impact individuals and families worldwide,
-            hindering sustainable development. The COVID-19 outbreak left many
-            devastated, particularly in sub-Saharan Africa where extreme
-            suffering became widespread. Founded in 2023 as a non-governmental
-            organization, SICP Charity strives to bring hope and support to
-            those in need. We mobilize resources to combat poverty,
-            malnutrition, and poor education for children. Additionally, we
-            support and encourage women's empowerment. Our mission is to address
-            these challenges and create positive change. Through dedicated
-            efforts, we aim to build a world where everyone has access to basic
-            necessities, quality education, and opportunities for growth and
-            development.
-          </p>
-        </div>
-      </div>
+    
 
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -237,68 +150,7 @@ const About = () => {
         </div>
       </section>
 
-      <div className="bg-gray-100 py-12">
-        <h1 className="text-4xl font-bold text-center mb-12 text-primary">
-          Our Leadership Team
-        </h1>
-        <main
-          data-aos="zoom-in"
-          className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-        >
-          {[
-            {
-              name: "NYIRAHABARUGIRA Winifred",
-              title: "President & Founder of SICP",
-              image: pic24,
-              quote:
-                "Together, we can make a lasting impact and create a brighter future for children and people in need.",
-            },
-            {
-              name: "BISANGWA Christophe",
-              title: "Chief Executive Officer of SICP",
-              image: CEO,
-              quote:
-                "Across the globe, I have seen with my own eyes the power of solidarity, opportunity, and protection of individuals and communities against vulnerability. I joined SICP mainly because the struggle for justice and inclusion for all and against the cruelty of poverty.",
-            },
-            {
-              name: "MAG Li",
-              title: "Chief Financial Officer of SICP",
-              image: mag,
-              quote:
-                "I am sure we can change the world if we lift our voices and help others to find their voice against poverty. SICP is on the front, and I am pleased to be a part of this team.",
-            },
-            {
-              name: "SAN Michel",
-              title: "Chief of Strategy and Operations of SICP",
-              image: michel,
-              quote:
-                "I am inspired by the team at SICP and their genuine commitment to conquer inequality and eradicate poverty and injustice in the community.",
-            },
-          ].map((member, index) => (
-            <section
-              key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
-            >
-              <div className="h-96 overflow-hidden">
-                <img
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  src={member.image}
-                  alt={member.name}
-                />
-              </div>
-              <div className="p-4 flex-grow flex flex-col">
-                <h2 className="text-xl font-bold text-center">{member.name}</h2>
-                <p className="text-sm text-gray-600 text-center mt-1 mb-2 font-bold">
-                  {member.title}
-                </p>
-                <p className="text-gray-700 text-sm leading-relaxed text-center">
-                  {member.quote}
-                </p>
-              </div>
-            </section>
-          ))}
-        </main>
-      </div>
+     
       <Footer />
     </div>
   );

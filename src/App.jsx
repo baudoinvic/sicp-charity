@@ -36,6 +36,8 @@ import Service from "./Service/Service";
 import Compaign from "./Compaign/Compaign";
 import Funraise from "./Funraise/Funraise";
 import Gallery from "./Gallery/Gallery";
+import Donate from "./Donate/Donate";
+import Historic from "./Historic/Historic";
 
 
  const CommonLayout = ({ children }) => {
@@ -96,6 +98,8 @@ const App = () => {
           <Route path="/Gallery" element={<Gallery />} />
           <Route path="/Donation" element={<Donation />} />
           <Route path="/Service" element={<Service />} />
+          <Route path="/Donate" element={<Donate />} />
+          <Route path="/Historic" element={<Historic />} />
 
           {/* Dashboard routes */}
           <Route path="/Admindashboard/Dashboard" element={<Dashboard />}>

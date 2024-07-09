@@ -1,12 +1,11 @@
 
 
 import React, { useState } from "react";
-// import Logo from "../../assets/logo.png";
 import pic1 from "../../assets/pic1.jpg";
 import { IoMdSearch } from "react-icons/io";
-import DarkMode from "./DarkMode";
 import { Link } from "react-router-dom";
 import { FaRegUser } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
 
 const Menu = [
   {
@@ -18,6 +17,23 @@ const Menu = [
     id: 2,
     name: "About Us",
     link: "/About",
+    submenu: [
+      {
+        id: 21,
+        name: "Aboout us",
+        link: "/About",
+      },
+      {
+        id: 22,
+        name: "Our History",
+        link: "/Historic",
+      },
+      {
+        id: 23,
+        name: "Who Can Donate",
+        link: "/Donate",
+      },
+    ],
   },
   {
     id: 3,
@@ -25,22 +41,22 @@ const Menu = [
     link: "/Service",
   },
   {
-    id: 3,
+    id: 4,
     name: "Our Gallery",
     link: "/Gallery",
   },
   {
-    id: 4,
+    id: 5,
     name: "Mission",
     link: "/Compaign",
   },
   {
-    id: 5,
+    id: 6,
     name: "Impact",
     link: "/Funraise",
   },
   {
-    id: 6,
+    id: 7,
     name: "Contact us",
     link: "/Contact",
   },
@@ -48,9 +64,18 @@ const Menu = [
 
 const Navbar = ({ handleOrderPopup }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleMouseEnter = (index) => {
+    setActiveDropdown(index);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveDropdown(null);
   };
 
   return (
@@ -85,11 +110,6 @@ const Navbar = ({ handleOrderPopup }) => {
               </div>
             </Link>
 
-            {/* Dark mode toggle */}
-            {/* <div>
-              <DarkMode />
-            </div> */}
-
             {/* Mobile menu toggle button */}
             <button
               className="sm:hidden block text-gray-600 dark:text-gray-300 focus:outline-none"
@@ -122,20 +142,51 @@ const Navbar = ({ handleOrderPopup }) => {
         </div>
       </div>
 
+      {/* Mobile menu */}
       <div
         className={`${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden bg-white dark:bg-gray-900 py-2 z-50 fixed inset-0 mt-16 transition-transform duration-300 ease-in-out`}
       >
-        <ul className="flex flex-col items-center space-y-4  pt-16">
+        <ul className="flex flex-col items-center space-y-4 pt-16">
           {Menu.map((data) => (
-            <li key={data.id} className="w-full text-center">
-              <a
-                href={data.link}
-                className="block w-full px-4 py-3 text-lg text-gray-600 dark:text-gray-300 hover:text-primary duration-200"
-              >
-                {data.name}
-              </a>
+            <li key={data.id} className="w-full text-center relative">
+              {data.submenu ? (
+                <>
+                  <button
+                    className="block w-full px-4 py-3 text-lg text-gray-600 dark:text-gray-300 hover:text-primary duration-200"
+                    onClick={() =>
+                      setActiveDropdown(
+                        activeDropdown === data.id ? null : data.id
+                      )
+                    }
+                  >
+                    {data.name}
+                    <FaChevronDown className="ml-1 inline" />
+                  </button>
+                  {activeDropdown === data.id && (
+                    <ul className="bg-gray-100 dark:bg-gray-800 py-2">
+                      {data.submenu.map((subItem) => (
+                        <li key={subItem.id}>
+                          <Link
+                            to={subItem.link}
+                            className="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary duration-200"
+                          >
+                            {subItem.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </>
+              ) : (
+                <Link
+                  to={data.link}
+                  className="block w-full px-4 py-3 text-lg text-gray-600 dark:text-gray-300 hover:text-primary duration-200"
+                >
+                  {data.name}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -144,14 +195,42 @@ const Navbar = ({ handleOrderPopup }) => {
       {/* lower Navbar */}
       <div data-aos="zoom-in" className="flex justify-center">
         <ul className="sm:flex hidden items-center mb-5">
-          {Menu.map((data) => (
-            <li key={data.id}>
-              <a
-                href={data.link}
-                className="inline-block px-4 hover:text-primary duration-200"
-              >
-                {data.name}
-              </a>
+          {Menu.map((data, index) => (
+            <li
+              key={data.id}
+              className="relative"
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+            >
+              {data.submenu ? (
+                <>
+                  <button className="flex items-center px-4 py-2 hover:text-primary duration-200">
+                    {data.name}
+                    <FaChevronDown className="ml-1" />
+                  </button>
+                  {activeDropdown === index && (
+                    <ul className="absolute left-0 top-full bg-white dark:bg-gray-800 shadow-md rounded-md py-2 min-w-[200px]">
+                      {data.submenu.map((subItem) => (
+                        <li key={subItem.id}>
+                          <Link
+                            to={subItem.link}
+                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 hover:text-primary duration-200"
+                          >
+                            {subItem.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </>
+              ) : (
+                <Link
+                  to={data.link}
+                  className="inline-block px-4 py-2 hover:text-primary duration-200"
+                >
+                  {data.name}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -161,4 +240,3 @@ const Navbar = ({ handleOrderPopup }) => {
 };
 
 export default Navbar;
-
