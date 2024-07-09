@@ -25,7 +25,7 @@ const [users, setUsers] = useState([]);
 const fetchUsers = () => {
   let token = localStorage.getItem("token");
   axios({
-    url: "https://beathaecommerceback-end.onrender.com/api/v1/users",
+    url: "https://auction-website-auji.onrender.com/api/v1/users",
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -71,30 +71,30 @@ useEffect(() => {
   fetchBillings();
 }, []);
 
- const fetchProducts = () => {
+ const [donations, setDonations] = useState([]);
+ const fetchDonations = () => {
    let token = localStorage.getItem("token");
    axios({
-     url: "https://beathaecommerceback-end.onrender.com/api/v1/product/viewAllProd",
+     url: "https://auction-website-auji.onrender.com/api/v1/donations",
      method: "GET",
      headers: {
        Authorization: `Bearer ${token}`,
      },
    })
      .then((response) => {
-       const productsData = response.data.products;
-       setProducts(productsData);
+       const donationsData = response.data.products;
+       setDonations(donationsData);
        toast.success(response.data.message);
      })
      .catch((error) => {
-       console.error("Error fetching products:", error);
-       toast.error("Error fetching products. Please try again later.");
+       console.error("Error fetching donations:", error);
+       toast.error("Error fetching donations. Please try again later.");
      });
  };
 
  useEffect(() => {
-   fetchProducts();
+   fetchDonations();
  }, []);
-
 
   return (
     <div className="container mx-auto px-4">
@@ -142,14 +142,14 @@ useEffect(() => {
             {
               icon: FaInstalod,
               title: "Donations",
-              count: Products.length,
+              count: donations.length,
               subtitle: "Items up for Donations",
               color: "orange",
             },
             {
               icon: HiUserGroup,
               title: "Donners",
-              count: Billings.length,
+              count: donations.length,
               subtitle: "Total Donors",
               color: "orange",
             },
@@ -163,7 +163,7 @@ useEffect(() => {
             {
               icon: HiShoppingCart,
               title: "Volunteers",
-              count: 20,
+              count: donations.length,
               subtitle: "Total Volunteers",
               color: "orange",
             },
