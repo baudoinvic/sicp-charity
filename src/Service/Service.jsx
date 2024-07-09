@@ -123,14 +123,10 @@ const Service = () => {
               >
                 <img
                   src={pic}
-                  className="w-full md:w-80 h-80 object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full md:w-80 h-96 object-cover transition-transform duration-300 group-hover:scale-110"
                   alt={`Empowering families ${index + 1}`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
-                  <span className="text-white text-lg font-semibold">
-                    Transforming Lives
-                  </span>
-                </div>
+              
               </div>
             ))}
           </div>
