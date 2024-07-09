@@ -21,15 +21,13 @@ const Video = () => {
         <div className="absolute inset-0 flex items-center justify-center text-white mb-20">
           <div className="text-center">
             <h1 className="text-2xl font-bold mb-20">
-              Your donations
-              and bids help us provide essential<br /> resources and services to
-              communities around the world.
+              We have organized more than 50 events every year
             </h1>
-            <Link to="/Donation">
+       
               <button className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-4 px-10  ">
-                Donate
+               Read More 
               </button>
-            </Link>
+          
           </div>
         </div>
       </div>
