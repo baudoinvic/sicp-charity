@@ -21,11 +21,11 @@ const About = () => {
           className="container mx-auto flex flex-col md:flex-row items-center justify-center py-6 mt-8"
         >
           {/* Left Side - Image */}
-          <div className="w-full md:w-2/5 mb-4 md:mb-0">
+          <div className="w-full h-full md:w-2/5 mb-4 md:mb-0">
             <img
               src={pic25}
               alt="About Us Image"
-              className="w-full h-auto max-h-85 object-cover rounded-lg shadow-md"
+              className="w-full h-full  object-cover rounded-lg shadow-md "
             />
           </div>
 

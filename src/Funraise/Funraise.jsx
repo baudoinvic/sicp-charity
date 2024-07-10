@@ -15,38 +15,53 @@ const Funraise = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <div className="flex flex-col items-center text-center">
-        <h1 className="pt-20 mb-10 text-2xl font-bold text-gray-800">
-          OUR IMPACT
-        </h1>
 
-        <div className="max-w-2xl mx-auto p-4">
-          <span className="text-sm text-gray-700">
-            Our organizations had emitted positive effect to our community, as
-            many people have enriched their critical thinking after following
-            our teachings of social and environment studies, and many of our
-            community are now self-employed. Depression and loneliness is a tale
-            in the lives of many of our community todays and self-confidence is
-            prevalent. In the similar vein Reconciliation is a living testimony
-            as our people are working together in peace and unity through
-            charity and other activities of our organization. Moreover a
-            reasonable number of children are being cared for in the proper way
-            and their future is rest assured. Lastly but not the rest our
-            organization impact outreached to at least 500 lives so far to
-            better their living standards.
-          </span>
+      <h1 className="pt-20 mb-10 text-2xl font-bold text-primary text-center">
+        OUR IMPACT
+      </h1>
+
+      <div className="flex flex-wrap justify-center p-4">
+        <div className="w-full md:w-1/2 lg:w-1/2 p-4">
+          <div className="max-w-2xl mx-auto p-4 left-side ">
+            <span className="text-sm text-gray-700 ">
+              Our organizations had emitted positive effect to our community, as
+              many people have enriched their critical thinking after following
+              our teachings of social and environment studies, and many of our
+              community are now self-employed. Depression and loneliness is a
+              tale in the lives of many of our community todays and
+              self-confidence is prevalent. In the similar vein Reconciliation
+              is a living testimony as our people are working together in peace
+              and unity through charity and other activities of our
+              organization. Moreover a reasonable number of children are being
+              cared for in the proper way and their future is rest assured.
+              Lastly but not the rest our organization impact outreached to at
+              least 500 lives so far to better their living standards.
+            </span>
+          </div>
+        </div>
+
+        <div className="w-full md:w-1/2 lg:w-1/2 p-4">
+          <div className="impact flex flex-col items-center my-4 right-side">
+            <img
+              src={impact}
+              className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl h-auto"
+              alt="Impact Image"
+            />
+            <div className="text-center mt-4">
+              <span className="font-bold text-sm ">
+                Children Education Supported: 260
+              </span>
+              <p className="font-medium text-sm">Empowered Women: 130</p>
+              <p className="font-medium text-sm">
+                Others supported (patients, refugees, elders etc.): 92
+              </p>
+              <p className="font-medium text-sm">Approached Associations: 18</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="impact flex justify-center my-4">
-        <img
-          src={impact}
-          className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl h-auto"
-          alt="Impact Image"
-        />
-      </div>
-
-      <div className="text flex flex-col items-center text-center my-4 space-y-2 px-4 sm:px-8">
+      {/* <div className="text flex flex-col items-center text-center my-4 space-y-2 px-4 sm:px-8">
         <span className="font-bold text-lg sm:text-xl">
           Children Education Supported: 260
         </span>
@@ -57,7 +72,7 @@ const Funraise = () => {
         <p className="font-medium text-base sm:text-lg">
           Approached Associations: 18
         </p>
-      </div>
+      </div> */}
 
       <main
         data-aos="zoom-in"

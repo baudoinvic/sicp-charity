@@ -37,7 +37,7 @@ const Menu = [
   },
   {
     id: 3,
-    name: "What we do",
+    name: "What We Do ",
     link: "/Service",
   },
   {
@@ -47,7 +47,7 @@ const Menu = [
   },
   {
     id: 5,
-    name: "Mission",
+    name: "Our Campaigns",
     link: "/Compaign",
   },
   {
@@ -57,7 +57,7 @@ const Menu = [
   },
   {
     id: 7,
-    name: "Contact us",
+    name: "Contact Us",
     link: "/Contact",
   },
 ];
@@ -101,6 +101,7 @@ const Navbar = ({ handleOrderPopup }) => {
               />
               <IoMdSearch className="text-gray-500 group-hover:text-primary absolute top-1/2 -translate-y-1/2 right-3" />
             </div>
+           
 
             {/* Sign in button */}
             <Link to="/Login">
@@ -206,7 +207,7 @@ const Navbar = ({ handleOrderPopup }) => {
                 <>
                   <button className="flex items-center px-4 py-2 hover:text-primary duration-200">
                     {data.name}
-                    <FaChevronDown className="ml-1" />
+                    {/* <FaChevronDown className="ml-1" /> */}
                   </button>
                   {activeDropdown === index && (
                     <ul className="absolute left-0 top-full bg-white dark:bg-gray-800 shadow-md rounded-md py-2 min-w-[200px]">

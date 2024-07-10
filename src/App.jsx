@@ -38,6 +38,7 @@ import Funraise from "./Funraise/Funraise";
 import Gallery from "./Gallery/Gallery";
 import Donate from "./Donate/Donate";
 import Historic from "./Historic/Historic";
+import Event from "./Event/Event";
 
 
  const CommonLayout = ({ children }) => {
@@ -100,6 +101,7 @@ const App = () => {
           <Route path="/Service" element={<Service />} />
           <Route path="/Donate" element={<Donate />} />
           <Route path="/Historic" element={<Historic />} />
+          <Route path="/Event" element={<Event />} />
 
           {/* Dashboard routes */}
           <Route path="/Admindashboard/Dashboard" element={<Dashboard />}>

@@ -23,9 +23,11 @@ const Video = () => {
             <h1 className="text-2xl font-bold mb-20">
               We have organized more than 50 events every year
             </h1>
+            <Link to="/Event">
               <button className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-4 px-10  ">
-               Read More 
+                Read More
               </button>
+            </Link>
           </div>
         </div>
       </div>

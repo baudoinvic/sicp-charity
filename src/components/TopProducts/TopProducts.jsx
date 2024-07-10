@@ -5,45 +5,47 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 const TopProducts = ({ handleOrderPopup }) => {
-  const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    address: "",
+const [formData, setFormData] = useState({
+  firstname: "",
+  lastname: "",
+  email: "",
+  address: "",
+  message: "",
+});
+
+const handleChange = (e) => {
+  const fieldName = e.target.name;
+
+  setFormData({
+    ...formData,
+    [fieldName]: e.target.value,
   });
+};
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    let token = localStorage.getItem("token");
+    console.log("Request Data:", formData);
+
+    const response = await axios({
+      url: "https://auction-website-auji.onrender.com/api/v1/contacts",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      data: JSON.stringify(formData),
     });
-  };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log("Submitting form with data:", formData); // Log form data
-
-    try {
-      const token = localStorage.getItem("token");
-      const response = await axios.post(
-        "https://auction-website-auji.onrender.com/api/v1/contacts",
-        formData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-
-      console.log("Response Data:", response.data);
-      toast.success("Thank you for becoming a volunteer");
-    } catch (error) {
-      console.error("Error:", error.response ? error.response.data : error);
-      toast.error("Failed to send message. Please try again later.");
-    }
-  };
+    console.log("Response Data:", response.data);
+    toast.success("Thank you for your feedback");
+  } catch (error) {
+    console.error("Error:", error.response ? error.response.data : error);
+    toast.error("Failed to send message. Please try again later.");
+  }
+};
 
   return (
     <div data-aos="zoom-in">
@@ -66,10 +68,10 @@ const TopProducts = ({ handleOrderPopup }) => {
               <div className="flex flex-col md:flex-row mb-4">
                 <div className="w-full md:w-1/2 mr-0 md:mr-4 mb-4 md:mb-0">
                   <input
+                    type="text"
                     id="firstname"
                     name="firstname"
                     placeholder="First name"
-                    value={formData.firstname}
                     required
                     onChange={handleChange}
                     className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
@@ -77,10 +79,10 @@ const TopProducts = ({ handleOrderPopup }) => {
                 </div>
                 <div className="w-full md:w-1/2">
                   <input
+                    type="text"
                     id="lastname"
                     name="lastname"
                     placeholder="Last name"
-                    value={formData.lastname}
                     required
                     onChange={handleChange}
                     className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
@@ -90,6 +92,7 @@ const TopProducts = ({ handleOrderPopup }) => {
               <div className="flex flex-col md:flex-row mb-4">
                 <div className="w-full md:w-1/2 mr-0 md:mr-4 mb-4 md:mb-0">
                   <input
+                    type="email"
                     id="email"
                     name="email"
                     placeholder="Your email"
@@ -101,6 +104,7 @@ const TopProducts = ({ handleOrderPopup }) => {
                 </div>
                 <div className="w-full md:w-1/2">
                   <input
+                    type="text"
                     id="address"
                     name="address"
                     placeholder="Address"
@@ -110,6 +114,23 @@ const TopProducts = ({ handleOrderPopup }) => {
                     className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
+              </div>
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+                  Subject
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  className="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-brightColor focus:bg-white focus:ring-0"
+                  placeholder="Please share with us your interterst"
+                  onChange={handleChange}
+                  required
+                ></textarea>
               </div>
               <button
                 type="submit"
