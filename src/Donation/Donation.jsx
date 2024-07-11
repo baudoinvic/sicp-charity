@@ -8,56 +8,56 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Donation = () => {
   const navigate = useNavigate();
-  
- const [formData, setFormData] = useState({
-   firstname: "",
-   lastname: "",
-   email: "",
-   amount: "",
- });
 
- const handleChange = (e) => {
-   const fieldName = e.target.name;
-   setFormData({
-     ...formData,
-     [fieldName]: e.target.value,
-   });
- };
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    amount: "",
+  });
 
- const handleAmountClick = (amt) => {
-   setFormData({ ...formData, amount: amt.toString() });
- };
+  const handleChange = (e) => {
+    const fieldName = e.target.name;
+    setFormData({
+      ...formData,
+      [fieldName]: e.target.value,
+    });
+  };
 
- const handleAmountChange = (e) => {
-   setFormData({ ...formData, amount: e.target.value });
- };
+  const handleAmountClick = (amt) => {
+    setFormData({ ...formData, amount: amt.toString() });
+  };
 
- const handleSubmit = async (e) => {
-   e.preventDefault();
+  const handleAmountChange = (e) => {
+    setFormData({ ...formData, amount: e.target.value });
+  };
 
-   try {
-     console.log("Request Data:", formData);
-     
-     const response = await axios.post(
-       "https://auction-website-auji.onrender.com/api/v1/donations",
-       formData,
-       {
-         headers: {
-           "Content-Type": "application/json",
-         },
-       }
-     );
-     console.log("Response Data:", response.data);
-     toast.success("Donation created successfully");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-     setTimeout(() => {
-       navigate("/checkout");
-     }, 2000);
-   } catch (error) {
-     console.error("Error:", error.response ? error.response.data : error);
-     toast.error("Failed to donate. Please try again later.");
-   }
- };
+    try {
+      console.log("Request Data:", formData);
+
+      const response = await axios.post(
+        "https://auction-website-auji.onrender.com/api/v1/donations",
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log("Response Data:", response.data);
+      toast.success("Donation created successfully");
+
+      setTimeout(() => {
+        navigate("/checkout");
+      }, 2000);
+    } catch (error) {
+      console.error("Error:", error.response ? error.response.data : error);
+      toast.error("Failed to donate. Please try again later.");
+    }
+  };
 
   return (
     <div className="Donation">
@@ -148,7 +148,7 @@ const Donation = () => {
               </select>
             </div>
 
-            <h2 className="text-xl font-semibold mb-4">Donation Details</h2>
+            {/* <h2 className="text-xl font-semibold mb-4">ils</h2> */}
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
@@ -233,4 +233,3 @@ const Donation = () => {
 };
 
 export default Donation;
-

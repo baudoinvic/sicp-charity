@@ -171,7 +171,7 @@ const Footer = () => {
                 to="/funraise"
                 className="block text-gray-300 hover:text-primary transition duration-300"
               >
-                Fundraising
+                Our Campaigns
               </Link>
               <Link
                 to="/compaign"
@@ -183,7 +183,7 @@ const Footer = () => {
                 to="/service"
                 className="block text-gray-300 hover:text-primary transition duration-300"
               >
-                What we do
+                What We Do
               </Link>
               <Link
                 to="/About"

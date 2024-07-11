@@ -20,7 +20,7 @@ const Menu = [
     submenu: [
       {
         id: 21,
-        name: "Aboout us",
+        name: "Who We Are",
         link: "/About",
       },
       {

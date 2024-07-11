@@ -126,7 +126,7 @@ const handleSubmit = async (e) => {
                   id="message"
                   name="message"
                   rows="4"
-                  className="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-brightColor focus:bg-white focus:ring-0"
+                  className="w-full px-4 py-3 rounded-lg  border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary "
                   placeholder="Please share with us your interterst"
                   onChange={handleChange}
                   required
