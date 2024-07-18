@@ -25,7 +25,7 @@ const Service = () => {
             "url('https://static.wixstatic.com/media/cecc1b_4e0f99a994834b81bc3e86f11a515b4f~mv2.jpg/v1/fill/w_1583,h_453,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/cecc1b_4e0f99a994834b81bc3e86f11a515b4f~mv2.jpg')",
         }}
       >
-        <h1 className="text-5xl font-bold text-white">What We Do</h1>
+        <h1 className="text-6xl font-bold text-white">What We Do</h1>
       </header>
 
       <span className="block w-11/12 sm:w-2/3 mx-auto text-center text-gray-700 leading-relaxed p-4 sm:pt-20 text-sm ">
