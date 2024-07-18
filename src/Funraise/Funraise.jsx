@@ -51,11 +51,13 @@ const Funraise = () => {
               <span className="font-bold text-sm ">
                 Children Education Supported: 260
               </span>
-              <p className="font-medium text-sm">Empowered Women: 130</p>
-              <p className="font-medium text-sm">
+              <p className=" text-sm font-bold">
+                Empowered Women: 130
+              </p>
+              <p className=" text-sm font-bold">
                 Others supported (patients, refugees, elders etc.): 92
               </p>
-              <p className="font-medium text-sm">Approached Associations: 18</p>
+              <p className=" text-sm font-bold">Approached Associations: 18</p>
             </div>
           </div>
         </div>

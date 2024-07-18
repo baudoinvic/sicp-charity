@@ -69,26 +69,7 @@ const Event = () => {
                 medications to those patients who are unable to afford hospital
                 bills.
               </p>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-indigo-600 font-semibold mb-2">
-                    Upload Photos:
-                  </label>
-                  <input
-                    type="file"
-                    className="w-full p-2 border border-indigo-200 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                  />
-                </div>
-                <div>
-                  <label className="block text-indigo-600 font-semibold mb-2">
-                    Upload PDF Flyers:
-                  </label>
-                  <input
-                    type="file"
-                    className="w-full p-2 border border-indigo-200 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                  />
-                </div>
-              </div>
+           
             </div>
           </section>
 
@@ -108,26 +89,7 @@ const Event = () => {
                 life such as pens, uniforms, notebooks, tickets, and school
                 fees.
               </p>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-indigo-600 font-semibold mb-2">
-                    Upload Photos:
-                  </label>
-                  <input
-                    type="file"
-                    className="w-full p-2 border border-indigo-200 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                  />
-                </div>
-                <div>
-                  <label className="block text-indigo-600 font-semibold mb-2">
-                    Upload PDF Flyers:
-                  </label>
-                  <input
-                    type="file"
-                    className="w-full p-2 border border-indigo-200 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                  />
-                </div>
-              </div>
+            
             </div>
           </section>
 
@@ -152,26 +114,7 @@ const Event = () => {
                 threatening the sustainability of ecological functions and
                 services.
               </p>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-indigo-600 font-semibold mb-2">
-                    Upload Photos:
-                  </label>
-                  <input
-                    type="file"
-                    className="w-full p-2 border border-indigo-200 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                  />
-                </div>
-                <div>
-                  <label className="block text-indigo-600 font-semibold mb-2">
-                    Upload PDF Files:
-                  </label>
-                  <input
-                    type="file"
-                    className="w-full p-2 border border-indigo-200 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                  />
-                </div>
-              </div>
+            
             </div>
 
             {/* Weekly Newsletters */}
@@ -189,26 +132,7 @@ const Event = () => {
                 developed in various form in different sectors in which human
                 survival activities take places.
               </p>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-indigo-600 font-semibold mb-2">
-                    Upload Photos:
-                  </label>
-                  <input
-                    type="file"
-                    className="w-full p-2 border border-indigo-200 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                  />
-                </div>
-                <div>
-                  <label className="block text-indigo-600 font-semibold mb-2">
-                    Upload PDF Files:
-                  </label>
-                  <input
-                    type="file"
-                    className="w-full p-2 border border-indigo-200 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                  />
-                </div>
-              </div>
+           
             </div>
 
             {/* Monthly Newsletters */}
@@ -224,26 +148,7 @@ const Event = () => {
                 Cooperatives have an important role in increasing community
                 resilience to climate change, wars, conflicts, and pandemics.
               </p>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-indigo-600 font-semibold mb-2">
-                    Upload Photos:
-                  </label>
-                  <input
-                    type="file"
-                    className="w-full p-2 border border-indigo-200 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                  />
-                </div>
-                <div>
-                  <label className="block text-indigo-600 font-semibold mb-2">
-                    Upload PDF Files:
-                  </label>
-                  <input
-                    type="file"
-                    className="w-full p-2 border border-indigo-200 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                  />
-                </div>
-              </div>
+         
             </div>
 
             {/* Subscription Form */}

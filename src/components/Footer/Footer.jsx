@@ -132,7 +132,7 @@ const Footer = () => {
             </h2>
             <nav className="space-y-3">
               <Link
-                to="/Home"
+                to=""
                 className="block text-gray-300 hover:text-primary transition duration-300"
               >
                 Home
@@ -141,7 +141,7 @@ const Footer = () => {
                 to="/About"
                 className="block text-gray-300 hover:text-primary transition duration-300"
               >
-                About
+                About Us
               </Link>
               <Link
                 to="/service"
@@ -159,7 +159,7 @@ const Footer = () => {
                 to="/contact"
                 className="block text-gray-300 hover:text-primary transition duration-300"
               >
-                Contact
+                Contact Us
               </Link>
             </nav>
           </div>
@@ -168,13 +168,13 @@ const Footer = () => {
             <h2 className="text-2xl font-bold text-primary mb-6">Links</h2>
             <nav className="space-y-3">
               <Link
-                to="/funraise"
+                to="/compaign"
                 className="block text-gray-300 hover:text-primary transition duration-300"
               >
                 Our Campaigns
               </Link>
               <Link
-                to="/compaign"
+                to="/funraise"
                 className="block text-gray-300 hover:text-primary transition duration-300"
               >
                 Our impact
@@ -189,7 +189,7 @@ const Footer = () => {
                 to="/About"
                 className="block text-gray-300 hover:text-primary transition duration-300"
               >
-                About us
+                About Us
               </Link>
               <Link
                 to="/Donation"

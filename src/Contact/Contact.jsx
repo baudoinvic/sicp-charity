@@ -207,14 +207,14 @@ function Contact() {
                     htmlFor="address"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    address
+                    Address
                   </label>
                   <input
                     type="tel"
                     id="address"
                     name="address"
                     className="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-brightColor focus:bg-white focus:ring-0"
-                    placeholder="address"
+                    placeholder="Your Address"
                     onChange={handleChange}
                     required
                   />
