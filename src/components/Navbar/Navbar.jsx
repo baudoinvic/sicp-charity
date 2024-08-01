@@ -104,7 +104,6 @@ const Navbar = ({ handleOrderPopup }) => {
             </div>
            
 
-            {/* Sign in button */}
             <Link to="/Login">
               <div className="sign-in flex">
                 <FaRegUser className="mt-2" />
