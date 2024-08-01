@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { FaRegUser } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 
+
 const Menu = [
   {
     id: 1,
@@ -90,9 +91,9 @@ const Navbar = ({ handleOrderPopup }) => {
             </a>
           </div>
 
-          {/* search bar */}
+  
           <div className="flex justify-between items-center gap-4">
-            {/* Search input */}
+       
             <div className="relative group hidden sm:block">
               <input
                 type="text"
@@ -110,6 +111,7 @@ const Navbar = ({ handleOrderPopup }) => {
                 <span className="text-gray-900 mt-1">Sign in</span>
               </div>
             </Link>
+           
 
             {/* Mobile menu toggle button */}
             <button
