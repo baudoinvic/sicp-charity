@@ -112,7 +112,6 @@ const Navbar = ({ handleOrderPopup }) => {
             </Link>
            
 
-            {/* Mobile menu toggle button */}
             <button
               className="sm:hidden block text-gray-600 dark:text-gray-300 focus:outline-none"
               onClick={toggleMenu}
