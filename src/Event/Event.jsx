@@ -50,9 +50,9 @@ const Event = () => {
           Upcoming
         </h1>
 
-        {/* Events Section */}
+       
         <div className="flex flex-col lg:flex-row justify-center py-12 space-y-8 lg:space-y-0 lg:space-x-4">
-          {/* Upcoming Events */}
+       
           <div className="w-full lg:w-1/4">
             <div className="flex flex-col items-start">
               <div className="bg-white shadow-lg overflow-hidden mb-4 w-full max-w-[12rem] h-48">
