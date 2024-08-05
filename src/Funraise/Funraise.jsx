@@ -63,19 +63,6 @@ const Funraise = () => {
         </div>
       </div>
 
-      {/* <div className="text flex flex-col items-center text-center my-4 space-y-2 px-4 sm:px-8">
-        <span className="font-bold text-lg sm:text-xl">
-          Children Education Supported: 260
-        </span>
-        <p className="font-medium text-base sm:text-lg">Empowered Women: 130</p>
-        <p className="font-medium text-base sm:text-lg">
-          Others supported (patients, refugees, elders etc.): 92
-        </p>
-        <p className="font-medium text-base sm:text-lg">
-          Approached Associations: 18
-        </p>
-      </div> */}
-
       <main
         data-aos="zoom-in"
         className="container mx-auto py-16 px-4 flex flex-col lg:flex-row items-center space-y-10 lg:space-y-0 lg:space-x-10"
