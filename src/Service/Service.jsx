@@ -68,7 +68,7 @@ const Service = () => {
           </p>
         </section>
 
-        {/* Section: Our Impact */}
+      
         <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
           <img
             className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"

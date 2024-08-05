@@ -193,7 +193,6 @@ const Navbar = ({ handleOrderPopup }) => {
         </ul>
       </div>
 
-      {/* lower Navbar */}
       <div data-aos="zoom-in" className="flex justify-center">
         <ul className="sm:flex hidden items-center mb-5">
           {Menu.map((data, index) => (
