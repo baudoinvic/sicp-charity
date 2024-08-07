@@ -14,7 +14,6 @@ const About = () => {
     <div className="about-us">
       <Navbar />
 
-      {/* Hero Section */}
       <section className="relative">
         <div
           data-aos="zoom-in"

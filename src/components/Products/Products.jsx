@@ -13,7 +13,7 @@ const Products = () => {
     <div className="py-12 mt-10">
       <div data-aos="zoom-in">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-center">
-          {/* Left Side - Image */}
+       
           <div className="w-full md:w-1/2 mb-8 md:mb-0">
             <img
               src="https://media.istockphoto.com/id/485631073/photo/nigerian-boys-and-girls.jpg?s=612x612&w=0&k=20&c=rJ3a3ZipBID-JtejPpNLmhFGmq9jZqlrZ_MrqgBREe8="
