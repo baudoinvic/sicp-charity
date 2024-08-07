@@ -100,11 +100,7 @@ const Service = () => {
             respective social gatherings and lives as a pathway to foster a
             community with strong and empowered women.
           </p>
-          {/* <Link to="/contact">
-            <button className="bg-primary text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
-              Support Us
-            </button>
-          </Link> */}
+         
         </section>
       </main>
 
