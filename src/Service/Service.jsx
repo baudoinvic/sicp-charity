@@ -17,7 +17,7 @@ const Service = () => {
     <div className="what-we-do">
       <Navbar />
 
-      {/* Hero Section */}
+     
       <header
         className="hero bg-cover bg-center  h-96 flex items-center justify-center text-center "
         style={{
