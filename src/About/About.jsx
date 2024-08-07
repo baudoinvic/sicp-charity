@@ -20,7 +20,7 @@ const About = () => {
           data-aos="zoom-in"
           className="container mx-auto flex flex-col md:flex-row items-center justify-center py-6 mt-8"
         >
-          {/* Left Side - Image */}
+      
           <div className="w-full h-full md:w-2/5 mb-4 md:mb-0">
             <img
               src={pic25}
@@ -29,7 +29,7 @@ const About = () => {
             />
           </div>
 
-          {/* Right Side - Text */}
+       
           <div className="w-full md:w-2/4 md:ml-8 mt-4 md:mt-0">
             <h2 className="text-2xl font-bold mb-3 text-primary">WHO WE ARE</h2>
             <p className="text-gray-700 text-sm leading-relaxed">
