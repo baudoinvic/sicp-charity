@@ -32,7 +32,7 @@ const Products = () => {
             </div>
           </div>
 
-          {/* Right Side - Text */}
+          
           <div className="w-full md:w-1/2 md:ml-8">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center md:text-left">
               HOW TO HELP US
