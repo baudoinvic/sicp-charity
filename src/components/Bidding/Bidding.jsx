@@ -42,7 +42,7 @@ const Bidding = () => {
   const [bidAmount, setBidAmount] = useState("");
   const [bidHistory, setBidHistory] = useState([]);
   const [showModal, setShowModal] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Assume user is not logged in by default
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
 
   useEffect(() => {
     const productsArray = Array.isArray(ProductsData)
