@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-// import { ProductsData } from "../Products/Products";
+
 
 const Modal = ({ show, onClose }) => {
   if (!show) return null;
@@ -62,7 +62,7 @@ const Bidding = () => {
 
   const handlePlaceBid = () => {
     if (!isLoggedIn) {
-      // Show a modal or an alert asking the user to create an account
+
       setShowModal(true);
       return;
     }
