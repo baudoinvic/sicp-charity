@@ -30,7 +30,7 @@ import Product from "./Admindashboard/Donations";
 import Setting from "./Admindashboard/Setting";
 import Edituser from "./Admindashboard/Edituser";
 import Editproduct from "./Admindashboard/Editproduct";
-import Bidding from "./components/Bidding/Bidding";
+// import Bidding from "./components/Bidding/Bidding";
 import Donation from "./Donation/Donation";
 import Service from "./Service/Service";
 import Compaign from "./Compaign/Compaign";
