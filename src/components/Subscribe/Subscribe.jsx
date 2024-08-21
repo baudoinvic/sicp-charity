@@ -1,7 +1,8 @@
+
 import React from "react";
 import Banner from "../../assets/website/orange-pattern.jpg";
 import { useState } from "react";
-import { ToastContainer,toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -15,8 +16,7 @@ const BannerImg = {
 };
 
 const Subscribe = () => {
-
-   const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleChange = (e) => {
     setEmail(e.target.value);
@@ -40,12 +40,17 @@ const Subscribe = () => {
       });
 
       console.log("Subscription Response Data:", response.data);
-      toast.success("Thank you for subscribing to our events you will be notified soon");
+      toast.success(
+        "Thank you for subscribing to our events, you will be notified soon"
+      );
+
+      // Clear the form
+      setEmail(""); // Reset the email state to clear the input field
     } catch (error) {
       console.error("Error:", error.response ? error.response.data : error);
       toast.error("Failed to subscribe. Please try again later.");
     }
-  }
+  };
 
   return (
     <div
@@ -75,7 +80,7 @@ const Subscribe = () => {
               </button>
             </div>
           </form>
-          <ToastContainer />
+          {/* <ToastContainer /> */}
         </div>
       </div>
     </div>
