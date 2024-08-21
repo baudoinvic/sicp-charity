@@ -46,13 +46,27 @@ function Contact() {
 
       console.log("Response Data:", response.data);
       toast.success("Thank you for your feedback");
+
+      // Clear the form
+      setFormData({
+        firstname: "",
+        lastname: "",
+        email: "",
+        address: "",
+        message: "",
+      });
+
+      // Optional: Focus on the first input field (if needed)
+      document.getElementById("firstname").focus();
     } catch (error) {
       console.error("Error:", error.response ? error.response.data : error);
       toast.error("Failed to send message. Please try again later.");
     }
   };
 
+
   return (
+    
     <>
       <Navbar />
 
@@ -116,9 +130,7 @@ function Contact() {
                       winifredn@solinitiativecp.org.
                     </p>
                     <a
-                      href="mailto:winifredn@solinitiativecp.org.
-
-"
+                      href="mailto:winifredn@solinitiativecp.org."
                       className="text-sm font-medium underline hover:text-gray-200 transition-colors inline-block mt-2"
                     >
                       Send an Email
@@ -130,7 +142,7 @@ function Contact() {
                   <FaPhoneAlt className="text-3xl text-white opacity-80" />
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Call Us</h3>
-                    <p className="text-sm opacity-80"> +250793017617 </p>
+                    <p className="text-sm opacity-80"> +250793017617 </p>
                     <a
                       href="tel:+32498778291"
                       className="text-sm font-medium underline hover:text-gray-200 transition-colors inline-block mt-2"
@@ -159,7 +171,8 @@ function Contact() {
                       type="text"
                       id="firstname"
                       name="firstname"
-                      className="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-brightColor focus:bg-white focus:ring-0"
+                      value={formData.firstname}
+                      className="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-300 bg-gray-100 focus:bg-white focus:ring-0"
                       placeholder="e.g., Marie"
                       onChange={handleChange}
                       required
@@ -176,7 +189,8 @@ function Contact() {
                       type="text"
                       id="lastname"
                       name="lastname"
-                      className="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-brightColor focus:bg-white focus:ring-0"
+                      value={formData.lastname}
+                      className="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-300 bg-gray-100 focus:bg-white focus:ring-0"
                       placeholder="e.g., Dupont"
                       onChange={handleChange}
                       required
@@ -195,7 +209,8 @@ function Contact() {
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-brightColor focus:bg-white focus:ring-0"
+                    value={formData.email}
+                    className="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-300 bg-gray-100 focus:bg-white focus:ring-0"
                     placeholder="you@example.com"
                     onChange={handleChange}
                     required
@@ -213,7 +228,8 @@ function Contact() {
                     type="tel"
                     id="address"
                     name="address"
-                    className="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-brightColor focus:bg-white focus:ring-0"
+                    value={formData.address}
+                    className="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-300 bg-gray-100 focus:bg-white focus:ring-0"
                     placeholder="Your Address"
                     onChange={handleChange}
                     required
@@ -231,8 +247,9 @@ function Contact() {
                     id="message"
                     name="message"
                     rows="4"
-                    className="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-brightColor focus:bg-white focus:ring-0"
-                    placeholder="Please share with us your thoughts"
+                    value={formData.message}
+                    className="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-300 bg-gray-100 focus:bg-white focus:ring-0"
+                    placeholder="Your message here"
                     onChange={handleChange}
                     required
                   ></textarea>
@@ -240,20 +257,24 @@ function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-primary text-white px-6 py-3 rounded-full font-semibold text-lg hover:bg-brightColor-dark transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brightColor focus:ring-offset-2"
+                  className="w-full py-3 px-6 bg-primary text-white rounded-lg font-semibold text-lg hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                 >
                   Send Message
                 </button>
               </form>
-              <ToastContainer />
             </div>
           </div>
         </div>
-        <Footer />
       </div>
+
+      <Footer />
+      {/* <ToastContainer /> */}
     </>
   );
 }
 
 export default Contact;
+
+
+
 
