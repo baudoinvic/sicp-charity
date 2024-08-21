@@ -78,7 +78,7 @@ const Testimonials = () => {
           <h1 data-aos="fade-up" className="text-3xl font-bold">
             What Our Donors Say
           </h1>
-          <p data-aos="fade-up" className="text-lg text-gray-400">
+          <p data-aos="fade-up" className="text-gray-400 mt-5">
             Welcome to our community of kindness and compassion. we believe in
             the power of collective action to change lives. Each donation, big
             or small, is a beacon of hope for those in need. Join us as we
