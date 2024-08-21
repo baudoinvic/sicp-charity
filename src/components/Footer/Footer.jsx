@@ -55,9 +55,9 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
               <img src={save} alt="Logo" className="w-10 rounded-full" />
-              <h3 className="font-bold text-lg text-primary ">
+              <h3 className="font-bold text-1xl text-primary w-2/3">
                 Solidarity Initiative
-                <br />
+               
                 for Children and People(SICP)
               </h3>
             </div>
@@ -127,7 +127,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-primary mb-6">
+            <h2 className="text-1xl font-bold text-primary mb-6">
               Important Links
             </h2>
             <nav className="space-y-3">
@@ -165,7 +165,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-primary mb-6">Links</h2>
+            <h2 className="text-1xl font-bold text-primary mb-6">Links</h2>
             <nav className="space-y-3">
               <Link
                 to="/compaign"
@@ -201,7 +201,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-primary mb-6">Contact</h2>
+            <h2 className="text-1xl font-bold text-primary mb-6">Our Contact</h2>
             <p className="mb-4 text-gray-300  hover:text-primary transition duration-300 flex items-center mr-10">
               Chief Executive Officer
             </p>
