@@ -15,13 +15,12 @@ const Banner = () => {
         <div className="container mx-auto">
           <div className="text-center mb-10">
             <h1 className="text-3xl font-bold mb-4">RECENT CAUSES</h1>
-            <p className="text-gray-600">
+            <p className="text-gray-600 w-2/4 mx-auto text-center ">
               Discover the latest initiatives we are passionately working on to
               make a positive impact in our communities.
-              <br /> From providing essential resources to those in need to
+               From providing essential resources to those in need to
               supporting educational programs and health services
-              <br /> your contributions help us drive change and uplift lives.
-              <br />
+               your contributions help us drive change and uplift lives.
               Join us in our mission to create a brighter future for everyone.
               Every effort counts, and together, we can make a difference.
             </p>

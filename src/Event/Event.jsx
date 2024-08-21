@@ -171,7 +171,7 @@ const Event = () => {
           </div>
         </section>
 
-        <div className="bg-white mb-8 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full sm:w-2/3 lg:w-2/6">
+        {/* <div className="bg-white mb-8 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full sm:w-2/3 lg:w-2/6">
           <h3 className="text-2xl font-semibold mb-3 text-primary">
             Subscribe to our Newsletter
           </h3>
@@ -196,7 +196,7 @@ const Event = () => {
               </button>
             </div>
           </form>
-        </div>
+        </div> */}
 
         <ToastContainer />
       </div>
