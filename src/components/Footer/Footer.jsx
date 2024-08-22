@@ -18,36 +18,41 @@ import code from "../../assets/women/code.jpg";
 import save from "../../assets/women/save.jpg";
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
+   const [email, setEmail] = useState("");
 
-  const handleChange = (e) => {
-    setEmail(e.target.value);
-  };
+   const handleChange = (e) => {
+     setEmail(e.target.value);
+   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+   const handleSubmit = async (e) => {
+     e.preventDefault();
 
-    try {
-      let token = localStorage.getItem("token");
-      console.log("Newsletter Subscription Email:", email);
+     try {
+       let token = localStorage.getItem("token");
+       console.log("Newsletter Subscription Email:", email);
 
-      const response = await axios({
-        url: "https://auction-website-auji.onrender.com/api/v1/subscriptions",
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        data: JSON.stringify({ email }),
-      });
+       const response = await axios({
+         url: "https://auction-website-auji.onrender.com/api/v1/subscriptions",
+         method: "POST",
+         headers: {
+           "Content-Type": "application/json",
+           Authorization: `Bearer ${token}`,
+         },
+         data: JSON.stringify({ email }),
+       });
 
-      console.log("Subscription Response Data:", response.data);
-      toast.success("Thank you for subscribing to our News letter");
-    } catch (error) {
-      console.error("Error:", error.response ? error.response.data : error);
-      toast.error("Failed to subscribe. Please try again later.");
-    }
-  };
+       console.log("Subscription Response Data:", response.data);
+       toast.success(
+         "Thank you for subscribing to our news letter"
+       );
+
+       // Clear the form
+       setEmail(""); // Reset the email state to clear the input field
+     } catch (error) {
+       console.error("Error:", error.response ? error.response.data : error);
+       toast.error("Failed to subscribe. Please try again later.");
+     }
+   };
   return (
     <div className="bg-gray-900 text-white rounded-t-3xl mt-8 md:mt-0 shadow-2xl">
       <div className="container mx-auto p-8 md:p-16">
