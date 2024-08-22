@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar/Navbar'
+import Footer from '../components/Footer/Footer';
 
 const Past = () => {
   return (
@@ -16,6 +17,7 @@ const Past = () => {
           patients who are unable to afford hospital bills.
         </p>
       </div>
+      <Footer />
     </div>
   );
 }

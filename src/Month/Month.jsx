@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar/Navbar'
+import Footer from '../components/Footer/Footer';
 
 const Month = () => {
   return (
@@ -73,6 +74,7 @@ const Month = () => {
           food security issues on the continent.
         </p>
       </div>
+      <Footer />
     </div>
   );
 }
