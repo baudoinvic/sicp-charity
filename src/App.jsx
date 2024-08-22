@@ -39,6 +39,10 @@ import Gallery from "./Gallery/Gallery";
 import Donate from "./Donate/Donate";
 import Historic from "./Historic/Historic";
 import Event from "./Event/Event";
+import Month from "./Month/Month";
+import Past from "./Past/Past";
+import Social from "./Social/Social";
+import New from "./New/New";
 
 
  const CommonLayout = ({ children }) => {
@@ -102,6 +106,10 @@ const App = () => {
           <Route path="/Donate" element={<Donate />} />
           <Route path="/Historic" element={<Historic />} />
           <Route path="/Event" element={<Event />} />
+          <Route path="/Month" element={<Month />} />
+          <Route path="/Past" element={<Past />} />
+          <Route path="/Social" element={<Social />} />
+          <Route path="/New" element={<New />} />
 
           {/* Dashboard routes */}
           <Route path="/Admindashboard/Dashboard" element={<Dashboard />}>

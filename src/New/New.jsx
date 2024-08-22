@@ -1,6 +1,4 @@
 import React from 'react'
-import Navbar from '../components/Navbar/Navbar'
-import Footer from '../components/Footer/Footer';
 
 const New = () => {
   return (
@@ -25,7 +23,7 @@ const New = () => {
           for human beings to combat degrading ecosystems. SICP
         </p>
       </div>
-       <Footer />
+      <Footer />
     </div>
   );
 }
