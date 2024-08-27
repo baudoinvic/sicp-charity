@@ -46,44 +46,7 @@ const Service = () => {
         data-aos="zoom-in"
         className="container mx-auto py-16 px-4 flex flex-col lg:flex-row items-center space-y-10 lg:space-y-0 lg:space-x-10"
       >
-        {/* <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
-          <img
-            className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
-            src={pic15}
-            alt="Picture 15"
-          />
-          <h2 className="text-2xl font-bold text-center mb-6 mt-5">
-            We train youth
-          </h2>
-          <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto text-sm">
-            We train youth and women in different aspect of life on how get
-            decent self-created jobs that generate dependable income. We
-            psychological train them how to become self-confident and help them
-            toward the revelation of their self-awareness in whatever they do in
-            society. Moreover we use social and environmental studies to teach
-            them how they can be full prepared to harmonize with ecosystem in
-            better way, and how to grow their interpersonal excellence, social
-            development skills and prosper peace and unity interaction among
-            them.
-          </p>
-        </section> */}
-
-      
-        {/* <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
-          <img
-            className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
-            src={copy}
-            alt="Picture 26"
-          />
-          <h2 className="text-2xl font-bold text-center mb-6 mt-5">Fundraising</h2>
-          <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto text-sm">
-            We do fundraising of money in order to help those ones who are in
-            needs of support. We educate families through guidance provision on
-            how to better care for their children from their infancy stage to
-            their adulthood. We assist patients, widows, refugees and others
-            vulnerable by helping them to stand ten feet tall again.
-          </p>
-        </section> */}
+     
 
         <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
           <img
