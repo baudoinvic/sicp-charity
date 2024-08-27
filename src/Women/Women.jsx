@@ -13,7 +13,7 @@ const Women = () => {
         <div className="container mx-auto py-12 px-4">
           <section className="md:ml-20">
             <div className="flex flex-col md:flex-row items-center md:items-start">
-              <div className="md:w-1/3 w-full">
+              <div className="md:w-1/3 w-full mt-10">
                 <img className="w-full h-auto" src={pic20} alt="Fundraising" />
               </div>
               <div className="md:w-1/2 w-full p-4 md:p-8 mt-6 md:mt-0 md:ml-8">
