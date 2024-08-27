@@ -6,11 +6,11 @@ import Footer from "../components/Footer/Footer";
 import { Link } from "react-router-dom";
 import pic15 from "../assets/women/pic15.jpg";
 import pic20 from "../assets/women/pic20.jpg";
-import pic26 from "../assets/women/pic26.jpg"
-import pic31 from "../assets/women/pic31.jpg";
-import pic32 from "../assets/women/pic32.jpg";
-import pic33 from "../assets/women/pic33.jpg";
-import copy from "../assets/women/copy.jpg";
+// import pic26 from "../assets/women/pic26.jpg"
+// import pic31 from "../assets/women/pic31.jpg";
+// import pic32 from "../assets/women/pic32.jpg";
+// import pic33 from "../assets/women/pic33.jpg";
+// import copy from "../assets/women/copy.jpg";
 
 const Service = () => {
   return (
@@ -46,8 +46,6 @@ const Service = () => {
         data-aos="zoom-in"
         className="container mx-auto py-16 px-4 flex flex-col lg:flex-row items-center space-y-10 lg:space-y-0 lg:space-x-10"
       >
-     
-
         <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
           <img
             className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
