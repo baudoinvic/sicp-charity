@@ -6,11 +6,7 @@ import Footer from "../components/Footer/Footer";
 import { Link } from "react-router-dom";
 import pic15 from "../assets/women/pic15.jpg";
 import pic20 from "../assets/women/pic20.jpg";
-// import pic26 from "../assets/women/pic26.jpg"
-// import pic31 from "../assets/women/pic31.jpg";
-// import pic32 from "../assets/women/pic32.jpg";
-// import pic33 from "../assets/women/pic33.jpg";
-// import copy from "../assets/women/copy.jpg";
+
 
 const Service = () => {
   return (
