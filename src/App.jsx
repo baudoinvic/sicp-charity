@@ -43,6 +43,11 @@ import Month from "./Month/Month";
 import Past from "./Past/Past";
 import Social from "./Social/Social";
 import New from "./New/New";
+import Second from "./Second/Second";
+import Leadership from "./Leadership/Leadership";
+import Youth from "./Youth/Youth";
+import Fun from "./Fun/Fun";
+import Women from "./Women/Women";
 
 
  const CommonLayout = ({ children }) => {
@@ -110,6 +115,11 @@ const App = () => {
           <Route path="/Past" element={<Past />} />
           <Route path="/Social" element={<Social />} />
           <Route path="/New" element={<New />} />
+          <Route path="/Second" element={<Second />} />
+          <Route path="/Leadership" element={<Leadership />} />
+          <Route path="/Youth" element={<Youth />} />
+          <Route path="/Fun" element={<Fun />} />
+          <Route path="/Women" element={<Women />} />
 
           {/* Dashboard routes */}
           <Route path="/Admindashboard/Dashboard" element={<Dashboard />}>

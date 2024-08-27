@@ -20,7 +20,7 @@ const Event = () => {
         <div className="flex flex-col lg:flex-row justify-center py-12 space-y-8 lg:space-y-0 lg:space-x-4">
           <div className="w-full lg:w-1/4">
             <div className="flex flex-col items-start">
-              <Link to="">
+              <Link to="/New">
                 <div className="bg-white shadow-lg overflow-hidden mb-4 w-full max-w-[12rem] h-48 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
                   <div className="bg-primary text-white p-4 text-center h-full flex flex-col justify-center">
                     <h2 className="text-2xl font-bold mb-2">Upcoming Event</h2>
@@ -43,7 +43,7 @@ const Event = () => {
 
           <div className="w-full lg:w-1/4">
             <div className="flex flex-col items-start">
-              <Link to="">
+              <Link to="/Month">
                 <div className="bg-white shadow-lg overflow-hidden mb-4 w-full max-w-[12rem] h-48 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
                   <div className="bg-primary text-white p-4 text-center h-full flex flex-col justify-center">
                     <h2 className="text-2xl font-bold mb-2">
@@ -53,7 +53,7 @@ const Event = () => {
                   </div>
                 </div>
               </Link>
-              <Link>
+              <Link to="/Month">
                 <p className="w-full lg:w-2/3 font-bold text-blue-500 underline">
                   The Importance of Preserving and Conserving Green Grassland
                 </p>
@@ -71,7 +71,7 @@ const Event = () => {
 
           <div className="w-full lg:w-1/4">
             <div className="flex flex-col items-start">
-              <Link to="">
+              <Link to="/Social">
                 <div className="bg-white shadow-lg overflow-hidden mb-4 w-full max-w-[12rem] h-48 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
                   <div className="bg-primary text-white p-4 text-center h-full flex flex-col justify-center">
                     <h2 className="text-2xl font-bold mb-2">
@@ -82,7 +82,7 @@ const Event = () => {
                 </div>
               </Link>
 
-              <Link to="">
+              <Link to="/Social">
                 <p className="w-full lg:w-2/3 font-bold text-blue-500 underline">
                   Cooperatives As A Path Way to The Women Sustainable
                   Livelihoods and Empowerment
@@ -100,17 +100,17 @@ const Event = () => {
 
           <div className="w-full lg:w-1/4">
             <div className="flex flex-col items-start">
-              <Link to="">
+              <Link to="/Second">
                 <div className="bg-white shadow-lg overflow-hidden mb-4 w-full max-w-[12rem] h-48 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
                   <div className="bg-primary text-white p-4 text-center h-full flex flex-col justify-center">
                     <h2 className="text-2xl font-bold mb-2">
                       Monthly Social Studies
                     </h2>
-                    <span className="text-lg">27 April 2024</span>
+                    <span className="text-lg">10 November 2024</span>
                   </div>
                 </div>
               </Link>
-              <Link to="">
+              <Link to="/Second">
                 <p className="w-full lg:w-2/3 font-bold text-blue-500 underline">
                   Cooperatives in Pandemics, Food Security, War conflict and
                   Climate Issues in Africa
@@ -132,7 +132,7 @@ const Event = () => {
 
         <section className="flex justify-start py-12">
           <div className="flex flex-col items-start max-w-md">
-            <Link to="">
+            <Link to="/Past">
               <div className="bg-white shadow-lg overflow-hidden mb-4 w-full max-w-[12rem] h-48 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
                 <div className="bg-gray-100 text-black p-4 text-center h-full flex flex-col justify-center">
                   <h2 className="text-2xl font-bold mb-2">Past Events</h2>
@@ -142,7 +142,7 @@ const Event = () => {
             </Link>
 
             <div className="text-gray-700 leading-relaxed text-sm">
-              <Link to="">
+              <Link to="/Past">
                 <p className="w-full lg:w-2/3 font-bold text-blue-500 underline ">
                   Provision of School Supplies to Children and Youth
                 </p>

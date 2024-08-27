@@ -1,48 +1,16 @@
 import React from 'react'
-import change from "../assets/women/change.jpg";
+import michel from "../assets/women/michel.jpg";
+import CEO from "../assets/women/CEO.jpg";
+import mag from "../assets/women/mag.jpg";
+import pic24 from "../assets/pic24.jpg";
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
-// import michel from "../assets/women/michel.jpg";
-// import CEO from "../assets/women/CEO.jpg";
-// import mag from "../assets/women/mag.jpg";
-// import pic24 from "../assets/pic24.jpg";
 
-const Historic = () => {
+const Leadership = () => {
   return (
-    <div className="historic">
-      <Navbar />
-      <div
-        data-aos="zoom-in"
-        className="container mx-auto flex flex-col md:flex-row items-center justify-center py-6 mt-20"
-      >
-        <div className="w-full md:w-2/5 mb-4 md:mb-0 flex justify-center">
-          <img
-            src={change}
-            alt="Our Story"
-            className="w-full h-auto max-h-85 rounded-lg shadow-md object-cover"
-          />
-        </div>
-
-        <div className="w-full md:w-2/4 md:ml-6 mt-4 md:mt-0">
-          <h2 className="text-2xl font-bold mb-3 text-primary">Our Story</h2>
-          <p className="text-gray-700 text-sm leading-relaxed">
-            Poverty, disease, homelessness, hunger, disasters, and refugee
-            crises negatively impact individuals and families worldwide,
-            hindering sustainable development. The COVID-19 outbreak left many
-            devastated, particularly in sub-Saharan Africa where extreme
-            suffering became widespread. Founded in 2023 as a non-governmental
-            organization, SICP Charity strives to bring hope and support to
-            those in need. We mobilize resources to combat poverty,
-            malnutrition, and poor education for children. Additionally, we
-            support and encourage women's empowerment. Our mission is to address
-            these challenges and create positive change. Through dedicated
-            efforts, we aim to build a world where everyone has access to basic
-            necessities, quality education, and opportunities for growth and
-            development.
-          </p>
-        </div>
-      </div>
-      {/* <div className="bg-white py-12 pt-20">
+    <div className="leadership">
+        <Navbar />
+      <div className="bg-white py-12 pt-20">
         <h1 className="text-4xl font-bold text-center mb-12 text-primary">
           Our Leadership Team
         </h1>
@@ -103,10 +71,10 @@ const Historic = () => {
             </section>
           ))}
         </main>
-      </div> */}
+      </div>
       <Footer />
     </div>
   );
 }
 
-export default Historic
+export default Leadership

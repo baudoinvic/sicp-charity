@@ -31,16 +31,51 @@ const Menu = [
       },
       {
         id: 23,
+        name: "Our Leadership Team",
+        link: "/Leadership",
+      },
+      {
+        id: 24,
         name: "Who Can Donate",
         link: "/Donate",
       },
     ],
   },
+
   {
     id: 3,
-    name: "What We Do ",
+    name: "What We Do",
     link: "/Service",
+    submenu: [
+      {
+        id: 21,
+        name: "Youth training",
+        link: "/Youth",
+      },
+      {
+        id: 22,
+        name: "Fundraising ",
+        link: "/Fun",
+      },
+      {
+        id: 23,
+        name: "Women Empowerment",
+        link: "/Women",
+      },
+      {
+        id: 24,
+        name: "Events",
+        link: "/Event",
+      },
+      {
+        id: 24,
+        name: "Newsletters",
+        link: "",
+      },
+    ],
   },
+
+ 
   {
     id: 4,
     name: "Our Gallery",

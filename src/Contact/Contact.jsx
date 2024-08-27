@@ -66,7 +66,6 @@ function Contact() {
 
 
   return (
-    
     <>
       <Navbar />
 
@@ -126,11 +125,9 @@ function Contact() {
                   <MdOutlineMailOutline className="text-4xl text-white opacity-80" />
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Write to Us</h3>
-                    <p className="text-sm opacity-80">
-                      winifredn@solinitiativecp.org.
-                    </p>
+                    <p className="text-sm opacity-80">info@sicpcharity.org</p>
                     <a
-                      href="mailto:winifredn@solinitiativecp.org."
+                      href="mailto: info@sicpcharity.org"
                       className="text-sm font-medium underline hover:text-gray-200 transition-colors inline-block mt-2"
                     >
                       Send an Email

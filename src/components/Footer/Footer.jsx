@@ -61,9 +61,7 @@ const Footer = () => {
             <div className="flex items-center space-x-4">
               <img src={save} alt="Logo" className="w-10 rounded-full" />
               <h3 className="font-bold text-1xl text-primary w-2/3">
-                Solidarity Initiative
-               
-                for Children and People(SICP)
+                Solidarity Initiative for Children and People(SICP)
               </h3>
             </div>
 
@@ -137,22 +135,22 @@ const Footer = () => {
             </h2>
             <nav className="space-y-3">
               <Link
-                to=""
+                to="/"
                 className="block text-gray-300 hover:text-primary transition duration-300"
               >
                 Home
               </Link>
               <Link
-                to="/About"
+                to="/Event"
                 className="block text-gray-300 hover:text-primary transition duration-300"
               >
-                About Us
+                Our Events
               </Link>
               <Link
-                to="/service"
+                to=""
                 className="block text-gray-300 hover:text-primary transition duration-300"
               >
-                What we do
+                News Letter
               </Link>
               <Link
                 to="/Donation"
@@ -206,18 +204,20 @@ const Footer = () => {
           </div>
 
           <div>
-            <h2 className="text-1xl font-bold text-primary mb-6">Our Contact</h2>
+            <h2 className="text-1xl font-bold text-primary mb-6">
+              Our Contact
+            </h2>
             <p className="mb-4 text-gray-300  hover:text-primary transition duration-300 flex items-center mr-10">
               Chief Executive Officer
             </p>
             <nav className="space-y-4">
               <a
-                href="mailto: winifredn@solinitiativecp.org
+                href="mailto: chrisbisangwaceo@sicpcharity.org
 "
                 className="block text-gray-300 hover:text-primary transition duration-300 flex items-center"
               >
                 <MdOutlineMailOutline className="text-2xl mr-3" />
-                winifredn@solinitiativecp.org
+                chrisbisangwaceo@sicpcharity.org
               </a>
               <a
                 href="tel: +250793017617"

@@ -15,12 +15,18 @@ const Funraise = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
+      <header
+        className="hero bg-cover bg-center  h-96 flex items-center justify-center text-center "
+        style={{
+          backgroundImage:
+            "url('https://media.licdn.com/dms/image/C4D12AQEnQIOpQeDHwQ/article-cover_image-shrink_720_1280/0/1619521100922?e=2147483647&v=beta&t=HrIyO8_o8j_biGarWf1zpCJPNz4b8wQKUxUa6x8ru_8')",
+        }}
+      >
+        <h1 className="text-6xl font-bold text-white">Our Impact</h1>
+      </header>
+    
 
-      <h1 className="pt-20 mb-10 text-2xl font-bold text-primary text-center">
-        OUR IMPACT
-      </h1>
-
-      <div className="flex flex-wrap justify-center p-4">
+      <div className="flex flex-wrap justify-center p-4 mt-10">
         <div className="w-full md:w-1/2 lg:w-1/2 p-4">
           <div className="max-w-2xl mx-auto p-4 left-side ">
             <span className="text-sm text-gray-700 ">
@@ -51,9 +57,7 @@ const Funraise = () => {
               <span className="font-bold text-sm ">
                 Children Education Supported: 260
               </span>
-              <p className=" text-sm font-bold">
-                Empowered Women: 130
-              </p>
+              <p className=" text-sm font-bold">Empowered Women: 130</p>
               <p className=" text-sm font-bold">
                 Others supported (patients, refugees, elders etc.): 92
               </p>
@@ -82,7 +86,6 @@ const Funraise = () => {
           </p>
         </section>
 
-      
         <section className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
           <img
             className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
