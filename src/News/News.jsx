@@ -19,22 +19,20 @@ const News = () => {
                 <Link to="/New">
                   <div className="bg-white shadow-lg overflow-hidden mb-4 w-full max-w-[12rem] h-48 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
                     <div className="bg-primary text-white p-4 text-center h-full flex flex-col justify-center">
-                      <span className="text-lg">
+                      <span className="text-lg ">
                         Current Newsletter – August 2024
                       </span>
                     </div>
                   </div>
                 </Link>
 
-                <p className="text-gray-700 leading-relaxed w-full lg:w-2/3 text-sm">
+                <p className="leading-relaxed w-full lg:w-2/3 text-sm text-blue-500 underline">
                   Current Newsletter.
                   <br /> End of summer Vacation and New academic years In
                   September,
                 </p>
               </div>
             </div>
-
-        
           </div>
 
           <h2 className="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2"></h2>
@@ -47,9 +45,9 @@ const News = () => {
               <Link to="/Past">
                 <div className="bg-white shadow-lg overflow-hidden mb-4 w-full max-w-[12rem] h-48 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
                   <div className="bg-gray-100 text-black p-4 text-center h-full flex flex-col justify-center">
-                    <h2 className="text-2xl font-bold mb-2">
+                    <span className="text-1xl font-bold mb-2">
                       Merry Christmas and Happy New Year 2025
-                    </h2>
+                    </span>
                   </div>
                 </div>
               </Link>
@@ -60,8 +58,6 @@ const News = () => {
                     Old/Past Newsletter about Christmas
                   </p>
                 </Link>
-
-            
               </div>
             </div>
           </section>
