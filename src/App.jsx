@@ -48,6 +48,7 @@ import Leadership from "./Leadership/Leadership";
 import Youth from "./Youth/Youth";
 import Fun from "./Fun/Fun";
 import Women from "./Women/Women";
+import News from "./News/News";
 
 
  const CommonLayout = ({ children }) => {
@@ -120,6 +121,7 @@ const App = () => {
           <Route path="/Youth" element={<Youth />} />
           <Route path="/Fun" element={<Fun />} />
           <Route path="/Women" element={<Women />} />
+          <Route path="/News" element={<News />} />
 
           {/* Dashboard routes */}
           <Route path="/Admindashboard/Dashboard" element={<Dashboard />}>

@@ -70,7 +70,7 @@ const Menu = [
       {
         id: 24,
         name: "Newsletters",
-        link: "",
+        link: "/News",
       },
     ],
   },
