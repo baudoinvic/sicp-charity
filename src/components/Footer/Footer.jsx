@@ -147,10 +147,10 @@ const Footer = () => {
                 Our Events
               </Link>
               <Link
-                to=""
+                to="/News"
                 className="block text-gray-300 hover:text-primary transition duration-300"
               >
-                News Letter
+                News Letters
               </Link>
               <Link
                 to="/Donation"
