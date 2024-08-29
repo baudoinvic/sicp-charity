@@ -11,19 +11,22 @@ const Current = () => {
 
   return (
     <>
-      <div className="current">
+      <div className="current ">
         <Navbar />
-        <div style={{ height: "750px", marginTop: "20px" }}>
-          <Worker
-            workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}
-          >
-            <Viewer
-              fileUrl="/current.pdf"
-              plugins={[defaultLayoutPluginInstance]}
-            />
-          </Worker>
+        <div className="mt-10">
+          <div style={{ height: "750px", marginTop: "20px" }}>
+            <Worker
+              workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}
+            >
+              <Viewer
+                fileUrl="/current.pdf"
+                plugins={[defaultLayoutPluginInstance]}
+              />
+            </Worker>
+          </div>
         </div>
       </div>
+       <br />
       <Footer />
     </>
   );
