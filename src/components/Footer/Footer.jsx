@@ -18,6 +18,7 @@ import code from "../../assets/women/code.jpg";
 import save from "../../assets/women/save.jpg";
 
 const Footer = () => {
+  
    const [email, setEmail] = useState("");
 
    const handleChange = (e) => {
@@ -54,7 +55,7 @@ const Footer = () => {
      }
    };
   return (
-    <div className="bg-gray-900 text-white rounded-t-3xl mt-8 md:mt-0 shadow-2xl">
+    <div className="bg-gray-900 text-white rounded-t-3xl mt-8 md:mt-0 shadow-2xl relative z-10">
       <div className="container mx-auto p-8 md:p-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-6">
