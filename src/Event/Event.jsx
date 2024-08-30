@@ -29,7 +29,7 @@ const Event = () => {
                 </div>
               </Link>
 
-              <p className="text-gray-700 leading-relaxed w-full lg:w-2/3 text-sm">
+              <p className="w-full lg:w-2/3  hover:underline  transition duration-300 ease-in-out cursor-pointer text-sm">
                 We plan to visit and assist the unaccompanied patients at MUHIMA
                 Hospital. We will help the patients to take showers and change
                 to new clothes. We will also give those words of encouragement
@@ -54,7 +54,7 @@ const Event = () => {
                 </div>
               </Link>
               <Link to="/Month">
-                <p className="w-full lg:w-2/3 font-bold text-blue-500 underline">
+                <p className="w-full lg:w-2/3 font-bold text-blue-500 hover:underline active:text-blue-700 transition duration-300 ease-in-out ">
                   The Importance of Preserving and Conserving Green Grassland
                 </p>
               </Link>
@@ -83,7 +83,7 @@ const Event = () => {
               </Link>
 
               <Link to="/Social">
-                <p className="w-full lg:w-2/3 font-bold text-blue-500 underline">
+                <p className="w-full lg:w-2/3 font-bold text-blue-500 hover:underline active:text-blue-700 transition duration-300 ease-in-out ">
                   Cooperatives As A Path Way to The Women Sustainable
                   Livelihoods and Empowerment
                 </p>
@@ -111,7 +111,7 @@ const Event = () => {
                 </div>
               </Link>
               <Link to="/Second">
-                <p className="w-full lg:w-2/3 font-bold text-blue-500 underline">
+                <p className="w-full lg:w-2/3 font-bold text-blue-500 hover:underline active:text-blue-700 transition duration-300 ease-in-out ">
                   Cooperatives in Pandemics, Food Security, War conflict and
                   Climate Issues in Africa
                 </p>
@@ -143,7 +143,7 @@ const Event = () => {
 
             <div className="text-gray-700 leading-relaxed text-sm">
               <Link to="/Past">
-                <p className="w-full lg:w-2/3 font-bold text-blue-500 underline ">
+                <p className="w-full lg:w-2/3 font-bold text-blue-500 hover:underline active:text-blue-700 transition duration-300 ease-in-out  ">
                   Provision of School Supplies to Children and Youth
                 </p>
               </Link>
