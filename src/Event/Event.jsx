@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 
 const Event = () => {
