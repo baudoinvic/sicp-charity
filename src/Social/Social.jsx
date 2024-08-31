@@ -7,7 +7,6 @@ const Social = () => {
   return (
     <div className=" from-purple-50 to-indigo-100 min-h-screen">
       <Navbar />
-
       <div className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-2xl md:text-2xl font-bold text-center text-primary mb-12 leading-tight">
           Cooperatives: A Pathway to Women's Sustainable Livelihoods and
