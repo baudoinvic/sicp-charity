@@ -12,7 +12,7 @@ const Social = () => {
           Cooperatives: A Pathway to Women's Sustainable Livelihoods and
           Empowerment
         </h1>
-
+          
         <div className="bg-white rounded-lg shadow-xl p-8 mb-8">
           <p className="text-1xl text-gray-700 leading-relaxed mb-6">
             Over the past two centuries cooperatives had been introduced to the
