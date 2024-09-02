@@ -53,6 +53,7 @@ import Current from "./News/Current";
 import Old from "./News/Old";
 
 import ScrollToTop from "./ScrollToTop/ScrollToTop";
+import Merry from "./News/Merry";
 
 const CommonLayout = ({ children }) => {
   return (
@@ -127,6 +128,7 @@ const App = () => {
           <Route path="/News" element={<News />} />
           <Route path="/Current" element={<Current />} />
           <Route path="/Old" element={<Old />} />
+          <Route path="/Merry" element={<Merry />} />
 
           {/* Dashboard routes */}
           <Route path="/Admindashboard/Dashboard" element={<Dashboard />}>
