@@ -27,7 +27,7 @@ const News = () => {
                 </Link>
 
                 <Link to="/Current">
-                  <p className="leading-relaxed w-full text-sm text-blue-500">
+                  <p className="leading-relaxed w-full text-sm text-blue-500 hover:underline  transition duration-300 ease-in-out cursor-pointer">
                     Current Newsletter.
                     <br /> End of summer Vacation and New academic years In
                     September,
@@ -49,15 +49,13 @@ const News = () => {
                 </Link>
 
                 <Link to="/Current">
-                  <p className="leading-relaxed w-full text-sm text-blue-500">
+                  <p className="leading-relaxed w-full text-sm text-blue-500 hover:underline  transition duration-300 ease-in-out cursor-pointer">
                     Merry Christmas and Happy New Year 2025
                   </p>
                 </Link>
               </div>
             </div>
           </div>
-
-         
 
           <h2 className="text-3xl font-bold mb-6 text-primary border-b-2 border-primary pb-2"></h2>
           <h1 className="text-3xl sm:text-4xl font-bold mb-8 text-left">
@@ -78,7 +76,8 @@ const News = () => {
 
               <div className="text-gray-700 leading-relaxed text-sm">
                 <Link to="/Old">
-                  <p className="w-full lg:w-2/3 font-bold text-blue-500  ">
+                  <p className="w-full lg:w-2/3 font-bold text-blue-500 hover:underline  transition duration-300 ease-in-out cursor-pointer ">
+                
                     Old/Past Newsletter about Christmas
                   </p>
                 </Link>
