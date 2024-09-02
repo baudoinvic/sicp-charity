@@ -18,7 +18,7 @@ const Old = () => {
               workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}
             >
               <Viewer
-                fileUrl="/old.pdf"
+                fileUrl="/last.pdf"
                 plugins={[defaultLayoutPluginInstance]}
               />
             </Worker>
