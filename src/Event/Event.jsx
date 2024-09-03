@@ -156,7 +156,7 @@ const Event = () => {
             </div>
           </div>
         </section>
-        <ToastContainer />
+       
       </div>
       <Footer />
     </div>
