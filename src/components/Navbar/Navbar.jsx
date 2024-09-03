@@ -1,7 +1,7 @@
 
 
 import React, { useState } from "react";
-import pic1 from "../../assets/pic1.jpg";
+import log from "../../assets/women/log.png";
 import { IoMdSearch } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { FaRegUser } from "react-icons/fa";
@@ -120,8 +120,8 @@ const Navbar = ({ handleOrderPopup }) => {
       <div className="bg-white py-4">
         <div className="container flex justify-between items-center">
           <div>
-            <a href="#" className="font-bold text-2xl sm:text-3xl flex gap-2">
-              <img src={pic1} alt="Logo" className="w-10" />
+            <a href="/" className="font-bold text-2xl sm:text-3xl flex gap-2">
+              <img src={log} alt="Logo" className="w-10" />
               SICP
             </a>
           </div>
