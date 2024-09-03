@@ -16,6 +16,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import pic1 from "../../assets/pic1.jpg";
 import code from "../../assets/women/code.jpg";
 import save from "../../assets/women/save.jpg";
+import log from "../../assets/women/log.png"
 
 const Footer = () => {
   
@@ -60,7 +61,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
-              <img src={save} alt="Logo" className="w-10 rounded-full" />
+              <img src={log} alt="Logo" className="w-10 rounded-full" />
               <h3 className="font-bold text-1xl text-primary w-2/3">
                 Solidarity Initiative for Children and People(SICP)
               </h3>
