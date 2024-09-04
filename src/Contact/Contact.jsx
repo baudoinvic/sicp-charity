@@ -56,7 +56,7 @@ function Contact() {
         message: "",
       });
 
-      // Optional: Focus on the first input field (if needed)
+     
       document.getElementById("firstname").focus();
     } catch (error) {
       console.error("Error:", error.response ? error.response.data : error);
