@@ -48,8 +48,8 @@ const Footer = () => {
          "Thank you for subscribing to our news letter"
        );
 
-       // Clear the form
-       setEmail(""); // Reset the email state to clear the input field
+       
+       setEmail(""); 
      } catch (error) {
        console.error("Error:", error.response ? error.response.data : error);
        toast.error("Failed to subscribe. Please try again later.");
