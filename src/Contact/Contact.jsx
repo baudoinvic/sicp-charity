@@ -14,7 +14,7 @@ function Contact() {
     firstname: "",
     lastname: "",
     email: "",
-    address: "",
+    subject: "",
     message: "",
   });
 
@@ -52,7 +52,7 @@ function Contact() {
         firstname: "",
         lastname: "",
         email: "",
-        address: "",
+        subject: "",
         message: "",
       });
 
@@ -216,18 +216,18 @@ function Contact() {
 
                 <div>
                   <label
-                    htmlFor="address"
+                    htmlFor="subject"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Address
+                   Subject
                   </label>
                   <input
-                    type="tel"
-                    id="address"
-                    name="address"
-                    value={formData.address}
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
                     className="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-300 bg-gray-100 focus:bg-white focus:ring-0"
-                    placeholder="Your Address"
+                    placeholder="Your Subject"
                     onChange={handleChange}
                     required
                   />
@@ -238,7 +238,7 @@ function Contact() {
                     htmlFor="message"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Subject
+                   Message
                   </label>
                   <textarea
                     id="message"
