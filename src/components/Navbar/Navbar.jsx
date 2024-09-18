@@ -126,9 +126,7 @@ const Navbar = ({ handleOrderPopup }) => {
             </a>
           </div>
 
-  
           <div className="flex justify-between items-center gap-4">
-       
             <div className="relative group hidden sm:block">
               <input
                 type="text"
