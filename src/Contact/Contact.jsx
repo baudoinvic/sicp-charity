@@ -141,7 +141,7 @@ function Contact() {
                     <h3 className="text-xl font-semibold mb-2">Call Us</h3>
                     <p className="text-sm opacity-80"> +250793017617 </p>
                     <a
-                      href="tel:+32498778291"
+                      href="tel:+250793017617"
                       className="text-sm font-medium underline hover:text-gray-200 transition-colors inline-block mt-2"
                     >
                       Call Now
@@ -219,7 +219,7 @@ function Contact() {
                     htmlFor="subject"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                   Subject
+                    Subject
                   </label>
                   <input
                     type="text"
@@ -238,7 +238,7 @@ function Contact() {
                     htmlFor="message"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                   Message
+                    Message
                   </label>
                   <textarea
                     id="message"
